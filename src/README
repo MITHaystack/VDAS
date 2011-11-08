@@ -1,0 +1,22 @@
+This directory contains the source for all of the Mark6 components.
+
+common/
+    Library files used for different applications.
+extern/
+	External source dependencies.
+disk2vlbi/
+    Translation program that converts from raw pcap format into native
+    VLBI data format.
+mark6/
+    Erlang-based control plane (not yet integrated with data plane).
+net2disk/
+	PF_RING-based data plane for network to disk capture. Still under construction.
+    Treats disk packs as JBOD and implements resilient file system.
+net2raid/
+    Application used during successful 16 Gbps MIT/NASA demonstration.
+scancheck/
+    Application for checking vdiff frames.
+tstmark6/
+    Erlang-based mark6 client.
+vdif/
+    Simple erlang-based VDIF checker.

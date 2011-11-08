@@ -1,0 +1,56 @@
+\hypertarget{structigb__buffer}{
+\section{igb\_\-buffer Struct Reference}
+\label{structigb__buffer}\index{igb\_\-buffer@{igb\_\-buffer}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structigb__buffer_a384937d516c5996be17f0d875e5ef7fc}{
+struct sk\_\-buff $\ast$ {\bfseries skb}}
+\label{structigb__buffer_a384937d516c5996be17f0d875e5ef7fc}
+
+\item 
+\hypertarget{structigb__buffer_a3b8e525dc7455ef32b319d6b82ae85df}{
+dma\_\-addr\_\-t {\bfseries dma}}
+\label{structigb__buffer_a3b8e525dc7455ef32b319d6b82ae85df}
+
+\item 
+\hypertarget{structigb__buffer_aea70c2ce8ebb6594e08016850515223b}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\hypertarget{unionigb__buffer_1_1@151_ace8f34ca12d13e431ae48ae01e65962e}{
+\>struct \{\\
+\>\>unsigned long {\bfseries time\_stamp}\\
+\>\>u16 {\bfseries length}\\
+\>\>u16 {\bfseries next\_to\_watch}\\
+\>\>unsigned int {\bfseries bytecount}\\
+\>\>u8 {\bfseries mapped\_as\_page}\\
+\>\} }
+\label{unionigb__buffer_1_1@151_ace8f34ca12d13e431ae48ae01e65962e}
+\\
+\hypertarget{unionigb__buffer_1_1@151_af7a67bcfb7faf41f628a3adce369abff}{
+\>struct \{\\
+\>\>struct page $\ast$ {\bfseries page}\\
+\>\>dma\_addr\_t {\bfseries page\_dma}\\
+\>\>u32 {\bfseries page\_offset}\\
+\>\} }
+\label{unionigb__buffer_1_1@151_af7a67bcfb7faf41f628a3adce369abff}
+\\
+\}; }
+\label{structigb__buffer_aea70c2ce8ebb6594e08016850515223b}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 238 of file igb.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/igb/igb-\/3.0.22/src/igb.h\end{DoxyCompactItemize}

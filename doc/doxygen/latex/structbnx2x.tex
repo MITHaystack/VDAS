@@ -1,0 +1,509 @@
+\hypertarget{structbnx2x}{
+\section{bnx2x Struct Reference}
+\label{structbnx2x}\index{bnx2x@{bnx2x}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structbnx2x_a108a56c6f6a0bddaac68f14bd4910b58}{
+struct \hyperlink{structbnx2x__fastpath}{bnx2x\_\-fastpath} {\bfseries fp} \mbox{[}MAX\_\-CONTEXT\mbox{]}}
+\label{structbnx2x_a108a56c6f6a0bddaac68f14bd4910b58}
+
+\item 
+\hypertarget{structbnx2x_ae2154043eaa79d51eb8f62e2d8f0bfbc}{
+void \_\-\_\-iomem $\ast$ {\bfseries regview}}
+\label{structbnx2x_ae2154043eaa79d51eb8f62e2d8f0bfbc}
+
+\item 
+\hypertarget{structbnx2x_a0db5855bfd09305dc447fb1ca98d632a}{
+void \_\-\_\-iomem $\ast$ {\bfseries doorbells}}
+\label{structbnx2x_a0db5855bfd09305dc447fb1ca98d632a}
+
+\item 
+\hypertarget{structbnx2x_a9dddbd784046c133584bbedbd52103dd}{
+struct net\_\-device $\ast$ {\bfseries dev}}
+\label{structbnx2x_a9dddbd784046c133584bbedbd52103dd}
+
+\item 
+\hypertarget{structbnx2x_a73f2bdedae8f6d1fd6851b3a87864087}{
+struct pci\_\-dev $\ast$ {\bfseries pdev}}
+\label{structbnx2x_a73f2bdedae8f6d1fd6851b3a87864087}
+
+\item 
+\hypertarget{structbnx2x_a4af0cc78b403c7c402e51d10df9bb4a9}{
+atomic\_\-t {\bfseries intr\_\-sem}}
+\label{structbnx2x_a4af0cc78b403c7c402e51d10df9bb4a9}
+
+\item 
+\hypertarget{structbnx2x_ae43739c2ecaf88934fb476678cc28b2a}{
+int {\bfseries tx\_\-ring\_\-size}}
+\label{structbnx2x_ae43739c2ecaf88934fb476678cc28b2a}
+
+\item 
+\hypertarget{structbnx2x_a951917659c000ec78efaa8119a3bfc6a}{
+u32 {\bfseries rx\_\-csum}}
+\label{structbnx2x_a951917659c000ec78efaa8119a3bfc6a}
+
+\item 
+\hypertarget{structbnx2x_af09ab44ea5fd96eae2d98865483833bc}{
+u32 {\bfseries rx\_\-buf\_\-size}}
+\label{structbnx2x_af09ab44ea5fd96eae2d98865483833bc}
+
+\item 
+\hypertarget{structbnx2x_ac05228bd6664854c9d0055d0aa652d19}{
+struct \hyperlink{structhost__def__status__block}{host\_\-def\_\-status\_\-block} $\ast$ {\bfseries def\_\-status\_\-blk}}
+\label{structbnx2x_ac05228bd6664854c9d0055d0aa652d19}
+
+\item 
+\hypertarget{structbnx2x_ad8a1a1b3ec9d00b2ed75db5a2c805dc9}{
+\_\-\_\-le16 {\bfseries def\_\-c\_\-idx}}
+\label{structbnx2x_ad8a1a1b3ec9d00b2ed75db5a2c805dc9}
+
+\item 
+\hypertarget{structbnx2x_ac41fd2eb970fbc3c7aa36d34726917ab}{
+\_\-\_\-le16 {\bfseries def\_\-u\_\-idx}}
+\label{structbnx2x_ac41fd2eb970fbc3c7aa36d34726917ab}
+
+\item 
+\hypertarget{structbnx2x_a709eff95454ffff82f20464a386f0620}{
+\_\-\_\-le16 {\bfseries def\_\-x\_\-idx}}
+\label{structbnx2x_a709eff95454ffff82f20464a386f0620}
+
+\item 
+\hypertarget{structbnx2x_a078c8ac0957a55156dc14dc5bf5080e0}{
+\_\-\_\-le16 {\bfseries def\_\-t\_\-idx}}
+\label{structbnx2x_a078c8ac0957a55156dc14dc5bf5080e0}
+
+\item 
+\hypertarget{structbnx2x_a90ad0bda40c997c325e099d392deadd6}{
+\_\-\_\-le16 {\bfseries def\_\-att\_\-idx}}
+\label{structbnx2x_a90ad0bda40c997c325e099d392deadd6}
+
+\item 
+\hypertarget{structbnx2x_ae4799583ab296dbe00f28e0f0092a109}{
+u32 {\bfseries attn\_\-state}}
+\label{structbnx2x_ae4799583ab296dbe00f28e0f0092a109}
+
+\item 
+\hypertarget{structbnx2x_a8400732d47f31771040b3007a1bfedb8}{
+struct \hyperlink{structattn__route}{attn\_\-route} {\bfseries attn\_\-group} \mbox{[}MAX\_\-DYNAMIC\_\-ATTN\_\-GRPS\mbox{]}}
+\label{structbnx2x_a8400732d47f31771040b3007a1bfedb8}
+
+\item 
+\hypertarget{structbnx2x_a15d5dcd5afe1ae78e2ebfc215b702265}{
+struct \hyperlink{structeth__spe}{eth\_\-spe} $\ast$ {\bfseries spq}}
+\label{structbnx2x_a15d5dcd5afe1ae78e2ebfc215b702265}
+
+\item 
+\hypertarget{structbnx2x_a0100460d9aa5cacd52eb1d441bdc6798}{
+dma\_\-addr\_\-t {\bfseries spq\_\-mapping}}
+\label{structbnx2x_a0100460d9aa5cacd52eb1d441bdc6798}
+
+\item 
+\hypertarget{structbnx2x_a88b387ec8605fdce0e2e4a6eb5304602}{
+u16 {\bfseries spq\_\-prod\_\-idx}}
+\label{structbnx2x_a88b387ec8605fdce0e2e4a6eb5304602}
+
+\item 
+\hypertarget{structbnx2x_a79153c05d9eb1c310868c5a7d788ed1c}{
+struct \hyperlink{structeth__spe}{eth\_\-spe} $\ast$ {\bfseries spq\_\-prod\_\-bd}}
+\label{structbnx2x_a79153c05d9eb1c310868c5a7d788ed1c}
+
+\item 
+\hypertarget{structbnx2x_a02fc9db950bb82fe6836f69f62b316c1}{
+struct \hyperlink{structeth__spe}{eth\_\-spe} $\ast$ {\bfseries spq\_\-last\_\-bd}}
+\label{structbnx2x_a02fc9db950bb82fe6836f69f62b316c1}
+
+\item 
+\hypertarget{structbnx2x_aca74191382aa7df10ba8745c5aa96169}{
+\_\-\_\-le16 $\ast$ {\bfseries dsb\_\-sp\_\-prod}}
+\label{structbnx2x_aca74191382aa7df10ba8745c5aa96169}
+
+\item 
+\hypertarget{structbnx2x_a9d52cfbfec4abd6eacc3bbd14fb825dd}{
+u16 {\bfseries spq\_\-left}}
+\label{structbnx2x_a9d52cfbfec4abd6eacc3bbd14fb825dd}
+
+\item 
+\hypertarget{structbnx2x_a17f7515a220dd5b4f11a1f37231c3fd8}{
+spinlock\_\-t {\bfseries spq\_\-lock}}
+\label{structbnx2x_a17f7515a220dd5b4f11a1f37231c3fd8}
+
+\item 
+\hypertarget{structbnx2x_a12916881e2cfa26d858d9e0a80843def}{
+int {\bfseries stats\_\-pending}}
+\label{structbnx2x_a12916881e2cfa26d858d9e0a80843def}
+
+\item 
+\hypertarget{structbnx2x_a2b4f79bf70a96e6a7e95605f2d6a4436}{
+int {\bfseries set\_\-mac\_\-pending}}
+\label{structbnx2x_a2b4f79bf70a96e6a7e95605f2d6a4436}
+
+\item 
+\hypertarget{structbnx2x_a5cbd90f286e43c2e4a60b0563f7e9d47}{
+int {\bfseries panic}}
+\label{structbnx2x_a5cbd90f286e43c2e4a60b0563f7e9d47}
+
+\item 
+\hypertarget{structbnx2x_a16f915219735df398208db2e8018ec46}{
+int {\bfseries msglevel}}
+\label{structbnx2x_a16f915219735df398208db2e8018ec46}
+
+\item 
+\hypertarget{structbnx2x_af74a16d7ff97c5363f7ac118132631af}{
+u32 {\bfseries flags}}
+\label{structbnx2x_af74a16d7ff97c5363f7ac118132631af}
+
+\item 
+\hypertarget{structbnx2x_a7b4e831324cb08184355a4c535ec19f7}{
+int {\bfseries func}}
+\label{structbnx2x_a7b4e831324cb08184355a4c535ec19f7}
+
+\item 
+\hypertarget{structbnx2x_a0ccf7ebee513812dcb3808d2b508a459}{
+int {\bfseries pm\_\-cap}}
+\label{structbnx2x_a0ccf7ebee513812dcb3808d2b508a459}
+
+\item 
+\hypertarget{structbnx2x_a0e91cb43c3240567c85f8d394c21c128}{
+int {\bfseries pcie\_\-cap}}
+\label{structbnx2x_a0e91cb43c3240567c85f8d394c21c128}
+
+\item 
+\hypertarget{structbnx2x_a8158567b408c5faf824560f3c407a790}{
+int {\bfseries mrrs}}
+\label{structbnx2x_a8158567b408c5faf824560f3c407a790}
+
+\item 
+\hypertarget{structbnx2x_a18228e229a74e618cb51dea2c93b80db}{
+struct work\_\-struct {\bfseries sp\_\-task}}
+\label{structbnx2x_a18228e229a74e618cb51dea2c93b80db}
+
+\item 
+\hypertarget{structbnx2x_ae113fd29b6f5a956ec4d6c70d003fa15}{
+struct work\_\-struct {\bfseries reset\_\-task}}
+\label{structbnx2x_ae113fd29b6f5a956ec4d6c70d003fa15}
+
+\item 
+\hypertarget{structbnx2x_ababbd19e061dd686a8020ea48bdec8ec}{
+u16 {\bfseries sp\_\-running}}
+\label{structbnx2x_ababbd19e061dd686a8020ea48bdec8ec}
+
+\item 
+\hypertarget{structbnx2x_a5774b4a12ac4568f090843b98dd6c91f}{
+struct timer\_\-list {\bfseries timer}}
+\label{structbnx2x_a5774b4a12ac4568f090843b98dd6c91f}
+
+\item 
+\hypertarget{structbnx2x_aadebe404d4fb863db5e9f6fa7f8deffa}{
+int {\bfseries current\_\-interval}}
+\label{structbnx2x_aadebe404d4fb863db5e9f6fa7f8deffa}
+
+\item 
+\hypertarget{structbnx2x_aa7596e77b504f71f53edfb19395d9916}{
+u16 {\bfseries fw\_\-seq}}
+\label{structbnx2x_aa7596e77b504f71f53edfb19395d9916}
+
+\item 
+\hypertarget{structbnx2x_aca53eea3d5f3e215f75a3d31f2bd3727}{
+u16 {\bfseries fw\_\-drv\_\-pulse\_\-wr\_\-seq}}
+\label{structbnx2x_aca53eea3d5f3e215f75a3d31f2bd3727}
+
+\item 
+\hypertarget{structbnx2x_a3f316cce7d44e7572c70d517456e004a}{
+u32 {\bfseries func\_\-stx}}
+\label{structbnx2x_a3f316cce7d44e7572c70d517456e004a}
+
+\item 
+\hypertarget{structbnx2x_a615576d93bd89af75890412607d24ec5}{
+struct \hyperlink{structlink__params}{link\_\-params} {\bfseries link\_\-params}}
+\label{structbnx2x_a615576d93bd89af75890412607d24ec5}
+
+\item 
+\hypertarget{structbnx2x_a18adcf596359a72eeb6b53d378f6417b}{
+struct \hyperlink{structlink__vars}{link\_\-vars} {\bfseries link\_\-vars}}
+\label{structbnx2x_a18adcf596359a72eeb6b53d378f6417b}
+
+\item 
+\hypertarget{structbnx2x_a401afb068c9a516995cb0ff17d88da3a}{
+struct \hyperlink{structmdio__if__info}{mdio\_\-if\_\-info} {\bfseries mdio}}
+\label{structbnx2x_a401afb068c9a516995cb0ff17d88da3a}
+
+\item 
+\hypertarget{structbnx2x_af49d63b070048b2abbebcc70965acab2}{
+struct \hyperlink{structbnx2x__common}{bnx2x\_\-common} {\bfseries common}}
+\label{structbnx2x_af49d63b070048b2abbebcc70965acab2}
+
+\item 
+\hypertarget{structbnx2x_acf3974f2923dec5bd0da098d07f32498}{
+struct \hyperlink{structbnx2x__port}{bnx2x\_\-port} {\bfseries port}}
+\label{structbnx2x_acf3974f2923dec5bd0da098d07f32498}
+
+\item 
+\hypertarget{structbnx2x_ad374951e33a0d5b90d1276b5d46e1d13}{
+struct \hyperlink{structcmng__struct__per__port}{cmng\_\-struct\_\-per\_\-port} {\bfseries cmng}}
+\label{structbnx2x_ad374951e33a0d5b90d1276b5d46e1d13}
+
+\item 
+\hypertarget{structbnx2x_a0461ede8cdd2969635ea35e713c16e32}{
+u32 {\bfseries vn\_\-weight\_\-sum}}
+\label{structbnx2x_a0461ede8cdd2969635ea35e713c16e32}
+
+\item 
+\hypertarget{structbnx2x_a859cfa035d4cb0a439a11008b86775a5}{
+u32 {\bfseries mf\_\-config}}
+\label{structbnx2x_a859cfa035d4cb0a439a11008b86775a5}
+
+\item 
+\hypertarget{structbnx2x_a8f31c0b685180b09a0f910ddebcce012}{
+u16 {\bfseries e1hov}}
+\label{structbnx2x_a8f31c0b685180b09a0f910ddebcce012}
+
+\item 
+\hypertarget{structbnx2x_a08a5c2881f4a1c99f911b1e6d8415e80}{
+u8 {\bfseries e1hmf}}
+\label{structbnx2x_a08a5c2881f4a1c99f911b1e6d8415e80}
+
+\item 
+\hypertarget{structbnx2x_ad51784e19d475a3ddc8f4a825dbd2ad8}{
+u8 {\bfseries wol}}
+\label{structbnx2x_ad51784e19d475a3ddc8f4a825dbd2ad8}
+
+\item 
+\hypertarget{structbnx2x_a083ada9c534227185108a6a01139e62d}{
+int {\bfseries rx\_\-ring\_\-size}}
+\label{structbnx2x_a083ada9c534227185108a6a01139e62d}
+
+\item 
+\hypertarget{structbnx2x_aaf40095374812003cbd775a7777444cd}{
+u16 {\bfseries tx\_\-quick\_\-cons\_\-trip\_\-int}}
+\label{structbnx2x_aaf40095374812003cbd775a7777444cd}
+
+\item 
+\hypertarget{structbnx2x_aec541a43c3a0ceb04f4ad347b9210ea6}{
+u16 {\bfseries tx\_\-quick\_\-cons\_\-trip}}
+\label{structbnx2x_aec541a43c3a0ceb04f4ad347b9210ea6}
+
+\item 
+\hypertarget{structbnx2x_a9efc0d54b5e8c4c7998644928c1dea3d}{
+u16 {\bfseries tx\_\-ticks\_\-int}}
+\label{structbnx2x_a9efc0d54b5e8c4c7998644928c1dea3d}
+
+\item 
+\hypertarget{structbnx2x_a77823772b94bc7efb752d7c1d6956a47}{
+u16 {\bfseries tx\_\-ticks}}
+\label{structbnx2x_a77823772b94bc7efb752d7c1d6956a47}
+
+\item 
+\hypertarget{structbnx2x_a18bed9de433fb36a4eb2fc78bd57a06d}{
+u16 {\bfseries rx\_\-quick\_\-cons\_\-trip\_\-int}}
+\label{structbnx2x_a18bed9de433fb36a4eb2fc78bd57a06d}
+
+\item 
+\hypertarget{structbnx2x_a87026d2e1ba8574168ef6985f1bf2c6a}{
+u16 {\bfseries rx\_\-quick\_\-cons\_\-trip}}
+\label{structbnx2x_a87026d2e1ba8574168ef6985f1bf2c6a}
+
+\item 
+\hypertarget{structbnx2x_aa177b129769f127fdcb9bf452af2f589}{
+u16 {\bfseries rx\_\-ticks\_\-int}}
+\label{structbnx2x_aa177b129769f127fdcb9bf452af2f589}
+
+\item 
+\hypertarget{structbnx2x_a7afe699e73b56b47828aace8da7f1d1b}{
+u16 {\bfseries rx\_\-ticks}}
+\label{structbnx2x_a7afe699e73b56b47828aace8da7f1d1b}
+
+\item 
+\hypertarget{structbnx2x_ade19896ddba575e82ec30e2fcec753d2}{
+u32 {\bfseries lin\_\-cnt}}
+\label{structbnx2x_ade19896ddba575e82ec30e2fcec753d2}
+
+\item 
+\hypertarget{structbnx2x_aec92fd3a7afe5d88bf95a9db50346dea}{
+int {\bfseries state}}
+\label{structbnx2x_aec92fd3a7afe5d88bf95a9db50346dea}
+
+\item 
+\hypertarget{structbnx2x_aee93991a7ea2aad5b69d9b91c5096bd6}{
+int {\bfseries multi\_\-mode}}
+\label{structbnx2x_aee93991a7ea2aad5b69d9b91c5096bd6}
+
+\item 
+\hypertarget{structbnx2x_a26c157e67615e990c7e4b9f0ce0c68e4}{
+int {\bfseries num\_\-queues}}
+\label{structbnx2x_a26c157e67615e990c7e4b9f0ce0c68e4}
+
+\item 
+\hypertarget{structbnx2x_a6f540c469c06990030cb88640251ca71}{
+u32 {\bfseries rx\_\-mode}}
+\label{structbnx2x_a6f540c469c06990030cb88640251ca71}
+
+\item 
+\hypertarget{structbnx2x_aadc212c35e79555fd92a22c90679a8ab}{
+u32 {\bfseries rx\_\-mode\_\-cl\_\-mask}}
+\label{structbnx2x_aadc212c35e79555fd92a22c90679a8ab}
+
+\item 
+\hypertarget{structbnx2x_a49693b161ecf93c647f0ba16dd17988b}{
+dma\_\-addr\_\-t {\bfseries def\_\-status\_\-blk\_\-mapping}}
+\label{structbnx2x_a49693b161ecf93c647f0ba16dd17988b}
+
+\item 
+\hypertarget{structbnx2x_ac244d20b27fdca4b2e630991cd4032b5}{
+struct \hyperlink{structbnx2x__slowpath}{bnx2x\_\-slowpath} $\ast$ {\bfseries slowpath}}
+\label{structbnx2x_ac244d20b27fdca4b2e630991cd4032b5}
+
+\item 
+\hypertarget{structbnx2x_a7e85bdabdfb844611760a4b69ec073f7}{
+dma\_\-addr\_\-t {\bfseries slowpath\_\-mapping}}
+\label{structbnx2x_a7e85bdabdfb844611760a4b69ec073f7}
+
+\item 
+\hypertarget{structbnx2x_a73c410bab49c0a2b64555775825eb265}{
+int {\bfseries dropless\_\-fc}}
+\label{structbnx2x_a73c410bab49c0a2b64555775825eb265}
+
+\item 
+\hypertarget{structbnx2x_aa45677ed3fc5e6496d4121872e7503f3}{
+int {\bfseries dmae\_\-ready}}
+\label{structbnx2x_aa45677ed3fc5e6496d4121872e7503f3}
+
+\item 
+\hypertarget{structbnx2x_a494c26a4cbec27d51d20147eb7a358c1}{
+struct mutex {\bfseries dmae\_\-mutex}}
+\label{structbnx2x_a494c26a4cbec27d51d20147eb7a358c1}
+
+\item 
+\hypertarget{structbnx2x_afda92f86e0060de2c70626b91c8a8c03}{
+struct mutex {\bfseries fw\_\-mb\_\-mutex}}
+\label{structbnx2x_afda92f86e0060de2c70626b91c8a8c03}
+
+\item 
+\hypertarget{structbnx2x_a2ae8d92fa4c8316e08d5a33c71f8c679}{
+int {\bfseries stats\_\-state}}
+\label{structbnx2x_a2ae8d92fa4c8316e08d5a33c71f8c679}
+
+\item 
+\hypertarget{structbnx2x_afdf36ffae81a85b57c3cee2877f5b660}{
+struct \hyperlink{structdmae__command}{dmae\_\-command} {\bfseries stats\_\-dmae}}
+\label{structbnx2x_afdf36ffae81a85b57c3cee2877f5b660}
+
+\item 
+\hypertarget{structbnx2x_a4115f094e883afee16393294d891e78b}{
+int {\bfseries executer\_\-idx}}
+\label{structbnx2x_a4115f094e883afee16393294d891e78b}
+
+\item 
+\hypertarget{structbnx2x_a189a45cc975b405ec951d716adb01c55}{
+u16 {\bfseries stats\_\-counter}}
+\label{structbnx2x_a189a45cc975b405ec951d716adb01c55}
+
+\item 
+\hypertarget{structbnx2x_acef170e12744c6a80e798d785145a9fd}{
+struct \hyperlink{structnet__device__stats}{net\_\-device\_\-stats} {\bfseries net\_\-stats}}
+\label{structbnx2x_acef170e12744c6a80e798d785145a9fd}
+
+\item 
+\hypertarget{structbnx2x_ad25782eec495550fcf1e9feb623443d2}{
+struct \hyperlink{structbnx2x__eth__stats}{bnx2x\_\-eth\_\-stats} {\bfseries eth\_\-stats}}
+\label{structbnx2x_ad25782eec495550fcf1e9feb623443d2}
+
+\item 
+\hypertarget{structbnx2x_a9460e7bf5cd8c58e07d02465c179811a}{
+struct z\_\-stream\_\-s $\ast$ {\bfseries strm}}
+\label{structbnx2x_a9460e7bf5cd8c58e07d02465c179811a}
+
+\item 
+\hypertarget{structbnx2x_af904d41cee95ca90828726c3d564f3ab}{
+void $\ast$ {\bfseries gunzip\_\-buf}}
+\label{structbnx2x_af904d41cee95ca90828726c3d564f3ab}
+
+\item 
+\hypertarget{structbnx2x_abaee85e7f1af9405d476924f8d659fca}{
+dma\_\-addr\_\-t {\bfseries gunzip\_\-mapping}}
+\label{structbnx2x_abaee85e7f1af9405d476924f8d659fca}
+
+\item 
+\hypertarget{structbnx2x_a9615b71927437a7688117007d93ec7ff}{
+int {\bfseries gunzip\_\-outlen}}
+\label{structbnx2x_a9615b71927437a7688117007d93ec7ff}
+
+\item 
+\hypertarget{structbnx2x_a22ae81728ad4df9f1a5088e760d0da44}{
+u32 {\bfseries pci\_\-state} \mbox{[}16\mbox{]}}
+\label{structbnx2x_a22ae81728ad4df9f1a5088e760d0da44}
+
+\item 
+\hypertarget{structbnx2x_af9a481f62dbe4609f4a2f8f227418084}{
+struct \hyperlink{structraw__op}{raw\_\-op} $\ast$ {\bfseries init\_\-ops}}
+\label{structbnx2x_af9a481f62dbe4609f4a2f8f227418084}
+
+\item 
+\hypertarget{structbnx2x_aed0eaa54a0bd4f8690391bd57794ed34}{
+u16 $\ast$ {\bfseries init\_\-ops\_\-offsets}}
+\label{structbnx2x_aed0eaa54a0bd4f8690391bd57794ed34}
+
+\item 
+\hypertarget{structbnx2x_a4f057bcd79593799e0b37404d709d0d9}{
+u32 $\ast$ {\bfseries init\_\-data}}
+\label{structbnx2x_a4f057bcd79593799e0b37404d709d0d9}
+
+\item 
+\hypertarget{structbnx2x_a5ead9ca9cff3027ff51a61385a4a865c}{
+const u8 $\ast$ {\bfseries tsem\_\-int\_\-table\_\-data}}
+\label{structbnx2x_a5ead9ca9cff3027ff51a61385a4a865c}
+
+\item 
+\hypertarget{structbnx2x_adb5c725119c7caf03dfba7ba1998cf45}{
+const u8 $\ast$ {\bfseries tsem\_\-pram\_\-data}}
+\label{structbnx2x_adb5c725119c7caf03dfba7ba1998cf45}
+
+\item 
+\hypertarget{structbnx2x_a0b29f708ab624895aa565786cd99fc33}{
+const u8 $\ast$ {\bfseries usem\_\-int\_\-table\_\-data}}
+\label{structbnx2x_a0b29f708ab624895aa565786cd99fc33}
+
+\item 
+\hypertarget{structbnx2x_aa78ebabd19c2d2264ca7f306745398fe}{
+const u8 $\ast$ {\bfseries usem\_\-pram\_\-data}}
+\label{structbnx2x_aa78ebabd19c2d2264ca7f306745398fe}
+
+\item 
+\hypertarget{structbnx2x_a8c762503f66d0359f478e9410d321015}{
+const u8 $\ast$ {\bfseries xsem\_\-int\_\-table\_\-data}}
+\label{structbnx2x_a8c762503f66d0359f478e9410d321015}
+
+\item 
+\hypertarget{structbnx2x_ae1e581755b6bb3ca5a12f84192ef3bb7}{
+const u8 $\ast$ {\bfseries xsem\_\-pram\_\-data}}
+\label{structbnx2x_ae1e581755b6bb3ca5a12f84192ef3bb7}
+
+\item 
+\hypertarget{structbnx2x_aafc89a846e7a750e430f8f9783ee6c07}{
+const u8 $\ast$ {\bfseries csem\_\-int\_\-table\_\-data}}
+\label{structbnx2x_aafc89a846e7a750e430f8f9783ee6c07}
+
+\item 
+\hypertarget{structbnx2x_abd05d23d515f2de369973240fbe46726}{
+const u8 $\ast$ {\bfseries csem\_\-pram\_\-data}}
+\label{structbnx2x_abd05d23d515f2de369973240fbe46726}
+
+\item 
+\hypertarget{structbnx2x_afb9953bcf37697debfa19c47911d5c2a}{
+char {\bfseries fw\_\-ver} \mbox{[}32\mbox{]}}
+\label{structbnx2x_afb9953bcf37697debfa19c47911d5c2a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 962 of file bnx2x.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/broadcom/netxtreme2-\/5.2.50/bnx2x-\/1.52.12/src/bnx2x.h\end{DoxyCompactItemize}

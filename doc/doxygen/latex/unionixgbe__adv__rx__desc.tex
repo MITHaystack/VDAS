@@ -1,0 +1,102 @@
+\hypertarget{unionixgbe__adv__rx__desc}{
+\section{ixgbe\_\-adv\_\-rx\_\-desc Union Reference}
+\label{unionixgbe__adv__rx__desc}\index{ixgbe\_\-adv\_\-rx\_\-desc@{ixgbe\_\-adv\_\-rx\_\-desc}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{unionixgbe__adv__rx__desc_a6fbefcda1464aa8a1a069ec115cbd36f}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\_\_le64 {\bfseries pkt\_addr}\\
+\>\_\_le64 {\bfseries hdr\_addr}\\
+\} {\bfseries read}}
+\label{unionixgbe__adv__rx__desc_a6fbefcda1464aa8a1a069ec115cbd36f}
+\\
+
+\end{tabbing}\item 
+\hypertarget{unionixgbe__adv__rx__desc_a8f7ac3f4785f8c7782d45c3736544453}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>struct \{\\
+\>\>union \{\\
+\>\>\>\_\_le32 {\bfseries data}\\
+\>\>\>struct \{\\
+\>\>\>\>\_\_le16 {\bfseries pkt\_info}\\
+\>\>\>\>\_\_le16 {\bfseries hdr\_info}\\
+\>\>\>\} {\bfseries hs\_rss}\\
+\>\>\} {\bfseries lo\_dword}\\
+\>\>union \{\\
+\>\>\>\_\_le32 {\bfseries rss}\\
+\>\>\>struct \{\\
+\>\>\>\>\_\_le16 {\bfseries ip\_id}\\
+\>\>\>\>\_\_le16 {\bfseries csum}\\
+\>\>\>\} {\bfseries csum\_ip}\\
+\>\>\} {\bfseries hi\_dword}\\
+\>\} {\bfseries lower}\\
+\>struct \{\\
+\>\>\_\_le32 {\bfseries status\_error}\\
+\>\>\_\_le16 {\bfseries length}\\
+\>\>\_\_le16 {\bfseries vlan}\\
+\>\} {\bfseries upper}\\
+\} {\bfseries wb}}
+\label{unionixgbe__adv__rx__desc_a8f7ac3f4785f8c7782d45c3736544453}
+\\
+
+\end{tabbing}\item 
+\hypertarget{unionixgbe__adv__rx__desc_a4f426bd123719518df7ed4bdabca09f0}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\_\_le64 {\bfseries pkt\_addr}\\
+\>\_\_le64 {\bfseries hdr\_addr}\\
+\} {\bfseries read}}
+\label{unionixgbe__adv__rx__desc_a4f426bd123719518df7ed4bdabca09f0}
+\\
+
+\end{tabbing}\item 
+\hypertarget{unionixgbe__adv__rx__desc_a1c5ff1896359c841b186417434c131fb}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>struct \{\\
+\>\>union \{\\
+\>\>\>\_\_le32 {\bfseries data}\\
+\>\>\>struct \{\\
+\>\>\>\>\_\_le16 {\bfseries pkt\_info}\\
+\>\>\>\>\_\_le16 {\bfseries hdr\_info}\\
+\>\>\>\} {\bfseries hs\_rss}\\
+\>\>\} {\bfseries lo\_dword}\\
+\>\>union \{\\
+\>\>\>\_\_le32 {\bfseries rss}\\
+\>\>\>struct \{\\
+\>\>\>\>\_\_le16 {\bfseries ip\_id}\\
+\>\>\>\>\_\_le16 {\bfseries csum}\\
+\>\>\>\} {\bfseries csum\_ip}\\
+\>\>\} {\bfseries hi\_dword}\\
+\>\} {\bfseries lower}\\
+\>struct \{\\
+\>\>\_\_le32 {\bfseries status\_error}\\
+\>\>\_\_le16 {\bfseries length}\\
+\>\>\_\_le16 {\bfseries vlan}\\
+\>\} {\bfseries upper}\\
+\} {\bfseries wb}}
+\label{unionixgbe__adv__rx__desc_a1c5ff1896359c841b186417434c131fb}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 2188 of file ixgbe\_\-type.h.
+
+
+
+The documentation for this union was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/ixgbe/ixgbe-\/3.1.15-\/FlowDirector-\/NoTNAPI/src/ixgbe\_\-type.h\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/ixgbe/ixgbe-\/3.3.9-\/DNA/src/ixgbe\_\-type.h\end{DoxyCompactItemize}

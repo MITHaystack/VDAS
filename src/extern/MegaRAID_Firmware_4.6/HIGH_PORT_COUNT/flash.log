@@ -1,0 +1,22 @@
+psley@tigress:~/mark6/src/extern/MegaRAID_Firmware_4.6/HIGH_PORT_COUNT$ ./upgrade.sh 
+                                     
+Adapter 0: LSI MegaRAID SAS 9280-24i4e
+Vendor ID: 0x1000, Device ID: 0x0079
+
+Package version on the controller: 12.12.0-0037 
+Package version of the image file: 12.12.0-0047 
+Download Completed.     
+Flashing image to adapter...
+Adapter 0: Flash Completed.
+Adapter 1: LSI MegaRAID SAS 9280-24i4e
+Vendor ID: 0x1000, Device ID: 0x0079
+
+Package version on the controller: 12.12.0-0037 
+Package version of the image file: 12.12.0-0047 
+Download Completed.     
+Flashing image to adapter...
+Adapter 1: Flash Completed.
+
+Exit Code: 0x00
+dlapsley@tigress:~/mark6/src/extern/MegaRAID_Firmware_4.6/HIGH_PORT_COUNT$ 
+

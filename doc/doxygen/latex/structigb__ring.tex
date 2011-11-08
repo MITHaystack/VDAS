@@ -1,0 +1,130 @@
+\hypertarget{structigb__ring}{
+\section{igb\_\-ring Struct Reference}
+\label{structigb__ring}\index{igb\_\-ring@{igb\_\-ring}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structigb__ring_acd8e87278f60d87fa7de1c715c8d0c12}{
+struct \hyperlink{structigb__q__vector}{igb\_\-q\_\-vector} $\ast$ {\bfseries q\_\-vector}}
+\label{structigb__ring_acd8e87278f60d87fa7de1c715c8d0c12}
+
+\item 
+\hypertarget{structigb__ring_a981236e121a479d2dcea013cea9bc97f}{
+struct net\_\-device $\ast$ {\bfseries netdev}}
+\label{structigb__ring_a981236e121a479d2dcea013cea9bc97f}
+
+\item 
+\hypertarget{structigb__ring_a8b15ac965590d87816a3c926cf437ba9}{
+struct \hyperlink{structdevice}{device} $\ast$ {\bfseries dev}}
+\label{structigb__ring_a8b15ac965590d87816a3c926cf437ba9}
+
+\item 
+\hypertarget{structigb__ring_aac5197300c232c380fad1a0a351aec07}{
+struct \hyperlink{structigb__buffer}{igb\_\-buffer} $\ast$ {\bfseries buffer\_\-info}}
+\label{structigb__ring_aac5197300c232c380fad1a0a351aec07}
+
+\item 
+\hypertarget{structigb__ring_a2e0b5223899fc7348cf9b3c004589127}{
+void $\ast$ {\bfseries desc}}
+\label{structigb__ring_a2e0b5223899fc7348cf9b3c004589127}
+
+\item 
+\hypertarget{structigb__ring_ac9e4e9fb1ce1bf0a2064ad542d9f23f6}{
+unsigned long {\bfseries flags}}
+\label{structigb__ring_ac9e4e9fb1ce1bf0a2064ad542d9f23f6}
+
+\item 
+\hypertarget{structigb__ring_aafb77c6b5f8fd4b3e3f6a4d904d80a15}{
+void \_\-\_\-iomem $\ast$ {\bfseries tail}}
+\label{structigb__ring_aafb77c6b5f8fd4b3e3f6a4d904d80a15}
+
+\item 
+\hypertarget{structigb__ring_ad9172d05bd21f453d0c61af24ce37643}{
+u16 {\bfseries count}}
+\label{structigb__ring_ad9172d05bd21f453d0c61af24ce37643}
+
+\item 
+\hypertarget{structigb__ring_aedde6bbb05bbc95bf8790987ab4a73e1}{
+u8 {\bfseries queue\_\-index}}
+\label{structigb__ring_aedde6bbb05bbc95bf8790987ab4a73e1}
+
+\item 
+\hypertarget{structigb__ring_a2827424ab8ecfb9d17052f332a237b91}{
+u8 {\bfseries reg\_\-idx}}
+\label{structigb__ring_a2827424ab8ecfb9d17052f332a237b91}
+
+\item 
+\hypertarget{structigb__ring_a90729fbc930317723de0676cb06da074}{
+u32 {\bfseries size}}
+\label{structigb__ring_a90729fbc930317723de0676cb06da074}
+
+\item 
+\hypertarget{structigb__ring_a02d5151258f39c03ea6c1e26010b1077}{
+unsigned int total\_\-bytes {\bfseries \_\-\_\-\_\-\_\-cacheline\_\-aligned\_\-in\_\-smp}}
+\label{structigb__ring_a02d5151258f39c03ea6c1e26010b1077}
+
+\item 
+\hypertarget{structigb__ring_a0aa32d0b5feae8a2ce7ba9bfc9b96d58}{
+unsigned int {\bfseries total\_\-packets}}
+\label{structigb__ring_a0aa32d0b5feae8a2ce7ba9bfc9b96d58}
+
+\item 
+\hypertarget{structigb__ring_a6a8e71c173e0390a92208d326fef8a9c}{
+u16 {\bfseries itr}}
+\label{structigb__ring_a6a8e71c173e0390a92208d326fef8a9c}
+
+\item 
+\hypertarget{structigb__ring_a2fc4647cde84d9521cc7daff598075f5}{
+u16 {\bfseries next\_\-to\_\-clean}}
+\label{structigb__ring_a2fc4647cde84d9521cc7daff598075f5}
+
+\item 
+\hypertarget{structigb__ring_aee80dd0e85fad817aa302f87d6d1d9e1}{
+u16 {\bfseries next\_\-to\_\-use}}
+\label{structigb__ring_aee80dd0e85fad817aa302f87d6d1d9e1}
+
+\item 
+\hypertarget{structigb__ring_aa0a1f3d6144b59e356fb6bd6a84eb1f0}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\hypertarget{unionigb__ring_1_1@157_aa0557b6cfdf2e4683ac5301373f54012}{
+\>struct \{\\
+\>\>struct \hyperlink{structigb__tx__queue__stats}{igb\_tx\_queue\_stats} {\bfseries tx\_stats}\\
+\>\} }
+\label{unionigb__ring_1_1@157_aa0557b6cfdf2e4683ac5301373f54012}
+\\
+\hypertarget{unionigb__ring_1_1@157_a9c4b9f4b24a8fcf05a646158b0b15663}{
+\>struct \{\\
+\>\>struct \hyperlink{structigb__rx__queue__stats}{igb\_rx\_queue\_stats} {\bfseries rx\_stats}\\
+\>\} }
+\label{unionigb__ring_1_1@157_a9c4b9f4b24a8fcf05a646158b0b15663}
+\\
+\}; }
+\label{structigb__ring_aa0a1f3d6144b59e356fb6bd6a84eb1f0}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structigb__ring_aecd6c86d7fb4d6e74c95b5c2556bc302}{
+dma\_\-addr\_\-t {\bfseries dma}}
+\label{structigb__ring_aecd6c86d7fb4d6e74c95b5c2556bc302}
+
+\item 
+\hypertarget{structigb__ring_a53f1bb313ce5650b9ed2e3a92424c6a4}{
+int {\bfseries numa\_\-node}}
+\label{structigb__ring_a53f1bb313ce5650b9ed2e3a92424c6a4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 305 of file igb.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/igb/igb-\/3.0.22/src/igb.h\end{DoxyCompactItemize}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SC02=192.168.1.2 
+DEST_ROOT=/data-sc02/wfdata
+
+
+for d in disk0 disk1 disk2 disk3
+do
+	for f in /mnt/${d}/"r1504_Wf_297-1700"*.vdif
+	do
+		echo scp ${f} ${SC02}:${DEST_ROOT}
+		scp ${f} ${SC02}:${DEST_ROOT}
+	done
+done

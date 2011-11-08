@@ -1,0 +1,81 @@
+INFO 0x7f672bf1d760 net2raid - Starting translation on : /mnt/disk0/DEMO_Wf_297-1340.m6
+INFO 0x7fa3b1e0b760 net2raid - Starting translation on : /mnt/disk1/DEMO_Wf_297-1340.m6
+INFO 0x7fe3b1ef1760 net2raid - Starting translation on : /mnt/disk2/DEMO_Wf_297-1340.m6
+INFO 0x7f5bfba20760 net2raid - Starting translation on : /mnt/disk3/DEMO_Wf_297-1340.m6
+INFO 0x7f72c38df760 net2raid - Launching main.
+
+INFO 0x7f72c38df760 net2raid - Starting child fd: 5
+INFO 0x7f72c38df760 net2raid - Starting child fd: 6
+INFO 0x7f72c38df760 net2raid - Starting child fd: 7
+INFO 0x7f72c38df760 net2raid - Starting child fd: 8
+INFO 0x7f72c38df760 net2raid - Opening FileWriter file: /mnt/disk0/DEMO_Wf_297-1556.m6
+INFO 0x7f72c38df760 net2raid - Preallocating  12500 MBytes
+INFO 0x7f72c38df760 net2raid - Opening FileWriter file: /mnt/disk1/DEMO_Wf_297-1556.m6
+INFO 0x7f72c38df760 net2raid - Opening FileWriter file: /mnt/disk3/DEMO_Wf_297-1556.m6
+INFO 0x7f72c38df760 net2raid - Opening FileWriter file: /mnt/disk2/DEMO_Wf_297-1556.m6
+INFO 0x7f72c38df760 net2raid - Preallocating  12500 MBytes
+INFO 0x7f72c38df760 net2raid - Preallocating  12500 MBytes
+INFO 0x7f72c38df760 net2raid - Preallocating  12500 MBytes
+INFO 0x7f72c38df760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f72c38df760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7f72c38df760 net2raid - Started capture process.
+INFO 0x7f722e635700 net2raid - NetReader Running...
+INFO 0x7f722f637700 net2raid - FileWriter Running...
+INFO 0x7f72c38df760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f72c38df760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7f72c38df760 net2raid - Started capture process.
+INFO 0x7f722e635700 net2raid - NetReader Running...
+INFO 0x7f722f637700 net2raid - FileWriter Running...
+INFO 0x7f72c38df760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f72c38df760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7f72c38df760 net2raid - Started capture process.
+INFO 0x7f72c38df760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f72c38df760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7f72c38df760 net2raid - Started capture process.
+INFO 0x7f722e635700 net2raid - NetReader Running...
+INFO 0x7f722f637700 net2raid - FileWriter Running...
+INFO 0x7f722e635700 net2raid - NetReader Running...
+INFO 0x7f722f637700 net2raid - FileWriter Running...
+INFO 0x7f722e635700 net2raid - New stream identified: stream_id=160081
+INFO 0x7f722e635700 net2raid - New stream identified: stream_id=93260
+INFO 0x7f722e635700 net2raid - New stream identified: stream_id=224846
+INFO 0x7f722e635700 net2raid - New stream identified: stream_id=28495
+INFO 0x7f722e635700 net2raid - New stream identified: stream_id=159053
+INFO 0x7f722e635700 net2raid - New stream identified: stream_id=94288
+INFO 0x7f722e635700 net2raid - New stream identified: stream_id=27467
+INFO 0x7f722e635700 net2raid - New stream identified: stream_id=225874
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f722e635700 net2raid - fdl: intf=eth2,id=160081:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f722e635700 net2raid - fdl: intf=eth2,id=28495:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f722e635700 net2raid - fdl: intf=eth4,id=159053:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f722e635700 net2raid - fdl: intf=eth4,id=27467:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f722e635700 net2raid - fdl: intf=eth3,id=94288:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f722e635700 net2raid - fdl: intf=eth3,id=225874:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f722e635700 net2raid - fdl: intf=eth5,id=93260:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f722e635700 net2raid - fdl: intf=eth5,id=224846:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f722e635700 net2raid - fdl: intf=eth5,id=93260:1,eps=9993413,daf=1651,ldf=1650,sqb=1,frr=95381,frl=1
+INFO 0x7f722e635700 net2raid - fdl: intf=eth5,id=93260:1,eps=9993413,daf=1716,ldf=1715,sqb=2,frr=95444,frl=2
+INFO 0x7f722e635700 net2raid - fdl: intf=eth5,id=224846:3,eps=9993413,daf=1715,ldf=1714,sqb=1,frr=95445,frl=1
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Stopped capture process.
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Stopped capture process.
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Received STOP
+INFO 0x7f72c38df760 net2raid - Stopped capture process.
+INFO 0x7f72c38df760 net2raid - Closed CLI stream.
+INFO 0x7f72c38df760 net2raid - Stopped capture process.
+INFO 0x7f72c38df760 net2raid - Closed CLI stream.
+INFO 0x7f72c38df760 net2raid - Closed CLI stream.
+INFO 0x7f72c38df760 net2raid - Closed CLI stream.

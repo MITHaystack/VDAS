@@ -1,0 +1,143 @@
+#!/usr/bin/python
+
+# Copyright 2011 MIT Haystack Observatory
+# 
+# This file is part of Mark6.
+# 
+# Mark6 is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 2 of the License.
+# 
+# Mark6 is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with Mark6.  If not, see <http://www.gnu.org/licenses/>.
+
+import subprocess
+import time
+import datetime
+import calendar
+
+class Station:
+	station_dict = {
+		'E': 'Wf',
+		'GGAO': 'G2'
+	}
+
+class Scan:
+
+	mark6_exec = '/opt/mit/mark6/bin/net2raid-run'
+
+	def __init__(self, experiment_name, source, station, start_time,
+		     duration, doy):
+		self._experiment_name = experiment_name
+		self._source = source
+		self._station = station
+
+		try:
+			self._station_code = Station.station_dict[station]
+		except:
+			self._station_code = station
+
+		self._start_time = int(start_time)
+		self._duration = int(duration)
+		self._end_time = int(start_time) + int(duration)
+
+                d = datetime.datetime.utcfromtimestamp(self._start_time)
+                self._scan_name = '%s_%s_%3d-%02d%02d'%(experiment_name,
+							    self._station_code,
+							    doy, d.hour,
+							    d.minute)
+
+        def __str__(self):
+                return ''.join([
+                        '<scan ',
+                        'experiment="%s" '%self._experiment_name,
+                        'source="%s" '%self._source,
+                        'station_code="%s" '%self._station_code,
+                        'start_time="%s" '%self._start_time,
+                        'duration="%s" '%self._duration,
+                        'scan_name="%s"'%self._scan_name,
+                        '/>'
+                        ])
+
+	def args(self):
+		return [ Scan.mark6_exec, self._source, self._station,
+			str(self._start_time), str(self._duration) ]
+
+	def late(self):
+		if time.time() > self._end_time:
+			return True
+		return False	
+
+
+class ScheduleParser:
+
+	def __init__(self, schedule_file, experiment_file_name, experiment_name):
+		input_file = open(schedule_file, 'r')
+		state = 0
+
+		scans = []
+		station_dict = {}
+		for l in input_file.readlines():
+			l = l.strip()
+			f = l.split()
+
+			if f[0] == '$SKED':
+				state = 1
+				continue
+			if f[0] == '$SOURCES':
+				state = 2
+				continue
+			if f[0] == '$STATIONS':
+				state = 3
+				continue
+			if f[0] == '$CODES':
+				break
+
+			if state == 1:
+				source, t, stations = f[0], f[4], f[9] 
+				num_stations = len(stations)/2
+				offset = 9 + num_stations
+				durations = f[offset+2:]
+				stations = list(stations)
+				stations = [ stations[i] for i in range(0, len(stations)-1, 2) ]
+				for i in range(num_stations):
+					t_l = list(t)
+					yy = t[0:2]
+					ddd = int(t[2:5])
+					hh = int(t[5:7])
+					mm = int(t[7:9])
+					ss = int(t[9:11])
+					time_offset = datetime.timedelta(ddd-1, hh*3600+mm*60+ss)
+					#  - datetime.timedelta(0, 3600*5)
+					start_datetime = datetime.datetime(2000 + int(yy), 1, 1, 0, 0, 0, 0) + time_offset
+					start_time = calendar.timegm(start_datetime.timetuple())
+					scans.append( Scan(experiment_name, source, stations[i], start_time, int(durations[i]), ddd)  )
+			elif state == 2:
+				pass
+			elif state == 3:
+				if f[0] == 'A':
+					code = f[1]
+					name = f[2]
+					station_dict[code] = name
+
+		for s in scans:
+			s._station = station_dict[s._station]
+
+		westford_scans = [ s for s in scans
+				   if s._station == 'WESTFORD' ]
+		experiment_file = open(experiment_file_name, 'w')
+
+		experiment_file.write('<experiment name="r1504" station="westford" start="2011297170000" end="2011298170000">\n')
+		for s in westford_scans:
+			experiment_file.write('\t' + str(s) + '\n')
+		experiment_file.write('</experiment>')
+
+if __name__ == '__main__':
+	sp = ScheduleParser('r1504.skd', 'r1504.xml', 'r1504')
+
+

@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Copyright 2011 MIT Haystack Observatory
+# 
+# This file is part of Mark6.
+# 
+# Mark6 is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 2 of the License.
+# 
+# Mark6 is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with Mark6.  If not, see <http://www.gnu.org/licenses/>.
+
+export LD_LIBRARY_PATH=/opt/mit/mark6/lib
+
+# Globals
+INSTALL_ROOT=/opt/mit/mark6
+EXEC=${INSTALL_ROOT}/bin/disk2vlbi
+MOUNT_POINTS="/mnt/disk0 /mnt/disk1 /mnt/disk2 /mnt/disk3"
+
+function convert() {
+	SCAN=$1
+	SIZE=$2
+	for m in ${MOUNT_POINTS}
+	do
+		echo Converting ${SCAN} on ${m}
+		if [ -e ${m}/${SCAN}.m6 ]; then
+			echo ${EXEC} --input_file ${m}/${SCAN}.m6 --size ${SIZE}
+			${EXEC} --input_file ${m}/${SCAN}.m6 --size ${SIZE}
+			chmod a+rwx ${m}/*.vdif
+		else
+			echo Scan ${m}/${SCAN} does not appear to exist...
+		fi
+	done
+}
+
+function usage() {
+    echo "scan-convert <scan_name> <size>"
+}
+
+
+# Main
+if [ $# == 1 ]; then
+	SCAN_NAME=$1
+	SIZE=0
+elif [ $# == 2 ]; then
+	SCAN_NAME=$1
+	SIZE=$2
+elif [ $# != 2 ]; then
+    usage
+    exit 1
+fi
+
+convert ${SCAN_NAME} ${SIZE}

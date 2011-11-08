@@ -1,0 +1,93 @@
+\input texinfo @c -*-texinfo-*-
+@c %**start of header
+@setfilename mark6.info
+@settitle Mark6 User Manual
+
+@dircategory Mark6 Data Acquisition System
+@direntry
+* Mark6: (mark6). 	The Mark6 Data Acquisition System
+@end direntry
+
+@c %**end of header
+
+@copying
+This is the Mark6 User Manual, version 0.1.
+
+Copyright @copyright{MIT Haystack Observatory} 2011.
+@end copying
+
+@titlepage
+@title Mark6 User Manual
+@c The following two commands start the copyright page
+@author David Lapsley
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+@c Output the table of contents at the beginning
+@contents
+
+@ifnottex
+@node Top
+@top Mark6 User Guide
+
+@insertcopying
+@end ifnottex
+
+@menu
+* Introduction::	Introduction and Overview of Mark6.
+* Usage::	Usage Instructions.
+* Index::	Complete index.
+@end menu
+
+@comment **********************************************************************
+@node Introduction, Usage, Top, Top
+@comment node-name,     next,        previous,         up
+@chapter Introduction
+@cindex introduction, overview
+
+@emph{Mark6} is capable of acquiring data at very high data rates.
+
+@comment **********************************************************************
+@node Usage, Index, Introduction, Top
+@comment node-name,     next,        previous,         up
+@chapter Usage
+@cindex usage
+@cindex command line arguments
+
+@section Command Line Arguments
+
+@verbatim
+usage mark6: 
+   -i <input trace file name>
+   -p <results prefix string>
+   -r <record size in bytes>
+   -m <dag|libpcap_correlator|libpcap_analyzer|aggregate_libpcap|network>
+   -f <pcap filter expression>
+   -d <input device>
+   -v Verbose flag
+   -t Run test
+   --alpha <alpha>
+   --n <maximum flow records>
+   --packet_threshold <packet threshold for flow records>
+   --distance_threshold <distance threshold for flow records>
+   --far_threshold <maximum far records to report>
+   --near_threshold <maximum near records to report>
+   --update_interval <update interval for reporting>
+   --inactive_time <flow expiration interval>
+   -h Help
+@end verbatim
+
+@node Index
+@unnumbered Index
+
+@printindex cp
+
+@bye
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+\hypertarget{structiscsi__cid__queue}{
+\section{iscsi\_\-cid\_\-queue Struct Reference}
+\label{structiscsi__cid__queue}\index{iscsi\_\-cid\_\-queue@{iscsi\_\-cid\_\-queue}}
+}
+
+
+{\ttfamily \#include $<$bnx2i.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structiscsi__cid__queue_a07f6e3c9af890eb54bf652cf952e8811}{
+void $\ast$ {\bfseries cid\_\-que\_\-base}}
+\label{structiscsi__cid__queue_a07f6e3c9af890eb54bf652cf952e8811}
+
+\item 
+\hypertarget{structiscsi__cid__queue_a4e866fea9222a2e857d767e945f4f068}{
+u32 $\ast$ {\bfseries cid\_\-que}}
+\label{structiscsi__cid__queue_a4e866fea9222a2e857d767e945f4f068}
+
+\item 
+\hypertarget{structiscsi__cid__queue_a9d5aaee8a0892d705332c083857edf67}{
+u32 {\bfseries cid\_\-q\_\-prod\_\-idx}}
+\label{structiscsi__cid__queue_a9d5aaee8a0892d705332c083857edf67}
+
+\item 
+\hypertarget{structiscsi__cid__queue_a8c57ac368b6ef29b2e494eeaaac6b739}{
+u32 {\bfseries cid\_\-q\_\-cons\_\-idx}}
+\label{structiscsi__cid__queue_a8c57ac368b6ef29b2e494eeaaac6b739}
+
+\item 
+\hypertarget{structiscsi__cid__queue_a988fff35ac375d146cbe905ce3a67ca6}{
+u32 {\bfseries cid\_\-q\_\-max\_\-idx}}
+\label{structiscsi__cid__queue_a988fff35ac375d146cbe905ce3a67ca6}
+
+\item 
+\hypertarget{structiscsi__cid__queue_ae60917d32fd93ec745b076bd3f8c0745}{
+u32 {\bfseries cid\_\-free\_\-cnt}}
+\label{structiscsi__cid__queue_ae60917d32fd93ec745b076bd3f8c0745}
+
+\item 
+\hypertarget{structiscsi__cid__queue_ac8c762bff5cf24fbe77dbaf2de0af240}{
+struct \hyperlink{structbnx2i__conn}{bnx2i\_\-conn} $\ast$$\ast$ {\bfseries conn\_\-cid\_\-tbl}}
+\label{structiscsi__cid__queue_ac8c762bff5cf24fbe77dbaf2de0af240}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+struct \hyperlink{structiscsi__cid__queue}{iscsi\_\-cid\_\-queue} -\/ Per adapter iscsi cid queue
+
+: queue base memory : queue memory pointer : produce index : consumer index : max index. used to detect wrap around condition : queue size : iscsi cid to conn structure mapping table
+
+Per adapter iSCSI CID Queue 
+
+Definition at line 276 of file bnx2i.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/broadcom/netxtreme2-\/5.2.50/bnx2i\_\-sles11-\/2.0.1e-\/05/driver/bnx2i.h\end{DoxyCompactItemize}

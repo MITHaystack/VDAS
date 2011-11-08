@@ -1,0 +1,33 @@
+{sys, [
+       {lib_dirs, ["../lib/"]},
+       {mod_cond, all},
+       {rel, "mark6", "1",
+        [
+         kernel,
+         stdlib,
+         sasl,
+	 mark6
+        ]},
+       {rel, "start_clean", "",
+        [
+         kernel,
+         stdlib
+        ]},
+       {boot_rel, "mark6"},
+       {profile, embedded},
+       {excl_sys_filters, ["^bin/.*",
+                           "^erts.*/bin/(dialyzer|typer)"]},
+       {app, sasl, [{incl_cond, include}]},
+       {app, mark6, [{incl_cond, include}, {mod_cond, ebin}]}
+      ]}.
+
+{target_dir, "mark6"}.
+
+{overlay, [
+           {mkdir, "log/sasl"},
+           {copy, "files/erl", "{{erts_vsn}}/bin/erl"},
+           {copy, "files/nodetool", "{{erts_vsn}}/bin/nodetool"},
+           {copy, "files/mark6", "bin/mark6"},
+           {copy, "files/app.config", "etc/app.config"},
+           {copy, "files/vm.args", "etc/vm.args"}
+           ]}.

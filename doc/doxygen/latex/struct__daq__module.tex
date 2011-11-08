@@ -1,0 +1,124 @@
+\hypertarget{struct__daq__module}{
+\section{\_\-daq\_\-module Struct Reference}
+\label{struct__daq__module}\index{\_\-daq\_\-module@{\_\-daq\_\-module}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct__daq__module_ae66fb10d74f8ed34ffb7b6703af1f5c0}{
+const uint32\_\-t {\bfseries api\_\-version}}
+\label{struct__daq__module_ae66fb10d74f8ed34ffb7b6703af1f5c0}
+
+\item 
+\hypertarget{struct__daq__module_abab58bd264751c6f0cc0636f4c53b7cd}{
+const uint32\_\-t {\bfseries module\_\-version}}
+\label{struct__daq__module_abab58bd264751c6f0cc0636f4c53b7cd}
+
+\item 
+\hypertarget{struct__daq__module_a013f4cc97a06604f5c8706d8d5769346}{
+const char $\ast$ {\bfseries name}}
+\label{struct__daq__module_a013f4cc97a06604f5c8706d8d5769346}
+
+\item 
+\hypertarget{struct__daq__module_a422dc0a0277452b5d90ff37e37cfb2d4}{
+const uint32\_\-t {\bfseries type}}
+\label{struct__daq__module_a422dc0a0277452b5d90ff37e37cfb2d4}
+
+\item 
+\hypertarget{struct__daq__module_ae63d6d47f5af9a84f409146d4840ea60}{
+int($\ast$ {\bfseries initialize} )(const \hyperlink{struct__daq__config}{DAQ\_\-Config\_\-t} $\ast$config, void $\ast$$\ast$ctxt\_\-ptr, char $\ast$errbuf, size\_\-t len)}
+\label{struct__daq__module_ae63d6d47f5af9a84f409146d4840ea60}
+
+\item 
+\hypertarget{struct__daq__module_a5c0a73a3399621f95d40f401685e8ba8}{
+int($\ast$ {\bfseries set\_\-filter} )(void $\ast$handle, const char $\ast$filter)}
+\label{struct__daq__module_a5c0a73a3399621f95d40f401685e8ba8}
+
+\item 
+\hypertarget{struct__daq__module_a031005236478fbc0c0549015c4659b9c}{
+int($\ast$ {\bfseries start} )(void $\ast$handle)}
+\label{struct__daq__module_a031005236478fbc0c0549015c4659b9c}
+
+\item 
+\hypertarget{struct__daq__module_a83a0026cd37fe3ef41f77c3ad098574e}{
+int($\ast$ {\bfseries acquire} )(void $\ast$handle, int cnt, DAQ\_\-Analysis\_\-Func\_\-t callback, void $\ast$user)}
+\label{struct__daq__module_a83a0026cd37fe3ef41f77c3ad098574e}
+
+\item 
+\hypertarget{struct__daq__module_a87939baf4c49398b271c0a6d60e49d37}{
+int($\ast$ {\bfseries inject} )(void $\ast$handle, const \hyperlink{struct__daq__pkthdr}{DAQ\_\-PktHdr\_\-t} $\ast$hdr, const uint8\_\-t $\ast$packet\_\-data, uint32\_\-t len, int reverse)}
+\label{struct__daq__module_a87939baf4c49398b271c0a6d60e49d37}
+
+\item 
+\hypertarget{struct__daq__module_a8332c43f7a596ad82a9fee36ad66f2b2}{
+int($\ast$ {\bfseries breakloop} )(void $\ast$handle)}
+\label{struct__daq__module_a8332c43f7a596ad82a9fee36ad66f2b2}
+
+\item 
+\hypertarget{struct__daq__module_a6d39c6fdd09507757230feb97cb6ea6a}{
+int($\ast$ {\bfseries stop} )(void $\ast$handle)}
+\label{struct__daq__module_a6d39c6fdd09507757230feb97cb6ea6a}
+
+\item 
+\hypertarget{struct__daq__module_af8062fe057dff9fd66f29bd4f91c25da}{
+void($\ast$ {\bfseries shutdown} )(void $\ast$handle)}
+\label{struct__daq__module_af8062fe057dff9fd66f29bd4f91c25da}
+
+\item 
+\hypertarget{struct__daq__module_ae43518ec696834c5969ddc00aed7ac3d}{
+DAQ\_\-State($\ast$ {\bfseries check\_\-status} )(void $\ast$handle)}
+\label{struct__daq__module_ae43518ec696834c5969ddc00aed7ac3d}
+
+\item 
+\hypertarget{struct__daq__module_a9497d977f4bd3ff89c07bcb3118aba66}{
+int($\ast$ {\bfseries get\_\-stats} )(void $\ast$handle, \hyperlink{struct__daq__stats}{DAQ\_\-Stats\_\-t} $\ast$stats)}
+\label{struct__daq__module_a9497d977f4bd3ff89c07bcb3118aba66}
+
+\item 
+\hypertarget{struct__daq__module_a7d2187513072de31dbc42b2a3508cbc2}{
+void($\ast$ {\bfseries reset\_\-stats} )(void $\ast$handle)}
+\label{struct__daq__module_a7d2187513072de31dbc42b2a3508cbc2}
+
+\item 
+\hypertarget{struct__daq__module_a0ed3dc239fab790d9e65bac527237c75}{
+int($\ast$ {\bfseries get\_\-snaplen} )(void $\ast$handle)}
+\label{struct__daq__module_a0ed3dc239fab790d9e65bac527237c75}
+
+\item 
+\hypertarget{struct__daq__module_ab78d8084f450d654c233dc00c89e3c20}{
+uint32\_\-t($\ast$ {\bfseries get\_\-capabilities} )(void $\ast$handle)}
+\label{struct__daq__module_ab78d8084f450d654c233dc00c89e3c20}
+
+\item 
+\hypertarget{struct__daq__module_abfe4c34342d3fe3a700e6e32c145b90c}{
+int($\ast$ {\bfseries get\_\-datalink\_\-type} )(void $\ast$handle)}
+\label{struct__daq__module_abfe4c34342d3fe3a700e6e32c145b90c}
+
+\item 
+\hypertarget{struct__daq__module_a046dd101206bfa69393885375680fc07}{
+const char $\ast$($\ast$ {\bfseries get\_\-errbuf} )(void $\ast$handle)}
+\label{struct__daq__module_a046dd101206bfa69393885375680fc07}
+
+\item 
+\hypertarget{struct__daq__module_a2bc4c08bf2d138b64bcbbc350fb7ba6b}{
+void($\ast$ {\bfseries set\_\-errbuf} )(void $\ast$handle, const char $\ast$string)}
+\label{struct__daq__module_a2bc4c08bf2d138b64bcbbc350fb7ba6b}
+
+\item 
+\hypertarget{struct__daq__module_adc8a8f0ecf1c07de2885cca21834b092}{
+int($\ast$ {\bfseries get\_\-device\_\-index} )(void $\ast$handle, const char $\ast$\hyperlink{structdevice}{device})}
+\label{struct__daq__module_adc8a8f0ecf1c07de2885cca21834b092}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file daq\_\-api.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/userland/snort/daq-\/0.5/api/daq\_\-api.h\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+#!/bin/bash
+
+# Copyright 2011 MIT Haystack Observatory
+#
+# This file is part of Mark6.
+# 
+# Mark6 is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 2 of the License.
+# 
+# Mark6 is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with Mark6.  If not, see <http://www.gnu.org/licenses/>.
+
+# Author:	del@haystack.mit.edu
+# Description:	This is a generic collection of disk-related functions that
+#		are used for partitioning, creating file systems, optimizing
+#		file system settings, creating RAID configurations, and
+#		benchmarking disk performance.  The script requires two
+#		input/configuration files:
+#			disktools.rc	A set of colon delimited entries of
+#					the form <device>:<mount point>.
+#					For example...
+#
+#					/dev/sdb:/mnt/disk0
+#					/dev/sdc:/mnt/disk1
+#					/dev/sdd:/mnt/disk2
+#			disktools.fio	An input file for the linux "fio" disk
+#					benchmarking tool.
+#					For example:
+#
+#					[disk8]
+#					rw=write
+#					iodepth=8
+#					directory=/mnt/disk8
+#					write_bw_log=disk8_write
+#					fill_device=1
+
+
+# Executables
+MOUNT=/bin/mount
+
+DEV_MAP[0]="/dev/sda:/mnt/disk0"
+DEV_MAP[1]="/dev/sdb:/mnt/disk1"
+DEV_MAP[2]="/dev/sdc:/mnt/disk2"
+DEV_MAP[3]="/dev/sdd:/mnt/disk3"
+
+mount_devs() {
+	MOUNT_OPTS="defaults,data=writeback,noatime,nodiratime"
+	for p in ${DEV_MAP[@]}
+	do
+		IFS=':' read -ra a <<< "$p"
+		dev=${a[0]}
+		mnt=${a[1]}
+
+		echo ${MOUNT} -t ext4 -o ${MOUNT_OPTS} ${dev}1 ${mnt}
+		${MOUNT} -t ext4 -o ${MOUNT_OPTS} ${dev}1 ${mnt}
+	done
+}
+
+main() {
+	echo About to mount the following devices:
+	for DEV in ${DEV_MAP[@]}
+	do
+		IFS=':' read -ra a <<< "$DEV"
+		dev=${a[0]}
+		mnt=${a[1]}
+		echo DEVICE: ${dev} MOUNT_POUNT: ${mnt}
+	done
+
+	mount_devs
+
+	echo Devices mounted...
+}
+
+
+# Kick off setup.
+main $*

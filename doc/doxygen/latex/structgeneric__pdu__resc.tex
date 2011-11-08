@@ -1,0 +1,92 @@
+\hypertarget{structgeneric__pdu__resc}{
+\section{generic\_\-pdu\_\-resc Struct Reference}
+\label{structgeneric__pdu__resc}\index{generic\_\-pdu\_\-resc@{generic\_\-pdu\_\-resc}}
+}
+
+
+{\ttfamily \#include $<$bnx2i.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structgeneric__pdu__resc_aab8f220bba88805ea04caf915bf9eb51}{
+char $\ast$ {\bfseries req\_\-buf}}
+\label{structgeneric__pdu__resc_aab8f220bba88805ea04caf915bf9eb51}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_a359217fab0b548c5f4d0f8c844b89e14}{
+dma\_\-addr\_\-t {\bfseries req\_\-dma\_\-addr}}
+\label{structgeneric__pdu__resc_a359217fab0b548c5f4d0f8c844b89e14}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_ab11842051fe1f1cd685930abeedb5a51}{
+u32 {\bfseries req\_\-buf\_\-size}}
+\label{structgeneric__pdu__resc_ab11842051fe1f1cd685930abeedb5a51}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_a285107d60e3f75715b53d6680699fec3}{
+char $\ast$ {\bfseries req\_\-wr\_\-ptr}}
+\label{structgeneric__pdu__resc_a285107d60e3f75715b53d6680699fec3}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_a6ff2c39a6ef8db8c6c080122d3900b34}{
+struct iscsi\_\-hdr {\bfseries resp\_\-hdr}}
+\label{structgeneric__pdu__resc_a6ff2c39a6ef8db8c6c080122d3900b34}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_a5caab87e2046cf41420564cdca7466b1}{
+char $\ast$ {\bfseries resp\_\-buf}}
+\label{structgeneric__pdu__resc_a5caab87e2046cf41420564cdca7466b1}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_ae9dba6add93f6cbc759788ed558879d5}{
+dma\_\-addr\_\-t {\bfseries resp\_\-dma\_\-addr}}
+\label{structgeneric__pdu__resc_ae9dba6add93f6cbc759788ed558879d5}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_abc56af2c4ca930df88c86efafae82a42}{
+u32 {\bfseries resp\_\-buf\_\-size}}
+\label{structgeneric__pdu__resc_abc56af2c4ca930df88c86efafae82a42}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_a729ac5f1884a7c2c6fe15053dee4945d}{
+char $\ast$ {\bfseries resp\_\-wr\_\-ptr}}
+\label{structgeneric__pdu__resc_a729ac5f1884a7c2c6fe15053dee4945d}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_a160e09c55007e632bcb093a26e491013}{
+char $\ast$ {\bfseries req\_\-bd\_\-tbl}}
+\label{structgeneric__pdu__resc_a160e09c55007e632bcb093a26e491013}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_acfa7579def0f66da85c54252d1773ba2}{
+dma\_\-addr\_\-t {\bfseries req\_\-bd\_\-dma}}
+\label{structgeneric__pdu__resc_acfa7579def0f66da85c54252d1773ba2}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_ab7427025b07979cda474c437fe3df3e7}{
+char $\ast$ {\bfseries resp\_\-bd\_\-tbl}}
+\label{structgeneric__pdu__resc_ab7427025b07979cda474c437fe3df3e7}
+
+\item 
+\hypertarget{structgeneric__pdu__resc_aeda17d3354bd634eb6d721b1decd209b}{
+dma\_\-addr\_\-t {\bfseries resp\_\-bd\_\-dma}}
+\label{structgeneric__pdu__resc_aeda17d3354bd634eb6d721b1decd209b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+struct \hyperlink{structgeneric__pdu__resc}{generic\_\-pdu\_\-resc} -\/ login pdu resource structure
+
+: driver buffer used to stage payload associated with the login request : dma address for iscsi login request payload buffer : actual login request payload length : pointer into login request buffer when next data is to be written : iscsi header where iscsi login response header is to be recreated : buffer to stage login response payload : login response payload buffer dma address : login response paylod length : pointer into login response buffer when next data is to be written : iscsi login request payload BD table : login request BD table dma address : iscsi login response payload BD table : login request BD table dma address
+
+following structure defines buffer info for generic pdus such as iSCSI Login, Logout and NOP 
+
+Definition at line 152 of file bnx2i.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/broadcom/netxtreme2-\/5.2.50/bnx2i\_\-sles11-\/2.0.1e-\/05/driver/bnx2i.h\end{DoxyCompactItemize}

@@ -1,0 +1,394 @@
+\hypertarget{struct____pfring}{
+\section{\_\-\_\-pfring Struct Reference}
+\label{struct____pfring}\index{\_\-\_\-pfring@{\_\-\_\-pfring}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct____pfring_ab917c9894ccd7b3b4e7d63b710939bb3}{
+u\_\-int8\_\-t {\bfseries initialized}}
+\label{struct____pfring_ab917c9894ccd7b3b4e7d63b710939bb3}
+
+\item 
+\hypertarget{struct____pfring_ad7d240403d121229c755764d73683000}{
+u\_\-char {\bfseries dna\_\-mapped\_\-device}}
+\label{struct____pfring_ad7d240403d121229c755764d73683000}
+
+\item 
+\hypertarget{struct____pfring_a6e8a24d935a66027779798cf071cedee}{
+u\_\-int16\_\-t {\bfseries num\_\-rx\_\-pkts\_\-before\_\-dns\_\-sync}}
+\label{struct____pfring_a6e8a24d935a66027779798cf071cedee}
+
+\item 
+\hypertarget{struct____pfring_a32d861898e8ad87f71cc5a46e8ba511f}{
+u\_\-int16\_\-t {\bfseries num\_\-tx\_\-pkts\_\-before\_\-dns\_\-sync}}
+\label{struct____pfring_a32d861898e8ad87f71cc5a46e8ba511f}
+
+\item 
+\hypertarget{struct____pfring_ac023ebdd0fc7cf6553135385a68ff6e3}{
+u\_\-int16\_\-t {\bfseries dna\_\-sync\_\-watermark}}
+\label{struct____pfring_ac023ebdd0fc7cf6553135385a68ff6e3}
+
+\item 
+\hypertarget{struct____pfring_a6bfbeb9951bf9a332b4ea490bf775266}{
+u\_\-int32\_\-t {\bfseries tot\_\-dna\_\-read\_\-pkts}}
+\label{struct____pfring_a6bfbeb9951bf9a332b4ea490bf775266}
+
+\item 
+\hypertarget{struct____pfring_a071a6b0b5ef47db6e97fbf5c1f40930f}{
+u\_\-int32\_\-t {\bfseries rx\_\-reg}}
+\label{struct____pfring_a071a6b0b5ef47db6e97fbf5c1f40930f}
+
+\item 
+\hypertarget{struct____pfring_a6d10e88bf867b83ed9d5be482dd69738}{
+u\_\-int32\_\-t {\bfseries tx\_\-reg}}
+\label{struct____pfring_a6d10e88bf867b83ed9d5be482dd69738}
+
+\item 
+\hypertarget{struct____pfring_ae818a3c3cacbbf525ce66ed1cf39cfde}{
+u\_\-int32\_\-t {\bfseries last\_\-rx\_\-slot\_\-read}}
+\label{struct____pfring_ae818a3c3cacbbf525ce66ed1cf39cfde}
+
+\item 
+\hypertarget{struct____pfring_a21c070166f93fb1e66c1031b0eba0122}{
+\hyperlink{structdna__device}{dna\_\-device} {\bfseries dna\_\-dev}}
+\label{struct____pfring_a21c070166f93fb1e66c1031b0eba0122}
+
+\item 
+\hypertarget{struct____pfring_a79bd6f91b615c712a6d503eaa259781d}{
+u\_\-int32\_\-t $\ast$ {\bfseries rx\_\-reg\_\-ptr}}
+\label{struct____pfring_a79bd6f91b615c712a6d503eaa259781d}
+
+\item 
+\hypertarget{struct____pfring_a8b671e91314cbe152c5125bae76fe3b2}{
+u\_\-int32\_\-t $\ast$ {\bfseries tx\_\-reg\_\-ptr}}
+\label{struct____pfring_a8b671e91314cbe152c5125bae76fe3b2}
+
+\item 
+\hypertarget{struct____pfring_a029f06f914dee680498b5f07ecdd6e93}{
+dna\_\-device\_\-operation {\bfseries last\_\-dna\_\-operation}}
+\label{struct____pfring_a029f06f914dee680498b5f07ecdd6e93}
+
+\item 
+\hypertarget{struct____pfring_a986da8d9b291f0c1b9060d08e8c051e3}{
+void $\ast$ {\bfseries priv\_\-data}}
+\label{struct____pfring_a986da8d9b291f0c1b9060d08e8c051e3}
+
+\item 
+\hypertarget{struct____pfring_a842eb60260197fad70b092e0b1fbc15b}{
+void($\ast$ {\bfseries close} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_a842eb60260197fad70b092e0b1fbc15b}
+
+\item 
+\hypertarget{struct____pfring_afbe369eb60b267ec56ccfe455dbe31bb}{
+int($\ast$ {\bfseries stats} )(\hyperlink{struct____pfring}{pfring} $\ast$, \hyperlink{structpfring__stat}{pfring\_\-stat} $\ast$)}
+\label{struct____pfring_afbe369eb60b267ec56ccfe455dbe31bb}
+
+\item 
+\hypertarget{struct____pfring_ab71d07142169758f6861eb85db470905}{
+int($\ast$ {\bfseries recv} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-char $\ast$$\ast$, u\_\-int, struct \hyperlink{structpfring__pkthdr}{pfring\_\-pkthdr} $\ast$, u\_\-int8\_\-t)}
+\label{struct____pfring_ab71d07142169758f6861eb85db470905}
+
+\item 
+\hypertarget{struct____pfring_ae5d0c066a459237ddf715a4e2273a1a9}{
+int($\ast$ {\bfseries set\_\-poll\_\-watermark} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int16\_\-t)}
+\label{struct____pfring_ae5d0c066a459237ddf715a4e2273a1a9}
+
+\item 
+\hypertarget{struct____pfring_a78d20062229d585f66b62bb8717784cd}{
+int($\ast$ {\bfseries set\_\-poll\_\-duration} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int)}
+\label{struct____pfring_a78d20062229d585f66b62bb8717784cd}
+
+\item 
+\hypertarget{struct____pfring_a78f767b19ae2fe1dfa101032636fdd2c}{
+int($\ast$ {\bfseries add\_\-hw\_\-rule} )(\hyperlink{struct____pfring}{pfring} $\ast$, \hyperlink{structhw__filtering__rule}{hw\_\-filtering\_\-rule} $\ast$)}
+\label{struct____pfring_a78f767b19ae2fe1dfa101032636fdd2c}
+
+\item 
+\hypertarget{struct____pfring_a5cacd265c18ae7116fe404fb3978a175}{
+int($\ast$ {\bfseries remove\_\-hw\_\-rule} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int16\_\-t)}
+\label{struct____pfring_a5cacd265c18ae7116fe404fb3978a175}
+
+\item 
+\hypertarget{struct____pfring_ad52e40ca0eea8a83dbb038017523c6d4}{
+int($\ast$ {\bfseries set\_\-channel\_\-id} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int32\_\-t)}
+\label{struct____pfring_ad52e40ca0eea8a83dbb038017523c6d4}
+
+\item 
+\hypertarget{struct____pfring_a8d13bf216487c8b88ed706f235657fca}{
+int($\ast$ {\bfseries set\_\-application\_\-name} )(\hyperlink{struct____pfring}{pfring} $\ast$, char $\ast$)}
+\label{struct____pfring_a8d13bf216487c8b88ed706f235657fca}
+
+\item 
+\hypertarget{struct____pfring_a4e1a47b73cde230e89e203b124f38b01}{
+int($\ast$ {\bfseries bind} )(\hyperlink{struct____pfring}{pfring} $\ast$, char $\ast$)}
+\label{struct____pfring_a4e1a47b73cde230e89e203b124f38b01}
+
+\item 
+\hypertarget{struct____pfring_a53578190bb59d05422d44d0a69b803e2}{
+int($\ast$ {\bfseries send} )(\hyperlink{struct____pfring}{pfring} $\ast$, char $\ast$, u\_\-int, u\_\-int8\_\-t)}
+\label{struct____pfring_a53578190bb59d05422d44d0a69b803e2}
+
+\item 
+\hypertarget{struct____pfring_ad616f3003e0dd173b8630981cd5921fb}{
+u\_\-int8\_\-t($\ast$ {\bfseries get\_\-num\_\-rx\_\-channels} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_ad616f3003e0dd173b8630981cd5921fb}
+
+\item 
+\hypertarget{struct____pfring_abc9bfd596520e766b5427ea63cd3c7d1}{
+int($\ast$ {\bfseries set\_\-sampling\_\-rate} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int32\_\-t)}
+\label{struct____pfring_abc9bfd596520e766b5427ea63cd3c7d1}
+
+\item 
+\hypertarget{struct____pfring_aae1b8fa60946a50217d86c10666b61cb}{
+int($\ast$ {\bfseries get\_\-selectable\_\-fd} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_aae1b8fa60946a50217d86c10666b61cb}
+
+\item 
+\hypertarget{struct____pfring_ae96de3574324e340ae008cb324e42b76}{
+int($\ast$ {\bfseries set\_\-direction} )(\hyperlink{struct____pfring}{pfring} $\ast$, packet\_\-direction)}
+\label{struct____pfring_ae96de3574324e340ae008cb324e42b76}
+
+\item 
+\hypertarget{struct____pfring_acbee907acd8d270ac7b02573dc7860f5}{
+int($\ast$ {\bfseries set\_\-cluster} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int, cluster\_\-type)}
+\label{struct____pfring_acbee907acd8d270ac7b02573dc7860f5}
+
+\item 
+\hypertarget{struct____pfring_a484e50048a7646fe74498ac21d86d6b5}{
+int($\ast$ {\bfseries remove\_\-from\_\-cluster} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_a484e50048a7646fe74498ac21d86d6b5}
+
+\item 
+\hypertarget{struct____pfring_a929fe4369b32c2394fcd3bde24708cc4}{
+int($\ast$ {\bfseries set\_\-master\_\-id} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int32\_\-t)}
+\label{struct____pfring_a929fe4369b32c2394fcd3bde24708cc4}
+
+\item 
+\hypertarget{struct____pfring_a73bfe055533dba0808de867f32bfa09c}{
+int($\ast$ {\bfseries set\_\-master} )(\hyperlink{struct____pfring}{pfring} $\ast$, \hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_a73bfe055533dba0808de867f32bfa09c}
+
+\item 
+\hypertarget{struct____pfring_a6b99f8aa911cd87b3c97d8fac82a1864}{
+u\_\-int16\_\-t($\ast$ {\bfseries get\_\-ring\_\-id} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_a6b99f8aa911cd87b3c97d8fac82a1864}
+
+\item 
+\hypertarget{struct____pfring_ad3f44261b3bfe565dc6439ecd95bdd47}{
+u\_\-int32\_\-t($\ast$ {\bfseries get\_\-num\_\-queued\_\-pkts} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_ad3f44261b3bfe565dc6439ecd95bdd47}
+
+\item 
+\hypertarget{struct____pfring_a50fbdb19627b7afe49bc4600c34382ae}{
+u\_\-int8\_\-t($\ast$ {\bfseries get\_\-packet\_\-consumer\_\-mode} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_a50fbdb19627b7afe49bc4600c34382ae}
+
+\item 
+\hypertarget{struct____pfring_ae31fcc7b24ec2d4112944238dbd1ecf2}{
+int($\ast$ {\bfseries set\_\-packet\_\-consumer\_\-mode} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int8\_\-t, char $\ast$, u\_\-int)}
+\label{struct____pfring_ae31fcc7b24ec2d4112944238dbd1ecf2}
+
+\item 
+\hypertarget{struct____pfring_a2171596059e14bffeea149721df8387d}{
+int($\ast$ {\bfseries get\_\-hash\_\-filtering\_\-rule\_\-stats} )(\hyperlink{struct____pfring}{pfring} $\ast$, \hyperlink{structhash__filtering__rule}{hash\_\-filtering\_\-rule} $\ast$, char $\ast$, u\_\-int $\ast$)}
+\label{struct____pfring_a2171596059e14bffeea149721df8387d}
+
+\item 
+\hypertarget{struct____pfring_a2b7f604a90b93790ef0becd53045ed6e}{
+int($\ast$ {\bfseries handle\_\-hash\_\-filtering\_\-rule} )(\hyperlink{struct____pfring}{pfring} $\ast$, \hyperlink{structhash__filtering__rule}{hash\_\-filtering\_\-rule} $\ast$, u\_\-char)}
+\label{struct____pfring_a2b7f604a90b93790ef0becd53045ed6e}
+
+\item 
+\hypertarget{struct____pfring_a63d2e6eb92d11511d5e47c1c8e82d869}{
+int($\ast$ {\bfseries purge\_\-idle\_\-hash\_\-rules} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int16\_\-t)}
+\label{struct____pfring_a63d2e6eb92d11511d5e47c1c8e82d869}
+
+\item 
+\hypertarget{struct____pfring_ac89dd9b09af90102b90cd3620189be0f}{
+int($\ast$ {\bfseries add\_\-filtering\_\-rule} )(\hyperlink{struct____pfring}{pfring} $\ast$, \hyperlink{structfiltering__rule}{filtering\_\-rule} $\ast$)}
+\label{struct____pfring_ac89dd9b09af90102b90cd3620189be0f}
+
+\item 
+\hypertarget{struct____pfring_ab3bfff81b083efa444afd7b6e9dda75d}{
+int($\ast$ {\bfseries remove\_\-filtering\_\-rule} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int16\_\-t)}
+\label{struct____pfring_ab3bfff81b083efa444afd7b6e9dda75d}
+
+\item 
+\hypertarget{struct____pfring_ab737c410d8cad49fa6d2ede1344b4a4f}{
+int($\ast$ {\bfseries get\_\-filtering\_\-rule\_\-stats} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int16\_\-t, char $\ast$, u\_\-int $\ast$)}
+\label{struct____pfring_ab737c410d8cad49fa6d2ede1344b4a4f}
+
+\item 
+\hypertarget{struct____pfring_a08c3dc9e5f9065e97cff3e634d2f3686}{
+int($\ast$ {\bfseries toggle\_\-filtering\_\-policy} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int8\_\-t)}
+\label{struct____pfring_a08c3dc9e5f9065e97cff3e634d2f3686}
+
+\item 
+\hypertarget{struct____pfring_ace7b04d2d1585d57ad25b04d0abc70b2}{
+int($\ast$ {\bfseries enable\_\-rss\_\-rehash} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_ace7b04d2d1585d57ad25b04d0abc70b2}
+
+\item 
+\hypertarget{struct____pfring_a8e109e79ac51ac96e301bcbb1806ffa4}{
+int($\ast$ {\bfseries poll} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int)}
+\label{struct____pfring_a8e109e79ac51ac96e301bcbb1806ffa4}
+
+\item 
+\hypertarget{struct____pfring_a63e55da44e33df592a6408eada6f6c7a}{
+int($\ast$ {\bfseries version} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int32\_\-t $\ast$)}
+\label{struct____pfring_a63e55da44e33df592a6408eada6f6c7a}
+
+\item 
+\hypertarget{struct____pfring_a5f7c21bef0402f08b1687d179892d954}{
+int($\ast$ {\bfseries get\_\-bound\_\-device\_\-address} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-char\mbox{[}6\mbox{]})}
+\label{struct____pfring_a5f7c21bef0402f08b1687d179892d954}
+
+\item 
+\hypertarget{struct____pfring_a60e3506755227a1164b291e2a1fdb11f}{
+u\_\-int16\_\-t($\ast$ {\bfseries get\_\-slot\_\-header\_\-len} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_a60e3506755227a1164b291e2a1fdb11f}
+
+\item 
+\hypertarget{struct____pfring_a6f90a981853c68c7081309cbe0823f3d}{
+int($\ast$ {\bfseries set\_\-virtual\_\-device} )(\hyperlink{struct____pfring}{pfring} $\ast$, \hyperlink{structvirtual__filtering__device__info}{virtual\_\-filtering\_\-device\_\-info} $\ast$)}
+\label{struct____pfring_a6f90a981853c68c7081309cbe0823f3d}
+
+\item 
+\hypertarget{struct____pfring_a969aa5320e1272c375f941aa772b68b2}{
+int($\ast$ {\bfseries loopback\_\-test} )(\hyperlink{struct____pfring}{pfring} $\ast$, char $\ast$, u\_\-int, u\_\-int)}
+\label{struct____pfring_a969aa5320e1272c375f941aa772b68b2}
+
+\item 
+\hypertarget{struct____pfring_a26cd0c37a7af1f93635bc582d2e9f4df}{
+int($\ast$ {\bfseries enable\_\-ring} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_a26cd0c37a7af1f93635bc582d2e9f4df}
+
+\item 
+\hypertarget{struct____pfring_ad31a5951f7b10f02a18c74a58ee832a7}{
+int($\ast$ {\bfseries disable\_\-ring} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_ad31a5951f7b10f02a18c74a58ee832a7}
+
+\item 
+\hypertarget{struct____pfring_a7ec606154a0468422a37ffa59430c163}{
+int($\ast$ {\bfseries dna\_\-init} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_a7ec606154a0468422a37ffa59430c163}
+
+\item 
+\hypertarget{struct____pfring_a6539f0d2cbe431ea1fce7151eafdf804}{
+void($\ast$ {\bfseries dna\_\-term} )(\hyperlink{struct____pfring}{pfring} $\ast$)}
+\label{struct____pfring_a6539f0d2cbe431ea1fce7151eafdf804}
+
+\item 
+\hypertarget{struct____pfring_ae0f86a49d2563a9e9a6e8f19fbe25ba9}{
+u\_\-int8\_\-t($\ast$ {\bfseries dna\_\-check\_\-packet\_\-to\_\-read} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-int8\_\-t)}
+\label{struct____pfring_ae0f86a49d2563a9e9a6e8f19fbe25ba9}
+
+\item 
+\hypertarget{struct____pfring_a12dcf1a97ce102075f7c51eefa08b45d}{
+u\_\-char $\ast$($\ast$ {\bfseries dna\_\-next\_\-packet} )(\hyperlink{struct____pfring}{pfring} $\ast$, u\_\-char $\ast$$\ast$, u\_\-int, struct \hyperlink{structpfring__pkthdr}{pfring\_\-pkthdr} $\ast$)}
+\label{struct____pfring_a12dcf1a97ce102075f7c51eefa08b45d}
+
+\item 
+\hypertarget{struct____pfring_aceace4ee726009f80f64f54076cd9543}{
+char $\ast$ {\bfseries buffer}}
+\label{struct____pfring_aceace4ee726009f80f64f54076cd9543}
+
+\item 
+\hypertarget{struct____pfring_a433aaa87147cbeb607d82d24ccf82a87}{
+char $\ast$ {\bfseries slots}}
+\label{struct____pfring_a433aaa87147cbeb607d82d24ccf82a87}
+
+\item 
+\hypertarget{struct____pfring_ae2780ec5a55f92c88b7c651898a15c9a}{
+char $\ast$ {\bfseries device\_\-name}}
+\label{struct____pfring_ae2780ec5a55f92c88b7c651898a15c9a}
+
+\item 
+\hypertarget{struct____pfring_ab97e824cf9550b25e96e6751af9ae508}{
+u\_\-int32\_\-t {\bfseries caplen}}
+\label{struct____pfring_ab97e824cf9550b25e96e6751af9ae508}
+
+\item 
+\hypertarget{struct____pfring_a08dbad4d4e3ab12522c3a917a5964d63}{
+u\_\-int16\_\-t {\bfseries slot\_\-header\_\-len}}
+\label{struct____pfring_a08dbad4d4e3ab12522c3a917a5964d63}
+
+\item 
+\hypertarget{struct____pfring_a62babb3717e3a4c06ce99b7cc31f2a73}{
+u\_\-int8\_\-t {\bfseries kernel\_\-packet\_\-consumer}}
+\label{struct____pfring_a62babb3717e3a4c06ce99b7cc31f2a73}
+
+\item 
+\hypertarget{struct____pfring_ad62acbaacaaeb0353680ccea58121027}{
+u\_\-int8\_\-t {\bfseries is\_\-shutting\_\-down}}
+\label{struct____pfring_ad62acbaacaaeb0353680ccea58121027}
+
+\item 
+\hypertarget{struct____pfring_aa88bc469dc2e6cb909af86e511cd96fb}{
+int {\bfseries fd}}
+\label{struct____pfring_aa88bc469dc2e6cb909af86e511cd96fb}
+
+\item 
+\hypertarget{struct____pfring_ad53c22fb55cd16ad8718656d240d0d1e}{
+\hyperlink{structflow_slot_info}{FlowSlotInfo} $\ast$ {\bfseries slots\_\-info}}
+\label{struct____pfring_ad53c22fb55cd16ad8718656d240d0d1e}
+
+\item 
+\hypertarget{struct____pfring_ac7b48b8d75477dc138e7db3a6cdf6e91}{
+u\_\-int {\bfseries poll\_\-sleep}}
+\label{struct____pfring_ac7b48b8d75477dc138e7db3a6cdf6e91}
+
+\item 
+\hypertarget{struct____pfring_ab781160cce2393311611a57c3baa91a4}{
+u\_\-int16\_\-t {\bfseries poll\_\-duration}}
+\label{struct____pfring_ab781160cce2393311611a57c3baa91a4}
+
+\item 
+\hypertarget{struct____pfring_aca9f091e60b1d5b2fdf80e1db8dd7586}{
+u\_\-int8\_\-t {\bfseries promisc}}
+\label{struct____pfring_aca9f091e60b1d5b2fdf80e1db8dd7586}
+
+\item 
+\hypertarget{struct____pfring_af2f445bae6e4457ae4162274036729d2}{
+u\_\-int8\_\-t {\bfseries clear\_\-promisc}}
+\label{struct____pfring_af2f445bae6e4457ae4162274036729d2}
+
+\item 
+\hypertarget{struct____pfring_aac9fef43754d86b64a71b888092110cd}{
+u\_\-int8\_\-t {\bfseries reentrant}}
+\label{struct____pfring_aac9fef43754d86b64a71b888092110cd}
+
+\item 
+\hypertarget{struct____pfring_aa88015b18db892fff97c8793698b949c}{
+u\_\-int8\_\-t {\bfseries break\_\-recv\_\-loop}}
+\label{struct____pfring_aa88015b18db892fff97c8793698b949c}
+
+\item 
+\hypertarget{struct____pfring_a4a44bc2e2ed7d3dfc9bfad0583631662}{
+u\_\-long {\bfseries num\_\-poll\_\-calls}}
+\label{struct____pfring_a4a44bc2e2ed7d3dfc9bfad0583631662}
+
+\item 
+\hypertarget{struct____pfring_af2479b04cba5ebbb8e8d5076cd8fe88e}{
+pthread\_\-spinlock\_\-t {\bfseries spinlock}}
+\label{struct____pfring_af2479b04cba5ebbb8e8d5076cd8fe88e}
+
+\item 
+\hypertarget{struct____pfring_a620353d21b059ac8308dc1ebf116f5d3}{
+struct sockaddr\_\-ll {\bfseries sock\_\-tx}}
+\label{struct____pfring_a620353d21b059ac8308dc1ebf116f5d3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 117 of file pfring.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/userland/lib/pfring.h\end{DoxyCompactItemize}

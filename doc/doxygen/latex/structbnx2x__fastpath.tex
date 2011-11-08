@@ -1,0 +1,254 @@
+\hypertarget{structbnx2x__fastpath}{
+\section{bnx2x\_\-fastpath Struct Reference}
+\label{structbnx2x__fastpath}\index{bnx2x\_\-fastpath@{bnx2x\_\-fastpath}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structbnx2x__fastpath_ac70b4786ae8fa44f6df8af0c37f8c823}{
+struct net\_\-device {\bfseries dummy\_\-netdev}}
+\label{structbnx2x__fastpath_ac70b4786ae8fa44f6df8af0c37f8c823}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a80c99965fcf8bf3e20ff92332af46851}{
+struct \hyperlink{structhost__status__block}{host\_\-status\_\-block} $\ast$ {\bfseries status\_\-blk}}
+\label{structbnx2x__fastpath_a80c99965fcf8bf3e20ff92332af46851}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a1b75cda0ecedb920b4fe7b37305f07da}{
+dma\_\-addr\_\-t {\bfseries status\_\-blk\_\-mapping}}
+\label{structbnx2x__fastpath_a1b75cda0ecedb920b4fe7b37305f07da}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a11e5fb61b3d88318eb73543df7b533fe}{
+struct \hyperlink{structsw__tx__bd}{sw\_\-tx\_\-bd} $\ast$ {\bfseries tx\_\-buf\_\-ring}}
+\label{structbnx2x__fastpath_a11e5fb61b3d88318eb73543df7b533fe}
+
+\item 
+\hypertarget{structbnx2x__fastpath_ae731d2892b50f457f50b8e8ea42f1dcf}{
+union \hyperlink{unioneth__tx__bd__types}{eth\_\-tx\_\-bd\_\-types} $\ast$ {\bfseries tx\_\-desc\_\-ring}}
+\label{structbnx2x__fastpath_ae731d2892b50f457f50b8e8ea42f1dcf}
+
+\item 
+\hypertarget{structbnx2x__fastpath_ad89d105ee07c6b5331c583b583bfd3f9}{
+dma\_\-addr\_\-t {\bfseries tx\_\-desc\_\-mapping}}
+\label{structbnx2x__fastpath_ad89d105ee07c6b5331c583b583bfd3f9}
+
+\item 
+\hypertarget{structbnx2x__fastpath_ac45647d62796d1e30ce17841244a5d3b}{
+struct \hyperlink{structsw__rx__bd}{sw\_\-rx\_\-bd} $\ast$ {\bfseries rx\_\-buf\_\-ring}}
+\label{structbnx2x__fastpath_ac45647d62796d1e30ce17841244a5d3b}
+
+\item 
+\hypertarget{structbnx2x__fastpath_adcb6d1adf61fc0f8a4d7d6e6a4050d70}{
+struct \hyperlink{structsw__rx__page}{sw\_\-rx\_\-page} $\ast$ {\bfseries rx\_\-page\_\-ring}}
+\label{structbnx2x__fastpath_adcb6d1adf61fc0f8a4d7d6e6a4050d70}
+
+\item 
+\hypertarget{structbnx2x__fastpath_af601c0548fb0404b5723e5fe4840e084}{
+struct \hyperlink{structeth__rx__bd}{eth\_\-rx\_\-bd} $\ast$ {\bfseries rx\_\-desc\_\-ring}}
+\label{structbnx2x__fastpath_af601c0548fb0404b5723e5fe4840e084}
+
+\item 
+\hypertarget{structbnx2x__fastpath_adeee9ae949d2a935201e105e0b648e00}{
+dma\_\-addr\_\-t {\bfseries rx\_\-desc\_\-mapping}}
+\label{structbnx2x__fastpath_adeee9ae949d2a935201e105e0b648e00}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a21a32acf923b2d6d6aae53d2b0bbc964}{
+union \hyperlink{unioneth__rx__cqe}{eth\_\-rx\_\-cqe} $\ast$ {\bfseries rx\_\-comp\_\-ring}}
+\label{structbnx2x__fastpath_a21a32acf923b2d6d6aae53d2b0bbc964}
+
+\item 
+\hypertarget{structbnx2x__fastpath_ae030fde81d0c9c75a187c1b9f79ebe31}{
+dma\_\-addr\_\-t {\bfseries rx\_\-comp\_\-mapping}}
+\label{structbnx2x__fastpath_ae030fde81d0c9c75a187c1b9f79ebe31}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a06498744df54549c38c1c1c731031426}{
+struct \hyperlink{structeth__rx__sge}{eth\_\-rx\_\-sge} $\ast$ {\bfseries rx\_\-sge\_\-ring}}
+\label{structbnx2x__fastpath_a06498744df54549c38c1c1c731031426}
+
+\item 
+\hypertarget{structbnx2x__fastpath_ad285e4bcc51a29c11745f75071c55cd3}{
+dma\_\-addr\_\-t {\bfseries rx\_\-sge\_\-mapping}}
+\label{structbnx2x__fastpath_ad285e4bcc51a29c11745f75071c55cd3}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a2f04aef7d7f69659a8a85a62bdbe78c7}{
+u64 {\bfseries sge\_\-mask} \mbox{[}RX\_\-SGE\_\-MASK\_\-LEN\mbox{]}}
+\label{structbnx2x__fastpath_a2f04aef7d7f69659a8a85a62bdbe78c7}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a5d378d4b36ea598794aa013fb5078f21}{
+int {\bfseries state}}
+\label{structbnx2x__fastpath_a5d378d4b36ea598794aa013fb5078f21}
+
+\item 
+\hypertarget{structbnx2x__fastpath_ade69b3829b76c572296ccc91ba03024f}{
+u8 {\bfseries index}}
+\label{structbnx2x__fastpath_ade69b3829b76c572296ccc91ba03024f}
+
+\item 
+\hypertarget{structbnx2x__fastpath_abb2d4c64e91c1812c7d70005c2a39564}{
+u8 {\bfseries cl\_\-id}}
+\label{structbnx2x__fastpath_abb2d4c64e91c1812c7d70005c2a39564}
+
+\item 
+\hypertarget{structbnx2x__fastpath_ababef7a7e004a187ebe38fd48cb236d8}{
+u8 {\bfseries sb\_\-id}}
+\label{structbnx2x__fastpath_ababef7a7e004a187ebe38fd48cb236d8}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a2e750f7a370ed741ba2b656f76e4c75e}{
+union \hyperlink{uniondb__prod}{db\_\-prod} {\bfseries tx\_\-db}}
+\label{structbnx2x__fastpath_a2e750f7a370ed741ba2b656f76e4c75e}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a9694485dd4901933366a34d9f63ead13}{
+u16 {\bfseries tx\_\-pkt\_\-prod}}
+\label{structbnx2x__fastpath_a9694485dd4901933366a34d9f63ead13}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a08ff184cea39305389f2f3c70de9c7e9}{
+u16 {\bfseries tx\_\-pkt\_\-cons}}
+\label{structbnx2x__fastpath_a08ff184cea39305389f2f3c70de9c7e9}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a75c01a21f2e02557bfd27dcbb6b8e36f}{
+u16 {\bfseries tx\_\-bd\_\-prod}}
+\label{structbnx2x__fastpath_a75c01a21f2e02557bfd27dcbb6b8e36f}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a28f1afca163b0bdd36ee9f02bf2016ac}{
+u16 {\bfseries tx\_\-bd\_\-cons}}
+\label{structbnx2x__fastpath_a28f1afca163b0bdd36ee9f02bf2016ac}
+
+\item 
+\hypertarget{structbnx2x__fastpath_af6257fdb07eba094e9c8ea93c348ebf1}{
+\_\-\_\-le16 $\ast$ {\bfseries tx\_\-cons\_\-sb}}
+\label{structbnx2x__fastpath_af6257fdb07eba094e9c8ea93c348ebf1}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a58152f5ec630426003d1d34b12d118eb}{
+\_\-\_\-le16 {\bfseries fp\_\-c\_\-idx}}
+\label{structbnx2x__fastpath_a58152f5ec630426003d1d34b12d118eb}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a596164f3ecb9f1e27ad73868fa392ede}{
+\_\-\_\-le16 {\bfseries fp\_\-u\_\-idx}}
+\label{structbnx2x__fastpath_a596164f3ecb9f1e27ad73868fa392ede}
+
+\item 
+\hypertarget{structbnx2x__fastpath_aa0266c3ff7264551dc79addc5e8fa180}{
+u16 {\bfseries rx\_\-bd\_\-prod}}
+\label{structbnx2x__fastpath_aa0266c3ff7264551dc79addc5e8fa180}
+
+\item 
+\hypertarget{structbnx2x__fastpath_abaf84ceefb959218b8ff7304758ac9f5}{
+u16 {\bfseries rx\_\-bd\_\-cons}}
+\label{structbnx2x__fastpath_abaf84ceefb959218b8ff7304758ac9f5}
+
+\item 
+\hypertarget{structbnx2x__fastpath_ab21e66e52e04224ba53dd479146c7d24}{
+u16 {\bfseries rx\_\-comp\_\-prod}}
+\label{structbnx2x__fastpath_ab21e66e52e04224ba53dd479146c7d24}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a6160918ed694190b206dc0f918bc715b}{
+u16 {\bfseries rx\_\-comp\_\-cons}}
+\label{structbnx2x__fastpath_a6160918ed694190b206dc0f918bc715b}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a15c320620ea8b367f468a9a427af3cc0}{
+u16 {\bfseries rx\_\-sge\_\-prod}}
+\label{structbnx2x__fastpath_a15c320620ea8b367f468a9a427af3cc0}
+
+\item 
+\hypertarget{structbnx2x__fastpath_acd9c6561a9e3c8dc44eee7c23ca14b56}{
+u16 {\bfseries last\_\-max\_\-sge}}
+\label{structbnx2x__fastpath_acd9c6561a9e3c8dc44eee7c23ca14b56}
+
+\item 
+\hypertarget{structbnx2x__fastpath_ae0bb4bfaa10f4a679b95ba5765e172d9}{
+\_\-\_\-le16 $\ast$ {\bfseries rx\_\-cons\_\-sb}}
+\label{structbnx2x__fastpath_ae0bb4bfaa10f4a679b95ba5765e172d9}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a10797f2a0c0dc125f755b38f1440487f}{
+\_\-\_\-le16 $\ast$ {\bfseries rx\_\-bd\_\-cons\_\-sb}}
+\label{structbnx2x__fastpath_a10797f2a0c0dc125f755b38f1440487f}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a8d57f49e2805a9b6a175abcbf20ee486}{
+unsigned long {\bfseries tx\_\-pkt}}
+\label{structbnx2x__fastpath_a8d57f49e2805a9b6a175abcbf20ee486}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a154686da1fa411527c36e81bc7393a7b}{
+unsigned long {\bfseries rx\_\-pkt}}
+\label{structbnx2x__fastpath_a154686da1fa411527c36e81bc7393a7b}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a78ea9152aa3a9909986e736d0f61c285}{
+unsigned long {\bfseries rx\_\-calls}}
+\label{structbnx2x__fastpath_a78ea9152aa3a9909986e736d0f61c285}
+
+\item 
+\hypertarget{structbnx2x__fastpath_aaf2ce26ea072a41ef4f43336b1ac0493}{
+struct \hyperlink{structsw__rx__bd}{sw\_\-rx\_\-bd} {\bfseries tpa\_\-pool} \mbox{[}ETH\_\-MAX\_\-AGGREGATION\_\-QUEUES\_\-E1H\mbox{]}}
+\label{structbnx2x__fastpath_aaf2ce26ea072a41ef4f43336b1ac0493}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a4be05b3a5ffd19c73a5bc7120c599fe4}{
+u8 {\bfseries tpa\_\-state} \mbox{[}ETH\_\-MAX\_\-AGGREGATION\_\-QUEUES\_\-E1H\mbox{]}}
+\label{structbnx2x__fastpath_a4be05b3a5ffd19c73a5bc7120c599fe4}
+
+\item 
+\hypertarget{structbnx2x__fastpath_aaefb76c9a367434d5195ed42b590aa2a}{
+u8 {\bfseries disable\_\-tpa}}
+\label{structbnx2x__fastpath_aaefb76c9a367434d5195ed42b590aa2a}
+
+\item 
+\hypertarget{structbnx2x__fastpath_adb8b7dc4310657576d24cfaf37018fb6}{
+struct \hyperlink{structtstorm__per__client__stats}{tstorm\_\-per\_\-client\_\-stats} {\bfseries old\_\-tclient}}
+\label{structbnx2x__fastpath_adb8b7dc4310657576d24cfaf37018fb6}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a76571a045f0719ef45c0e4837fb2e8aa}{
+struct \hyperlink{structustorm__per__client__stats}{ustorm\_\-per\_\-client\_\-stats} {\bfseries old\_\-uclient}}
+\label{structbnx2x__fastpath_a76571a045f0719ef45c0e4837fb2e8aa}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a364c878034e117e16cf4a7ba6ba44383}{
+struct \hyperlink{structxstorm__per__client__stats}{xstorm\_\-per\_\-client\_\-stats} {\bfseries old\_\-xclient}}
+\label{structbnx2x__fastpath_a364c878034e117e16cf4a7ba6ba44383}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a7fdf84a8dc84212af848ab07014d003c}{
+struct \hyperlink{structbnx2x__eth__q__stats}{bnx2x\_\-eth\_\-q\_\-stats} {\bfseries eth\_\-q\_\-stats}}
+\label{structbnx2x__fastpath_a7fdf84a8dc84212af848ab07014d003c}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a539ea84817d0d3265c5f37e959c6f077}{
+char {\bfseries name} \mbox{[}FP\_\-NAME\_\-SIZE\mbox{]}}
+\label{structbnx2x__fastpath_a539ea84817d0d3265c5f37e959c6f077}
+
+\item 
+\hypertarget{structbnx2x__fastpath_a66f98d370e349f4e94a8e0564e2c1c58}{
+struct \hyperlink{structbnx2x}{bnx2x} $\ast$ {\bfseries bp}}
+\label{structbnx2x__fastpath_a66f98d370e349f4e94a8e0564e2c1c58}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 304 of file bnx2x.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/broadcom/netxtreme2-\/5.2.50/bnx2x-\/1.52.12/src/bnx2x.h\end{DoxyCompactItemize}

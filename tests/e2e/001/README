@@ -1,0 +1,64 @@
+Extended test (600 seconds at 16 Gbps)
+
+a0       LSI MegaRAID SAS 9280-24i4e encl:1 ldrv:2  batt:FAULT, module missing, pack missing, charge failed
+a0d0      7448GiB RAID 0   1x8  optimal
+a0d1      7448GiB RAID 0   1x8  optimal
+a0e245s0    931GiB  a0d0  online  
+a0e245s1    931GiB  a0d0  online  
+a0e245s2    931GiB  a0d0  online  
+a0e245s3    931GiB  a0d0  online  
+a0e245s4    931GiB  a0d0  online  
+a0e245s5    931GiB  a0d0  online  
+a0e245s6    931GiB  a0d0  online  
+a0e245s7    931GiB  a0d0  online  
+a0e245s8    931GiB  a0d1  online  
+a0e245s9    931GiB  a0d1  online  
+a0e245s10    931GiB  a0d1  online  
+a0e245s11    931GiB  a0d1  online  
+a0e245s12    931GiB  a0d1  online  
+a0e245s13    931GiB  a0d1  online  
+a0e245s14    931GiB  a0d1  online  
+a0e245s15    931GiB  a0d1  online  
+
+a1       LSI MegaRAID SAS 9280-24i4e encl:1 ldrv:2  batt:FAULT, module missing, pack missing, charge failed
+a1d0      7448GiB RAID 0   1x8  optimal
+a1d1        12TiB RAID 0   1x7  optimal
+unconfigured:  a1e245s6
+a1e245s0   1863GiB  a1d1  online  
+a1e245s1   1863GiB  a1d1  online  
+a1e245s2   1863GiB  a1d1  online  
+a1e245s3   1863GiB  a1d1  online  
+a1e245s4   1863GiB  a1d1  online  
+a1e245s5   1863GiB  a1d1  online  
+a1e245s6   1863GiB        ready    predictive-failure
+a1e245s7   1863GiB  a1d1  online  
+a1e245s8    931GiB  a1d0  online  
+a1e245s9    931GiB  a1d0  online  
+a1e245s10    931GiB  a1d0  online  
+a1e245s11    931GiB  a1d0  online  
+a1e245s12    931GiB  a1d0  online  
+a1e245s13    931GiB  a1d0  online  
+a1e245s14    931GiB  a1d0  online  
+a1e245s15    931GiB  a1d0  online  
+
+
+# Client
+[  3] 599.0-600.0 sec    488 MBytes  4.10 Gbits/sec
+[  3]  0.0-600.0 sec    286 GBytes  4.10 Gbits/sec
+[  3] Sent 37495780 datagrams
+[  3]  0.0-600.0 sec    286 GBytes  4.10 Gbits/sec
+[  3] Sent 37494760 datagrams
+[  3]  0.0-600.0 sec    286 GBytes  4.10 Gbits/sec
+[  3] Sent 37493936 datagrams
+[  3]  0.0-600.0 sec    286 GBytes  4.10 Gbits/sec
+
+# Server
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/sde1             220G  3.3G  206G   2% /
+tmpfs                 5.9G     0  5.9G   0% /lib/init/rw
+udev                  5.9G  244K  5.9G   1% /dev
+tmpfs                 5.9G     0  5.9G   0% /dev/shm
+/dev/sda1             7.2T  285G  6.6T   5% /mnt/disk0
+/dev/sdb1             7.2T  285G  6.6T   5% /mnt/disk1
+/dev/sdc1              13T  285G   12T   3% /mnt/disk2
+/dev/sdd1             7.2T  285G  6.6T   5% /mnt/disk3

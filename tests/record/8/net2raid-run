@@ -1,0 +1,127 @@
+#!/bin/bash
+
+export LD_LIBRARY_PATH=/opt/mit/mark6/lib
+
+# Globals
+INSTALL_ROOT=/opt/mit/mark6
+EXEC=${INSTALL_ROOT}/bin/net2raid
+ETHTOOL=/sbin/ethtool
+BLOCKDEV=/sbin/blockdev
+VMSTAT=/usr/bin/vmstat
+LOG_DIR=${INSTALL_ROOT}/log
+KILLALL=/usr/bin/killall
+GRAPHS=${INSTALL_ROOT}/bin/net2raid-graphs
+
+# Configure ethernet drivers
+${ETHTOOL} -K eth2 gro on
+${ETHTOOL} -K eth3 gro on
+${ETHTOOL} -K eth4 gro on
+${ETHTOOL} -K eth5 gro on
+
+# Offload parameters for eth2:
+# rx-checksumming: on
+# tx-checksumming: on
+# scatter-gather: on
+# tcp-segmentation-offload: on
+# udp-fragmentation-offload: off
+# generic-segmentation-offload: on
+# generic-receive-offload: off
+# large-receive-offload: on
+# ntuple-filters: off
+# receive-hashing: off
+
+# RAID settings
+${BLOCKDEV} --setra 16384 /dev/sda
+${BLOCKDEV} --setra 16384 /dev/sdb
+${BLOCKDEV} --setra 16384 /dev/sdc
+${BLOCKDEV} --setra 16384 /dev/sdd
+
+echo deadline > /sys/block/sda/queue/scheduler
+echo deadline > /sys/block/sdb/queue/scheduler
+echo deadline > /sys/block/sdc/queue/scheduler
+echo deadline > /sys/block/sdd/queue/scheduler
+
+echo 512 > /sys/block/sda/queue/nr_requests
+echo 512 > /sys/block/sdb/queue/nr_requests
+echo 512 > /sys/block/sdc/queue/nr_requests
+echo 512 > /sys/block/sdd/queue/nr_requests
+
+# /etc/modules
+# pf_ring transparent_mode=0 min_num_slots=4096 enable_ip_defrag=1
+
+# IRQ "MAP"
+
+ETH2_IRQ=`cat /proc/interrupts | grep eth2 | awk -F: '{ print $1; }' \
+		| awk '{ print $1; }'`
+ETH3_IRQ=`cat /proc/interrupts | grep eth3 | awk -F: '{ print $1; }' \
+		| awk '{ print $1; }'`
+ETH4_IRQ=`cat /proc/interrupts | grep eth4 | awk -F: '{ print $1; }' \
+		| awk '{ print $1; }'`
+ETH5_IRQ=`cat /proc/interrupts | grep eth5 | awk -F: '{ print $1; }' \
+		| awk '{ print $1; }'`
+MEGASAS1_IRQ=24
+MEGASAS2_IRQ=35
+
+
+# Setup IRQ AFFINITY (echoing a CPU mask to set affinity)
+echo 1 > /proc/irq/${ETH2_IRQ}/smp_affinity
+echo cat /proc/irq/${ETH2_IRQ}/smp_affinity
+
+echo 1 > /proc/irq/${ETH3_IRQ}/smp_affinity
+echo cat /proc/irq/${ETH3_IRQ}/smp_affinity
+
+echo 4 > /proc/irq/${ETH4_IRQ}/smp_affinity
+echo cat /proc/irq/${ETH4_IRQ}/smp_affinity
+
+echo 4 > /proc/irq/${ETH5_IRQ}/smp_affinity
+echo cat /proc/irq/${ETH5_IRQ}/smp_affinity
+
+# CPU0
+echo 1 > /proc/irq/${MEGASAS1_IRQ}/smp_affinity
+echo cat /proc/irq/${MEGASAS1_IRQ}/smp_affinity
+
+# CPU2
+echo 4 > /proc/irq/${MEGASAS2_IRQ}/smp_affinity
+echo cat /proc/irq/${MEGASAS2_IRQ}/smp_affinity
+
+# Run! 
+
+# Args
+# WRITE_BLOCKS=2048
+# WRITE_BLOCKS=8192
+WRITE_BLOCKS=2048
+PAGES_PER_BUFFER=256
+WRITE_BLOCKS=1024
+PAGES_PER_BUFFER=512
+DURATION=120
+SNAPLEN=8266
+VMSTAT_INTERVAL=1
+
+${VMSTAT} -n ${VMSTAT_INTERVAL} > ${LOG_DIR}/vmstat.log &
+
+sleep 5
+
+${EXEC} \
+    --interfaces \
+	eth2 \
+	eth3 \
+	eth4 \
+	eth5 \
+    --capture_files \
+	/mnt/disk0/disk0-5.m6 \
+	/mnt/disk1/disk1-5.m6 \
+	/mnt/disk2/disk2-5.m6 \
+	/mnt/disk3/disk3-5.m6 \
+    --smp_affinities \
+	1 \
+	1 \
+	3 \
+	3 \
+    --write_blocks ${WRITE_BLOCKS} \
+    --snaplen ${SNAPLEN} \
+    --time ${DURATION} \
+    --translate=false \
+    --pages_per_buffer=${PAGES_PER_BUFFER}
+
+${KILLALL} vmstat
+${GRAPHS}

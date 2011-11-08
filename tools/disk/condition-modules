@@ -1,0 +1,167 @@
+#!/bin/bash
+
+# Copyright 2011 MIT Haystack Observatory
+#
+# This file is part of Mark6.
+# 
+# Mark6 is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 2 of the License.
+# 
+# Mark6 is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with Mark6.  If not, see <http://www.gnu.org/licenses/>.
+
+# Author:	del@haystack.mit.edu
+# Description:	This is a generic collection of disk-related functions that
+#		are used for partitioning, creating file systems, optimizing
+#		file system settings, creating RAID configurations, and
+#		benchmarking disk performance.  The script requires two
+#		input/configuration files:
+#			disktools.rc	A set of colon delimited entries of
+#					the form <device>:<mount point>.
+#					For example...
+#
+#					/dev/sdb:/mnt/disk0
+#					/dev/sdc:/mnt/disk1
+#					/dev/sdd:/mnt/disk2
+#			disktools.fio	An input file for the linux "fio" disk
+#					benchmarking tool.
+#					For example:
+#
+#					[disk8]
+#					rw=write
+#					iodepth=8
+#					directory=/mnt/disk8
+#					write_bw_log=disk8_write
+#					fill_device=1
+
+
+# Executables
+TUNE2FS=/sbin/tune2fs
+E2FSCK=/sbin/e2fsck
+DUMPE2FS=/sbin/dumpe2fs
+MOUNT=/bin/mount
+MEGACLI=/usr/sbin/megacli
+PARTED=/sbin/parted
+MKFS=/sbin/mkfs.ext4
+
+DEV_MAP[0]="/dev/sda:/mnt/disk0"
+DEV_MAP[1]="/dev/sdb:/mnt/disk1"
+DEV_MAP[2]="/dev/sdc:/mnt/disk2"
+DEV_MAP[3]="/dev/sdd:/mnt/disk3"
+
+tune_devs() {
+	for p in ${DEV_MAP[@]}
+	do
+		IFS=':' read -ra a <<< "$p"
+		dev=${a[0]}
+		mnt=${a[1]}
+
+		echo Configuring ${dev}1
+		# Enable writeback mode. This mode will typically provide the best ext4 performance.
+		${TUNE2FS} -o journal_data_writeback ${dev}1
+
+		# Delete has_journal option
+		${TUNE2FS} -O ^has_journal  ${dev}1
+	
+		# Required fsck
+		${E2FSCK} -f ${dev}1
+
+		# Check fs options
+		${DUMPE2FS} ${dev}1
+	done
+}
+
+mount_devs() {
+	MOUNT_OPTS="defaults,data=writeback,noatime,nodiratime"
+	# FOR XFS
+	# MOUNT_OPTS="noatime,nodiratime,allocsize=512m,sunit=1024,swidth=8192"
+	for p in ${DEV_MAP[@]}
+	do
+		IFS=':' read -ra a <<< "$p"
+		dev=${a[0]}
+		mnt=${a[1]}
+
+		echo ${MOUNT} -t ext4 -o ${MOUNT_OPTS} ${dev}1 ${mnt}
+		mkdir -p ${mnt}
+		${MOUNT} -t ext4 -o ${MOUNT_OPTS} ${dev}1 ${mnt}
+		# For XFS
+		# ${MOUNT} -t xfs -o ${MOUNT_OPTS} ${dev}1 ${mnt}
+	done
+}
+
+
+mk_part() {
+	for DEV in ${DEV_MAP[@]}
+	do
+		IFS=':' read -ra a <<< "$DEV"
+		dev=${a[0]}
+		mnt=${a[1]}
+
+		echo ${PARTED} ${dev} --script mklabel gpt
+		${PARTED} ${dev} --script mklabel gpt
+	
+		echo ${PARTED} ${dev} --script rm 1
+		${PARTED} ${dev} --script rm 1
+
+		echo ${PARTED} ${dev} --script mkpart ext4 1049k -- -1
+		${PARTED} ${dev} --script mkpart ext4 1049k -- -1
+	done
+}
+
+mk_fs() {
+	for DEV in ${DEV_MAP[@]}
+	do
+		IFS=':' read -ra a <<< "$DEV"
+		dev=${a[0]}
+		mnt=${a[1]}
+
+		echo ${MKFS} ${dev}1
+		${MKFS} ${dev}1
+		#-d sunit=1024,swidth=8192 \
+		# \
+		# -d su=1024,sw=1 \
+    		# -l su=64k,version=2,lazy-count=1,size=128m \
+    		# -i attr=2 \
+		# ${dev}1 
+	done
+}
+
+main() {
+	echo Welcome to the Mark6 disk conditioning program
+	echo
+	echo This software has been developed by MIT Haystack Observatory and
+	echo is released under the terms of the GPL \(see LICENSE file\)
+	echo 
+	echo Please direct any questions to del@haystack.mit.edu
+	echo
+
+	echo About to condition the following devices:
+	for DEV in ${DEV_MAP[@]}
+	do
+		IFS=':' read -ra a <<< "$DEV"
+		dev=${a[0]}
+		mnt=${a[1]}
+		echo DEVICE: ${dev} MOUNT_POUNT: ${mnt}
+	done
+
+	echo Creating partitions...
+	mk_part
+
+	echo Creating File Systems...
+	mk_fs
+
+	echo Tuning devices...
+	tune_devs
+
+	echo Completed conditioning...
+}
+
+
+# Kick off setup.
+main $*

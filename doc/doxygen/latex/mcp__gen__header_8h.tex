@@ -1,0 +1,90 @@
+\hypertarget{mcp__gen__header_8h}{
+\section{src/extern/PF\_\-RING-\/4.7.0/drivers/myricom/myri10ge-\/linux.1.5.1/firmware/mcp\_\-gen\_\-header.h File Reference}
+\label{mcp__gen__header_8h}\index{src/extern/PF\_\-RING-\/4.7.0/drivers/myricom/myri10ge-\/linux.1.5.1/firmware/mcp\_\-gen\_\-header.h@{src/extern/PF\_\-RING-\/4.7.0/drivers/myricom/myri10ge-\/linux.1.5.1/firmware/mcp\_\-gen\_\-header.h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmcp__gen__header}{mcp\_\-gen\_\-header}
+\item 
+struct \hyperlink{structzmcp__info}{zmcp\_\-info}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{mcp__gen__header_8h_acfc507ad880439f7e84e36e1b7599895}{
+\#define {\bfseries MCP\_\-HEADER\_\-PTR\_\-OFFSET}~0x3c}
+\label{mcp__gen__header_8h_acfc507ad880439f7e84e36e1b7599895}
+
+\item 
+\hypertarget{mcp__gen__header_8h_aa69113c6852fe9cd773f8d3c8b5a50dd}{
+\#define {\bfseries MCP\_\-TYPE\_\-MX}~0x4d582020}
+\label{mcp__gen__header_8h_aa69113c6852fe9cd773f8d3c8b5a50dd}
+
+\item 
+\hypertarget{mcp__gen__header_8h_a2ad1d8a911a15a44f01f46a7b80b9fb7}{
+\#define {\bfseries MCP\_\-TYPE\_\-PCIE}~0x70636965}
+\label{mcp__gen__header_8h_a2ad1d8a911a15a44f01f46a7b80b9fb7}
+
+\item 
+\hypertarget{mcp__gen__header_8h_a0ceea701f56bb991649efd3e2d3793a6}{
+\#define {\bfseries MCP\_\-TYPE\_\-ETH}~0x45544820}
+\label{mcp__gen__header_8h_a0ceea701f56bb991649efd3e2d3793a6}
+
+\item 
+\hypertarget{mcp__gen__header_8h_a5f0361d43d4049df75acc584e320011d}{
+\#define {\bfseries MCP\_\-TYPE\_\-MCP0}~0x4d435030}
+\label{mcp__gen__header_8h_a5f0361d43d4049df75acc584e320011d}
+
+\item 
+\hypertarget{mcp__gen__header_8h_a5da0a1f087ea7901dac56a6337ba6146}{
+\#define {\bfseries MCP\_\-TYPE\_\-DFLT}~0x20202020}
+\label{mcp__gen__header_8h_a5da0a1f087ea7901dac56a6337ba6146}
+
+\item 
+\hypertarget{mcp__gen__header_8h_acc489ab4a19eaf3667ec9f6598739a9b}{
+\#define {\bfseries MCP\_\-TYPE\_\-ETHZ}~0x4554485a}
+\label{mcp__gen__header_8h_acc489ab4a19eaf3667ec9f6598739a9b}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{mcp__gen__header_8h_aa45e9c28e9355580e897b9d7b09055aa}{
+typedef struct \hyperlink{structmcp__gen__header}{mcp\_\-gen\_\-header} {\bfseries mcp\_\-gen\_\-header\_\-t}}
+\label{mcp__gen__header_8h_aa45e9c28e9355580e897b9d7b09055aa}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file define a standard header used as a first entry point to exchange information between firmware/driver and driver.
+
+The header structure can be anywhere in the mcp. It will usually be in the .data section, because some fields needs to be initialized at compile time.
+
+The 32bit word at offset MX\_\-HEADER\_\-PTR\_\-OFFSET in the mcp must contains the location of the header.
+
+Typically a MCP will start with the following: 
+\begin{DoxyCode}
+   .text
+     .space 52    ! to help catch MEMORY_INT errors
+     bt start     ! jump to real code
+     nop
+     .long _gen_mcp_header
+\end{DoxyCode}
+
+
+The source will have a definition like: 
+\begin{DoxyCode}
+   mcp_gen_header_t gen_mcp_header = {
+      .header_length = sizeof(mcp_gen_header_t),
+      .mcp_type = MCP_TYPE_XXX,
+      .version = "something $Id: mcp_gen_header.h,v 1.9 2009-02-27 16:29:36 loic 
+      Exp $",
+      .mcp_globals = (unsigned)&Globals
+   };
+\end{DoxyCode}
+ In most case using the convenience MCP\_\-GEN\_\-HEADER\_\-DECL() macro is simpler than doing a full manual declaration. 
+
+Definition in file \hyperlink{mcp__gen__header_8h_source}{mcp\_\-gen\_\-header.h}.
+

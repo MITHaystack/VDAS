@@ -1,0 +1,89 @@
+\hypertarget{structcnic__ulp__ops}{
+\section{cnic\_\-ulp\_\-ops Struct Reference}
+\label{structcnic__ulp__ops}\index{cnic\_\-ulp\_\-ops@{cnic\_\-ulp\_\-ops}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structcnic__ulp__ops_a67d6b5510996a4b9ee9eb91ac83f94cc}{
+void($\ast$ {\bfseries cnic\_\-init} )(struct \hyperlink{structcnic__dev}{cnic\_\-dev} $\ast$dev)}
+\label{structcnic__ulp__ops_a67d6b5510996a4b9ee9eb91ac83f94cc}
+
+\item 
+\hypertarget{structcnic__ulp__ops_afdd94fb001f7c11183289cc3be6e44bc}{
+void($\ast$ {\bfseries cnic\_\-exit} )(struct \hyperlink{structcnic__dev}{cnic\_\-dev} $\ast$dev)}
+\label{structcnic__ulp__ops_afdd94fb001f7c11183289cc3be6e44bc}
+
+\item 
+\hypertarget{structcnic__ulp__ops_acfbb6bdc7f991ba64836170aa684fff2}{
+void($\ast$ {\bfseries cnic\_\-start} )(void $\ast$ulp\_\-ctx)}
+\label{structcnic__ulp__ops_acfbb6bdc7f991ba64836170aa684fff2}
+
+\item 
+\hypertarget{structcnic__ulp__ops_af00b6c6d0e1dc545093a1f175408515f}{
+void($\ast$ {\bfseries cnic\_\-stop} )(void $\ast$ulp\_\-ctx)}
+\label{structcnic__ulp__ops_af00b6c6d0e1dc545093a1f175408515f}
+
+\item 
+\hypertarget{structcnic__ulp__ops_a65b6830cf60b352490c6eec28ce4d2ba}{
+void($\ast$ {\bfseries indicate\_\-kcqes} )(void $\ast$ulp\_\-ctx, struct \hyperlink{structkcqe}{kcqe} $\ast$cqes\mbox{[}$\,$\mbox{]}, u32 num\_\-cqes)}
+\label{structcnic__ulp__ops_a65b6830cf60b352490c6eec28ce4d2ba}
+
+\item 
+\hypertarget{structcnic__ulp__ops_ae260d254ede3e2c470c7b3c709812132}{
+void($\ast$ {\bfseries indicate\_\-netevent} )(void $\ast$ulp\_\-ctx, unsigned long event)}
+\label{structcnic__ulp__ops_ae260d254ede3e2c470c7b3c709812132}
+
+\item 
+\hypertarget{structcnic__ulp__ops_af73755205c41417c96e36cfdf491f741}{
+void($\ast$ {\bfseries indicate\_\-inetevent} )(void $\ast$ulp\_\-ctx, unsigned long event)}
+\label{structcnic__ulp__ops_af73755205c41417c96e36cfdf491f741}
+
+\item 
+\hypertarget{structcnic__ulp__ops_acad2e30b433d252248c04b62f60e1913}{
+void($\ast$ {\bfseries cm\_\-connect\_\-complete} )(struct \hyperlink{structcnic__sock}{cnic\_\-sock} $\ast$)}
+\label{structcnic__ulp__ops_acad2e30b433d252248c04b62f60e1913}
+
+\item 
+\hypertarget{structcnic__ulp__ops_a8226a400bae765e7546ea71a0e139196}{
+void($\ast$ {\bfseries cm\_\-close\_\-complete} )(struct \hyperlink{structcnic__sock}{cnic\_\-sock} $\ast$)}
+\label{structcnic__ulp__ops_a8226a400bae765e7546ea71a0e139196}
+
+\item 
+\hypertarget{structcnic__ulp__ops_ac384e4d82d00b8fcdb52a6f1642d4a8c}{
+void($\ast$ {\bfseries cm\_\-abort\_\-complete} )(struct \hyperlink{structcnic__sock}{cnic\_\-sock} $\ast$)}
+\label{structcnic__ulp__ops_ac384e4d82d00b8fcdb52a6f1642d4a8c}
+
+\item 
+\hypertarget{structcnic__ulp__ops_ab11b3a735b6cf4af087167cba990c2ea}{
+void($\ast$ {\bfseries cm\_\-remote\_\-close} )(struct \hyperlink{structcnic__sock}{cnic\_\-sock} $\ast$)}
+\label{structcnic__ulp__ops_ab11b3a735b6cf4af087167cba990c2ea}
+
+\item 
+\hypertarget{structcnic__ulp__ops_ac999dcb8bdbe645c35f04e4d881c43f9}{
+void($\ast$ {\bfseries cm\_\-remote\_\-abort} )(struct \hyperlink{structcnic__sock}{cnic\_\-sock} $\ast$)}
+\label{structcnic__ulp__ops_ac999dcb8bdbe645c35f04e4d881c43f9}
+
+\item 
+\hypertarget{structcnic__ulp__ops_ac6e20d3f9d674985d7469cc0735d20e2}{
+struct module $\ast$ {\bfseries owner}}
+\label{structcnic__ulp__ops_ac6e20d3f9d674985d7469cc0735d20e2}
+
+\item 
+\hypertarget{structcnic__ulp__ops_a9c4039ef9249ab111bbf277b0a8da1e0}{
+atomic\_\-t {\bfseries ref\_\-count}}
+\label{structcnic__ulp__ops_a9c4039ef9249ab111bbf277b0a8da1e0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 296 of file cnic\_\-if.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/broadcom/netxtreme2-\/5.2.50/bnx2-\/2.0.8b/src/cnic\_\-if.h\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{structlsa__hdr}{
+\section{lsa\_\-hdr Struct Reference}
+\label{structlsa__hdr}\index{lsa\_\-hdr@{lsa\_\-hdr}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structlsa__hdr_adb767b40eb2d8b0ec8957bc5a43df94b}{
+u\_\-int16\_\-t {\bfseries ls\_\-age}}
+\label{structlsa__hdr_adb767b40eb2d8b0ec8957bc5a43df94b}
+
+\item 
+\hypertarget{structlsa__hdr_afe230fb80225b9c04e9bea5087a7ae8b}{
+u\_\-int8\_\-t {\bfseries ls\_\-options}}
+\label{structlsa__hdr_afe230fb80225b9c04e9bea5087a7ae8b}
+
+\item 
+\hypertarget{structlsa__hdr_a80bf838e054eb9d7048f4c41be0bc738}{
+u\_\-int8\_\-t {\bfseries ls\_\-type}}
+\label{structlsa__hdr_a80bf838e054eb9d7048f4c41be0bc738}
+
+\item 
+\hypertarget{structlsa__hdr_aacee9cf8e578aab26bc1e91345da234b}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct in\_addr {\bfseries lsa\_id}\\
+\>struct \{\\
+\>\>u\_int8\_t {\bfseries opaque\_type}\\
+\>\>u\_int8\_t {\bfseries opaque\_id} \mbox{[}3\mbox{]}\\
+\>\} {\bfseries opaque\_field}\\
+\} {\bfseries un\_lsa\_id}}
+\label{structlsa__hdr_aacee9cf8e578aab26bc1e91345da234b}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structlsa__hdr_a19f161e427f72ae5d9db797a440c4f39}{
+struct in\_\-addr {\bfseries ls\_\-router}}
+\label{structlsa__hdr_a19f161e427f72ae5d9db797a440c4f39}
+
+\item 
+\hypertarget{structlsa__hdr_a5fbfe10a403944dc5048855685ef86ce}{
+u\_\-int32\_\-t {\bfseries ls\_\-seq}}
+\label{structlsa__hdr_a5fbfe10a403944dc5048855685ef86ce}
+
+\item 
+\hypertarget{structlsa__hdr_a25e8a14c755c64e75ef3df3cf748c8f9}{
+u\_\-int16\_\-t {\bfseries ls\_\-chksum}}
+\label{structlsa__hdr_a25e8a14c755c64e75ef3df3cf748c8f9}
+
+\item 
+\hypertarget{structlsa__hdr_ae74ff25c6124da466060e4a2f1ccf855}{
+u\_\-int16\_\-t {\bfseries ls\_\-length}}
+\label{structlsa__hdr_ae74ff25c6124da466060e4a2f1ccf855}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 165 of file ospf.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/userland/tcpdump-\/4.1.1/ospf.h\end{DoxyCompactItemize}

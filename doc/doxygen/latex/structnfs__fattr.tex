@@ -1,0 +1,74 @@
+\hypertarget{structnfs__fattr}{
+\section{nfs\_\-fattr Struct Reference}
+\label{structnfs__fattr}\index{nfs\_\-fattr@{nfs\_\-fattr}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structnfs__fattr_a63af5ab1538005c27f774274db72aeb5}{
+u\_\-int32\_\-t {\bfseries fa\_\-type}}
+\label{structnfs__fattr_a63af5ab1538005c27f774274db72aeb5}
+
+\item 
+\hypertarget{structnfs__fattr_a9d68a583c23fa25d19b01d4196f51fd2}{
+u\_\-int32\_\-t {\bfseries fa\_\-mode}}
+\label{structnfs__fattr_a9d68a583c23fa25d19b01d4196f51fd2}
+
+\item 
+\hypertarget{structnfs__fattr_a06749fd2d8de16c5253f5a63d147524b}{
+u\_\-int32\_\-t {\bfseries fa\_\-nlink}}
+\label{structnfs__fattr_a06749fd2d8de16c5253f5a63d147524b}
+
+\item 
+\hypertarget{structnfs__fattr_a5b2b31969339f9cd59c32eaed18e0f08}{
+u\_\-int32\_\-t {\bfseries fa\_\-uid}}
+\label{structnfs__fattr_a5b2b31969339f9cd59c32eaed18e0f08}
+
+\item 
+\hypertarget{structnfs__fattr_ad6596221507c9f507a58ba953655c8ac}{
+u\_\-int32\_\-t {\bfseries fa\_\-gid}}
+\label{structnfs__fattr_ad6596221507c9f507a58ba953655c8ac}
+
+\item 
+\hypertarget{structnfs__fattr_a3933bf7f4974653581ea939762247833}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>u\_int32\_t {\bfseries nfsv2fa\_size}\\
+\>\>u\_int32\_t {\bfseries nfsv2fa\_blocksize}\\
+\>\>u\_int32\_t {\bfseries nfsv2fa\_rdev}\\
+\>\>u\_int32\_t {\bfseries nfsv2fa\_blocks}\\
+\>\>u\_int32\_t {\bfseries nfsv2fa\_fsid}\\
+\>\>u\_int32\_t {\bfseries nfsv2fa\_fileid}\\
+\>\>\hyperlink{structnfsv2__time}{nfstime2} {\bfseries nfsv2fa\_atime}\\
+\>\>\hyperlink{structnfsv2__time}{nfstime2} {\bfseries nfsv2fa\_mtime}\\
+\>\>\hyperlink{structnfsv2__time}{nfstime2} {\bfseries nfsv2fa\_ctime}\\
+\>\} {\bfseries fa\_nfsv2}\\
+\>struct \{\\
+\>\>\hyperlink{structnfs__uquad}{nfsuint64} {\bfseries nfsv3fa\_size}\\
+\>\>\hyperlink{structnfs__uquad}{nfsuint64} {\bfseries nfsv3fa\_used}\\
+\>\>\hyperlink{structnfsv3__spec}{nfsv3spec} {\bfseries nfsv3fa\_rdev}\\
+\>\>\hyperlink{structnfs__uquad}{nfsuint64} {\bfseries nfsv3fa\_fsid}\\
+\>\>\hyperlink{structnfs__uquad}{nfsuint64} {\bfseries nfsv3fa\_fileid}\\
+\>\>\hyperlink{structnfsv3__time}{nfstime3} {\bfseries nfsv3fa\_atime}\\
+\>\>\hyperlink{structnfsv3__time}{nfstime3} {\bfseries nfsv3fa\_mtime}\\
+\>\>\hyperlink{structnfsv3__time}{nfstime3} {\bfseries nfsv3fa\_ctime}\\
+\>\} {\bfseries fa\_nfsv3}\\
+\} {\bfseries fa\_un}}
+\label{structnfs__fattr_a3933bf7f4974653581ea939762247833}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 308 of file nfs.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/userland/tcpdump-\/4.1.1/nfs.h\end{DoxyCompactItemize}

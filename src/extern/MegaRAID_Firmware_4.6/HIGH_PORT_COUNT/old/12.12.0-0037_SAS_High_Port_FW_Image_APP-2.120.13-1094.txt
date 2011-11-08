@@ -1,0 +1,511 @@
+************************************
+
+LSI Corp. MegaRAID Firmware Release 
+
+************************************
+
+Release date: 12/10/10
+
+====================== 
+Supported Controllers:
+======================
+
+MegaRAID SAS 9280-24i4e
+MegaRAID SAS 9280-16i4e
+MegaRAID SAS 9260-16i
+
+
+
+Component:
+=========
+SAS MegaRAID Firmware Release for MegaRAID Controllers
+Release date: 12/10/10
+
+
+Version Numbers:	
+===============
+Current Firmware Package:  12.12.0-0037   
+Current Package Details:   
+APP-2.120.13-1094_BB-2.02.00.00-0000_BIOS-3.20.00_4.11.05.00_0x0418A000_WEBBIOS-6.0-32-e_27-Rel_PCLI-04.04-01700008_BOOT-01.250.04.219_NVDATA-2.09.03-0010_SAS2XFW-25.05.04.00_MFGIMG-25.05.04.00_2010_12_06
+			     
+Previous Firmware Package:  12.11.0-0017   
+Previous Package Details:   
+APP-2.110.03-0967_BB-2.02.00.00-0000_BIOS-3.18.00_4.09.05.00_0x0416A000_WEBBIOS-6.0-24-e_19-Rel_PCLI-04.04-01100008_BOOT-01.250.04.219_NVDATA-2.08.03-0004_SAS2XFW-25.05.04.00_MFGIMG-25.05.04.00_2010_08_06
+		 
+			      
+
+Bug Fixes and Enhancements:
+===========================
+Firmware:
+=========
+Enhancements:
+LSIP200119698 	(CO) 	BBU AEN Change for 6G SAS controllers
+LSIP200110783 	(CO) 	Need ability to RESET expander from behind MegaSAS
+LSIP200070114 	(CO) 	Enable OCR Support for iMR
+LSIP200077653 	(CO) 	BMC to communicate with our firmware, using I2C interface
+LSIP200083499 	(CO) 	Retry SATA IDNF
+LSIP200083501 	(CO) 	Inconsistent drive mixing rules in the case of unsecured SED only DG
+LSIP200083484 	(CO) 	Stage BIOS directly from flash - for iMR
+LSIP200070054 	(CO) 	Implement mechanism for FW to obtain RAID driver version and provide in API
+LSIP200077437 	(CO) 	Fast-Path-II: RAID-5 Write Optimizations
+LSIP200063471 	(CO) 	Check internal backplane SES page for Backplane Bay ID and display in mgmt tools
+LSIP200063465 	(CO) 	Sideband Management
+LSIP200063425 	(CO) 	RAID fw should not run BGI on entire VD after capacity expansion
+LSIP200063451 	(CO) 	Request to have VD offline, instead of PDs become foreign when PDs missing in spanned array
+LSIP200063440 	(CO) 	Update I2C device locations for OEM controller and enable switch to access SEP
+LSIP200075204 	(CO) 	RAID Firmware to read controller thermal sensors to get chip and board temps
+LSIP200063435 	(CO) 	Modify NVData to make GPIO16 of OEM controller output activity LED for all 8 PHYs
+LSIP200063446 	(CO) 	Monitor HDD temperature for all attached drives
+LSIP200063459 	(CO) 	Support for variable rate HDDs
+
+Bug Fixes:
+==========
+LSIP200085323 	(DFCT) 	Deliver Skinny Merge fixes
+LSIP200119148 	(DFCT) 	Intermittent initialization failure (Fault code 0x01) SDRAM ReadEye calibration
+LSIP200119150 	(DFCT) 	intermittent RAID key authentication issue was occurring on boot up
+LSIP200119296 	(DFCT) 	Machine Check with specific motherboard.
+LSIP200119390 	(DFCT) 	Tape Device  loads unexpectedly on Liberator and Falcon MR adapters
+LSIP200119144 	(DFCT) 	2108 ROMB reports a non-functional Local Disk as "Operable"
+LSIP200113822 	(DFCT) 	RAID-0 Volumes Disappeared After RAID Creation - intermittent
+LSIP200119165 	(DFCT) 	Provide the chip version/revision for MegaRAID controllers thru MegaCLI
+LSIP200113830 	(DFCT) 	Timeout happens in Electra + 600GB SAS HDD during the system power-on.
+LSIP200113832 	(DFCT) 	FW causes Fatal Error when HSP drive responded with Sense 0x02 for Write/Verify or TUR.
+LSIP200051941 	(DFCT) 	Some LED are still not working according to SPEC with latest NVDATA
+LSIP200114320 	(DFCT) 	After a complete and successfully recalibrate cycle the request to a relearn is still on
+LSIP200114335 	(DFCT) 	sas address not programmed correctly for OEM boards
+LSIP200118870 	(DFCT) 	ESXi installation fails on RAID1/RAID0 cluster of two SSDs
+LSIP200119312 	(DFCT) 	Disable VPD for specific SSVID 
+LSIP200119340 	(DFCT) 	After FW downgrade eventlog cannot be read
+LSIP200119397 	(DFCT) 	PL version 05.00.28.00 check in
+LSIP200119135 	(DFCT) 	Field cant flash back from 10M08 to 10M04 successfully, requires Debugger
+LSIP200119143 	(DFCT) 	Copy back does not start in a case of revertible HSP
+LSIP200077733 	(DFCT) 	FW sets wrong state for the PD
+LSIP200084868 	(DFCT) 	FW fails to alert multipath restoration
+LSIP200095187 	(DFCT) 	Not able to change IO policy in Repo VD
+LSIP200095594 	(DFCT) 	FW sets wrong state for the PD
+LSIP200112601 	(DFCT) 	Test tool compare issue on R5 while running stress test and cable pull
+LSIP200082793 	(DFCT) 	Product name (Controller name) is not coming after flashing of firmware.
+LSIP200085281 	(DFCT) 	To resolve iMR build issues for
+LSIP200083709 	(DFCT) 	(RW LSIP200075445) IMR : Copyback not resuming on a pd which is in transition state while rebooting
+LSIP200086474 	(DFCT) 	Montask with DATA TLB ERROR exception running PR
+LSIP200087156 	(DFCT) 	FW hits montask with DATA TLB exception while spunning down the VDs
+LSIP200087388 	(DFCT) 	Compile out some code for iMR
+LSIP200087192 	(DFCT) 	Drives should be spin down properly after 30 min with no oscillation.
+LSIP200086544 	(DFCT) 	Host fails to boot intermittently due to message: FW could not sync up with property changes for some VD's/PD's
+LSIP200087714 	(DFCT) 	Incorrect power save policy shown in MSM
+LSIP200087163 	(DFCT) 	Current power save policy shown wrong info
+LSIP200088728 	(DFCT) 	(RW LSIP200087192) Drives should be spin down properly after 30 min with no oscillation.
+LSIP200089672 	(DFCT) 	10m09-iMR: FW hits montask with an error "unable to allocate dmTableIdx for Device Handle"
+LSIP200089751 	(DFCT) 	10m09-CacheCade : VD with all SSD PDs is associated with CacheCade VD
+LSIP200094968 	(DFCT) 	MSM is not allowing to create a VD with all SSD PD in None Power save mode.
+LSIP200095238 	(DFCT) 	On upgrade to 10m09 VD power save policy should be updated to CTRL DEFAULT
+LSIP200096746 	(DFCT) 	Enable or disable idle modes which are changeable by the drive FW rather than enabling/disabling all idle modes.
+LSIP200095913 	(DFCT) 	Step 7 Failed, GHS will go to spin down state After Abort CC For 5 Minutes
+LSIP200097571 	(DFCT) 	Remove debug prints
+LSIP200096759 	(DFCT) 	(RW LSIP200095187) Not able to change IO policy in Repo VD
+LSIP200098288 	(DFCT) 	Multi span VD is getting spundown early
+LSIP200099557 	(DFCT) 	send stand by immediate command to SATA SSD
+LSIP200100802 	(DFCT) 	Porting the iBBU08 fixes (LSIP200095866, LSIP200095695, LSIP200095868) to 10m09
+LSIP200105492 	(DFCT) 	global hot spare dosen't get spun down for iMR card.
+LSIP200105542 	(DFCT) 	Fatal FW error because of "delayClearPdEntry+64"
+LSIP200105985 	(DFCT) 	Drives does not spin down after reconstruction
+LSIP200111721 	(DFCT) 	Porting the defect:LSIP200074970(SR-IOV are expose to BIOS in iMR controller)
+LSIP200105289 	(DFCT) 	Test tool compare issue found in R6 while doing Power cycling with Media Error Injection.
+LSIP200111452 	(DFCT) 	MR Fw break with stress, rebuild and CC on 3 span R10
+LSIP200084573 	(DFCT) 	Liberator driver reports SRB_STATUS_DATA_OVERRUN
+LSIP200097537 	(DFCT) 	FW fails to map the third enclosure in iMR
+LSIP200097903 	(DFCT) 	CLI 8.00.35 crashes during a getresults command to controller
+LSIP200097940 	(DFCT) 	PerfMon : CACHE METRICS for iMR shows garbage value.
+LSIP200098289 	(DFCT) 	System Halts on multiple R6 creation with the driver version 4.32.0.64
+LSIP200100783 	(DFCT) 	Revert back staging BIOS support for 10m09
+LSIP200105689 	(DFCT) 	MonTask: line 1521 in file ../../ddf/ddfConfig.c during an attempt to import a Foreign config.
+LSIP200105768 	(DFCT) 	iMR- IO on degraded R1 causing megamon break.
+LSIP200105977 	(DFCT) 	MonTask: line 1197 in file ../../raid/1078dma.c
+LSIP200095313 	(DFCT) 	Hit Montask During TAS -- Repeated multipath failover w/ I/O (-tas)
+LSIP200105228 	(DFCT) 	foriegn bit flag is set to a CB PD after import.
+LSIP200106010 	(DFCT) 	(RW LSIP200083910) iMR card hits to Megamon by performing OCR while heavy IO is running on VD
+LSIP200111535 	(DFCT) 	Potential Data Mismatch after Power Loss on 8888ELP
+LSIP200111537 	(DFCT) 	Medium errors during CC caused driver to kill adapter - background tasks not covered by CME fix
+LSIP200099383 	(DFCT) 	Hii-Fails to Enable Security due to Space Character on Suggested Security Key
+LSIP200083545 	(DFCT) 	RAID Failed to Rebuild After Reboot with New Drive Insert
+LSIP200086378 	(DFCT) 	enclosure Discovery Order has Changed in 10M06 Firmware
+LSIP200087208 	(DFCT) 	Manage MegaRAID Advanced Software Options is showing Megaraid Recovery as unlimited in imr controller
+LSIP200087153 	(DFCT) 	Snapshot is disabled after breaking the repo VD mirror.
+LSIP200085867 	(DFCT) 	When 2 MegaRAID cards are inserted in the system, 2 points of SnapShot are created after the system reboot.
+LSIP200095745 	(DFCT) 	Montask hit if you try to import snapshot base.
+LSIP200096624 	(DFCT) 	MSM to scan and import all foreign Ps caused to fail for MonTask: line 199 in file ../../raid/1078int.c
+LSIP200096750 	(DFCT) 	Montask hit if you try to import foreign configuration from IR2 to MR
+LSIP200089382 	(DFCT) 	Fw breakinto Megamon while importing foreign configuration from MR to IMR
+LSIP200095694 	(DFCT) 	Read/Write Error Reconstruction with removal of SSD drives
+LSIP200096455 	(DFCT) 	Remove Breakmirror code in 10m09 compilation
+LSIP200096709 	(DFCT) 	FW hits Assertion failure in ../../raid/pd.c at line 6817: mon_task when HSP starting
+LSIP200094922 	(DFCT) 	Montask hit with SEVERE_ERROR: Time 494 sec, File:../../dm/src/chipmgr.c, Line 919 when creating view on degraded repo.
+LSIP200097380 	(DFCT) 	FW breaks in to MegaMon whenn View is created and rescan is done in disk management.
+LSIP200094603 	(DFCT) 	FW breaks into Assertion failure in ../../raid/ldbbm.c at line 1634: mon_task while recovering medium errors
+LSIP200096710 	(DFCT) 	FW breaks into Kill Adapter mon_task while recovering medium errors
+LSIP200097782 	(DFCT) 	Unable to import foreign config of 16 VD from a MR to iMR 
+LSIP200099403 	(DFCT) 	Memory leak in IMR - Code review defect
+LSIP200105303 	(DFCT) 	Foreign config import failed with error message "Failed to read Foreign configuration" in IMR controller
+LSIP200105290 	(DFCT) 	Cannot import multiple foreign config in iMR controller
+LSIP200106079 	(DFCT) 	Foreign config is not importing in MR controller.
+LSIP200110651 	(DFCT) 	CodeReview: Remove print in PdRemoveClearDS
+LSIP200095980 	(DFCT) 	9260-8i hangs when connected to OEM expander
+LSIP200106221 	(DFCT) 	SERR and system crash occures with SLES11 SP1 and Lynx2 LSI2008 FW 20.7.1-0004
+LSIP200074096 	(DFCT) 	16 VDs of MR fail to import to iMR reporting "count exceeds 20"
+LSIP200085688 	(DFCT) 	MR-iMR import is not showing preview when it has 32 VDs
+LSIP200087394 	(DFCT) 	Freeing up SRAM space by removing unwanted data from IOPATH
+LSIP200089236 	(DFCT) 	Extending Secure Erase feature for all SSD vendors
+LSIP200095602 	(DFCT) 	10m09: Full initialization is not completing on R60
+LSIP200096920 	(DFCT) 	showprogress command will not update the LD initialization progresss
+LSIP200096929 	(DFCT) 	In PCLI LD initialization progress is not displaying properly.
+LSIP200096436 	(DFCT) 	No AEN for VD bad block table is full
+LSIP200105474 	(DFCT) 	Mon task : when create a Global HSP with particular drive
+LSIP200105916 	(DFCT) 	Test tool compare issue encountered during IO + workaround testing on certain bad behaving SATA drive
+LSIP200100782 	(DFCT) 	To add support for setting "MR_LD_PS_POLICY_T10".
+LSIP200100822 	(DFCT) 	To implement review comments
+LSIP200104279 	(DFCT) 	Broken volume comes back as joined after reboot. (org defect LSIP200088129)
+LSIP200074613 	(DFCT) 	Fails to import foreign configuration
+LSIP200087534 	(DFCT) 	Dummy defect to deliver the AI changes for PR LSIP200071063
+LSIP200095559 	(DFCT) 	iMR-f/w break into Montask line1197 in file ../../raid/1078dma.c pull out 2nd drive from 2span R50
+LSIP200100086 	(DFCT) 	Dummy task to check in the 10M09 AI to add comment on the fix for foreign configuration import
+LSIP200084501 	(DFCT) 	Test tool compare issue hit while running specific stress test in R0, R1 & R10
+LSIP200094694 	(DFCT) 	Break mirror option is not coming in IMR controller
+LSIP200094784 	(DFCT) 	Offline the broken VD and importing of it is not supported.
+LSIP200097017 	(DFCT) 	Break Mirror Review Defect
+LSIP200088060 	(DFCT) 	(RW LSIP200087152) Copyback started on the broken mirror VD.
+LSIP200088106 	(DFCT) 	HSP dosent kick in when we do "break mirror" for any vd.
+LSIP200088129 	(DFCT) 	when there are two vd's if you do "break mirror" for vd1 and reboot, the vd1 comes as a joined vd.
+LSIP200094429 	(DFCT) 	GHS will not kick in once a mirror is broken untill you create a one more GHS
+LSIP200094597 	(DFCT) 	PR failed to abort when started break mirror to R1 VD.
+LSIP200094718 	(DFCT) 	after breaking the mirror clear the config and reboot, the broken vd will come as a joined vd.
+LSIP200095327 	(DFCT) 	VD is present after clearing the configuration
+LSIP200095558 	(DFCT) 	Break mirror: GHSP did not not kick after auto imported degraded VD
+LSIP200095954 	(DFCT) 	Break Mirror - WB: While joining going on 1st DG breaking 2nd DG breaks both the DGs
+LSIP200098814 	(DFCT) 	Break Mirror operation spins down split member and spins it up before a reboot.
+LSIP200077354 	(DFCT) 	iMR Multipath: IO failure while removing redundant path
+LSIP200096543 	(DFCT) 	10M09 Acceptance. After resizing a VD the BGI completion time was not as expected.
+LSIP200085686 	(DFCT) 	Dummy defect to support OCR in iMR
+LSIP200095942 	(DFCT) 	Foreign Config import not possible through boot msg prompt
+LSIP200089423 	(DFCT) 	No BIOS reported error if "F" key fails to import foreign config, and fail no message in tty
+LSIP200096525 	(DFCT) 	Expand VD size shows the reconstruct time took 63940sec.
+LSIP200097212 	(DFCT) 	Expand VD size shows the recon time took 1573s, NOTE: this issue was fixed in iMR rev 1.120.04-1006 (LSIP200096525)
+LSIP200086043 	(DFCT) 	Warning with MSM using particular expander with MegaRAID cards
+LSIP200086933 	(DFCT) 	SECURITY PROTOCOL IN command is failed, because "Invalid request" s responded (TAPE issue )
+LSIP200089363 	(DFCT) 	DOS MegaSCU doesn't allow user to change mfc setting for disableJoinMirror & breakMirrorRaidLevels
+LSIP200086126 	(DFCT) 	PR does not start in DOS using CLI.
+LSIP200095027 	(DFCT) 	Reconstruction Failed : R5 to R6; FW breaks into Megamon
+LSIP200095202 	(DFCT) 	Once FW breaks into Megamon, it requiring multiple restarts and while initializing again its breaking into Megamon
+LSIP200095381 	(DFCT) 	Unable to install OS on boot VD, after loading MegaRAID driver FW breaking into Megamon
+LSIP200095476 	(DFCT) 	iMR FW Encountering Data TLB Error Exception
+LSIP200084844 	(DFCT) 	Code Review Changes
+LSIP200095538 	(DFCT) 	PerfMon shows Zero stats for CacheCade
+LSIP200085871 	(DFCT) 	10M06 Firmware doesn't allow controller property set or set Adjustable task Rates on High Port Cards
+LSIP200088642 	(DFCT) 	Second CacheCade VD's size displayed as 0KB after deleting first CacheCade VD
+LSIP200084465 	(DFCT) 	Fix Merge Issues
+LSIP200084902 	(DFCT) 	Code Review Defect
+LSIP200085624 	(DFCT) 	FW hangs during rebuilding single R1
+LSIP200085787 	(DFCT) 	FW hangs while Clearing Config.
+LSIP200085794 	(DFCT) 	Hit Montask When Running I/O & Check Consistency
+LSIP200086128 	(DFCT) 	Unable to communicate with Battery
+LSIP200086235 	(DFCT) 	Version needs to be incremented for 10M09 Train
+LSIP200087372 	(DFCT) 	Break Mirror code will not compile with latest API
+LSIP200084780 	(DFCT) 	Break Mirror: app shows option to join a mirror when no mirror is broken
+LSIP200085625 	(DFCT) 	Could not find Break Mirror R1 option in WebBIOS
+LSIP200086137 	(DFCT) 	Could not find Join Mirror option in MSM 8.15-00
+LSIP200086149 	(DFCT) 	HS rebuild should not start if the broken mirror PD still presents in slot
+LSIP200086430 	(DFCT) 	BreakMirror:Pd from broken mirror is not going to power save mode.
+LSIP200087152 	(DFCT) 	Copyback started on the broken mirror VD.
+LSIP200087432 	(DFCT) 	MSM shows a single drive in both online and unconfigured good after a break mirror
+LSIP200087437 	(DFCT) 	Without any broken mirror join mirror option is enabled in MSM and it is allowing to proceed further by clicking it.
+LSIP200087890 	(DFCT) 	While creating VD FW break in to Megamon
+LSIP200094447 	(DFCT) 	Code Review Defect
+LSIP200086148 	(DFCT) 	Broken Mirror PDs failed to spin down
+LSIP200087210 	(DFCT) 	Break Mirror: iMR to MR break Mirror import fails(not showing the PD as Foreign) in WebBIOS
+LSIP200087371 	(DFCT) 	Break Mirror: MR to iMR break Mirror import fails(not showing the PD as Foreign) in WebBIOS
+LSIP200087581 	(DFCT) 	Foreign config import failed with error message "Memory is unavailable to compleate the requested command"
+LSIP200088113 	(DFCT) 	Breaking SSD drives mirror leads to spinning down SSD drives.
+LSIP200088470 	(DFCT) 	join mirror is not disabled after once the process of joining mirror is going on
+LSIP200088520 	(DFCT) 	Break Mirror : PD goes to unconfig Good when the source PD is removed.
+LSIP200088612 	(DFCT) 	break mirror option is given for raid 60 with three drives in each span.
+LSIP200088618 	(DFCT) 	fails to import foreign configuration after spunning up the broken PDs
+LSIP200088631 	(DFCT) 	In Cachecade VD "LD allowed operation" shows Break mirror and join mirror in SLT
+LSIP200089549 	(DFCT) 	Break Mirror: Join mirror option is shown in webBIOS during the rebuild is in progress
+LSIP200094974 	(DFCT) 	Dedicated HSP imported as Global HSP from IMR to MR
+LSIP200095812 	(DFCT) 	Need to disable Break Mirror functionality
+LSIP200083559 	(DFCT) 	(RW LSIP200077761) When attached 16 PDs and made status as UG on reboot 3 PDs are becoming JBOD
+LSIP200085752 	(DFCT) 	MegaCli -AdpAllInfo indicate "BBU Supported" for iMR cards.
+LSIP200089644 	(DFCT) 	S3 sleep mode causes a Blue screen during wake up on 9240 LSI MR
+LSIP200082271 	(DFCT) 	10M08 FW goes to megamon, bypassWaitForBootMsgRetrieval+88
+LSIP200076422 	(DFCT) 	PID Timeouts seen on tty output every 10s with iMR FW
+LSIP200085919 	(DFCT) 	change temp sensor definition so not to conflict with values used
+LSIP200084878 	(DFCT) 	Update Param.h to address code review AI
+LSIP200084843 	(DFCT) 	code review corrections
+LSIP200075790 	(DFCT) 	CacheCade Drives become offline during fail-over test
+LSIP200087604 	(DFCT) 	Dummy defect - Check-in Misc changes
+LSIP200084852 	(DFCT) 	MR : Inconsistency found against WT policy VD while doing Write Journaling
+LSIP200085217 	(DFCT) 	FW reports miscompares after OCR on 64KB/32KB/1MB strip VDs
+LSIP200077611 	(DFCT) 	Test tool compare issue is hit when a CB PD is set to rebuild.
+LSIP200082166 	(DFCT) 	FW hit montask at /dm/mpt2/mptcmd.c line 2778 while running IO + Media error script
+LSIP200082441 	(DFCT) 	MR: Running CC twice reports inconsistencies on fully initialised optimal VDs with IO
+LSIP200084499 	(DFCT) 	FW crashed at /raid/1078dma.c on R5 on power cycle with WJ entry
+LSIP200085032 	(DFCT) 	FW crashes at line 3339 in file ../../dm/src/devmgr.c while load balancing
+LSIP200082002 	(DFCT) 	iMR : Test tool compare error is seen on 32k/64k strip.
+LSIP200082415 	(DFCT) 	Test tool compare error on 8K stripe size VD when min IO size is 1k and max IO size is 2k
+LSIP200082444 	(DFCT) 	iMR : Throws 'Not enough controller memory' message while try to flash FW in specific scenario's
+LSIP200083755 	(DFCT) 	iMR : FW crashed while running mkfs.ext3 /dev/sdx command - Intermittent
+LSIP200083933 	(DFCT) 	iMR : FW crashed at /raid/cpx.c while enclosure power cycle on R5 VDs
+LSIP200084204 	(DFCT) 	Dummy defect: Make as MR only solution
+LSIP200083909 	(DFCT) 	CC reports inconsistencies on R6 WT,DIO VDs
+LSIP200084242 	(DFCT) 	Dummy defect: Make perf monitor common for shared and non-shared CL cases
+LSIP200075798 	(DFCT) 	When MFC bit set to x08 or x10, unable to change the ps policy at controller properties
+LSIP200076217 	(DFCT) 	Mrmonitor does not show the current power save policy is been updated on the ld after ld go to power save mode.
+LSIP200076761 	(DFCT) 	Power save policy is not changing afer vd is going to spin down mode.
+LSIP200076974 	(DFCT) 	Mrmonitor does not show updates in power policy for all VD`s if more then one Vd is present in Drive Group.
+LSIP200075805 	(DFCT) 	After importing Foreign Config from a controller, drives do not spin up on FW.
+LSIP200075801 	(DFCT) 	Drive is going to foreign instead of starting Copy Back.
+LSIP200077237 	(DFCT) 	Mismatch in Vd power policies.
+LSIP200075640 	(DFCT) 	HotSpare is going to foreign state.
+LSIP200077236 	(DFCT) 	Drives do not spin up for spanned DG
+LSIP200077248 	(DFCT) 	NVDATA causing failed to set ps policy at controller level for controller
+LSIP200077370 	(DFCT) 	Power save policy is not changing after aborting the CheckConsistency.
+LSIP200077487 	(DFCT) 	For OEM card NVdtata for the following [do not cache, controller level ps policy and advanced option] is not in sync
+LSIP200064462 	(DFCT) 	CLI, LD with T10 drives supprt string not correct
+LSIP200075445 	(DFCT) 	IMR : Copyback not resuming on a pd which is in transition state while rebooting
+LSIP200077701 	(DFCT) 	Changing the mfc bit to 0xff is resulting in change the ps poloci of previously created DG
+LSIP200077702 	(DFCT) 	For mfc value 0xff, FW not allowing to change the ps policy at DG level
+LSIP200082414 	(DFCT) 	Configured good Drives are not spinning down in give time period.
+LSIP200082632 	(DFCT) 	FW is showing wrong state for current ps policy in preboot environment (WebBIOS)
+LSIP200082824 	(DFCT) 	VD with Direct Attached PD`s are spinning down even when spinupdrive count and delay are set to 2 to 12.
+LSIP200082817 	(DFCT) 	Configured Drives not going to powersave mode as per specified standby time due to FW logic
+LSIP200074044 	(DFCT) 	comment out or remove currently unused prints to the tty log
+LSIP200083450 	(DFCT) 	add code for temperature sensor that uses MFI
+LSIP200072582 	(DFCT) 	memory test failure
+LSIP200075190 	(DFCT) 	Consolidated Build defects
+LSIP200064328 	(DFCT) 	VD`s are going to Unconfigured good PD`s after reboot of the system.
+LSIP200064442 	(DFCT) 	IO fails with drives missing during OCR on Spin Down PD while starting IO
+LSIP200070866 	(DFCT) 	Configured Drive goes to unconfigured good while power cycling the enclosure.
+LSIP200071624 	(DFCT) 	Online drives are going to foreign and unconfiguregood state after reboot of the system.
+LSIP200071391 	(DFCT) 	FW shows message of UnSyncrognization while rebooting the system.
+LSIP200071072 	(DFCT) 	Current PS policy of VD is not changing when the VD state changing from spin down to spin up
+LSIP200071881 	(DFCT) 	Snapshot is getting disable after reboot.
+LSIP200071370 	(DFCT) 	In SSD HDD mix VD`s SSD drives are going to spin down mode.
+LSIP200071665 	(DFCT) 	No application enumerates the cascaded enclosure
+LSIP200071033 	(DFCT) 	Cannot create configuration if MFC bit disablepowersavings is set to ff.
+LSIP200071363 	(DFCT) 	Drives become foreign while after reboot while drives in transtition state after fw flash.
+LSIP200071409 	(DFCT) 	When the PDs are in Transition state to create a config, rebooting the system shows no config present
+LSIP200071372 	(DFCT) 	Snap Shot Rep Vd spins down when Repo and Base are both in the same DG.
+LSIP200072625 	(DFCT) 	System is getting hang in BIOS, controller not responding
+LSIP200071637 	(DFCT) 	Importing foreign config is affecting the Default PSpolicy of the DG
+LSIP200072748 	(DFCT) 	SSCD fails to import with BAIL_OUT at line 1280
+LSIP200072415 	(DFCT) 	Snap base fails to import when the Snap repo is cleared of garbage.
+LSIP200073251 	(DFCT) 	(RW LSIP200071881) Snapshot is getting disable after reboot.
+LSIP200073253 	(DFCT) 	SSD VD is also covered by SSCD
+LSIP200072139 	(DFCT) 	Fw crashes when rebooted with spundown base vds.
+LSIP200073606 	(DFCT) 	Dummy defect
+LSIP200073811 	(DFCT) 	VDs going to Offline state with some of the PDs to failed state while mounting the VDs to OS through DiskManagement
+LSIP200074361 	(DFCT) 	Snap DG goes offline and drives to foreing with IO failure upon OCR
+LSIP200073953 	(DFCT) 	Changing the power policy from Max to None for DG when the DG goes spun down, DG is still going to Spun Down
+LSIP200073998 	(DFCT) 	VD's are partially spinning Up.
+LSIP200074399 	(DFCT) 	PD is going to foreign state instead of starting the copyback.
+LSIP200074402 	(DFCT) 	Disabling powersave policy is not allowing to import foreign config which was created before disabling the power save
+LSIP200074734 	(DFCT) 	Current Power save mode is showing as Auto for SSC or VD created using SSD
+LSIP200071078 	(DFCT) 	MSM fails to change VD properties of a Snap Repository
+LSIP200073602 	(DFCT) 	(RW LSIP200073251) (RW LSIP200071881) Snapshot is getting disable after reboot.
+LSIP200075056 	(DFCT) 	Dummy defect
+LSIP200075609 	(DFCT) 	Cannot create SSCD.
+LSIP200075793 	(DFCT) 	Current PS policy of DG incorrect after reboot!!
+LSIP200075226 	(DFCT) 	(RW LSIP200075056) Dummy defect
+LSIP200054893 	(DFCT) 	(RW LSIP200054556) OEM support
+LSIP200072062 	(DFCT) 	Change the DG PS policy from MAX to NONE for a selected DG, DG is still going to Spun down
+LSIP200054894 	(DFCT) 	OEM Implementation
+LSIP200053060 	(DFCT) 	Online Drives going to Powersave mode making BGI aborted.
+LSIP200053151 	(DFCT) 	Operating system is getting Hung when Opeartion(rebuild) is going on.
+LSIP200053333 	(DFCT) 	Online Drive is Spunning Down even when mfc field disablePowerSaving is set to 0x04 .
+LSIP200053335 	(DFCT) 	Spun Down HotSpare is not Spunning Up if PetrolRead is started.
+LSIP200053338 	(DFCT) 	Operating system is getting Hung when OS is ideal after HotSpares and Unconfigured Good Drives enters to SpunDown mode .
+LSIP200053342 	(DFCT) 	Cannot create the configuration due to Error code 25 .
+LSIP200053363 	(DFCT) 	Firmware breaks into mega mon when copy back is started .
+LSIP200053450 	(DFCT) 	FW breaks to Megamon : Driver detected possible FW hang, halting FW.
+LSIP200053469 	(DFCT) 	Spun drives do not spin up on creating config.
+LSIP200053494 	(DFCT) 	Recon does not progress on when a spun down pd is added
+LSIP200053652 	(DFCT) 	FirmWare throws continously (flush cache ar 0 is eligible for flush) while running IOs.
+LSIP200054205 	(DFCT) 	FW breaks to megamon when running IO on large no. of Spun Down Drives
+LSIP200054430 	(DFCT) 	FW allows to spin down Snapshot Repository
+LSIP200054435 	(DFCT) 	Virtual Drives do not spin down after completion of Initialization.
+LSIP200054658 	(DFCT) 	SAS & SATA Mix :Partial Virtual Drive is Spinng Up .
+LSIP200054913 	(DFCT) 	HDD does not spin down in a VD with HDD SDD mix
+LSIP200054914 	(DFCT) 	Drives from different enclosures do not spin up during Create VD
+LSIP200054925 	(DFCT) 	VD is not going to powersavemode when there is a BGI happening on other VD.
+LSIP200055041 	(DFCT) 	Rebuild does not starts wile IOs are running.
+LSIP200055044 	(DFCT) 	IO`s stops after rebuild starts.
+LSIP200053326 	(DFCT) 	Spun Down Hot Spare if kicking in rebuild , then the Hot Spare drive is not spunning up .
+LSIP200053456 	(DFCT) 	FirmWare logs shows clearing of the configuration when No VDs are present .
+LSIP200053497 	(DFCT) 	FirmWare log shows deletion of 64 VDs, even when 1 VD is been deleted.
+LSIP200054657 	(DFCT) 	VD powerstate is oscillating between powersave and active without any i/os.
+LSIP200057209 	(DFCT) 	FW breaks into megamon when online vd's are trying to spundown after I/O's terminated on the vd's
+LSIP200057267 	(DFCT) 	Configured array is not changing to PS mode when there is a second Array created.
+LSIP200062239 	(DFCT) 	Cannot Create Configuration after changing the spindown time of drives in controller property.
+LSIP200063137 	(DFCT) 	Wrong PD state Transition shown while removing spin down drives
+LSIP200064219 	(DFCT) 	WebBIOS: Can not set powersave properties for DG
+LSIP200064587 	(DFCT) 	Can not create config Through Ctrl-R or MSM
+LSIP200064334 	(DFCT) 	Controller Cache Pinned and VD goes to offline when I/O was Running
+LSIP200054652 	(DFCT) 	Configured Disk goes to Foreign when rebooted with cc issued on a spundown VD
+LSIP200064217 	(DFCT) 	POwersaving property "DefaultPSPolicy" changing to 0xff
+LSIP200064916 	(DFCT) 	MSM: Displaying '0' power option when DefaultPSPolicy is 3
+LSIP200063530 	(DFCT) 	Controller resets while IO was running and sending logs that VD can be spin down when the IO is running
+LSIP200064826 	(DFCT) 	Fw crash when rebuild and i/os are running on a PRL 11 VD with SAS and SATA mix.
+LSIP200064927 	(DFCT) 	FirmWare hits to megaMon while rebuild and IO`s is going on Raid 50.
+LSIP200053149 	(DFCT) 	Firm Ware Breaks into MegaMon
+LSIP200053474 	(DFCT) 	FW breaks to megamon when doing operation after calling for powersave of VD
+LSIP200056734 	(DFCT) 	IO Policies and Read Policies are getting change after Reconstruction.
+LSIP200064016 	(DFCT) 	Alignment Exception: FW breaks to megamon while cable connect in Multipath
+LSIP200054222 	(DFCT) 	FW breaks to megamon: Driver detect possible FW hang
+LSIP200054282 	(DFCT) 	Multiple Timeout events seen in FW logs while running IO and changing VD cache policies
+LSIP200062941 	(DFCT) 	FW breaks to megamon during rebuild while CME in SBBM
+LSIP200062959 	(DFCT) 	firmWare breaks in MegaMon while rebuild is happening and IO`s are running on Raid6 .
+LSIP200063003 	(DFCT) 	FW breaks into Megamon while spinning up drive from offline state
+LSIP200063136 	(DFCT) 	FW breaks in Megamon while Spinning up from powersave mode
+LSIP200063138 	(DFCT) 	Fw breaks to megaon with driver time out. IO on PRL11 with from 24 drives with all spun down drives
+LSIP200063176 	(DFCT) 	FW breaks into Megamon while spinning up / Spinning down partially Degraded array
+LSIP200057250 	(DFCT) 	Test tool compare issue found on Raid 6, While Running IO`s and CC.
+LSIP200064198 	(DFCT) 	Test tool compare issue found while using SSCD and running IO`s on R1.
+LSIP200062960 	(DFCT) 	UnConfiguredGood Spun Down drives Spin Up while IO`s are running and rebuild is happening.
+LSIP200063378 	(DFCT) 	SSD Drives are going in Power save mode .
+LSIP200064649 	(DFCT) 	Disable CTIO on spun down drives. Enable it back when drives are spun up
+LSIP200065083 	(DFCT) 	OEM support for direct attached drives
+LSIP200065126 	(DFCT) 	Fw crash with MonTask: line 2633 in file ../../raid/cache.c error
+LSIP200065130 	(DFCT) 	FW crash with MonTask: line 189 in file ../../raid/timer.c error
+LSIP200070156 	(DFCT) 	Propagate spinup errors to RAID
+LSIP200054556 	(DFCT) 	OEM support
+LSIP200054915 	(DFCT) 	Initialization starts on VD with some spun down drives but does not spin up the drives
+
+
+Pre-Boot CLI:
+=============
+Enhancements:
+LSIP200063469 	(CO) 	Check internal backplane SES page for Backplane Bay ID and display in mgmt tools
+LSIP200063457 	(CO) 	Support for variable rate HDDs
+LSIP200075203 	(CO) 	RAID Firmware to read controller thermal sensors to get chip and board temps
+LSIP200070634 	(CO) 	Customer requested these EFI:CLI commands are required for their testing
+LSIP200073881 	(CO) 	Provide PCI bus and device id for a selected controller thru MegaCLI
+LSIP200072376 	(CO) 	SWRAID. Develop CLI for uEFI 2.2
+
+Bug Fixes:
+LSIP200076197 	(DFCT) 	“No more interfaces” on executing most of the CLI command
+LSIP200075420 	(DFCT) 	SWR: MegaDCli does not detect the PDs
+LSIP200076437 	(DFCT) 	SWR5: Unable to create Raid 5 thru DCLI
+LSIP200087722 	(DFCT) 	DCLI -After creating R5, we can’t delete the VD or clear the config.
+LSIP200084490 	(DFCT) 	Porting 10M08 chnages to 10M09
+LSIP200085665 	(DFCT) 	"MegaCli pdfwdownload" command is not flashing PD Firmware for Multiple PD's at a time.
+LSIP200087720 	(DFCT) 	DCLI - Version Info showing wrong Date.
+LSIP200085497 	(DFCT) 	SWR5: Cannot create config and clear config using EFI CLI
+LSIP200087729 	(DFCT) 	DCLI/EFI CLI - "pdfwdownload" command is not exists in the help file of DCLI and EFI CLI.
+LSIP200075421 	(DFCT) 	SWR: MegaDcli takes too much to execute command
+LSIP200087724 	(DFCT) 	Intermittent issue seen while Clearing Configuraton through MegaCLI in RHEL 6 B2 64bit
+LSIP200097535 	(DFCT) 	Dummy defect to update version of DCLI
+LSIP200097793 	(DFCT) 	EFI Cli is displaying "Created VD0" even for 2nd VD
+LSIP200097811 	(DFCT) 	To check in EFI CLI binary
+LSIP200099360 	(DFCT) 	Porting 10M08 changes to 10M09 and 10M12
+LSIP200082937 	(DFCT) 	Defect to merge DSW-3 code
+LSIP200084314 	(DFCT) 	AutoDeleteOldestSnapshot doesn’t work in the CLI
+LSIP200018606 	(DFCT) 	"./MegaCli64 adpeventlog getlatest n ax" fails when ldbi is running on the 9260
+LSIP200018607 	(DFCT) 	Exagrid "./MegaCli64 adpeventlog getlatest n ax" fails when ldbi is running on the 84016
+LSIP200086176 	(DFCT) 	Adding manufacturing page 8 programming support in CLI as part of PR LSIP200035454
+LSIP200087587 	(DFCT) 	Defect to accomodate for non-availablity of DSW-3 feature on iMR controllers
+LSIP200089369 	(DFCT) 	Incorrect Display View Mirror Infos for all VD's in Windows CLI
+LSIP200096227 	(DFCT) 	By pressing Ctrl-Y(PCLI) in POST message, its going to megamon in fw and also not getting pcli command promot .
+LSIP200096792 	(DFCT) 	CLI crashes when using "–snapshot –info" command on the repository VD
+LSIP200097032 	(DFCT) 	CLI is allowing user to set MAXWITHCACHE ps policy for one of the OEM, which should actually be restricted
+LSIP200085810 	(DFCT) 	MegaCli PdFwDownload output missing a dash
+LSIP200089295 	(DFCT) 	-adpsettings command is not expecting "s" on end of "EnableLedHeaders" setting
+LSIP200089930 	(DFCT) 	Junk character in the help message for “encinfo” command
+LSIP200095273 	(DFCT) 	MegaCLI 8.00.30 crashed during a -adpallinfo command to a iMR controller.
+LSIP200094773 	(DFCT) 	Changes for OEM
+LSIP200076406 	(DFCT) 	CLI displays 'Stripe' size instead of displaying 'Strip' size in adpallinfo info page
+LSIP200082223 	(DFCT) 	"MegaCli -AdpAliLog a0" command showing wrong Adapter values in the adapterinfo field.
+LSIP200018511 	(DFCT) 	Linux "MegaCli adpalilog a0" displays garbage, also missing key data comparing to Windows output.
+LSIP200082785 	(DFCT) 	Support of AdpGetPciInfo command for recent stream
+LSIP200083564 	(DFCT) 	10M08-Megacli-8.00.28 : Megacli does not give any progress value for initialization on LD with progdsply
+LSIP200086230 	(DFCT) 	Different TimeStamps values in MegaCLI Ctrl Eventlog
+LSIP200076405 	(DFCT) 	AdpNvram Clear not working
+
+
+WebBIOS:
+========
+Enhancements:
+LSIP200063453 	(CO) 	Support for variable rate HDDs
+LSIP200054947 	(CO) 	High Port Count controller onboard expander introduction
+LSIP200075199 	(CO) 	RAID Firmware to read controller thermal sensors to get chip and board temps
+LSIP200063441 	(CO) 	Monitor HDD temperature for all attached drives
+
+Bug Fixes:
+LSIP200084207 	(DFCT) 	Porting defect from 10M08 to 10M09
+LSIP200086183 	(DFCT) 	Adv. Software Option list table it says Trial feature, same for Deactivate tab also. String changes required
+LSIP200085177 	(DFCT) 	WebBIOS does not display the VDs in order
+LSIP200094405 	(DFCT) 	(RW LSIP200056205) "Deactivate Trail Features" button is enabled though the trial features are not shown in WebBIOS
+LSIP200088650 	(DFCT) 	WebBIOS is not allowing to break more than one DG at a time.
+LSIP200089374 	(DFCT) 	WebBIOS: breaking the second mirror breaks first mirror
+LSIP200088850 	(DFCT) 	WebBIOS: Fails to bring the broken arm as new VD
+LSIP200094711 	(DFCT) 	WebBios not allowing to enable snapshot on a VD at the first go.
+LSIP200094837 	(DFCT) 	Dummy defect for 10M09 PFK and break mirror hot keys.
+LSIP200094921 	(DFCT) 	Available VD size shown wrong info after reconstruction finished on VD
+LSIP200095230 	(DFCT) 	Join two broken Mirror with two different Join Mirror Tree is not working fine
+LSIP200095339 	(DFCT) 	Unable to select multiple PD/VDs in the Webbios configuration wizard page through Keyboard and Mouse
+LSIP200095350 	(DFCT) 	Dummy defect to port code from 10M08/10M06/10M04 streams.
+LSIP200095349 	(DFCT) 	Unable to import Foreign Config using "Configuration 1" option in WebBios
+LSIP200096461 	(DFCT) 	Option for Raid Reconstruction from R6 to R5 not available in the absence of unconfigured good PD
+LSIP200096454 	(DFCT) 	End of dirve information page incorrect in webbios
+LSIP200096749 	(DFCT) 	Dummy defect to port 10M08 changes to 10M09 stream.
+LSIP200097138 	(DFCT) 	WebBIOS: Unable to set the powersave mode "None"
+LSIP200097154 	(DFCT) 	Dummy defect to make changes for Dimmer switch NONE option.
+LSIP200098562 	(DFCT) 	Dummy defect to revert back the changes for enhanced import.
+LSIP200111071 	(DFCT) 	Porting defect "LSIP200061806 Array Size During Creation" from 10M04 train to 10M09 train
+LSIP200088469 	(DFCT) 	spelling mistake in " Mega raid bios config utility join mirror-- chosse option" page
+LSIP200089219 	(DFCT) 	WebBIOS: Unable to set the powersave mode "Controller defined"
+LSIP200087590 	(DFCT) 	Webbios allowing to set Power saving setting for snapshot Repo Disk Group
+LSIP200094970 	(DFCT) 	JBOD to unconfigured Drive conversion screen is not appearing in web bios
+LSIP200095194 	(DFCT) 	the confirmation page which comes after breaking the mirror is not according to the UX
+LSIP200095195 	(DFCT) 	in webbios "megaraid BIOS utility JoinMirror -choose option" page is not according to the UX.
+LSIP200095207 	(DFCT) 	on selecting "bring the mirror arm as a new vd " will lead to confirmation page which is not acc to ux.
+LSIP200095028 	(DFCT) 	once selecting the option to break mirror it can't be disabled using the keyboard.
+LSIP200083598 	(DFCT) 	WEBBIOS: On "Manage MegaRAID Advanced Software Options" page shortcut key is not working.
+LSIP200083595 	(DFCT) 	WEBBIOS: While activating Trail Features on Software Option Summary page information is missing.
+
+BIOS:
+=====
+Enhancements:
+LSIP200094540 	(CO) 	Support new API for getting memroy requirements for iMR
+LSIP200113117 	(CO) 	(LSIP200111728) Long term fix for iMR SRAM space exhaustion
+
+Bug Fixes:
+LSIP200086954 	(DFCT) 	Errata Fix required in BIOS for the BT750 errata in Geimini/B0 chip
+LSIP200083525 	(DFCT) 	Drake hang during PXE boot when QLogic QLE8152 10G FCoE card is installed.
+LSIP200088215 	(DFCT) 	BIOS version 4.17/Failing on INT13 test when running a read after a write
+LSIP200089634 	(DFCT) 	Dont hook INT15h if FW doesnt need host memory
+LSIP200089645 	(DFCT) 	Enable CLP and perform workaround in that path
+LSIP200094374 	(DFCT) 	Timeout if command didn't complete in three minutes
+LSIP200089646 	(DFCT) 	Increase code size to 40k (currently it is 32k) as we need more code space for TB
+LSIP200089522 	(DFCT) 	Storelibtest showing build version instead of build date in get controller info
+LSIP200087295 	(DFCT) 	Controller hangs at post if you have three or more Milehigh enclosures connected to TB controller.(SHEA works)
+LSIP200097644 	(DFCT) 	BIOS access variable which are no longer available to BIOS
+LSIP200094519 	(DFCT) 	multiple boot does not work.
+LSIP200099229 	(DFCT) 	Move PnP header from offset 70h to 0x74
+LSIP200099238 	(DFCT) 	System hangs after BIOS POST is over on PCI 3.0 system
+LSIP200099228 	(DFCT) 	User need to reboot system two times to boot to OS
+LSIP200100054 	(DFCT) 	System hangs during OpROM POST in some systems
+LSIP200098815 	(DFCT) 	OS won't boot with 16VDs on adapter0 and 64VDs on adapter1
+LSIP200105680 	(DFCT) 	Montask when booting with 2 IMR controllers
+LSIP200113055 	(DFCT) 	workaround FW handshkae: Increase timeout from 30 seconds to 120 seconds
+LSIP200113247 	(DFCT) 	Adapter at Baseport is not responding after change OEM number and reboot
+LSIP200106170 	(DFCT) 	9260-8i reports FW Dump message during BIOS initialization when user press CTL-H
+
+
+Installation:
+=============
+Use MegaCLI to flash the SAS controllers.  MegaCLI can be downloaded from the support and download
+section of www.lsi.com.
+
+Command syntax:  MegaCli -adpfwflash -f mrhighpc.rom -a0
+
+
+

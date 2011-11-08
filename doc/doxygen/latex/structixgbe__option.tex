@@ -1,0 +1,98 @@
+\hypertarget{structixgbe__option}{
+\section{ixgbe\_\-option Struct Reference}
+\label{structixgbe__option}\index{ixgbe\_\-option@{ixgbe\_\-option}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries enable\_\-option}, 
+{\bfseries range\_\-option}, 
+{\bfseries list\_\-option}
+ \}
+\item 
+enum \{ {\bfseries enable\_\-option}, 
+{\bfseries range\_\-option}, 
+{\bfseries list\_\-option}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structixgbe__option_ad66986096809afbed8ef5fdc89e472ca}{
+enum ixgbe\_\-option:: \{ ... \}  {\bfseries type}}
+\label{structixgbe__option_ad66986096809afbed8ef5fdc89e472ca}
+
+\item 
+\hypertarget{structixgbe__option_a9144b0d18abcb64effe985a94bf7b5fa}{
+const char $\ast$ {\bfseries name}}
+\label{structixgbe__option_a9144b0d18abcb64effe985a94bf7b5fa}
+
+\item 
+\hypertarget{structixgbe__option_acf76d3c8beb091e1e632c3ff487935bd}{
+const char $\ast$ {\bfseries err}}
+\label{structixgbe__option_acf76d3c8beb091e1e632c3ff487935bd}
+
+\item 
+\hypertarget{structixgbe__option_add09d3db2ae26eb8dfb150f93ef4349a}{
+int {\bfseries def}}
+\label{structixgbe__option_add09d3db2ae26eb8dfb150f93ef4349a}
+
+\item 
+\hypertarget{structixgbe__option_adb004178f1762d79b15718cace2da381}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>int {\bfseries min}\\
+\>\>int {\bfseries max}\\
+\>\} {\bfseries r}\\
+\>struct \{\\
+\>\>int {\bfseries nr}\\
+\>\>struct {\bfseries ixgbe\_opt\_list} \{\\
+\>\>\>int {\bfseries i}\\
+\>\>\>char $\ast$ {\bfseries str}\\
+\>\>\} {\bfseries p}\\
+\>\} {\bfseries l}\\
+\} {\bfseries arg}}
+\label{structixgbe__option_adb004178f1762d79b15718cace2da381}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structixgbe__option_a72c7480e9427acae6cc9e57a22dd033b}{
+enum ixgbe\_\-option:: \{ ... \}  {\bfseries type}}
+\label{structixgbe__option_a72c7480e9427acae6cc9e57a22dd033b}
+
+\item 
+\hypertarget{structixgbe__option_a1758fa271bf91e126d390d4699b56784}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>int {\bfseries min}\\
+\>\>int {\bfseries max}\\
+\>\} {\bfseries r}\\
+\>struct \{\\
+\>\>int {\bfseries nr}\\
+\>\>struct {\bfseries ixgbe\_opt\_list} \{\\
+\>\>\>int {\bfseries i}\\
+\>\>\>char $\ast$ {\bfseries str}\\
+\>\>\} {\bfseries p}\\
+\>\} {\bfseries l}\\
+\} {\bfseries arg}}
+\label{structixgbe__option_a1758fa271bf91e126d390d4699b56784}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 319 of file ixgbe\_\-param.c.
+
+
+
+The documentation for this struct was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/ixgbe/ixgbe-\/3.1.15-\/FlowDirector-\/NoTNAPI/src/ixgbe\_\-param.c\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/ixgbe/ixgbe-\/3.3.9-\/DNA/src/ixgbe\_\-param.c\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+.\" Process this file with
+.\" groff -man -Tascii foo.1
+.\"
+.TH net2disk 1 "August 2011" Linux "User Manuals"
+
+.SH NAME
+.B net2disk
+\- Capture data from network interface and record to disk.
+
+.SH SYNOPSIS
+.B net2disk
+.B [--snaplen 
+.I <capture length>
+.B ]
+.B [--promiscuous]
+.B [--log_config
+.I <filename>
+.B ]
+.B [--interfaces
+.I <list of net interfaces>
+.B ]
+.B [--capture_files 
+.I <list of files>
+.B ]
+.B [--smp_affinities
+.I <list of affinities>
+.B ]
+.B [--ring_buffers
+.I <total # ring buffers>
+.B ]
+.B [--write_blocks
+.I <# write blocks per capture file>
+.B ]
+.B [--help]
+.B ...
+
+.SH DESCRIPTION
+.B net2disk
+Captures data from one or more network interfaces and writes data
+to one or more disks. Each network interface is mapped to its own
+disk. Each network interface/disk pair is processed in a separate 
+process.
+
+.SH OPTIONS
+.IP "--snaplen <capture length>"
+Length of bytes to capture (includes L2 header and above in the
+protocol stack)
+
+.IP "--promiscuous"
+When present, sets each opened ethernet interface to promiscuous mode.
+
+.IP "--log_config <filename>"
+Configuration file for application logging subsystem.
+
+
+.IP "--interfaces <list of net interfaces>"
+List of network interfaces from which data are captured.
+
+.IP "--capture_files <list of files>"
+List of files to which data are written. These files are paired with
+the network interfaces supplied in the --interfaces option, according
+to their ordering on the command line.
+
+.IP "--smp_affinities <list of affinities>"
+List of SMP processor affinities. Each affinity is specified as a
+number which is the number of the CPU to which a process should be
+mapped (starting from 0). The arguments to the --interfaces,
+--capture_files, and --smp_affinities options create a set of three
+tuples fo the form: <interfaceN, fileN, affinityN>. This represents a
+configuration where interfaceN and fileN are served in the same
+process which is executed on processor affinityN.
+
+.IP "--ring_buffers <total # of ring buffers>"
+The total number of ring buffers to use in the system.
+
+.IP "--write_blocks <# write blocks per capture file>"
+The total number of write blocks to use for each capture file.
+
+.IP"--help"
+Print a usage message.
+
+
+.SH FILES
+.I /opt/haystack/mark6/etc/net2disk.conf
+.RS
+Application logging configuration file.
+
+.RE
+.I /opt/haystack/mark6/bin/net2disk.sh
+.RS
+Execution script. This script will start a new net2disk instance.
+
+.RE
+.I /opt/haystack/mark6/bin/net2disk
+.RS
+Mark6 data-plane executable. This gets called by net2disk.sh.
+
+.RE
+.I /opt/haystack/mark6/log/
+.RS
+Logging directory. All log files and statistics files are stored here.
+
+.RE
+.I /opt/haystack/mark6/log/net2disk.log
+.RS
+Log file. All application logging (DEBUG, INFO, WARNING, ERROR, etc.)
+is sent to this log file.
+
+.SH ENVIRONMENT
+None
+
+.SH DIAGNOSTICS
+The following diagnostics may be issued on stderr:
+ 
+Bad magic number.
+.RS
+The input file does not look like an archive file.
+.RE
+Old style baz segments.
+.RS
+.B foo
+can only handle new style baz segments. COBOL
+object libraries are not supported in this version.
+
+.SH BUGS
+None known at this time.
+
+.SH AUTHOR
+David Lapsley <del at haystack dot mit dot edu>
+
+.SH "SEE ALSO"
+.BR mark6 (1),
+.BR dimino6 (1)
+

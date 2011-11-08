@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Copyright 2011 MIT Haystack Observatory
+# 
+# This file is part of Mark6.
+# 
+# Mark6 is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 2 of the License.
+# 
+# Mark6 is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with Mark6.  If not, see <http://www.gnu.org/licenses/>.
+
+export LD_LIBRARY_PATH=/opt/mit/mark6/lib
+
+# Globals
+INSTALL_ROOT=/opt/mit/mark6
+EXEC=/opt/haystack/bmr/x86_64-0.7/bin/fchk_test
+MOUNT_POINTS="/mnt/disk0 /mnt/disk1 /mnt/disk2 /mnt/disk3"
+PACKETS=1000000
+
+
+echo ${SCAN}
+
+function capture() {
+	START_TIME=$1
+	DURATION=$2
+	SOURCE=$3
+
+	EXPERIMENT=DEMO
+	if [ `hostname` == "tigress" ]; then
+		STATION=Wf
+	elif [ `hostname` == "mark6-002" ]; then
+		STATION=Gg
+	else
+		STATION=Uk
+	fi
+
+	DOY=`date -d @${START_TIME} +%j`
+	TIME=`date -d @${START_TIME} +%H%M`
+	SCAN_NAME=${EXPERIMENT}_${STATION}_${DOY}-${TIME}
+
+	echo ${SCAN_NAME}
+	echo ${DOY}
+	echo ${TIME}
+
+	echo scan-run -e ${EXPERIMENT} -s ${SOURCE} -S ${STATION} -T ${START_TIME} -n ${SCAN_NAME} -d ${DURATION} 
+	scan-run -e ${EXPERIMENT} -s ${SOURCE} -S ${STATION} -T ${START_TIME} -n ${SCAN_NAME} -d ${DURATION} 
+	scan-convert ${SCAN_NAME}
+	scan-check ${SCAN_NAME}
+}
+
+function usage() {
+    echo "single-scan <start_time> <duration> <source>"
+}
+
+
+# Main
+if [ $# != 3 ]; then
+    usage
+    exit 1
+else
+    START_TIME=$1
+    DURATION=$2
+    SOURCE=$3
+
+    capture ${START_TIME} ${DURATION} ${SOURCE}
+fi

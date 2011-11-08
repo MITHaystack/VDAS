@@ -1,0 +1,495 @@
+\hypertarget{structe1000__adapter}{
+\section{e1000\_\-adapter Struct Reference}
+\label{structe1000__adapter}\index{e1000\_\-adapter@{e1000\_\-adapter}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structe1000__adapter_a73eb4fdfe6cc0d8b0cf06341ef404ed8}{
+struct timer\_\-list {\bfseries tx\_\-fifo\_\-stall\_\-timer}}
+\label{structe1000__adapter_a73eb4fdfe6cc0d8b0cf06341ef404ed8}
+
+\item 
+\hypertarget{structe1000__adapter_ad0a78887d6d6b1a41c80f55b6cdc138b}{
+struct timer\_\-list {\bfseries watchdog\_\-timer}}
+\label{structe1000__adapter_ad0a78887d6d6b1a41c80f55b6cdc138b}
+
+\item 
+\hypertarget{structe1000__adapter_a51a22a757521e79d522aee7ddc443df7}{
+struct timer\_\-list {\bfseries phy\_\-info\_\-timer}}
+\label{structe1000__adapter_a51a22a757521e79d522aee7ddc443df7}
+
+\item 
+\hypertarget{structe1000__adapter_a4f457f28049ec084346bee90b44265e9}{
+u32 {\bfseries bd\_\-number}}
+\label{structe1000__adapter_a4f457f28049ec084346bee90b44265e9}
+
+\item 
+\hypertarget{structe1000__adapter_a491c5e6f69fc1889148b39ed5ade3298}{
+u32 {\bfseries rx\_\-buffer\_\-len}}
+\label{structe1000__adapter_a491c5e6f69fc1889148b39ed5ade3298}
+
+\item 
+\hypertarget{structe1000__adapter_a4e7fb24f2734422660e48200d0b5503b}{
+u32 {\bfseries wol}}
+\label{structe1000__adapter_a4e7fb24f2734422660e48200d0b5503b}
+
+\item 
+\hypertarget{structe1000__adapter_a5186f33c6b5302c5f3b5afda0aa92815}{
+u32 {\bfseries smartspeed}}
+\label{structe1000__adapter_a5186f33c6b5302c5f3b5afda0aa92815}
+
+\item 
+\hypertarget{structe1000__adapter_ae02aef9ee07e199c8a8fef0150835cac}{
+u32 {\bfseries en\_\-mng\_\-pt}}
+\label{structe1000__adapter_ae02aef9ee07e199c8a8fef0150835cac}
+
+\item 
+\hypertarget{structe1000__adapter_a54fd15c45625cea92cfbbd7d4bcaaac3}{
+u16 {\bfseries link\_\-speed}}
+\label{structe1000__adapter_a54fd15c45625cea92cfbbd7d4bcaaac3}
+
+\item 
+\hypertarget{structe1000__adapter_ad1cd01703945d1f661d25653afb3e8ae}{
+u16 {\bfseries link\_\-duplex}}
+\label{structe1000__adapter_ad1cd01703945d1f661d25653afb3e8ae}
+
+\item 
+\hypertarget{structe1000__adapter_a106b92a33b14d567b01d4d9909af47a3}{
+spinlock\_\-t {\bfseries stats\_\-lock}}
+\label{structe1000__adapter_a106b92a33b14d567b01d4d9909af47a3}
+
+\item 
+\hypertarget{structe1000__adapter_a8613c0dc9fdffe055c35abc0fd48dfb8}{
+unsigned int {\bfseries total\_\-tx\_\-bytes}}
+\label{structe1000__adapter_a8613c0dc9fdffe055c35abc0fd48dfb8}
+
+\item 
+\hypertarget{structe1000__adapter_a3025bd99b84dbbfcda83bb7c6ff72984}{
+unsigned int {\bfseries total\_\-tx\_\-packets}}
+\label{structe1000__adapter_a3025bd99b84dbbfcda83bb7c6ff72984}
+
+\item 
+\hypertarget{structe1000__adapter_a3092f8151c8291c1b778b28f103ca0c6}{
+unsigned int {\bfseries total\_\-rx\_\-bytes}}
+\label{structe1000__adapter_a3092f8151c8291c1b778b28f103ca0c6}
+
+\item 
+\hypertarget{structe1000__adapter_a5aef97d1af141968bf502abfb9d5fb95}{
+unsigned int {\bfseries total\_\-rx\_\-packets}}
+\label{structe1000__adapter_a5aef97d1af141968bf502abfb9d5fb95}
+
+\item 
+\hypertarget{structe1000__adapter_a3a576fd44b0651c03aea5e3827bde352}{
+u32 {\bfseries itr}}
+\label{structe1000__adapter_a3a576fd44b0651c03aea5e3827bde352}
+
+\item 
+\hypertarget{structe1000__adapter_a42d531e76324823d73b070a9ae250e98}{
+u32 {\bfseries itr\_\-setting}}
+\label{structe1000__adapter_a42d531e76324823d73b070a9ae250e98}
+
+\item 
+\hypertarget{structe1000__adapter_a02ff1b7a1279a1c23c457285e995f16f}{
+u16 {\bfseries tx\_\-itr}}
+\label{structe1000__adapter_a02ff1b7a1279a1c23c457285e995f16f}
+
+\item 
+\hypertarget{structe1000__adapter_a061e0c86950055dc008c780c9b37a370}{
+u16 {\bfseries rx\_\-itr}}
+\label{structe1000__adapter_a061e0c86950055dc008c780c9b37a370}
+
+\item 
+\hypertarget{structe1000__adapter_a91032cac88c2801b07864cbd819d12bf}{
+struct work\_\-struct {\bfseries reset\_\-task}}
+\label{structe1000__adapter_a91032cac88c2801b07864cbd819d12bf}
+
+\item 
+\hypertarget{structe1000__adapter_a8aad4c5673dc1ae289f78e514b3ad7df}{
+struct work\_\-struct {\bfseries watchdog\_\-task}}
+\label{structe1000__adapter_a8aad4c5673dc1ae289f78e514b3ad7df}
+
+\item 
+\hypertarget{structe1000__adapter_a0c734058d3a94fe1d1125f3dd157ce76}{
+bool {\bfseries fc\_\-autoneg}}
+\label{structe1000__adapter_a0c734058d3a94fe1d1125f3dd157ce76}
+
+\item 
+\hypertarget{structe1000__adapter_a18470114a2d66ff2485ff65a7083fa06}{
+struct \hyperlink{structe1000__tx__ring}{e1000\_\-tx\_\-ring} $\ast$ {\bfseries tx\_\-ring}}
+\label{structe1000__adapter_a18470114a2d66ff2485ff65a7083fa06}
+
+\item 
+\hypertarget{structe1000__adapter_ae97b7cc3a1afe84248799655c69f9b87}{
+unsigned int {\bfseries restart\_\-queue}}
+\label{structe1000__adapter_ae97b7cc3a1afe84248799655c69f9b87}
+
+\item 
+\hypertarget{structe1000__adapter_ae30a464d59911e3b3beb853c1a291497}{
+u32 {\bfseries txd\_\-cmd}}
+\label{structe1000__adapter_ae30a464d59911e3b3beb853c1a291497}
+
+\item 
+\hypertarget{structe1000__adapter_afa2167f16fa258f6fb766ce45f74fad6}{
+u32 {\bfseries tx\_\-int\_\-delay}}
+\label{structe1000__adapter_afa2167f16fa258f6fb766ce45f74fad6}
+
+\item 
+\hypertarget{structe1000__adapter_a8ca806071aaec3a994f7afd710b5dc0f}{
+u32 {\bfseries tx\_\-abs\_\-int\_\-delay}}
+\label{structe1000__adapter_a8ca806071aaec3a994f7afd710b5dc0f}
+
+\item 
+\hypertarget{structe1000__adapter_ae1f08695c305107d818db78782544f68}{
+u32 {\bfseries gotc}}
+\label{structe1000__adapter_ae1f08695c305107d818db78782544f68}
+
+\item 
+\hypertarget{structe1000__adapter_a8c23a9c94b22ee49c996dd065fa01bbf}{
+u64 {\bfseries gotc\_\-old}}
+\label{structe1000__adapter_a8c23a9c94b22ee49c996dd065fa01bbf}
+
+\item 
+\hypertarget{structe1000__adapter_ab1c86796d299f6a3fb8bd80b89848faa}{
+u64 {\bfseries tpt\_\-old}}
+\label{structe1000__adapter_ab1c86796d299f6a3fb8bd80b89848faa}
+
+\item 
+\hypertarget{structe1000__adapter_ad3b967396f1a29e50d18d27dce3e144f}{
+u64 {\bfseries colc\_\-old}}
+\label{structe1000__adapter_ad3b967396f1a29e50d18d27dce3e144f}
+
+\item 
+\hypertarget{structe1000__adapter_a5e97a6e866b2620f344c20f7767114f2}{
+u32 {\bfseries tx\_\-timeout\_\-count}}
+\label{structe1000__adapter_a5e97a6e866b2620f344c20f7767114f2}
+
+\item 
+\hypertarget{structe1000__adapter_aa7c80c6e72235320c4e2381468c46e16}{
+u32 {\bfseries tx\_\-fifo\_\-head}}
+\label{structe1000__adapter_aa7c80c6e72235320c4e2381468c46e16}
+
+\item 
+\hypertarget{structe1000__adapter_af297eafa4afab90ccca910b3563fc50f}{
+u32 {\bfseries tx\_\-head\_\-addr}}
+\label{structe1000__adapter_af297eafa4afab90ccca910b3563fc50f}
+
+\item 
+\hypertarget{structe1000__adapter_ab9ce6eef34cd4cfb36ab717720186f8e}{
+u32 {\bfseries tx\_\-fifo\_\-size}}
+\label{structe1000__adapter_ab9ce6eef34cd4cfb36ab717720186f8e}
+
+\item 
+\hypertarget{structe1000__adapter_a2bfeb5f7e71ce095da98b2a035c3e94d}{
+u8 {\bfseries tx\_\-timeout\_\-factor}}
+\label{structe1000__adapter_a2bfeb5f7e71ce095da98b2a035c3e94d}
+
+\item 
+\hypertarget{structe1000__adapter_a77685a6dd067c1f7560b04fd131bdb05}{
+atomic\_\-t {\bfseries tx\_\-fifo\_\-stall}}
+\label{structe1000__adapter_a77685a6dd067c1f7560b04fd131bdb05}
+
+\item 
+\hypertarget{structe1000__adapter_afb0185f55d3bbdc162f94de6fe387026}{
+bool {\bfseries pcix\_\-82544}}
+\label{structe1000__adapter_afb0185f55d3bbdc162f94de6fe387026}
+
+\item 
+\hypertarget{structe1000__adapter_a6a195b85447dd6b818fc35879f4a1c5d}{
+bool {\bfseries detect\_\-tx\_\-hung}}
+\label{structe1000__adapter_a6a195b85447dd6b818fc35879f4a1c5d}
+
+\item 
+\hypertarget{structe1000__adapter_aacf6d61332bc5a5a778a97e9e597ab0b}{
+bool($\ast$ {\bfseries clean\_\-rx} )(struct \hyperlink{structe1000__adapter}{e1000\_\-adapter} $\ast$adapter, struct \hyperlink{structe1000__rx__ring}{e1000\_\-rx\_\-ring} $\ast$rx\_\-ring)}
+\label{structe1000__adapter_aacf6d61332bc5a5a778a97e9e597ab0b}
+
+\item 
+\hypertarget{structe1000__adapter_a853c1d60eadfd5db8058693665a5ad3b}{
+void($\ast$ {\bfseries alloc\_\-rx\_\-buf} )(struct \hyperlink{structe1000__adapter}{e1000\_\-adapter} $\ast$adapter, struct \hyperlink{structe1000__rx__ring}{e1000\_\-rx\_\-ring} $\ast$rx\_\-ring, int cleaned\_\-count)}
+\label{structe1000__adapter_a853c1d60eadfd5db8058693665a5ad3b}
+
+\item 
+\hypertarget{structe1000__adapter_ab29a8f4930262a40fc347f63727e519a}{
+struct \hyperlink{structe1000__rx__ring}{e1000\_\-rx\_\-ring} $\ast$ {\bfseries rx\_\-ring}}
+\label{structe1000__adapter_ab29a8f4930262a40fc347f63727e519a}
+
+\item 
+\hypertarget{structe1000__adapter_a60857fa29b592594a2da7a59df6c6c74}{
+u64 {\bfseries hw\_\-csum\_\-err}}
+\label{structe1000__adapter_a60857fa29b592594a2da7a59df6c6c74}
+
+\item 
+\hypertarget{structe1000__adapter_af4a507c64486f47130303c3018ece2a4}{
+u64 {\bfseries hw\_\-csum\_\-good}}
+\label{structe1000__adapter_af4a507c64486f47130303c3018ece2a4}
+
+\item 
+\hypertarget{structe1000__adapter_a65921ccd793652f64e3003f1552ee660}{
+u32 {\bfseries alloc\_\-rx\_\-buff\_\-failed}}
+\label{structe1000__adapter_a65921ccd793652f64e3003f1552ee660}
+
+\item 
+\hypertarget{structe1000__adapter_a8516c6831520609bd5d62feab89e69ce}{
+u32 {\bfseries rx\_\-int\_\-delay}}
+\label{structe1000__adapter_a8516c6831520609bd5d62feab89e69ce}
+
+\item 
+\hypertarget{structe1000__adapter_a19a29add622475a09fa9d88bfb1dc63f}{
+u32 {\bfseries rx\_\-abs\_\-int\_\-delay}}
+\label{structe1000__adapter_a19a29add622475a09fa9d88bfb1dc63f}
+
+\item 
+\hypertarget{structe1000__adapter_adcb6374720b100c13fba65d084c96bd3}{
+bool {\bfseries rx\_\-csum}}
+\label{structe1000__adapter_adcb6374720b100c13fba65d084c96bd3}
+
+\item 
+\hypertarget{structe1000__adapter_abd3287c46c3b461cbf6d975008334f43}{
+u32 {\bfseries gorc}}
+\label{structe1000__adapter_abd3287c46c3b461cbf6d975008334f43}
+
+\item 
+\hypertarget{structe1000__adapter_aadc5ed86f6ace6303564209d8e0a8bab}{
+u64 {\bfseries gorc\_\-old}}
+\label{structe1000__adapter_aadc5ed86f6ace6303564209d8e0a8bab}
+
+\item 
+\hypertarget{structe1000__adapter_a013b3eba3165ac5e633c7bbfd7b599a7}{
+u32 {\bfseries max\_\-frame\_\-size}}
+\label{structe1000__adapter_a013b3eba3165ac5e633c7bbfd7b599a7}
+
+\item 
+\hypertarget{structe1000__adapter_aff8994873edf9eae09ca128a4bca0728}{
+u32 {\bfseries min\_\-frame\_\-size}}
+\label{structe1000__adapter_aff8994873edf9eae09ca128a4bca0728}
+
+\item 
+\hypertarget{structe1000__adapter_ac33a54627ac0878ec46d946b85ae464a}{
+struct net\_\-device $\ast$ {\bfseries netdev}}
+\label{structe1000__adapter_ac33a54627ac0878ec46d946b85ae464a}
+
+\item 
+\hypertarget{structe1000__adapter_ab8bac775ad1e13e668745c3489a7d531}{
+struct pci\_\-dev $\ast$ {\bfseries pdev}}
+\label{structe1000__adapter_ab8bac775ad1e13e668745c3489a7d531}
+
+\item 
+\hypertarget{structe1000__adapter_a4b5a0e7200a413eea41f2513305d9fd3}{
+struct \hyperlink{structnet__device__stats}{net\_\-device\_\-stats} {\bfseries net\_\-stats}}
+\label{structe1000__adapter_a4b5a0e7200a413eea41f2513305d9fd3}
+
+\item 
+\hypertarget{structe1000__adapter_ac0ade157959cb38a8bee6f2544820a73}{
+struct \hyperlink{structe1000__hw}{e1000\_\-hw} {\bfseries hw}}
+\label{structe1000__adapter_ac0ade157959cb38a8bee6f2544820a73}
+
+\item 
+\hypertarget{structe1000__adapter_ac92edd57401bf044b55cfbe26ca991bc}{
+struct \hyperlink{structe1000__hw__stats}{e1000\_\-hw\_\-stats} {\bfseries stats}}
+\label{structe1000__adapter_ac92edd57401bf044b55cfbe26ca991bc}
+
+\item 
+\hypertarget{structe1000__adapter_a7ce11f21554e6db58b5c82dfc115f5a3}{
+struct \hyperlink{structe1000__phy__info}{e1000\_\-phy\_\-info} {\bfseries phy\_\-info}}
+\label{structe1000__adapter_a7ce11f21554e6db58b5c82dfc115f5a3}
+
+\item 
+\hypertarget{structe1000__adapter_a119b48132216e8abad97aa4734d0a058}{
+struct \hyperlink{structe1000__phy__stats}{e1000\_\-phy\_\-stats} {\bfseries phy\_\-stats}}
+\label{structe1000__adapter_a119b48132216e8abad97aa4734d0a058}
+
+\item 
+\hypertarget{structe1000__adapter_a47e96bbc90d3ef9ff7c12ce1fce8ac44}{
+int {\bfseries msg\_\-enable}}
+\label{structe1000__adapter_a47e96bbc90d3ef9ff7c12ce1fce8ac44}
+
+\item 
+\hypertarget{structe1000__adapter_a52eef2efcf25182616b8885f22364ba3}{
+unsigned long {\bfseries state}}
+\label{structe1000__adapter_a52eef2efcf25182616b8885f22364ba3}
+
+\item 
+\hypertarget{structe1000__adapter_a52e8a207c97b2ddafa6e9d11bf3a0f48}{
+u32 {\bfseries eeprom\_\-wol}}
+\label{structe1000__adapter_a52e8a207c97b2ddafa6e9d11bf3a0f48}
+
+\item 
+\hypertarget{structe1000__adapter_a7d0c4e6cc1fc44c23216c83baf8201cd}{
+u32 $\ast$ {\bfseries config\_\-space}}
+\label{structe1000__adapter_a7d0c4e6cc1fc44c23216c83baf8201cd}
+
+\item 
+\hypertarget{structe1000__adapter_ab1b0341946dc851ecab7397313fa130a}{
+unsigned int {\bfseries flags}}
+\label{structe1000__adapter_ab1b0341946dc851ecab7397313fa130a}
+
+\item 
+\hypertarget{structe1000__adapter_a76baa651d1aaa344b0d577013ee338ee}{
+u32 {\bfseries tx\_\-desc\_\-pwr}}
+\label{structe1000__adapter_a76baa651d1aaa344b0d577013ee338ee}
+
+\item 
+\hypertarget{structe1000__adapter_a7be4cd1c55fe75372ba249b42e00b5ae}{
+struct work\_\-struct {\bfseries fifo\_\-stall\_\-task}}
+\label{structe1000__adapter_a7be4cd1c55fe75372ba249b42e00b5ae}
+
+\item 
+\hypertarget{structe1000__adapter_a033104a616b85367404073cffec1a2b9}{
+struct work\_\-struct {\bfseries phy\_\-info\_\-task}}
+\label{structe1000__adapter_a033104a616b85367404073cffec1a2b9}
+
+\item 
+\hypertarget{structe1000__adapter_a88842ffb6a9589d9ab9e3819ecd0c950}{
+struct timer\_\-list {\bfseries blink\_\-timer}}
+\label{structe1000__adapter_a88842ffb6a9589d9ab9e3819ecd0c950}
+
+\item 
+\hypertarget{structe1000__adapter_a5ee7a8ca851ad9d3af0127dedf412ab8}{
+struct \hyperlink{structe1000__info}{e1000\_\-info} $\ast$ {\bfseries ei}}
+\label{structe1000__adapter_a5ee7a8ca851ad9d3af0127dedf412ab8}
+
+\item 
+\hypertarget{structe1000__adapter_a1132fa1809e921871f8a52bff2b5abdf}{
+struct vlan\_\-group $\ast$ {\bfseries vlgrp}}
+\label{structe1000__adapter_a1132fa1809e921871f8a52bff2b5abdf}
+
+\item 
+\hypertarget{structe1000__adapter_ae96b179217d5f53721369aa524b6a6dc}{
+u16 {\bfseries mng\_\-vlan\_\-id}}
+\label{structe1000__adapter_ae96b179217d5f53721369aa524b6a6dc}
+
+\item 
+\hypertarget{structe1000__adapter_ab893f162d055d60c609dfdb01b1e618d}{
+u16 {\bfseries eeprom\_\-vers}}
+\label{structe1000__adapter_ab893f162d055d60c609dfdb01b1e618d}
+
+\item 
+\hypertarget{structe1000__adapter_a319f08ec5bbde8616b1a4cb3dfbb8e71}{
+struct \hyperlink{structe1000__ring}{e1000\_\-ring} $\ast$tx\_\-ring {\bfseries \_\-\_\-\_\-\_\-cacheline\_\-aligned\_\-in\_\-smp}}
+\label{structe1000__adapter_a319f08ec5bbde8616b1a4cb3dfbb8e71}
+
+\item 
+\hypertarget{structe1000__adapter_a5222b2538cdb1e7e297dbcc865d02fa0}{
+u32 {\bfseries tx\_\-dma\_\-failed}}
+\label{structe1000__adapter_a5222b2538cdb1e7e297dbcc865d02fa0}
+
+\item 
+\hypertarget{structe1000__adapter_ab75625703297f99997931eb20385b78c}{
+struct \hyperlink{structe1000__ring}{e1000\_\-ring} $\ast$ {\bfseries rx\_\-ring}}
+\label{structe1000__adapter_ab75625703297f99997931eb20385b78c}
+
+\item 
+\hypertarget{structe1000__adapter_af53abcb6dcc16b462851268aa6a08b57}{
+u64 {\bfseries rx\_\-hdr\_\-split}}
+\label{structe1000__adapter_af53abcb6dcc16b462851268aa6a08b57}
+
+\item 
+\hypertarget{structe1000__adapter_a25af109d30a90fe362212f5e22417174}{
+u32 {\bfseries rx\_\-dma\_\-failed}}
+\label{structe1000__adapter_a25af109d30a90fe362212f5e22417174}
+
+\item 
+\hypertarget{structe1000__adapter_a71f2b151d12e8d05d93fd7e4647db663}{
+unsigned int {\bfseries rx\_\-ps\_\-pages}}
+\label{structe1000__adapter_a71f2b151d12e8d05d93fd7e4647db663}
+
+\item 
+\hypertarget{structe1000__adapter_a77323ae502f70783c3032bbb70368ff4}{
+u16 {\bfseries rx\_\-ps\_\-bsize0}}
+\label{structe1000__adapter_a77323ae502f70783c3032bbb70368ff4}
+
+\item 
+\hypertarget{structe1000__adapter_a60d383415cda2a3022a790496a940e4d}{
+u64 {\bfseries rx\_\-dropped\_\-backlog}}
+\label{structe1000__adapter_a60d383415cda2a3022a790496a940e4d}
+
+\item 
+\hypertarget{structe1000__adapter_aaa456fca779338fda828bb5d7e25663e}{
+struct \hyperlink{structe1000__ring}{e1000\_\-ring} {\bfseries test\_\-tx\_\-ring}}
+\label{structe1000__adapter_aaa456fca779338fda828bb5d7e25663e}
+
+\item 
+\hypertarget{structe1000__adapter_aec171ea6dc66027a46c6dc506f8b3130}{
+struct \hyperlink{structe1000__ring}{e1000\_\-ring} {\bfseries test\_\-rx\_\-ring}}
+\label{structe1000__adapter_aec171ea6dc66027a46c6dc506f8b3130}
+
+\item 
+\hypertarget{structe1000__adapter_a172b6ad7d973944eb975b2afc701b582}{
+u32 {\bfseries test\_\-icr}}
+\label{structe1000__adapter_a172b6ad7d973944eb975b2afc701b582}
+
+\item 
+\hypertarget{structe1000__adapter_ab04fe70d1d65ea77ff94155c1cc48a3e}{
+u32 {\bfseries msg\_\-enable}}
+\label{structe1000__adapter_ab04fe70d1d65ea77ff94155c1cc48a3e}
+
+\item 
+\hypertarget{structe1000__adapter_a1ad7d655b51981dd68c61c472f709bef}{
+u32 {\bfseries pba}}
+\label{structe1000__adapter_a1ad7d655b51981dd68c61c472f709bef}
+
+\item 
+\hypertarget{structe1000__adapter_aea2792843790ad808b9d98dace571200}{
+u32 {\bfseries max\_\-hw\_\-frame\_\-size}}
+\label{structe1000__adapter_aea2792843790ad808b9d98dace571200}
+
+\item 
+\hypertarget{structe1000__adapter_a5fb208daa21166d172cdce93abe0d98c}{
+unsigned long {\bfseries led\_\-status}}
+\label{structe1000__adapter_a5fb208daa21166d172cdce93abe0d98c}
+
+\item 
+\hypertarget{structe1000__adapter_a068e490b3ed0188061057b18b244e69e}{
+unsigned int {\bfseries flags2}}
+\label{structe1000__adapter_a068e490b3ed0188061057b18b244e69e}
+
+\item 
+\hypertarget{structe1000__adapter_a287c49d6a9d1c4def8e9272c022e6f18}{
+struct work\_\-struct {\bfseries downshift\_\-task}}
+\label{structe1000__adapter_a287c49d6a9d1c4def8e9272c022e6f18}
+
+\item 
+\hypertarget{structe1000__adapter_a18626f25bb41fca90dc1385d2270833f}{
+struct work\_\-struct {\bfseries update\_\-phy\_\-task}}
+\label{structe1000__adapter_a18626f25bb41fca90dc1385d2270833f}
+
+\item 
+\hypertarget{structe1000__adapter_a5f0da7b091732f5dd9e350c3e0b9c4c9}{
+struct work\_\-struct {\bfseries led\_\-blink\_\-task}}
+\label{structe1000__adapter_a5f0da7b091732f5dd9e350c3e0b9c4c9}
+
+\item 
+\hypertarget{structe1000__adapter_a5e3122f10a09e7dd421554e53e8de619}{
+struct work\_\-struct {\bfseries print\_\-hang\_\-task}}
+\label{structe1000__adapter_a5e3122f10a09e7dd421554e53e8de619}
+
+\item 
+\hypertarget{structe1000__adapter_a4aa9d182da3b851007c12330ba5d3433}{
+bool {\bfseries idle\_\-check}}
+\label{structe1000__adapter_a4aa9d182da3b851007c12330ba5d3433}
+
+\item 
+\hypertarget{structe1000__adapter_a23194da683299c3e936656af49c9fe92}{
+int {\bfseries node}}
+\label{structe1000__adapter_a23194da683299c3e936656af49c9fe92}
+
+\item 
+\hypertarget{structe1000__adapter_a0c1f5c7b9f759759efac06960a911153}{
+int {\bfseries phy\_\-hang\_\-count}}
+\label{structe1000__adapter_a0c1f5c7b9f759759efac06960a911153}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 231 of file e1000.h.
+
+
+
+The documentation for this struct was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/e1000/e1000-\/8.0.30/src/e1000.h\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/e1000e/e1000e-\/1.3.10a/src/e1000.h\end{DoxyCompactItemize}

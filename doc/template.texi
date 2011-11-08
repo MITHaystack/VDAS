@@ -1,0 +1,84 @@
+\input texinfo @c -*-texinfo-*-
+@c %**start of header
+@setfilename mark6.info.1
+@settitle Mark6 User Manual
+@c %**end of header
+
+@copying
+This is the Mark6 User Manual, version 0.1.
+
+Copyright @copyright{BBN Technologies} 2005.
+@end copying
+
+@titlepage
+@title Mark6 User Manual
+@c The following two commands start the copyright page
+@author dlapsley@bbn.com
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+@c Output the table of contents at the beginning
+@contents
+
+@ifnottex
+@node Top
+@top Mark6 User Guide
+
+@insertcopying
+@end ifnottex
+
+@menu
+* Introduction::		Introduction and Overview of Mark6.
+* Usage::				Usage Instructions.
+* Index::				Complete index.
+@end menu
+
+@comment **********************************************************************
+@node Introduction, Usage, Top, Top
+@comment node-name,     next,        previous,         up
+@chapter Introduction
+@cindex introduction, overview
+
+This is the first chapter.
+
+@cindex index entry, another
+
+@enumerate
+@item
+This is the first item.
+
+@item
+This is the second item.
+@end enumerate
+
+@comment **********************************************************************
+@node Second Chapter, Index, First Chapter, Top
+@comment node-name,     next,        previous,         up
+@chapter Second Chapter
+@cindex Ending a Texinfo file
+cindex Texinfo file ending
+@cindex File ending
+  
+	  
+This is the second chapter.
+
+@section This is a section.
+
+@subsection This is a subsection.
+
+
+
+@node Index
+@unnumbered Index
+
+@printindex cp
+
+@bye
+
+
+
+
+
+

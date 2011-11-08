@@ -1,0 +1,106 @@
+\hypertarget{structvf__data__storage}{
+\section{vf\_\-data\_\-storage Struct Reference}
+\label{structvf__data__storage}\index{vf\_\-data\_\-storage@{vf\_\-data\_\-storage}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structvf__data__storage_a27af9e08e8fa90042db13dfec37ffb34}{
+unsigned char {\bfseries vf\_\-mac\_\-addresses} \mbox{[}ETH\_\-ALEN\mbox{]}}
+\label{structvf__data__storage_a27af9e08e8fa90042db13dfec37ffb34}
+
+\item 
+\hypertarget{structvf__data__storage_a3c2192cca5cd7d8aa4be32b5a949200e}{
+u16 {\bfseries vf\_\-mc\_\-hashes} \mbox{[}IGB\_\-MAX\_\-VF\_\-MC\_\-ENTRIES\mbox{]}}
+\label{structvf__data__storage_a3c2192cca5cd7d8aa4be32b5a949200e}
+
+\item 
+\hypertarget{structvf__data__storage_a11110dae4f94bf03439a40d9c4871175}{
+u16 {\bfseries num\_\-vf\_\-mc\_\-hashes}}
+\label{structvf__data__storage_a11110dae4f94bf03439a40d9c4871175}
+
+\item 
+\hypertarget{structvf__data__storage_a4ff4c35af70f456a327532eb6780967f}{
+u16 {\bfseries default\_\-vf\_\-vlan\_\-id}}
+\label{structvf__data__storage_a4ff4c35af70f456a327532eb6780967f}
+
+\item 
+\hypertarget{structvf__data__storage_a2b3b0b7d8a25c76c81e9caf4de330e0c}{
+u16 {\bfseries vlans\_\-enabled}}
+\label{structvf__data__storage_a2b3b0b7d8a25c76c81e9caf4de330e0c}
+
+\item 
+\hypertarget{structvf__data__storage_aafa8cb049c30ea0b915616e6871a9747}{
+unsigned char {\bfseries em\_\-mac\_\-addresses} \mbox{[}MAX\_\-EMULATION\_\-MAC\_\-ADDRS $\ast$ETH\_\-ALEN\mbox{]}}
+\label{structvf__data__storage_aafa8cb049c30ea0b915616e6871a9747}
+
+\item 
+\hypertarget{structvf__data__storage_a0cdcd3aa5e47fd7b9c517fd68162c560}{
+u32 {\bfseries uta\_\-table\_\-copy} \mbox{[}IGB\_\-MAX\_\-UTA\_\-ENTRIES\mbox{]}}
+\label{structvf__data__storage_a0cdcd3aa5e47fd7b9c517fd68162c560}
+
+\item 
+\hypertarget{structvf__data__storage_ac4288e0f3bea5619870b96e6d9b0d0c3}{
+u32 {\bfseries flags}}
+\label{structvf__data__storage_ac4288e0f3bea5619870b96e6d9b0d0c3}
+
+\item 
+\hypertarget{structvf__data__storage_ac0226eb2e5df7085e0105569f1bf4342}{
+unsigned long {\bfseries last\_\-nack}}
+\label{structvf__data__storage_ac0226eb2e5df7085e0105569f1bf4342}
+
+\item 
+\hypertarget{structvf__data__storage_affb9430266befa53256867b3f65e7ada}{
+bool {\bfseries clear\_\-to\_\-send}}
+\label{structvf__data__storage_affb9430266befa53256867b3f65e7ada}
+
+\item 
+\hypertarget{structvf__data__storage_a31937cce5899160f3ce8485e88c8d644}{
+struct \hyperlink{structvf__stats}{vf\_\-stats} {\bfseries vfstats}}
+\label{structvf__data__storage_a31937cce5899160f3ce8485e88c8d644}
+
+\item 
+\hypertarget{structvf__data__storage_a15d8b03fba0c348c619f825487ea6787}{
+struct \hyperlink{structvf__stats}{vf\_\-stats} {\bfseries last\_\-vfstats}}
+\label{structvf__data__storage_a15d8b03fba0c348c619f825487ea6787}
+
+\item 
+\hypertarget{structvf__data__storage_abaa50ef152f30f76a4b4121d814a8218}{
+struct \hyperlink{structvf__stats}{vf\_\-stats} {\bfseries saved\_\-rst\_\-vfstats}}
+\label{structvf__data__storage_abaa50ef152f30f76a4b4121d814a8218}
+
+\item 
+\hypertarget{structvf__data__storage_ab798a610a9e3f8cc0ca41f68cd06edcf}{
+bool {\bfseries pf\_\-set\_\-mac}}
+\label{structvf__data__storage_ab798a610a9e3f8cc0ca41f68cd06edcf}
+
+\item 
+\hypertarget{structvf__data__storage_af09c2b0e8358913b0cc1d8aaaaf804ad}{
+u16 {\bfseries pf\_\-vlan}}
+\label{structvf__data__storage_af09c2b0e8358913b0cc1d8aaaaf804ad}
+
+\item 
+\hypertarget{structvf__data__storage_a256461d61423683d1dbf0d54f9d668b0}{
+u16 {\bfseries pf\_\-qos}}
+\label{structvf__data__storage_a256461d61423683d1dbf0d54f9d668b0}
+
+\item 
+\hypertarget{structvf__data__storage_a0e5b6e3f4cb6dd0821042258faf8df1c}{
+u16 {\bfseries tx\_\-rate}}
+\label{structvf__data__storage_a0e5b6e3f4cb6dd0821042258faf8df1c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 117 of file igb.h.
+
+
+
+The documentation for this struct was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/igb/igb-\/3.0.22/src/igb.h\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/ixgbe/ixgbe-\/3.1.15-\/FlowDirector-\/NoTNAPI/src/ixgbe.h\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/ixgbe/ixgbe-\/3.3.9-\/DNA/src/ixgbe.h\end{DoxyCompactItemize}

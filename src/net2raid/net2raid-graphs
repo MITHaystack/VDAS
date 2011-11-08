@@ -1,0 +1,238 @@
+#!/usr/bin/gnuplot
+
+# Copyright 2011 MIT Haystack Observatory
+# 
+# This file is part of Mark6.
+# 
+# Mark6 is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 2 of the License.
+# 
+# Mark6 is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with Mark6.  If not, see <http://www.gnu.org/licenses/>.
+
+set terminal pdf size 8,6
+
+set grid
+
+FW_ETH2='/opt/mit/mark6/log/fw_eth2.csv'
+FW_ETH3='/opt/mit/mark6/log/fw_eth3.csv'
+FW_ETH4='/opt/mit/mark6/log/fw_eth4.csv'
+FW_ETH5='/opt/mit/mark6/log/fw_eth5.csv'
+
+NR_ETH2='/opt/mit/mark6/log/nr_eth2.csv'
+NR_ETH3='/opt/mit/mark6/log/nr_eth3.csv'
+NR_ETH4='/opt/mit/mark6/log/nr_eth4.csv'
+NR_ETH5='/opt/mit/mark6/log/nr_eth5.csv'
+
+set output "/opt/mit/mark6/log/e2e_mp.pdf"
+set size 1,1
+set multiplot
+
+set origin 0,0.5
+set size 0.5,0.5
+set title 'Ethernet2'
+set xlabel 'Time(s)'
+plot FW_ETH2 using 1:5 t 'fw inst bit rate' with lines, \
+	FW_ETH2 using 1:6 t 'fw life bit rate' with lines, \
+	FW_ETH2 using 1:7 t 'fw bit rate' with lines, \
+	NR_ETH2 using 1:5 t 'nr inst bit rate' with lines, \
+	NR_ETH2 using 1:6 t 'nr life bit rate' with lines, \
+	NR_ETH2 using 1:7 t 'nr avg bit rate' with lines
+
+set origin 0.5,0.5
+set size 0.5, 0.5
+set title 'Ethernet3'
+set xlabel 'Time(s)'
+plot FW_ETH3 using 1:5 t 'fw inst bit rate' with lines, \
+	FW_ETH3 using 1:6 t 'fw life bit rate' with lines, \
+	FW_ETH3 using 1:7 t 'fw avg bit rate' with lines, \
+	NR_ETH3 using 1:5 t 'nr inst bit rate' with lines, \
+	NR_ETH3 using 1:6 t 'nr life bit rate' with lines, \
+	NR_ETH3 using 1:7 t 'nr avg bit rate' with lines
+
+set origin 0,0
+set size 0.5, 0.5
+set title 'Ethernet4'
+set xlabel 'Time(s)'
+plot FW_ETH4 using 1:5 t 'fw inst bit rate' with lines, \
+	FW_ETH4 using 1:6 t 'fw life bit rate' with lines, \
+	FW_ETH4 using 1:7 t 'fw avg bit rate' with lines, \
+	NR_ETH4 using 1:5 t 'nr inst bit rate' with lines, \
+	NR_ETH4 using 1:6 t 'nr life bit rate' with lines, \
+	NR_ETH4 using 1:7 t 'nr avg bit rate' with lines
+
+set origin 0.5,0
+set size 0.5, 0.5
+set title 'Ethernet5'
+set xlabel 'Time(s)'
+plot FW_ETH5 using 1:5 t 'fw inst bit rate' with lines, \
+	FW_ETH5 using 1:6 t 'fw life bit rate' with lines, \
+	FW_ETH5 using 1:7 t 'fw avg bit rate' with lines, \
+	NR_ETH5 using 1:5 t 'nr inst bit rate' with lines, \
+	NR_ETH5 using 1:6 t 'nr life bit rate' with lines, \
+	NR_ETH5 using 1:7 t 'nr avg bit rate' with lines
+
+unset multiplot
+set output
+set output "/opt/mit/mark6/log/nr.pdf"
+set origin 0,0
+set size 1,1
+set title 'Average NR Bit Rate'
+set xlabel 'Time(s)'
+plot NR_ETH2 using 1:7 t 'eth2' with lines, NR_ETH3 using 1:7 t 'eth3' with lines, NR_ETH4 using 1:7 t 'eth4' with lines, NR_ETH5 using 1:7 t 'eth5' with lines
+
+set output "/opt/mit/mark6/log/fw.pdf"
+set origin 0,0
+set size 1,1
+set title 'Average FW Bit Rate'
+set xlabel 'Time(s)'
+plot FW_ETH2 using 1:7 t 'eth2' with lines, FW_ETH3 using 1:7 t 'eth3' with lines, FW_ETH4 using 1:7 t 'eth4' with lines, FW_ETH5 using 1:7 t 'eth5' with lines
+
+VMSTAT_DATA='/opt/mit/mark6/log/vmstat.log'
+
+set output "/opt/mit/mark6/log/vmstat_mp-1.pdf"
+set size 1,1
+set multiplot
+
+set origin 0,0.5
+set size 0.5, 0.5
+
+set title 'Procs'
+set xlabel 'Time(s)'
+set ylabel 'Bytes'
+plot VMSTAT_DATA every ::3 using 3 t 'r' with lines,\
+	VMSTAT_DATA every ::3 using 4 t 'b' with lines
+
+set origin 0.5,0.5
+set size 0.5, 0.5
+
+set title 'Memory'
+set xlabel 'Time(s)'
+set ylabel 'Bytes'
+plot VMSTAT_DATA every ::3 using 3 t 'swpd' with lines,\
+	VMSTAT_DATA every ::3 using 4 t 'free' with lines,\
+	VMSTAT_DATA every ::3 using 5 t 'buff' with lines,\
+	VMSTAT_DATA every ::3 using 6 t 'cache' with lines
+
+set origin 0,0
+set size 0.5, 0.5
+
+set title 'CPU'
+set xlabel 'Time(s)'
+set ylabel '%'
+plot VMSTAT_DATA every ::3 using 13 t 'us' with lines,\
+	VMSTAT_DATA every ::3 using 14 t 'sy' with lines,\
+	VMSTAT_DATA every ::3 using 15 t 'id' with lines,\
+	VMSTAT_DATA every ::3 using 16 t 'wa' with lines
+
+set origin 0.5,0
+set size 0.5, 0.5
+
+set title 'Swap'
+set xlabel 'Time(s)'
+set ylabel 'Pages/s'
+plot VMSTAT_DATA every ::3 using 7 t 'si' with lines,\
+	VMSTAT_DATA every ::3 using 8 t 'so' with lines
+
+
+unset multiplot
+set output
+set output "/opt/mit/mark6/log/vmstat_mp-2.pdf"
+set multiplot
+set size 1,1
+
+set origin 0,0.5
+set size 0.5, 0.5
+set title 'IO'
+set xlabel 'Time(s)'
+set ylabel 'Blocks/s'
+plot VMSTAT_DATA every ::3 using 9 t 'bi' with lines,\
+	VMSTAT_DATA every ::3 using 10 t 'bo' with lines
+
+set origin 0.5,0.5
+set size 0.5,0.5
+set title 'Interrupts and Context Switches'
+set xlabel 'Time(s)'
+set ylabel 'events/s'
+plot VMSTAT_DATA every ::3 using 11 t 'in' with lines,\
+	VMSTAT_DATA every ::3 using 12 t 'cs' with lines
+
+unset multiplot
+set output
+set output "/opt/mit/mark6/log/fw_mp.pdf"
+set size 1,1
+set multiplot
+
+set origin 0,0.5
+set size 0.5,0.5
+
+set title 'FileWriter(eth2)'
+set xlabel 'Time(s)'
+plot FW_ETH2 using 1:5 t 'inst bit rate' with lines, \
+	FW_ETH2 using 1:6 t 'life bit rate' with lines, \
+	FW_ETH2 using 1:7 t 'avg bit rate' with lines
+
+
+set origin 0.5,0.5
+set size 0.5,0.5
+set title 'FileWriter(eth3)'
+plot FW_ETH3 using 1:5 t 'inst bit rate' with lines, \
+	FW_ETH3 using 1:6 t 'life bit rate' with lines, \
+	FW_ETH3 using 1:7 t 'avg bit rate' with lines
+
+set origin 0,0
+set size 0.5,0.5
+set title 'FileWriter(eth4)'
+plot FW_ETH4 using 1:5 t 'inst bit rate' with lines, \
+	FW_ETH4 using 1:6 t 'life bit rate' with lines, \
+	FW_ETH4 using 1:7 t 'avg bit rate' with lines
+
+set origin 0.5,0
+set size 0.5,0.5
+set title 'FileWriter(eth5)'
+plot FW_ETH5 using 1:5 t 'inst bit rate' with lines, \
+	FW_ETH5 using 1:6 t 'life bit rate' with lines, \
+	FW_ETH5 using 1:7 t 'avg bit rate' with lines
+
+unset multiplot
+set output
+set output "/opt/mit/mark6/log/nr_mp.pdf"
+set multiplot
+set size 1,1
+
+set origin 0,0.5
+set size 0.5,0.5
+
+set title 'NetReader(eth2)'
+set xlabel 'Time(s)'
+plot NR_ETH2 using 1:5 t 'inst bit rate' with lines, \
+	NR_ETH2 using 1:6 t 'life bit rate' with lines, \
+	NR_ETH2 using 1:7 t 'avg bit rate' with lines
+
+
+set origin 0.5,0.5
+set size 0.5, 0.5
+set title 'NetReader(eth3)'
+plot NR_ETH3 using 1:5 t 'inst bit rate' with lines, \
+	NR_ETH3 using 1:6 t 'life bit rate' with lines, \
+	NR_ETH3 using 1:7 t 'avg bit rate' with lines
+
+set origin 0,0
+set size 0.5,0.5
+set title 'NetReader(eth4)'
+plot NR_ETH4 using 1:5 t 'inst bit rate' with lines, \
+	NR_ETH4 using 1:6 t 'life bit rate' with lines, \
+	NR_ETH4 using 1:7 t 'avg bit rate' with lines
+
+set origin 0.5,0
+set size 0.5,0.5
+set title 'NetReader(eth5)'
+plot NR_ETH5 using 1:5 t 'inst bit rate' with lines, \
+	NR_ETH5 using 1:6 t 'life bit rate' with lines, \
+	NR_ETH5 using 1:7 t 'avg bit rate' with lines

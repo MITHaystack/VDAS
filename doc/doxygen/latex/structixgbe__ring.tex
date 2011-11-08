@@ -1,0 +1,159 @@
+\hypertarget{structixgbe__ring}{
+\section{ixgbe\_\-ring Struct Reference}
+\label{structixgbe__ring}\index{ixgbe\_\-ring@{ixgbe\_\-ring}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structixgbe__ring_af5c32f4c8fcb0fc80e91c58028a4b7fc}{
+struct \hyperlink{structixgbe__ring}{ixgbe\_\-ring} $\ast$ {\bfseries next}}
+\label{structixgbe__ring_af5c32f4c8fcb0fc80e91c58028a4b7fc}
+
+\item 
+\hypertarget{structixgbe__ring_a141ebd28104d122294e7b141105f792d}{
+void $\ast$ {\bfseries desc}}
+\label{structixgbe__ring_a141ebd28104d122294e7b141105f792d}
+
+\item 
+\hypertarget{structixgbe__ring_a35eb31bbb935a7dc2d9278a3210c439a}{
+struct \hyperlink{structdevice}{device} $\ast$ {\bfseries dev}}
+\label{structixgbe__ring_a35eb31bbb935a7dc2d9278a3210c439a}
+
+\item 
+\hypertarget{structixgbe__ring_a86ba3ae4e5ddc6e9a6e14c5213d5dd2a}{
+struct net\_\-device $\ast$ {\bfseries netdev}}
+\label{structixgbe__ring_a86ba3ae4e5ddc6e9a6e14c5213d5dd2a}
+
+\item 
+\hypertarget{structixgbe__ring_ad8dd4797f27c1b570d32ed85306fa5fa}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \hyperlink{structixgbe__tx__buffer}{ixgbe\_tx\_buffer} $\ast$ {\bfseries tx\_buffer\_info}\\
+\>struct \hyperlink{structixgbe__rx__buffer}{ixgbe\_rx\_buffer} $\ast$ {\bfseries rx\_buffer\_info}\\
+\}; }
+\label{structixgbe__ring_ad8dd4797f27c1b570d32ed85306fa5fa}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structixgbe__ring_ac5e7cd13897840223ee2b9e54dbcfd43}{
+unsigned long {\bfseries state}}
+\label{structixgbe__ring_ac5e7cd13897840223ee2b9e54dbcfd43}
+
+\item 
+\hypertarget{structixgbe__ring_aaa2555884b1752858e30602d5d4516df}{
+u8 \_\-\_\-iomem $\ast$ {\bfseries tail}}
+\label{structixgbe__ring_aaa2555884b1752858e30602d5d4516df}
+
+\item 
+\hypertarget{structixgbe__ring_abde9e81e199148ccbddec572a403dab9}{
+u16 {\bfseries count}}
+\label{structixgbe__ring_abde9e81e199148ccbddec572a403dab9}
+
+\item 
+\hypertarget{structixgbe__ring_a47ebdee3acc43219d377853d50ed1a12}{
+u16 {\bfseries rx\_\-buf\_\-len}}
+\label{structixgbe__ring_a47ebdee3acc43219d377853d50ed1a12}
+
+\item 
+\hypertarget{structixgbe__ring_ab89e30c623aec216f9284ddc8a8507d2}{
+u8 {\bfseries queue\_\-index}}
+\label{structixgbe__ring_ab89e30c623aec216f9284ddc8a8507d2}
+
+\item 
+\hypertarget{structixgbe__ring_a70c3fd7f6344fd69af9886c874e450bc}{
+u8 {\bfseries reg\_\-idx}}
+\label{structixgbe__ring_a70c3fd7f6344fd69af9886c874e450bc}
+
+\item 
+\hypertarget{structixgbe__ring_a451c624699918633902213928aca7c22}{
+u8 {\bfseries atr\_\-sample\_\-rate}}
+\label{structixgbe__ring_a451c624699918633902213928aca7c22}
+
+\item 
+\hypertarget{structixgbe__ring_af806e2cd230a05d8db7a55a2950ca0c0}{
+u8 {\bfseries atr\_\-count}}
+\label{structixgbe__ring_af806e2cd230a05d8db7a55a2950ca0c0}
+
+\item 
+\hypertarget{structixgbe__ring_a8717011a140a59a3d8efdde787a6675e}{
+u16 {\bfseries next\_\-to\_\-use}}
+\label{structixgbe__ring_a8717011a140a59a3d8efdde787a6675e}
+
+\item 
+\hypertarget{structixgbe__ring_a458af46cd0bc37627eee7bdd0a499030}{
+u16 {\bfseries next\_\-to\_\-clean}}
+\label{structixgbe__ring_a458af46cd0bc37627eee7bdd0a499030}
+
+\item 
+\hypertarget{structixgbe__ring_a80dda6eef2a82c393a2d82f8527ba0d3}{
+struct \hyperlink{structixgbe__queue__stats}{ixgbe\_\-queue\_\-stats} {\bfseries stats}}
+\label{structixgbe__ring_a80dda6eef2a82c393a2d82f8527ba0d3}
+
+\item 
+\hypertarget{structixgbe__ring_a7b35b109bad4fd9f043d1e65bf963951}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \hyperlink{structixgbe__tx__queue__stats}{ixgbe\_tx\_queue\_stats} {\bfseries tx\_stats}\\
+\>struct \hyperlink{structixgbe__rx__queue__stats}{ixgbe\_rx\_queue\_stats} {\bfseries rx\_stats}\\
+\}; }
+\label{structixgbe__ring_a7b35b109bad4fd9f043d1e65bf963951}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structixgbe__ring_a9c85e5f8944f5094c175dbb69bbc66e3}{
+int {\bfseries numa\_\-node}}
+\label{structixgbe__ring_a9c85e5f8944f5094c175dbb69bbc66e3}
+
+\item 
+\hypertarget{structixgbe__ring_ab5f373e733d9c5c82b8381489c8aa58d}{
+unsigned int {\bfseries size}}
+\label{structixgbe__ring_ab5f373e733d9c5c82b8381489c8aa58d}
+
+\item 
+\hypertarget{structixgbe__ring_a9bd53088ccce606bb6ff0133eb476025}{
+dma\_\-addr\_\-t {\bfseries dma}}
+\label{structixgbe__ring_a9bd53088ccce606bb6ff0133eb476025}
+
+\item 
+\hypertarget{structixgbe__ring_a0c61579399cd3cec06ed25d4cbc6d635}{
+struct \hyperlink{structixgbe__q__vector}{ixgbe\_\-q\_\-vector} $\ast$ {\bfseries q\_\-vector}}
+\label{structixgbe__ring_a0c61579399cd3cec06ed25d4cbc6d635}
+
+\item 
+\hypertarget{structixgbe__ring_ac1c1be614e3cc6eaac633369b940ffd6}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \hyperlink{structixgbe__tx__buffer}{ixgbe\_tx\_buffer} $\ast$ {\bfseries tx\_buffer\_info}\\
+\>struct \hyperlink{structixgbe__rx__buffer}{ixgbe\_rx\_buffer} $\ast$ {\bfseries rx\_buffer\_info}\\
+\}; }
+\label{structixgbe__ring_ac1c1be614e3cc6eaac633369b940ffd6}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structixgbe__ring_a2d8a55a90dd6a90d139e4bfdbcd3da0c}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \hyperlink{structixgbe__tx__queue__stats}{ixgbe\_tx\_queue\_stats} {\bfseries tx\_stats}\\
+\>struct \hyperlink{structixgbe__rx__queue__stats}{ixgbe\_rx\_queue\_stats} {\bfseries rx\_stats}\\
+\}; }
+\label{structixgbe__ring_a2d8a55a90dd6a90d139e4bfdbcd3da0c}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 315 of file ixgbe.h.
+
+
+
+The documentation for this struct was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/ixgbe/ixgbe-\/3.1.15-\/FlowDirector-\/NoTNAPI/src/ixgbe.h\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/ixgbe/ixgbe-\/3.3.9-\/DNA/src/ixgbe.h\end{DoxyCompactItemize}

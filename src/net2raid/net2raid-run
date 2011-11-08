@@ -1,0 +1,123 @@
+#!/bin/bash
+
+# Copyright 2011 MIT Haystack Observatory
+# 
+# This file is part of Mark6.
+# 
+# Mark6 is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 2 of the License.
+# 
+# Mark6 is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with Mark6.  If not, see <http://www.gnu.org/licenses/>.
+
+export LD_LIBRARY_PATH=/opt/mit/mark6/lib
+
+# Globals
+INSTALL_ROOT=/opt/mit/mark6
+EXEC=${INSTALL_ROOT}/bin/net2raid
+VMSTAT=/usr/bin/vmstat
+LOG_DIR=${INSTALL_ROOT}/log
+KILLALL=/usr/bin/killall
+GRAPHS=${INSTALL_ROOT}/bin/net2raid-graphs
+
+# Run! 
+
+# Args
+WRITE_BLOCKS=1024
+PAGES_PER_BUFFER=512
+DURATION=60
+SNAPLEN=8266
+VMSTAT_INTERVAL=1
+
+function run() {
+    SCAN_NAME=$1
+    DURATION=$2
+
+    ${VMSTAT} -n ${VMSTAT_INTERVAL} > ${LOG_DIR}/vmstat.log &
+    
+    ${EXEC} \
+    	--interfaces \
+	eth2 \
+	eth3 \
+	eth4 \
+	eth5 \
+    	--capture_files \
+	/mnt/disk0/${SCAN_NAME}.m6 \
+	/mnt/disk1/${SCAN_NAME}.m6 \
+	/mnt/disk2/${SCAN_NAME}.m6 \
+	/mnt/disk3/${SCAN_NAME}.m6 \
+    	--smp_affinities \
+	1 \
+	1 \
+	3 \
+	3 \
+    	--write_blocks ${WRITE_BLOCKS} \
+    	--snaplen ${SNAPLEN} \
+    	--time ${DURATION} \
+    	--translate=false \
+    	--pages_per_buffer=${PAGES_PER_BUFFER}
+    
+    ${KILLALL} vmstat
+    ${GRAPHS}
+    TARBALL=${INSTALL_ROOT}/log/${SCAN_NAME}.tar
+    cd ${INSTALL_ROOT}/log
+    /bin/tar cf ${TARBALL} \
+	${INSTALL_ROOT}/log/*.sts \
+	${INSTALL_ROOT}/log/*.csv \
+	${INSTALL_ROOT}/log/*.pdf \
+	${INSTALL_ROOT}/log/*.log
+
+    /bin/gzip ${TARBALL}
+    
+    /bin/rm -f ${INSTALL_ROOT}/log/*.sts
+    /bin/rm -f ${INSTALL_ROOT}/log/*.csv
+    /bin/rm -f ${INSTALL_ROOT}/log/*.pdf
+    /bin/rm -f ${INSTALL_ROOT}/log/*.log
+}
+
+function testrun() {
+    SCAN_NAME=$1
+    DURATION=$2
+
+    echo SCAN_NAME=$SCAN_NAME
+    echo DURATION=$DURATION
+    
+    sleep ${DURATION}
+
+    TARBALL=${INSTALL_ROOT}/log/${SCAN_NAME}.tar
+    cd ${INSTALL_ROOT}/log
+    /bin/tar cf ${TARBALL} \
+	${INSTALL_ROOT}/log/*.sts \
+	${INSTALL_ROOT}/log/*.csv \
+	${INSTALL_ROOT}/log/*.pdf \
+	${INSTALL_ROOT}/log/*.log
+    
+    /bin/gzip ${TARBALL}
+
+    /bin/rm -f ${INSTALL_ROOT}/log/*.sts
+    /bin/rm -f ${INSTALL_ROOT}/log/*.csv
+    /bin/rm -f ${INSTALL_ROOT}/log/*.pdf
+    /bin/rm -f ${INSTALL_ROOT}/log/*.log
+}
+
+function usage() {
+    echo "net2raid-run <scan_name> <duration>"
+}
+
+
+# Main
+if [ $# != 2 ]; then
+    usage
+    exit 1
+else
+    SCAN_NAME=$1
+    DURATION=$2
+
+    run ${SCAN_NAME} ${DURATION}
+fi

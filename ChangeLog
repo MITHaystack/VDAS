@@ -1,0 +1,8 @@
+2011-06-21  David Lapsley   <del@haystack.mit.edu>
+
+	* Moved to automake build system.
+	* Cleaned up build system.
+	* Separated unit test targets into "check" target.
+	* Added setup script.
+	* Added AC_SUBST targets for boost library/include locations.
+	* Full build/continuous integration system in place.

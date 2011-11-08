@@ -1,0 +1,209 @@
+#!/usr/bin/escript
+%% -*- erlang -*-
+%%! -smp enable -sname vdif 
+
+%% Copyright 2011 MIT Haystack Observatory
+%% 
+%% This file is part of Mark6.
+%% 
+%% Mark6 is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, version 2 of the License.
+%% 
+%% Mark6 is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with Mark6.  If not, see <http://www.gnu.org/licenses/>.
+
+%%%-------------------------------------------------------------------
+%%% @author David <dlapsley@lib1-lt.haystack.mit.edu>
+%%% @copyright (C) 2011, MIT Haystack Observatory
+%%% @doc
+%%% Connects to X3C logger via TCP and is responsible for transmitting
+%%% commands and receiving the response to those commands and passing
+%%% them back.
+%%% @end
+%%% Created : 29 Mar 2011 by David <dlapsley@lib1-lt.haystack.mit.edu>
+%%%-------------------------------------------------------------------
+-author("dlapsley@haystack.mit.edu").
+-include_lib("xmerl/include/xmerl.hrl").
+-mode(compile).
+
+%% API
+-define(FRAME_SIZE, 8224).
+-define(HEADER_SIZE, 32).
+-define(PAYLOAD_SIZE, 8192).
+-record(vdif, {frame, thread_id, station_id, epoch_seconds, length}).
+-record(state, {protocol_table, fd_data, fd_in, fd_out}).
+
+trim_whitespace(Input) ->
+    LS = re:replace(Input, "^[ \\t\\n]*", "", [{return, list}]),
+    RS = re:replace(LS, "[ \\t\\n]*$", "", [{return, list}]),
+    RS.
+
+is_header(Bin) ->
+    try decode_header(binary:part(Bin, {0, 32}))
+    catch
+	_:_ -> error
+    end.
+
+
+main([File_name_data, File_name_in, File_name_out]) ->
+    Protocol_table = ets:new(protocol_table, [ set ]),
+    error_logger:info_msg("Filename: ~p ~p~n", [File_name_in, File_name_out]),
+    {ok, Fd_in} = file:open(File_name_in, [ read, binary ]),
+    {ok, Fd_out} = file:open(File_name_out, [ write ]),
+    {ok, Fd_data} = file:open(File_name_data, [ write, binary, raw ]),
+    FRAME_SIZE = 8224,
+    scan_file(#state{protocol_table=Protocol_table, fd_data=Fd_data,
+		     fd_in=Fd_in, fd_out=Fd_out});
+main([]) ->
+    io:format("usage: <data> <in> <out>~n").
+
+valid_frame_number(Prev_frame, Curr_frame) ->
+    if
+	Curr_frame /= Prev_frame + 1 ->
+	    {error, Curr_frame - Prev_frame};
+	true ->
+	    ok
+    end.
+
+update_protocol(S, V) ->
+    case ets:lookup(S#state.protocol_table, V#vdif.thread_id) of
+	[{Key, Element}|T] ->
+	    % io:format("Element: ~p~n", [ Element ]),
+	    Return = valid_frame_number(Element#vdif.frame, V#vdif.frame),
+	    ets:insert(S#state.protocol_table,
+		       {Element#vdif.thread_id, Element#vdif{frame=V#vdif.frame}});
+	[] ->
+	    io:format("Inserting new element: ~p~n", [V#vdif.thread_id]),
+	    true = ets:insert(S#state.protocol_table, {V#vdif.thread_id, V}),
+	    ok;
+	_ ->
+	    io:format("Ooops~n"),
+	    {error, "Unkown"}
+    end.
+    
+
+scan_file(S) ->
+    {ok, Binary} = file:read(S#state.fd_in, ?HEADER_SIZE),
+    scan_file(S, start, Binary, 0).
+
+scan_file(S, start, Hdr, _Frame) ->
+    case is_header(Hdr) of
+	error ->
+	    [H|T] = binary:bin_to_list(Hdr),
+	    case file:read(S#state.fd_in, 1) of
+		{ok, Bin} ->
+		    New_hdr = binary:list_to_bin(lists:append(T, [Bin])),
+		    scan_file(S, start, New_hdr, 0);
+		{error, Reason} ->
+		    scan_file(S, error, Reason);
+		eof ->
+		    scan_file(S, eof)
+	    end;
+	{ok, V} ->
+	    update_protocol(S, V),
+	    case file:read(S#state.fd_in, ?PAYLOAD_SIZE) of
+		{ok, Data} ->
+		    case file:read(S#state.fd_in, ?HEADER_SIZE) of
+			{ok, New_hdr} ->
+			    scan_file(S, sync, New_hdr, V#vdif.frame);
+			{error, Reason} ->
+			    scan_file(S, error, Reason);
+			eof ->
+			    scan_file(S, eof)
+		    end;
+		{error, Reason} ->
+		    scan_file(S, error, Reason);
+		eof ->
+		    scan_file(S, eof)
+	    end
+    end;
+scan_file(S, sync, Hdr, Frame) ->
+    case is_header(Hdr) of
+	error ->
+	    [H|T] = binary:bin_to_list(Hdr),
+	    case file:read(S#state.fd_in, 1) of
+		{ok, Bin} ->
+		    New_hdr = binary:list_to_bin(lists:append(T, [Bin])),
+		    scan_file(S, start, New_hdr, 0);
+		{error, Reason} ->
+		    scan_file(S, error, Reason);
+		eof ->
+		    scan_file(S, eof)
+	    end;
+	{ok, V} ->
+	    update_protocol(S, V),
+	    case file:read(S#state.fd_in, ?PAYLOAD_SIZE) of
+		{ok, Bin} ->
+		    % file:write(S#state.fd_data, Hdr),
+		    % file:write(S#state.fd_data, Bin),
+		    case file:read(S#state.fd_in, ?HEADER_SIZE) of
+			{ok, New_hdr} ->
+			    scan_file(S, sync, New_hdr, V#vdif.frame);
+			{error, Reason} ->
+			    scan_file(S, error, Reason);
+			eof ->
+			    scan_file(S, eof)
+		    end;
+		{error, Reason} ->
+		    scan_file(S, error, Reason);
+		eof ->
+		    scan_file(S, eof)
+	    end
+    end.
+
+scan_file(S, error, Reason) ->
+    file:close(S#state.fd_data),
+    file:close(S#state.fd_in),
+    file:close(S#state.fd_out),
+    error_logger:error_msg("scan_file: error ~p~n", [ Reason ]).
+
+scan_file(S, eof) ->
+    file:close(S#state.fd_data),
+    file:close(S#state.fd_in),
+    file:close(S#state.fd_out),
+    error_logger:error_msg("scan_file: eof~n").
+
+
+    
+decode_header(<<
+		W0B0:8, W0B1:8, W0B2:8, W0B3:8, 
+		W1B0:8, W1B1:8, W1B2:8, W1B3:8, 
+		W2B0:8, W2B1:8, W2B2:8, W2B3:8, 
+		W3B0:8, W3B1:8, W3B2:8, W3B3:8, 
+		W4B0:8, W4B1:8, W4B2:8, W4B3:8, 
+		W5B0:8, W5B1:8, W5B2:8, W5B3:8, 
+		W6B0:8, W6B1:8, W6B2:8, W6B3:8, 
+		W7B0:8, 16#DE:8, 16#AD:8, 16#AB:8
+	      >>) ->    
+    <<I:1, L:1, Seconds_a:6>> = <<W0B3:8>>,
+    <<Epoch_seconds:32>> = <<Seconds_a, W0B2, W0B1, W0B0>>,
+    <<_:2,Reference_epoch:6>> = << W1B3 >>,
+    <<Data_frame:32>> = <<2#0:8, W1B2, W1B1, W1B0>>,
+    <<V:3, Log_channels:5>> = <<W2B3>>,
+    <<Length:32>> = <<2#0:8, W2B2, W2B1, W2B0>>,
+    <<C:1, Bits:5,Thread_id_a:2>> = <<W3B3>>,
+    <<Thread_id:32>> = <<2#0:22, Thread_id_a:2, W3B2:8>>,
+    <<Station_id:32>> = <<2#0:16, W3B1:8, W3B1:8>>,
+    <<EDV:8>> = <<W4B3>>,
+
+     % io:format("~p ~p~n", [ Data_frame, Thread_id ]),
+    {ok, #vdif{frame=Data_frame, thread_id=Thread_id,
+	       station_id=Station_id, epoch_seconds=Epoch_seconds,
+	       length=Length}}.
+
+    %io:format("MW          : ~.16B~.16B~.16B~.16B~n", [ 0, 0, 0, W7B0 ]),
+     %io:format("Data_frame  : ~p~n~n", [ Data_frame ]),
+    % io:format("MW            : ~p ~p~n", [ MW1, MW2]),
+    % io:format("Data_frame  : ~.16B~.16B~.16B~n", [ W1B2, W1B1, W1B0 ]),
+    % io:format("Frame_length: ~p~n", [ Length ]),
+    % io:format("Epoch       : ~p~n", [ Reference_epoch ]),
+    % io:format("Epoch_seconds: ~.16B~.16B~.16B~.16B~n", [ W0B3, W0B2, W0B1, W0B0 ]),
+    % io:format("Epoch_seconds: ~p~n", [ Epoch_seconds ]).
+
+		

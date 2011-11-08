@@ -1,0 +1,8 @@
+/dev/sdb:/mnt/disk0
+/dev/sdc:/mnt/disk1
+/dev/sdd:/mnt/disk2
+/dev/sde:/mnt/disk3
+/dev/sdf:/mnt/disk4
+/dev/sdg:/mnt/disk5
+/dev/sdh:/mnt/disk6
+/dev/sdi:/mnt/disk7

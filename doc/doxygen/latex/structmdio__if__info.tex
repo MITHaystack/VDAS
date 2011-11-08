@@ -1,0 +1,53 @@
+\hypertarget{structmdio__if__info}{
+\section{mdio\_\-if\_\-info Struct Reference}
+\label{structmdio__if__info}\index{mdio\_\-if\_\-info@{mdio\_\-if\_\-info}}
+}
+
+
+{\ttfamily \#include $<$bnx2x\_\-compat.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structmdio__if__info_aad5c088e4eea422024074d8640115057}{
+int {\bfseries prtad}}
+\label{structmdio__if__info_aad5c088e4eea422024074d8640115057}
+
+\item 
+\hypertarget{structmdio__if__info_ac3874f3f1b4d721a0c17db00c2a2ceac}{
+u32 \_\-\_\-bitwise {\bfseries mmds}}
+\label{structmdio__if__info_ac3874f3f1b4d721a0c17db00c2a2ceac}
+
+\item 
+\hypertarget{structmdio__if__info_a9eef85e0a64bc8b52880d0109a4b79b7}{
+unsigned {\bfseries mode\_\-support}}
+\label{structmdio__if__info_a9eef85e0a64bc8b52880d0109a4b79b7}
+
+\item 
+\hypertarget{structmdio__if__info_a72e8a0147af827739dc9be3dbc924135}{
+struct net\_\-device $\ast$ {\bfseries dev}}
+\label{structmdio__if__info_a72e8a0147af827739dc9be3dbc924135}
+
+\item 
+\hypertarget{structmdio__if__info_a34f72c3cb82c9fcd4bf7fa73284bd4a3}{
+int($\ast$ {\bfseries mdio\_\-read} )(struct net\_\-device $\ast$dev, int prtad, int devad, u16 addr)}
+\label{structmdio__if__info_a34f72c3cb82c9fcd4bf7fa73284bd4a3}
+
+\item 
+\hypertarget{structmdio__if__info_a0c796f534d3f13cb576ad5ed70bd1c0a}{
+int($\ast$ {\bfseries mdio\_\-write} )(struct net\_\-device $\ast$dev, int prtad, int devad, u16 addr, u16 val)}
+\label{structmdio__if__info_a0c796f534d3f13cb576ad5ed70bd1c0a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+struct \hyperlink{structmdio__if__info}{mdio\_\-if\_\-info} -\/ Ethernet controller MDIO interface : PRTAD of the PHY (MDIO\_\-PRTAD\_\-NONE if not present/unknown) : Mask of MMDs expected to be present in the PHY. This must be non-\/zero unless  = MDIO\_\-PRTAD\_\-NONE. : MDIO modes supported. If MDIO\_\-SUPPORTS\_\-C22 is set then MII register access will be passed through with  = MDIO\_\-DEVAD\_\-NONE. If MDIO\_\-EMULATE\_\-C22 is set then access to commonly used clause 22 registers will be translated into clause 45 registers. : Net device structure : Register read function; returns value or negative error code : Register write function; returns 0 or negative error code 
+
+Definition at line 480 of file bnx2x\_\-compat.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/broadcom/netxtreme2-\/5.2.50/bnx2x-\/1.52.12/src/bnx2x\_\-compat.h\end{DoxyCompactItemize}

@@ -1,0 +1,381 @@
+DEBUG 0x7fdb804a1760 net2raid - Starting.
+DEBUG 0x7fdb804a1760 net2raid - Parent still here after fork.
+DEBUG 0x7fdb804a1760 net2raid - Parent still here after fork.
+DEBUG 0x7fdb804a1760 net2raid - Forked child: 0
+DEBUG 0x7fdb804a1760 net2raid - Parent still here after fork.
+DEBUG 0x7fdb804a1760 net2raid - Forked child: 1
+DEBUG 0x7fdb804a1760 net2raid - Parent still here after fork.
+DEBUG 0x7fdb804a1760 net2raid - Forked child: 2
+INFO 0x7fdb804a1760 net2raid - Launching main.
+
+INFO 0x7fdb804a1760 net2raid - Starting child fd: 5
+INFO 0x7fdb804a1760 net2raid - Starting child fd: 6
+INFO 0x7fdb804a1760 net2raid - Starting child fd: 7
+INFO 0x7fdb804a1760 net2raid - Starting child fd: 8
+DEBUG 0x7fdb804a1760 net2raid - Forked child: 3
+DEBUG 0x7fdb804a1760 net2raid - Started child_cli
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Opening FileWriter file: /mnt/disk2/disk2-6.m6
+DEBUG 0x7fdb804a1760 net2raid - File: /mnt/disk2/disk2-6.m6 fd: 12
+INFO 0x7fdb804a1760 net2raid - Preallocating  90000 MBytes
+DEBUG 0x7fdb804a1760 net2raid - Started child_cli
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Opening FileWriter file: /mnt/disk3/disk3-6.m6
+DEBUG 0x7fdb804a1760 net2raid - File: /mnt/disk3/disk3-6.m6 fd: 13
+INFO 0x7fdb804a1760 net2raid - Preallocating  90000 MBytes
+INFO 0x7fdaec9f9700 net2raid - StatsWriter Running...
+INFO 0x7fdaec9f9700 net2raid - StatsWriter Running...
+DEBUG 0x7fdb804a1760 net2raid - Started child_cli
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Opening FileWriter file: /mnt/disk1/disk1-6.m6
+DEBUG 0x7fdb804a1760 net2raid - File: /mnt/disk1/disk1-6.m6 fd: 11
+INFO 0x7fdb804a1760 net2raid - Preallocating  90000 MBytes
+DEBUG 0x7fdb804a1760 net2raid - Started child_cli
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Opening FileWriter file: /mnt/disk0/disk0-6.m6
+DEBUG 0x7fdb804a1760 net2raid - File: /mnt/disk0/disk0-6.m6 fd: 10
+INFO 0x7fdb804a1760 net2raid - Preallocating  90000 MBytes
+INFO 0x7fdaec9f9700 net2raid - StatsWriter Running...
+INFO 0x7fdaec9f9700 net2raid - StatsWriter Running...
+DEBUG 0x7fdb804a1760 net2raid - pfd: 11
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7fdb804a1760 net2raid - Started capture process.
+INFO 0x7fdaeb1f6700 net2raid - NetReader Running...
+INFO 0x7fdaeb9f7700 net2raid - StatsWriter Running...
+DEBUG 0x7fdb804a1760 net2raid - pfd: 12
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7fdb804a1760 net2raid - Started capture process.
+INFO 0x7fdaeb1f6700 net2raid - NetReader Running...
+INFO 0x7fdaec1f8700 net2raid - FileWriter Running...
+INFO 0x7fdaeb9f7700 net2raid - StatsWriter Running...
+INFO 0x7fdaec1f8700 net2raid - FileWriter Running...
+DEBUG 0x7fdb804a1760 net2raid - pfd: 10
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7fdb804a1760 net2raid - Started capture process.
+DEBUG 0x7fdb804a1760 net2raid - pfd: 13
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fdb804a1760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7fdb804a1760 net2raid - Started capture process.
+INFO 0x7fdaeb9f7700 net2raid - StatsWriter Running...
+INFO 0x7fdaeb1f6700 net2raid - NetReader Running...
+INFO 0x7fdaec1f8700 net2raid - FileWriter Running...
+INFO 0x7fdaeb9f7700 net2raid - StatsWriter Running...
+INFO 0x7fdaeb1f6700 net2raid - NetReader Running...
+INFO 0x7fdaec1f8700 net2raid - FileWriter Running...
+INFO 0x7fdaeb1f6700 net2raid - New stream identified: stream_id=225874
+INFO 0x7fdaeb1f6700 net2raid - New stream identified: stream_id=27467
+INFO 0x7fdaeb1f6700 net2raid - New stream identified: stream_id=94288
+INFO 0x7fdaeb1f6700 net2raid - New stream identified: stream_id=159053
+INFO 0x7fdaeb1f6700 net2raid - New stream identified: stream_id=28495
+INFO 0x7fdaeb1f6700 net2raid - New stream identified: stream_id=93260
+INFO 0x7fdaeb1f6700 net2raid - New stream identified: stream_id=160081
+INFO 0x7fdaeb1f6700 net2raid - New stream identified: stream_id=224846
+INFO 0x7fdb804a1760 net2raid - Received STOP
+INFO 0x7fdb804a1760 net2raid - Received STOP
+INFO 0x7fdb804a1760 net2raid - Received STOP
+INFO 0x7fdb804a1760 net2raid - Received STOP
+DEBUG 0x7fdaeb9f7700 net2raid - elapsed run time: 180.041
+INFO 0x7fdb804a1760 net2raid - Received STOP
+INFO 0x7fdaeb1f6700 net2raid - fdl: intf=eth3,id=225874:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7fdaeb1f6700 net2raid - fdl: intf=eth3,id=94288:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7fdaeb1f6700 net2raid - elapsed run time: 180.049
+INFO 0x7fdb804a1760 net2raid - Received STOP
+DEBUG 0x7fdaeb9f7700 net2raid - elapsed run time: 180.036
+INFO 0x7fdb804a1760 net2raid - Received STOP
+INFO 0x7fdaeb1f6700 net2raid - fdl: intf=eth4,id=27467:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7fdaeb1f6700 net2raid - fdl: intf=eth4,id=159053:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7fdaeb1f6700 net2raid - elapsed run time: 180.042
+INFO 0x7fdb804a1760 net2raid - Received STOP
+DEBUG 0x7fdaeb9f7700 net2raid - elapsed run time: 180.043
+INFO 0x7fdb804a1760 net2raid - Received STOP
+INFO 0x7fdaeb1f6700 net2raid - fdl: intf=eth2,id=28495:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7fdaeb1f6700 net2raid - fdl: intf=eth2,id=160081:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7fdaeb1f6700 net2raid - elapsed run time: 180.044
+INFO 0x7fdb804a1760 net2raid - Received STOP
+DEBUG 0x7fdaeb9f7700 net2raid - elapsed run time: 180.057
+INFO 0x7fdb804a1760 net2raid - Received STOP
+INFO 0x7fdaeb1f6700 net2raid - fdl: intf=eth5,id=93260:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7fdaeb1f6700 net2raid - fdl: intf=eth5,id=224846:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7fdaeb1f6700 net2raid - elapsed run time: 180.057
+INFO 0x7fdb804a1760 net2raid - Received STOP
+DEBUG 0x7fdaec9f9700 net2raid - elapsed run time: 181.035
+DEBUG 0x7fdaec9f9700 net2raid - elapsed run time: 181.036
+INFO 0x7fdb804a1760 net2raid - Received STOP
+INFO 0x7fdb804a1760 net2raid - Received STOP
+DEBUG 0x7fdaec1f8700 net2raid - elapsed run time: 180.703
+INFO 0x7fdb804a1760 net2raid - Stopped capture process.
+DEBUG 0x7fdaec1f8700 net2raid - elapsed run time: 180.645
+INFO 0x7fdb804a1760 net2raid - Stopped capture process.
+INFO 0x7fdb804a1760 net2raid - Closed CLI stream.
+DEBUG 0x7fdaec9f9700 net2raid - elapsed run time: 181.047
+INFO 0x7fdb804a1760 net2raid - Received STOP
+DEBUG 0x7fdaec1f8700 net2raid - elapsed run time: 180.741
+INFO 0x7fdb804a1760 net2raid - Stopped capture process.
+DEBUG 0x7fdaec9f9700 net2raid - elapsed run time: 181.055
+INFO 0x7fdb804a1760 net2raid - Received STOP
+DEBUG 0x7fdaec1f8700 net2raid - elapsed run time: 180.689
+INFO 0x7fdb804a1760 net2raid - Stopped capture process.
+INFO 0x7fdb804a1760 net2raid - Closed CLI stream.
+INFO 0x7fdb804a1760 net2raid - Closed CLI stream.
+INFO 0x7fdb804a1760 net2raid - Closed CLI stream.
+DEBUG 0x7fae764e6760 net2raid - Starting.
+DEBUG 0x7fae764e6760 net2raid - Parent still here after fork.
+DEBUG 0x7fae764e6760 net2raid - Forked child: 0
+DEBUG 0x7fae764e6760 net2raid - Parent still here after fork.
+DEBUG 0x7fae764e6760 net2raid - Forked child: 1
+DEBUG 0x7fae764e6760 net2raid - Parent still here after fork.
+DEBUG 0x7fae764e6760 net2raid - Forked child: 2
+DEBUG 0x7fae764e6760 net2raid - Parent still here after fork.
+INFO 0x7fae764e6760 net2raid - Launching main.
+
+INFO 0x7fae764e6760 net2raid - Starting child fd: 5
+INFO 0x7fae764e6760 net2raid - Starting child fd: 6
+INFO 0x7fae764e6760 net2raid - Starting child fd: 7
+INFO 0x7fae764e6760 net2raid - Starting child fd: 8
+DEBUG 0x7fae764e6760 net2raid - Forked child: 3
+DEBUG 0x7fae764e6760 net2raid - Started child_cli
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Opening FileWriter file: /mnt/disk0/disk0-7.m6
+DEBUG 0x7fae764e6760 net2raid - Started child_cli
+DEBUG 0x7fae764e6760 net2raid - Started child_cli
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Opening FileWriter file: /mnt/disk3/disk3-7.m6
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Opening FileWriter file: /mnt/disk1/disk1-7.m6
+DEBUG 0x7fae764e6760 net2raid - Started child_cli
+INFO 0x7fade2a3e700 net2raid - StatsWriter Running...
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Opening FileWriter file: /mnt/disk2/disk2-7.m6
+INFO 0x7fade2a3e700 net2raid - StatsWriter Running...
+INFO 0x7fade2a3e700 net2raid - StatsWriter Running...
+INFO 0x7fade2a3e700 net2raid - StatsWriter Running...
+DEBUG 0x7fae764e6760 net2raid - File: /mnt/disk2/disk2-7.m6 fd: 12
+INFO 0x7fae764e6760 net2raid - Preallocating  150000 MBytes
+DEBUG 0x7fae764e6760 net2raid - File: /mnt/disk1/disk1-7.m6 fd: 11
+INFO 0x7fae764e6760 net2raid - Preallocating  150000 MBytes
+DEBUG 0x7fae764e6760 net2raid - File: /mnt/disk0/disk0-7.m6 fd: 10
+INFO 0x7fae764e6760 net2raid - Preallocating  150000 MBytes
+DEBUG 0x7fae764e6760 net2raid - File: /mnt/disk3/disk3-7.m6 fd: 13
+INFO 0x7fae764e6760 net2raid - Preallocating  150000 MBytes
+DEBUG 0x7fae764e6760 net2raid - pfd: 11
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7fae764e6760 net2raid - Started capture process.
+INFO 0x7fade123b700 net2raid - NetReader Running...
+INFO 0x7fade1a3c700 net2raid - StatsWriter Running...
+INFO 0x7fade223d700 net2raid - FileWriter Running...
+DEBUG 0x7fae764e6760 net2raid - pfd: 12
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7fae764e6760 net2raid - Started capture process.
+INFO 0x7fade123b700 net2raid - NetReader Running...
+INFO 0x7fade1a3c700 net2raid - StatsWriter Running...
+INFO 0x7fade223d700 net2raid - FileWriter Running...
+DEBUG 0x7fae764e6760 net2raid - pfd: 10
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7fae764e6760 net2raid - Started capture process.
+INFO 0x7fade1a3c700 net2raid - StatsWriter Running...
+INFO 0x7fade123b700 net2raid - NetReader Running...
+INFO 0x7fade223d700 net2raid - FileWriter Running...
+DEBUG 0x7fae764e6760 net2raid - pfd: 13
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Received WRITE_TO_DISK
+INFO 0x7fae764e6760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7fae764e6760 net2raid - Started capture process.
+INFO 0x7fade1a3c700 net2raid - StatsWriter Running...
+INFO 0x7fade123b700 net2raid - NetReader Running...
+INFO 0x7fade223d700 net2raid - FileWriter Running...
+INFO 0x7fade123b700 net2raid - New stream identified: stream_id=159053
+INFO 0x7fade123b700 net2raid - New stream identified: stream_id=160081
+INFO 0x7fade123b700 net2raid - New stream identified: stream_id=27467
+INFO 0x7fade123b700 net2raid - New stream identified: stream_id=28495
+INFO 0x7fade123b700 net2raid - New stream identified: stream_id=93260
+INFO 0x7fade123b700 net2raid - New stream identified: stream_id=94288
+INFO 0x7fade123b700 net2raid - New stream identified: stream_id=224846
+INFO 0x7fade123b700 net2raid - New stream identified: stream_id=225874
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fae764e6760 net2raid - Received STOP
+DEBUG 0x7fade1a3c700 net2raid - elapsed run time: 300.078
+DEBUG 0x7fade1a3c700 net2raid - elapsed run time: 300.122
+DEBUG 0x7fade1a3c700 net2raid - elapsed run time: 300.128
+DEBUG 0x7fade1a3c700 net2raid - elapsed run time: 300.1
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fade123b700 net2raid - fdl: intf=eth2,id=160081:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7fade123b700 net2raid - fdl: intf=eth2,id=28495:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7fade123b700 net2raid - elapsed run time: 300.157
+INFO 0x7fade123b700 net2raid - fdl: intf=eth5,id=93260:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fade123b700 net2raid - fdl: intf=eth5,id=224846:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7fade123b700 net2raid - fdl: intf=eth3,id=94288:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7fade123b700 net2raid - elapsed run time: 300.129
+INFO 0x7fade123b700 net2raid - fdl: intf=eth3,id=225874:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7fade123b700 net2raid - elapsed run time: 300.218
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fade123b700 net2raid - fdl: intf=eth4,id=159053:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7fade123b700 net2raid - fdl: intf=eth4,id=27467:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7fade123b700 net2raid - elapsed run time: 300.203
+INFO 0x7fae764e6760 net2raid - Received STOP
+DEBUG 0x7fade2a3e700 net2raid - elapsed run time: 301.12
+DEBUG 0x7fade2a3e700 net2raid - elapsed run time: 301.12
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fae764e6760 net2raid - Received STOP
+DEBUG 0x7fade223d700 net2raid - elapsed run time: 300.581
+INFO 0x7fae764e6760 net2raid - Stopped capture process.
+DEBUG 0x7fade223d700 net2raid - elapsed run time: 300.497
+INFO 0x7fae764e6760 net2raid - Stopped capture process.
+INFO 0x7fae764e6760 net2raid - Closed CLI stream.
+DEBUG 0x7fade2a3e700 net2raid - elapsed run time: 301.146
+DEBUG 0x7fade2a3e700 net2raid - elapsed run time: 301.146
+INFO 0x7fae764e6760 net2raid - Received STOP
+INFO 0x7fae764e6760 net2raid - Received STOP
+DEBUG 0x7fade223d700 net2raid - elapsed run time: 300.558
+INFO 0x7fae764e6760 net2raid - Stopped capture process.
+DEBUG 0x7fade223d700 net2raid - elapsed run time: 300.623
+INFO 0x7fae764e6760 net2raid - Stopped capture process.
+INFO 0x7fae764e6760 net2raid - Closed CLI stream.
+INFO 0x7fae764e6760 net2raid - Closed CLI stream.
+INFO 0x7fae764e6760 net2raid - Closed CLI stream.
+DEBUG 0x7f3837713760 net2raid - Starting.
+DEBUG 0x7f3837713760 net2raid - Parent still here after fork.
+DEBUG 0x7f3837713760 net2raid - Parent still here after fork.
+DEBUG 0x7f3837713760 net2raid - Forked child: 0
+DEBUG 0x7f3837713760 net2raid - Parent still here after fork.
+DEBUG 0x7f3837713760 net2raid - Forked child: 1
+DEBUG 0x7f3837713760 net2raid - Forked child: 2
+DEBUG 0x7f3837713760 net2raid - Parent still here after fork.
+INFO 0x7f3837713760 net2raid - Launching main.
+
+INFO 0x7f3837713760 net2raid - Starting child fd: 5
+DEBUG 0x7f3837713760 net2raid - Forked child: 3
+INFO 0x7f3837713760 net2raid - Starting child fd: 6
+INFO 0x7f3837713760 net2raid - Starting child fd: 7
+INFO 0x7f3837713760 net2raid - Starting child fd: 8
+DEBUG 0x7f3837713760 net2raid - Started child_cli
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Opening FileWriter file: /mnt/disk2/disk2-8.m6
+INFO 0x7f37a3c6b700 net2raid - StatsWriter Running...
+DEBUG 0x7f3837713760 net2raid - File: /mnt/disk2/disk2-8.m6 fd: 12
+INFO 0x7f3837713760 net2raid - Preallocating  300000 MBytes
+DEBUG 0x7f3837713760 net2raid - Started child_cli
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Opening FileWriter file: /mnt/disk0/disk0-8.m6
+DEBUG 0x7f3837713760 net2raid - Started child_cli
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Opening FileWriter file: /mnt/disk1/disk1-8.m6
+INFO 0x7f37a3c6b700 net2raid - StatsWriter Running...
+INFO 0x7f37a3c6b700 net2raid - StatsWriter Running...
+DEBUG 0x7f3837713760 net2raid - Started child_cli
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Opening FileWriter file: /mnt/disk3/disk3-8.m6
+INFO 0x7f37a3c6b700 net2raid - StatsWriter Running...
+DEBUG 0x7f3837713760 net2raid - File: /mnt/disk0/disk0-8.m6 fd: 10
+INFO 0x7f3837713760 net2raid - Preallocating  300000 MBytes
+DEBUG 0x7f3837713760 net2raid - File: /mnt/disk1/disk1-8.m6 fd: 11
+INFO 0x7f3837713760 net2raid - Preallocating  300000 MBytes
+DEBUG 0x7f3837713760 net2raid - File: /mnt/disk3/disk3-8.m6 fd: 13
+INFO 0x7f3837713760 net2raid - Preallocating  300000 MBytes
+DEBUG 0x7f3837713760 net2raid - pfd: 12
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7f3837713760 net2raid - Started capture process.
+INFO 0x7f37a2468700 net2raid - NetReader Running...
+INFO 0x7f37a2c69700 net2raid - StatsWriter Running...
+INFO 0x7f37a346a700 net2raid - FileWriter Running...
+DEBUG 0x7f3837713760 net2raid - pfd: 10
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7f3837713760 net2raid - Started capture process.
+INFO 0x7f37a2468700 net2raid - NetReader Running...
+INFO 0x7f37a2c69700 net2raid - StatsWriter Running...
+INFO 0x7f37a346a700 net2raid - FileWriter Running...
+DEBUG 0x7f3837713760 net2raid - pfd: 13
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7f3837713760 net2raid - Started capture process.
+INFO 0x7f37a2c69700 net2raid - StatsWriter Running...
+INFO 0x7f37a2468700 net2raid - NetReader Running...
+INFO 0x7f37a346a700 net2raid - FileWriter Running...
+DEBUG 0x7f3837713760 net2raid - pfd: 11
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Received WRITE_TO_DISK
+INFO 0x7f3837713760 net2raid - Received READ_FROM_NETWORK...
+INFO 0x7f3837713760 net2raid - Started capture process.
+INFO 0x7f37a2c69700 net2raid - StatsWriter Running...
+INFO 0x7f37a2468700 net2raid - NetReader Running...
+INFO 0x7f37a346a700 net2raid - FileWriter Running...
+INFO 0x7f37a2468700 net2raid - New stream identified: stream_id=27467
+INFO 0x7f37a2468700 net2raid - New stream identified: stream_id=28495
+INFO 0x7f37a2468700 net2raid - New stream identified: stream_id=159053
+INFO 0x7f37a2468700 net2raid - New stream identified: stream_id=160081
+INFO 0x7f37a2468700 net2raid - New stream identified: stream_id=93260
+INFO 0x7f37a2468700 net2raid - New stream identified: stream_id=224846
+INFO 0x7f37a2468700 net2raid - New stream identified: stream_id=94288
+INFO 0x7f37a2468700 net2raid - New stream identified: stream_id=225874
+INFO 0x7f3837713760 net2raid - Received STOP
+INFO 0x7f3837713760 net2raid - Received STOP
+INFO 0x7f3837713760 net2raid - Received STOP
+INFO 0x7f3837713760 net2raid - Received STOP
+DEBUG 0x7f37a2c69700 net2raid - elapsed run time: 599.118
+INFO 0x7f3837713760 net2raid - Received STOP
+INFO 0x7f37a2468700 net2raid - fdl: intf=eth2,id=28495:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f37a2468700 net2raid - fdl: intf=eth2,id=160081:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7f37a2468700 net2raid - elapsed run time: 599.123
+INFO 0x7f3837713760 net2raid - Received STOP
+DEBUG 0x7f37a2c69700 net2raid - elapsed run time: 599.177
+INFO 0x7f3837713760 net2raid - Received STOP
+INFO 0x7f37a2468700 net2raid - fdl: intf=eth4,id=27467:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f37a2468700 net2raid - fdl: intf=eth4,id=159053:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7f37a2468700 net2raid - elapsed run time: 599.191
+INFO 0x7f3837713760 net2raid - Received STOP
+DEBUG 0x7f37a2c69700 net2raid - elapsed run time: 599.128
+INFO 0x7f3837713760 net2raid - Received STOP
+INFO 0x7f37a2468700 net2raid - fdl: intf=eth5,id=93260:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f37a2468700 net2raid - fdl: intf=eth5,id=224846:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7f37a2468700 net2raid - elapsed run time: 599.128
+INFO 0x7f3837713760 net2raid - Received STOP
+DEBUG 0x7f37a2c69700 net2raid - elapsed run time: 599.162
+INFO 0x7f3837713760 net2raid - Received STOP
+INFO 0x7f37a2468700 net2raid - fdl: intf=eth3,id=94288:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+INFO 0x7f37a2468700 net2raid - fdl: intf=eth3,id=225874:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+DEBUG 0x7f37a2468700 net2raid - elapsed run time: 599.163
+INFO 0x7f3837713760 net2raid - Received STOP
+DEBUG 0x7f37a3c6b700 net2raid - elapsed run time: 601.132
+INFO 0x7f3837713760 net2raid - Received STOP
+DEBUG 0x7f37a346a700 net2raid - elapsed run time: 600.08
+INFO 0x7f3837713760 net2raid - Stopped capture process.
+DEBUG 0x7f37a3c6b700 net2raid - elapsed run time: 601.1
+INFO 0x7f3837713760 net2raid - Received STOP
+DEBUG 0x7f37a346a700 net2raid - elapsed run time: 599.987
+INFO 0x7f3837713760 net2raid - Stopped capture process.
+INFO 0x7f3837713760 net2raid - Closed CLI stream.
+DEBUG 0x7f37a3c6b700 net2raid - elapsed run time: 601.14
+DEBUG 0x7f37a3c6b700 net2raid - elapsed run time: 601.14
+INFO 0x7f3837713760 net2raid - Received STOP
+INFO 0x7f3837713760 net2raid - Received STOP
+DEBUG 0x7f37a346a700 net2raid - elapsed run time: 599.913
+INFO 0x7f3837713760 net2raid - Stopped capture process.
+DEBUG 0x7f37a346a700 net2raid - elapsed run time: 600.042
+INFO 0x7f3837713760 net2raid - Stopped capture process.
+INFO 0x7f3837713760 net2raid - Closed CLI stream.
+INFO 0x7f3837713760 net2raid - Closed CLI stream.
+INFO 0x7f3837713760 net2raid - Closed CLI stream.

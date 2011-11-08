@@ -1,0 +1,4463 @@
+Script started on Tue 25 Oct 2011 03:14:54 AM UTC
+root@mark6-002:~# ls
+bmr-0.7.tar.gz	conversion.log	globusconnect-multiuser-latest.tgz  interfaces	Ss-XX	     t.sh   tune.sh  Vv-XX
+capture.log	gcmu-0.3	haystack.tar			    log		start-gg.sh  Tt-XX  Uu-XX
+root@mark6-002:~# ./[K[K!sou
+source /opt/mit/mark6/etc/rc.mark6.gg
+==============================
+Mark6 environment
+
+ETHERNET IRQs
+ETH2_IRQ 64
+ETH3_IRQ 63
+ETH4_IRQ 65
+ETH5_IRQ 66
+
+RAID Controller IRQs
+MEGASAS1_IRQ 24
+MEGASAS2_IRQ 34
+
+TIMEZONE
+TZ UTC
+==============================
+Mark6 environment initialization is complete. Have a nice day!
+root@mark6-002:~\ m6>./start-w[Kgg.sh 
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth2, link-type EN10MB (Ethernet), capture size 65535 bytes
+03:15:00.393978 IP 192.168.5.101.65535 > 192.168.5.118.4207: UDP, length 8224
+03:15:00.393983 IP 192.168.5.101.65535 > 192.168.5.118.4205: UDP, length 8224
+03:15:00.393987 IP 192.168.5.101.65535 > 192.168.5.118.4207: UDP, length 8224
+03:15:00.393990 IP 192.168.5.101.65535 > 192.168.5.118.4205: UDP, length 8224
+03:15:00.393994 IP 192.168.5.101.65535 > 192.168.5.118.4207: UDP, length 8224
+5 packets captured
+939 packets received by filter
+889 packets dropped by kernel
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth3, link-type EN10MB (Ethernet), capture size 65535 bytes
+03:15:00.617960 IP 192.168.5.109.65535 > 192.168.5.126.4206: UDP, length 8224
+03:15:00.617964 IP 192.168.5.109.65535 > 192.168.5.126.4208: UDP, length 8224
+03:15:00.617967 IP 192.168.5.109.65535 > 192.168.5.126.4206: UDP, length 8224
+03:15:00.617971 IP 192.168.5.109.65535 > 192.168.5.126.4208: UDP, length 8224
+03:15:00.618109 IP 192.168.5.109.65535 > 192.168.5.126.4206: UDP, length 8224
+5 packets captured
+66 packets received by filter
+20 packets dropped by kernel
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth4, link-type EN10MB (Ethernet), capture size 65535 bytes
+03:15:00.810246 IP 192.168.5.101.65535 > 192.168.5.102.4203: UDP, length 8224
+03:15:00.810250 IP 192.168.5.101.65535 > 192.168.5.102.4201: UDP, length 8224
+03:15:00.810253 IP 192.168.5.101.65535 > 192.168.5.102.4203: UDP, length 8224
+03:15:00.810324 IP 192.168.5.101.65535 > 192.168.5.102.4201: UDP, length 8224
+03:15:00.810329 IP 192.168.5.101.65535 > 192.168.5.102.4203: UDP, length 8224
+5 packets captured
+48 packets received by filter
+18 packets dropped by kernel
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth5, link-type EN10MB (Ethernet), capture size 65535 bytes
+03:15:01.022177 IP 192.168.5.109.65535 > 192.168.5.110.4202: UDP, length 8224
+03:15:01.022181 IP 192.168.5.109.65535 > 192.168.5.110.4204: UDP, length 8224
+03:15:01.022185 IP 192.168.5.109.65535 > 192.168.5.110.4202: UDP, length 8224
+03:15:01.022188 IP 192.168.5.109.65535 > 192.168.5.110.4204: UDP, length 8224
+03:15:01.022254 IP 192.168.5.109.65535 > 192.168.5.110.4202: UDP, length 8224
+5 packets captured
+91 packets received by filter
+49 packets dropped by kernel
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/sde1             228G  6.5G  210G   3% /
+tmpfs                 3.0G     0  3.0G   0% /lib/init/rw
+udev                  3.0G  204K  3.0G   1% /dev
+tmpfs                 3.0G     0  3.0G   0% /dev/shm
+/dev/sda1             7.2T  551G  6.3T   8% /mnt/disk0
+/dev/sdb1             7.2T  568G  6.3T   9% /mnt/disk1
+/dev/sdc1             7.2T  925G  5.9T  14% /mnt/disk2
+/dev/sdd1             7.2T  847G  6.0T  13% /mnt/disk3
+Starting scan at Tue Oct 25 03:04:41 UTC 2011 for 48 seconds.
+
+DEMO_Gg_298-0304
+298
+0304
+scan-run -e DEMO -s 0552+398 -S Gg -T 1319511881 -n DEMO_Gg_298-0304 -d 48
+Running schedule: <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319511881" duration="48" scan_name="DEMO_Gg_298-0304"/>
+late scan:           1319512501.22 <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319511881" duration="48" scan_name="DEMO_Gg_298-0304"/>
+
+
+Converting DEMO_Gg_298-0304 on /mnt/disk0
+Scan /mnt/disk0/DEMO_Gg_298-0304 does not appear to exist...
+Converting DEMO_Gg_298-0304 on /mnt/disk1
+Scan /mnt/disk1/DEMO_Gg_298-0304 does not appear to exist...
+Converting DEMO_Gg_298-0304 on /mnt/disk2
+Scan /mnt/disk2/DEMO_Gg_298-0304 does not appear to exist...
+Converting DEMO_Gg_298-0304 on /mnt/disk3
+Scan /mnt/disk3/DEMO_Gg_298-0304 does not appear to exist...
+File /mnt/disk0/DEMO_Gg_298-0304*.vdif does not appear to exist...
+File /mnt/disk1/DEMO_Gg_298-0304*.vdif does not appear to exist...
+File /mnt/disk2/DEMO_Gg_298-0304*.vdif does not appear to exist...
+File /mnt/disk3/DEMO_Gg_298-0304*.vdif does not appear to exist...
+Starting scan at Tue Oct 25 03:57:09 UTC 2011 for 48 seconds.
+
+DEMO_Gg_298-0357
+298
+0357
+scan-run -e DEMO -s 0552+398 -S Gg -T 1319515029 -n DEMO_Gg_298-0357 -d 48
+Running schedule: <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319515029" duration="48" scan_name="DEMO_Gg_298-0357"/>
+running scan:        <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319515029" duration="48" scan_name="DEMO_Gg_298-0357"/>
+scan start:          Tue Oct 25 03:57:09 2011
+now/start_time:      1319515029.0 1319515029
++------------------------------------------------------------------------------+
+|                                                                              |
+|                              Net2disk v0.5                                   |
+|                                                                              |
+|                                                                              |
+|                  Copyright 2011 MIT Haystack Observatory                     |
+|                          dlapsley@haystack.mit.edu                           |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+interfaces:         eth2 eth3 eth4 eth5 
+capture_files:      /mnt/disk0/DEMO_Gg_298-0357.m6 /mnt/disk1/DEMO_Gg_298-0357.m6 /mnt/disk2/DEMO_Gg_298-0357.m6 /mnt/disk3/DEMO_Gg_298-0357.m6 
+smp_affinities:     1 1 3 3 
+snaplen:            8266
+promiscuous:        1
+time:               48
+log_config:         /opt/mit/mark6/etc/net2raid-log.cfg
+write_blocks:       512
+num_interfaces:     4
+translate:          0
+ INFO [0x7f23f7c4e760] (main.cc:357) - Launching main.
+
+Received start()
+Recording for 48 seconds
+ INFO [0x7f23f7c4e760] (main.cc:372) - Starting child fd: 5
+ INFO [0x7f23f7c4e760] (main.cc:372) - Starting child fd: 6
+ INFO [0x7f23f7c4e760] (main.cc:372) - Starting child fd: 7
+ INFO [0x7f23f7c4e760] (main.cc:372) - Starting child fd: 8
+ INFO [0x7f23f7c4e760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk1/DEMO_Gg_298-0357.m6
+ INFO [0x7f23f7c4e760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk0/DEMO_Gg_298-0357.m6
+ INFO [0x7f23f7c4e760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f23f7c4e760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f23f7c4e760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk3/DEMO_Gg_298-0357.m6
+ INFO [0x7f23f7c4e760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk2/DEMO_Gg_298-0357.m6
+ INFO [0x7f23f7c4e760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f23f7c4e760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f23f7c4e760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f23f7c4e760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f23f7c4e760] (main.cc:433) - Started capture process.
+ INFO [0x7f23a2daa700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f23a3dac700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f23f7c4e760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f23f7c4e760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f23f7c4e760] (main.cc:433) - Started capture process.
+ INFO [0x7f23f7c4e760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f23f7c4e760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f23f7c4e760] (main.cc:433) - Started capture process.
+ INFO [0x7f23a2daa700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f23a2daa700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f23f7c4e760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f23f7c4e760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f23f7c4e760] (main.cc:433) - Started capture process.
+ INFO [0x7f23a3dac700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f23a3dac700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f23a2daa700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f23a3dac700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f23a2daa700] (net_reader.cc:249) - New stream identified: stream_id=227930
+ INFO [0x7f23a2daa700] (net_reader.cc:249) - New stream identified: stream_id=29523
+ INFO [0x7f23a2daa700] (net_reader.cc:249) - New stream identified: stream_id=96344
+ INFO [0x7f23a2daa700] (net_reader.cc:249) - New stream identified: stream_id=161109
+ INFO [0x7f23a2daa700] (net_reader.cc:249) - New stream identified: stream_id=95316
+ INFO [0x7f23a2daa700] (net_reader.cc:249) - New stream identified: stream_id=30551
+ INFO [0x7f23a2daa700] (net_reader.cc:249) - New stream identified: stream_id=226902
+ INFO [0x7f23a2daa700] (net_reader.cc:249) - New stream identified: stream_id=162137
+ INFO [0x7f23f7c4e760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f23f7c4e760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f23f7c4e760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f23f7c4e760] (stats_writer.cc:132) - Received STOP
+Received stop()/opt/mit/mark6/bin/net2raid-run: line 39:  5016 Terminated              ${VMSTAT} -n ${VMSTAT_INTERVAL} > ${LOG_DIR}/vmstat.log
+ INFO [0x7f23f7c4e760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f23a2daa700] (net_reader.cc:149) - fdl: intf=eth3,id=95316:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f23a2daa700] (net_reader.cc:149) - fdl: intf=eth3,id=226902:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f23f7c4e760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f23f7c4e760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f23a2daa700] (net_reader.cc:149) - fdl: intf=eth5,id=227930:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f23a2daa700] (net_reader.cc:149) - fdl: intf=eth5,id=96344:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f23f7c4e760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f23f7c4e760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f23f7c4e760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f23a2daa700] (net_reader.cc:149) - fdl: intf=eth4,id=30551:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f23a2daa700] (net_reader.cc:149) - fdl: intf=eth2,id=29523:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f23a2daa700] (net_reader.cc:149) - fdl: intf=eth4,id=162137:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f23a2daa700] (net_reader.cc:149) - fdl: intf=eth2,id=161109:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f23f7c4e760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f23f7c4e760] (stats_writer.cc:132) - Received STOP
+/bin/tar: Removing leading `/' from member names
+scan/actual duration: 48 48.7488980293
+
+
+Converting DEMO_Gg_298-0357 on /mnt/disk0
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk0/DEMO_Gg_298-0357.m6 --size 0
+ INFO [0x7fa62850b760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk0/DEMO_Gg_298-0357.m6
+ INFO [0x7f23f7c4e760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f23f7c4e760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f23f7c4e760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f23f7c4e760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f23f7c4e760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f23f7c4e760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f23f7c4e760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f23f7c4e760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f23f7c4e760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f23f7c4e760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f23f7c4e760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f23f7c4e760] (main.cc:404) - Closed CLI stream.
+Converting DEMO_Gg_298-0357 on /mnt/disk1
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk1/DEMO_Gg_298-0357.m6 --size 0
+ INFO [0x7f2eb8055760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk1/DEMO_Gg_298-0357.m6
+Converting DEMO_Gg_298-0357 on /mnt/disk2
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk2/DEMO_Gg_298-0357.m6 --size 0
+ INFO [0x7fa858e40760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk2/DEMO_Gg_298-0357.m6
+Converting DEMO_Gg_298-0357 on /mnt/disk3
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk3/DEMO_Gg_298-0357.m6 --size 0
+ INFO [0x7f9b1be45760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk3/DEMO_Gg_298-0357.m6
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0357-4205.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0357-4205.vdif
+Begins[0] 23@10036631.004672
+Using 1024 octets/frame for 1e+06 frames from 0x197b270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1450179 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450179 packets (all channels)
+Bstats[0] 0.197 0.307 0.306 0.189 (61.4% 32768.000 Ms 643566/1Ms)
+Cumulative CPUtime 43.867 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.867 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.867 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.867 s
+Total issues 0 on 1450179 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10036631.004672 to 23@10036677.410368 for 46.405696 s, 1450180 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0357-4207.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0357-4207.vdif
+Begins[2] 23@10036631.004672
+Using 1024 octets/frame for 1e+06 frames from 0x1ae9270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1450178 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450178 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.893 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.893 s
+Bstats[2] 0.183 0.317 0.319 0.181 (63.6% 32768.000 Ms 666769/1Ms)
+Cumulative CPUtime 43.893 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.893 s
+Total issues 0 on 1450178 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10036631.004672 to 23@10036677.410336 for 46.405664 s, 1450179 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0357-4206.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0357-4206.vdif
+Begins[1] 23@10036631.004704
+Using 1024 octets/frame for 1e+06 frames from 0x10c1270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1449672 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449672 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.672 s
+Bstats[1] 0.172 0.339 0.307 0.182 (64.6% 32768.000 Ms 677305/1Ms)
+Cumulative CPUtime 43.672 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.672 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.672 s
+Total issues 0 on 1449672 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10036631.004704 to 23@10036677.394176 for 46.389472 s, 1449673 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0357-4208.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0357-4208.vdif
+Begins[3] 23@10036631.004704
+Using 1024 octets/frame for 1e+06 frames from 0xa0c270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1449672 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449672 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.732 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.732 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.732 s
+Bstats[3] 0.190 0.297 0.326 0.187 (62.3% 32768.000 Ms 653174/1Ms)
+Cumulative CPUtime 43.732 s
+Total issues 0 on 1449672 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10036631.004704 to 23@10036677.394176 for 46.389472 s, 1449673 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0357-4201.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0357-4201.vdif
+Begins[0] 23@10036631.004640
+Using 1024 octets/frame for 1e+06 frames from 0xa41270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1450179 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450179 packets (all channels)
+Bstats[0] 0.159 0.340 0.343 0.158 (68.3% 32768.000 Ms 715943/1Ms)
+Cumulative CPUtime 43.944 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.944 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.944 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.944 s
+Total issues 0 on 1450179 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10036631.004640 to 23@10036677.410336 for 46.405696 s, 1450180 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0357-4203.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0357-4203.vdif
+Begins[2] 23@10036631.004640
+Using 1024 octets/frame for 1e+06 frames from 0xbb7270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1450178 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450178 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.088 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.088 s
+Bstats[2] 0.160 0.337 0.346 0.158 (68.3% 32768.000 Ms 715723/1Ms)
+Cumulative CPUtime 44.088 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.088 s
+Total issues 0 on 1450178 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10036631.004640 to 23@10036677.410304 for 46.405664 s, 1450179 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0357-4202.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0357-4202.vdif
+Begins[1] 23@10036631.004704
+Using 1024 octets/frame for 1e+06 frames from 0x8f0270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1449925 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449925 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 45.453 s
+Bstats[1] 0.200 0.294 0.294 0.211 (58.9% 32768.000 Ms 617436/1Ms)
+Cumulative CPUtime 45.453 s
+Bstats[2] not calculated
+Cumulative CPUtime 45.453 s
+Bstats[3] not calculated
+Cumulative CPUtime 45.453 s
+Total issues 0 on 1449925 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10036631.004704 to 23@10036677.402272 for 46.397568 s, 1449926 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0357-4204.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0357-4204.vdif
+Begins[3] 23@10036631.004672
+Using 1024 octets/frame for 1e+06 frames from 0x1fbe270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1449926 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449926 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 45.022 s
+Bstats[1] not calculated
+Cumulative CPUtime 45.022 s
+Bstats[2] not calculated
+Cumulative CPUtime 45.022 s
+Bstats[3] 0.184 0.311 0.319 0.186 (63.1% 32768.000 Ms 661266/1Ms)
+Cumulative CPUtime 45.022 s
+Total issues 0 on 1449926 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10036631.004672 to 23@10036677.402272 for 46.397600 s, 1449927 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+Starting scan at Tue Oct 25 04:25:02 UTC 2011 for 48 seconds.
+
+DEMO_Gg_298-0425
+298
+0425
+scan-run -e DEMO -s 0552+398 -S Gg -T 1319516702 -n DEMO_Gg_298-0425 -d 48
+Running schedule: <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319516702" duration="48" scan_name="DEMO_Gg_298-0425"/>
+running scan:        <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319516702" duration="48" scan_name="DEMO_Gg_298-0425"/>
+scan start:          Tue Oct 25 04:25:02 2011
+now/start_time:      1319516702.05 1319516702
++------------------------------------------------------------------------------+
+|                                                                              |
+|                              Net2disk v0.5                                   |
+|                                                                              |
+|                                                                              |
+|                  Copyright 2011 MIT Haystack Observatory                     |
+|                          dlapsley@haystack.mit.edu                           |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+interfaces:         eth2 eth3 eth4 eth5 
+capture_files:      /mnt/disk0/DEMO_Gg_298-0425.m6 /mnt/disk1/DEMO_Gg_298-0425.m6 /mnt/disk2/DEMO_Gg_298-0425.m6 /mnt/disk3/DEMO_Gg_298-0425.m6 
+smp_affinities:     1 1 3 3 
+snaplen:            8266
+promiscuous:        1
+time:               48
+log_config:         /opt/mit/mark6/etc/net2raid-log.cfg
+write_blocks:       512
+num_interfaces:     4
+translate:          0
+ INFO [0x7f28ae805760] (main.cc:357) - Launching main.
+
+Received start()
+Recording for 48 seconds
+ INFO [0x7f28ae805760] (main.cc:372) - Starting child fd: 5
+ INFO [0x7f28ae805760] (main.cc:372) - Starting child fd: 6
+ INFO [0x7f28ae805760] (main.cc:372) - Starting child fd: 7
+ INFO [0x7f28ae805760] (main.cc:372) - Starting child fd: 8
+ INFO [0x7f28ae805760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk1/DEMO_Gg_298-0425.m6
+ INFO [0x7f28ae805760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk3/DEMO_Gg_298-0425.m6
+ INFO [0x7f28ae805760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk0/DEMO_Gg_298-0425.m6
+ INFO [0x7f28ae805760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk2/DEMO_Gg_298-0425.m6
+ INFO [0x7f28ae805760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f28ae805760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f28ae805760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f28ae805760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f28ae805760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f28ae805760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f28ae805760] (main.cc:433) - Started capture process.
+ INFO [0x7f2859961700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f28ae805760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f28ae805760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f28ae805760] (main.cc:433) - Started capture process.
+ INFO [0x7f2859961700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f285a963700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f285a963700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f28ae805760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f28ae805760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f28ae805760] (main.cc:433) - Started capture process.
+ INFO [0x7f2859961700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f285a963700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f28ae805760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f28ae805760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f28ae805760] (main.cc:433) - Started capture process.
+ INFO [0x7f2859961700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f285a963700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f2859961700] (net_reader.cc:249) - New stream identified: stream_id=227930
+ INFO [0x7f2859961700] (net_reader.cc:249) - New stream identified: stream_id=161109
+ INFO [0x7f2859961700] (net_reader.cc:249) - New stream identified: stream_id=96344
+ INFO [0x7f2859961700] (net_reader.cc:249) - New stream identified: stream_id=29523
+ INFO [0x7f2859961700] (net_reader.cc:249) - New stream identified: stream_id=30551
+ INFO [0x7f2859961700] (net_reader.cc:249) - New stream identified: stream_id=162137
+ INFO [0x7f2859961700] (net_reader.cc:249) - New stream identified: stream_id=226902
+ INFO [0x7f2859961700] (net_reader.cc:249) - New stream identified: stream_id=95316
+ INFO [0x7f28ae805760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f28ae805760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f28ae805760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f28ae805760] (stats_writer.cc:132) - Received STOP
+Received stop()/opt/mit/mark6/bin/net2raid-run: line 39:  5084 Terminated              ${VMSTAT} -n ${VMSTAT_INTERVAL} > ${LOG_DIR}/vmstat.log
+ INFO [0x7f28ae805760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f2859961700] (net_reader.cc:149) - fdl: intf=eth5,id=227930:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f2859961700] (net_reader.cc:149) - fdl: intf=eth5,id=96344:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f28ae805760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f28ae805760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f2859961700] (net_reader.cc:149) - fdl: intf=eth2,id=161109:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f2859961700] (net_reader.cc:149) - fdl: intf=eth2,id=29523:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f28ae805760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f28ae805760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f2859961700] (net_reader.cc:149) - fdl: intf=eth4,id=30551:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f2859961700] (net_reader.cc:149) - fdl: intf=eth4,id=162137:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f28ae805760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f28ae805760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f2859961700] (net_reader.cc:149) - fdl: intf=eth3,id=226902:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f2859961700] (net_reader.cc:149) - fdl: intf=eth3,id=95316:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f28ae805760] (stats_writer.cc:132) - Received STOP
+/bin/tar: Removing leading `/' from member names
+scan/actual duration: 48 48.7495129108
+
+
+Converting DEMO_Gg_298-0425 on /mnt/disk0
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk0/DEMO_Gg_298-0425.m6 --size 0
+ INFO [0x7f621de7c760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk0/DEMO_Gg_298-0425.m6
+ INFO [0x7f28ae805760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f28ae805760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f28ae805760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f28ae805760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f28ae805760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f28ae805760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f28ae805760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f28ae805760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f28ae805760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f28ae805760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f28ae805760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f28ae805760] (main.cc:404) - Closed CLI stream.
+Converting DEMO_Gg_298-0425 on /mnt/disk1
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk1/DEMO_Gg_298-0425.m6 --size 0
+ INFO [0x7f88d83c3760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk1/DEMO_Gg_298-0425.m6
+Converting DEMO_Gg_298-0425 on /mnt/disk2
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk2/DEMO_Gg_298-0425.m6 --size 0
+ INFO [0x7f493368a760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk2/DEMO_Gg_298-0425.m6
+Converting DEMO_Gg_298-0425 on /mnt/disk3
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk3/DEMO_Gg_298-0425.m6 --size 0
+ INFO [0x7f726924b760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk3/DEMO_Gg_298-0425.m6
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0425-4205.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0425-4205.vdif
+Begins[0] 23@10038304.003040
+Using 1024 octets/frame for 1e+06 frames from 0xbd8270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1451318 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451318 packets (all channels)
+Bstats[0] 0.197 0.308 0.307 0.189 (61.5% 32768.000 Ms 644414/1Ms)
+Cumulative CPUtime 44.073 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.073 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.073 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.073 s
+Total issues 0 on 1451318 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10038304.003040 to 23@10038350.445184 for 46.442144 s, 1451319 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0425-4207.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0425-4207.vdif
+Begins[2] 23@10038304.003008
+Using 1024 octets/frame for 1e+06 frames from 0x1ea6270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1451318 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451318 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.942 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.942 s
+Bstats[2] 0.181 0.317 0.321 0.180 (63.8% 32768.000 Ms 669167/1Ms)
+Cumulative CPUtime 43.942 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.942 s
+Total issues 0 on 1451318 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10038304.003008 to 23@10038350.445152 for 46.442144 s, 1451319 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0425-4206.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0425-4206.vdif
+Begins[1] 23@10038304.003072
+Using 1024 octets/frame for 1e+06 frames from 0x20c2270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1451698 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451698 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.023 s
+Bstats[1] 0.170 0.341 0.308 0.180 (65.0% 32768.000 Ms 681465/1Ms)
+Cumulative CPUtime 44.023 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.023 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.023 s
+Total issues 0 on 1451698 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10038304.003072 to 23@10038350.457376 for 46.454304 s, 1451699 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0425-4208.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0425-4208.vdif
+Begins[3] 23@10038304.003040
+Using 1024 octets/frame for 1e+06 frames from 0x19d8270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1451698 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451698 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.677 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.677 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.677 s
+Bstats[3] 0.189 0.298 0.327 0.186 (62.5% 32768.000 Ms 654879/1Ms)
+Cumulative CPUtime 43.677 s
+Total issues 0 on 1451698 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10038304.003040 to 23@10038350.457344 for 46.454304 s, 1451699 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0425-4201.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0425-4201.vdif
+Begins[0] 23@10038304.003104
+Using 1024 octets/frame for 1e+06 frames from 0xe06270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1451445 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451445 packets (all channels)
+Bstats[0] 0.157 0.342 0.345 0.156 (68.7% 32768.000 Ms 720746/1Ms)
+Cumulative CPUtime 44.238 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.238 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.238 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.238 s
+Total issues 0 on 1451445 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10038304.003104 to 23@10038350.449312 for 46.446208 s, 1451446 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0425-4203.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0425-4203.vdif
+Begins[2] 23@10038304.003104
+Using 1024 octets/frame for 1e+06 frames from 0x1360270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1451444 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451444 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.139 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.139 s
+Bstats[2] 0.158 0.339 0.348 0.155 (68.7% 32768.000 Ms 720609/1Ms)
+Cumulative CPUtime 44.139 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.139 s
+Total issues 0 on 1451444 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10038304.003104 to 23@10038350.449280 for 46.446176 s, 1451445 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0425-4202.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0425-4202.vdif
+Begins[1] 23@10038304.003136
+Using 1024 octets/frame for 1e+06 frames from 0x1078270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1451065 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451065 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.971 s
+Bstats[1] 0.198 0.297 0.296 0.208 (59.3% 32768.000 Ms 622143/1Ms)
+Cumulative CPUtime 44.971 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.971 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.971 s
+Total issues 0 on 1451065 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10038304.003136 to 23@10038350.437184 for 46.434048 s, 1451066 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0425-4204.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0425-4204.vdif
+Begins[3] 23@10038304.003104
+Using 1024 octets/frame for 1e+06 frames from 0x24af270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1451065 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451065 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 45.507 s
+Bstats[1] not calculated
+Cumulative CPUtime 45.507 s
+Bstats[2] not calculated
+Cumulative CPUtime 45.507 s
+Bstats[3] 0.182 0.313 0.322 0.183 (63.5% 32768.000 Ms 665964/1Ms)
+Cumulative CPUtime 45.507 s
+Total issues 0 on 1451065 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10038304.003104 to 23@10038350.437152 for 46.434048 s, 1451066 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+Starting scan at Tue Oct 25 04:51:08 UTC 2011 for 48 seconds.
+
+DEMO_Gg_298-0451
+298
+0451
+scan-run -e DEMO -s 0552+398 -S Gg -T 1319518268 -n DEMO_Gg_298-0451 -d 48
+Running schedule: <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319518268" duration="48" scan_name="DEMO_Gg_298-0451"/>
+running scan:        <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319518268" duration="48" scan_name="DEMO_Gg_298-0451"/>
+scan start:          Tue Oct 25 04:51:08 2011
+now/start_time:      1319518268.01 1319518268
++------------------------------------------------------------------------------+
+|                                                                              |
+|                              Net2disk v0.5                                   |
+|                                                                              |
+|                                                                              |
+|                  Copyright 2011 MIT Haystack Observatory                     |
+|                          dlapsley@haystack.mit.edu                           |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+interfaces:         eth2 eth3 eth4 eth5 
+capture_files:      /mnt/disk0/DEMO_Gg_298-0451.m6 /mnt/disk1/DEMO_Gg_298-0451.m6 /mnt/disk2/DEMO_Gg_298-0451.m6 /mnt/disk3/DEMO_Gg_298-0451.m6 
+smp_affinities:     1 1 3 3 
+snaplen:            8266
+promiscuous:        1
+time:               48
+log_config:         /opt/mit/mark6/etc/net2raid-log.cfg
+write_blocks:       512
+num_interfaces:     4
+translate:          0
+ INFO [0x7f3d63a6c760] (main.cc:357) - Launching main.
+
+Received start()
+Recording for 48 seconds
+ INFO [0x7f3d63a6c760] (main.cc:372) - Starting child fd: 5
+ INFO [0x7f3d63a6c760] (main.cc:372) - Starting child fd: 6
+ INFO [0x7f3d63a6c760] (main.cc:372) - Starting child fd: 7
+ INFO [0x7f3d63a6c760] (main.cc:372) - Starting child fd: 8
+ INFO [0x7f3d63a6c760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk1/DEMO_Gg_298-0451.m6
+ INFO [0x7f3d63a6c760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f3d63a6c760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk3/DEMO_Gg_298-0451.m6
+ INFO [0x7f3d63a6c760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f3d63a6c760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk2/DEMO_Gg_298-0451.m6
+ INFO [0x7f3d63a6c760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk0/DEMO_Gg_298-0451.m6
+ INFO [0x7f3d63a6c760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f3d63a6c760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f3d63a6c760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f3d63a6c760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f3d63a6c760] (main.cc:433) - Started capture process.
+ INFO [0x7f3d0ebc8700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f3d0fbca700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f3d63a6c760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f3d63a6c760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f3d63a6c760] (main.cc:433) - Started capture process.
+ INFO [0x7f3d0ebc8700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f3d0fbca700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f3d63a6c760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f3d63a6c760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f3d63a6c760] (main.cc:433) - Started capture process.
+ INFO [0x7f3d0ebc8700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f3d0fbca700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f3d63a6c760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f3d63a6c760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f3d63a6c760] (main.cc:433) - Started capture process.
+ INFO [0x7f3d0ebc8700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f3d0fbca700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f3d0ebc8700] (net_reader.cc:249) - New stream identified: stream_id=95316
+ INFO [0x7f3d0ebc8700] (net_reader.cc:249) - New stream identified: stream_id=96344
+ INFO [0x7f3d0ebc8700] (net_reader.cc:249) - New stream identified: stream_id=227930
+ INFO [0x7f3d0ebc8700] (net_reader.cc:249) - New stream identified: stream_id=226902
+ INFO [0x7f3d0ebc8700] (net_reader.cc:249) - New stream identified: stream_id=162137
+ INFO [0x7f3d0ebc8700] (net_reader.cc:249) - New stream identified: stream_id=29523
+ INFO [0x7f3d0ebc8700] (net_reader.cc:249) - New stream identified: stream_id=30551
+ INFO [0x7f3d0ebc8700] (net_reader.cc:249) - New stream identified: stream_id=161109
+ INFO [0x7f3d63a6c760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f3d63a6c760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f3d63a6c760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f3d63a6c760] (stats_writer.cc:132) - Received STOP
+Received stop()/opt/mit/mark6/bin/net2raid-run: line 39:  5148 Terminated              ${VMSTAT} -n ${VMSTAT_INTERVAL} > ${LOG_DIR}/vmstat.log
+ INFO [0x7f3d63a6c760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f3d0ebc8700] (net_reader.cc:149) - fdl: intf=eth3,id=95316:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f3d0ebc8700] (net_reader.cc:149) - fdl: intf=eth3,id=226902:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f3d63a6c760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f3d63a6c760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f3d0ebc8700] (net_reader.cc:149) - fdl: intf=eth5,id=96344:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f3d0ebc8700] (net_reader.cc:149) - fdl: intf=eth5,id=227930:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f3d63a6c760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f3d63a6c760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f3d0ebc8700] (net_reader.cc:149) - fdl: intf=eth4,id=162137:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f3d0ebc8700] (net_reader.cc:149) - fdl: intf=eth4,id=30551:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f3d63a6c760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f3d63a6c760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f3d0ebc8700] (net_reader.cc:149) - fdl: intf=eth2,id=29523:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f3d0ebc8700] (net_reader.cc:149) - fdl: intf=eth2,id=161109:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f3d63a6c760] (stats_writer.cc:132) - Received STOP
+/bin/tar: Removing leading `/' from member names
+scan/actual duration: 48 48.736841917
+
+
+Converting DEMO_Gg_298-0451 on /mnt/disk0
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk0/DEMO_Gg_298-0451.m6 --size 0
+ INFO [0x7f14012e9760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk0/DEMO_Gg_298-0451.m6
+ INFO [0x7f3d63a6c760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f3d63a6c760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f3d63a6c760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f3d63a6c760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f3d63a6c760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f3d63a6c760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f3d63a6c760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f3d63a6c760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f3d63a6c760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f3d63a6c760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f3d63a6c760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f3d63a6c760] (main.cc:404) - Closed CLI stream.
+Converting DEMO_Gg_298-0451 on /mnt/disk1
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk1/DEMO_Gg_298-0451.m6 --size 0
+ INFO [0x7f1cfc8a3760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk1/DEMO_Gg_298-0451.m6
+Converting DEMO_Gg_298-0451 on /mnt/disk2
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk2/DEMO_Gg_298-0451.m6 --size 0
+ INFO [0x7f442114d760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk2/DEMO_Gg_298-0451.m6
+Converting DEMO_Gg_298-0451 on /mnt/disk3
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk3/DEMO_Gg_298-0451.m6 --size 0
+ INFO [0x7f56735b5760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk3/DEMO_Gg_298-0451.m6
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0451-4205.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0451-4205.vdif
+Begins[0] 23@10039870.001600
+Using 1024 octets/frame for 1e+06 frames from 0x1f84270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1451445 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451445 packets (all channels)
+Bstats[0] 0.197 0.308 0.306 0.189 (61.4% 32768.000 Ms 643834/1Ms)
+Cumulative CPUtime 43.679 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.679 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.679 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.679 s
+Total issues 0 on 1451445 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10039870.001600 to 23@10039916.447808 for 46.446208 s, 1451446 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0451-4207.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0451-4207.vdif
+Begins[2] 23@10039870.001600
+Using 1024 octets/frame for 1e+06 frames from 0x121e270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1451444 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451444 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.758 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.758 s
+Bstats[2] 0.183 0.316 0.318 0.182 (63.4% 32768.000 Ms 664899/1Ms)
+Cumulative CPUtime 43.758 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.758 s
+Total issues 0 on 1451444 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10039870.001600 to 23@10039916.447776 for 46.446176 s, 1451445 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0451-4206.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0451-4206.vdif
+Begins[1] 23@10039870.001600
+Using 1024 octets/frame for 1e+06 frames from 0x192b270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1449546 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449546 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.748 s
+Bstats[1] 0.166 0.347 0.313 0.174 (66.0% 32768.000 Ms 691970/1Ms)
+Cumulative CPUtime 43.748 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.748 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.748 s
+Total issues 0 on 1449546 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10039870.001600 to 23@10039916.387040 for 46.385440 s, 1449547 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0451-4208.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0451-4208.vdif
+Begins[3] 23@10039870.001600
+Using 1024 octets/frame for 1e+06 frames from 0xd05270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1449545 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449545 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.578 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.578 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.578 s
+Bstats[3] 0.185 0.301 0.331 0.183 (63.2% 32768.000 Ms 662962/1Ms)
+Cumulative CPUtime 43.578 s
+Total issues 0 on 1449545 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10039870.001600 to 23@10039916.387008 for 46.385408 s, 1449546 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0451-4201.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0451-4201.vdif
+Begins[0] 23@10039870.001632
+Using 1024 octets/frame for 1e+06 frames from 0x891270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1450938 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450938 packets (all channels)
+Bstats[0] 0.156 0.343 0.346 0.154 (69.0% 32768.000 Ms 723216/1Ms)
+Cumulative CPUtime 44.447 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.447 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.447 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.447 s
+Total issues 0 on 1450938 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10039870.001632 to 23@10039916.431616 for 46.429984 s, 1450939 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0451-4203.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0451-4203.vdif
+Begins[2] 23@10039870.001600
+Using 1024 octets/frame for 1e+06 frames from 0x23db270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1450939 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450939 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.447 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.447 s
+Bstats[2] 0.157 0.340 0.349 0.154 (68.9% 32768.000 Ms 722439/1Ms)
+Cumulative CPUtime 44.447 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.447 s
+Total issues 0 on 1450939 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10039870.001600 to 23@10039916.431616 for 46.430016 s, 1450940 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0451-4202.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0451-4202.vdif
+Begins[1] 23@10039870.001632
+Using 1024 octets/frame for 1e+06 frames from 0x13fb270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1450559 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450559 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.939 s
+Bstats[1] 0.198 0.298 0.298 0.207 (59.6% 32768.000 Ms 624452/1Ms)
+Cumulative CPUtime 44.939 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.939 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.939 s
+Total issues 0 on 1450559 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10039870.001632 to 23@10039916.419488 for 46.417856 s, 1450560 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0451-4204.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0451-4204.vdif
+Begins[3] 23@10039870.001632
+Using 1024 octets/frame for 1e+06 frames from 0x24b4270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1450558 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450558 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.846 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.846 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.846 s
+Bstats[3] 0.180 0.315 0.323 0.182 (63.8% 32768.000 Ms 668624/1Ms)
+Cumulative CPUtime 44.846 s
+Total issues 0 on 1450558 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10039870.001632 to 23@10039916.419456 for 46.417824 s, 1450559 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+Starting scan at Tue Oct 25 05:17:50 UTC 2011 for 48 seconds.
+
+DEMO_Gg_298-0517
+298
+0517
+scan-run -e DEMO -s 0552+398 -S Gg -T 1319519870 -n DEMO_Gg_298-0517 -d 48
+Running schedule: <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319519870" duration="48" scan_name="DEMO_Gg_298-0517"/>
+running scan:        <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319519870" duration="48" scan_name="DEMO_Gg_298-0517"/>
+scan start:          Tue Oct 25 05:17:50 2011
+now/start_time:      1319519870.02 1319519870
++------------------------------------------------------------------------------+
+|                                                                              |
+|                              Net2disk v0.5                                   |
+|                                                                              |
+|                                                                              |
+|                  Copyright 2011 MIT Haystack Observatory                     |
+|                          dlapsley@haystack.mit.edu                           |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+interfaces:         eth2 eth3 eth4 eth5 
+capture_files:      /mnt/disk0/DEMO_Gg_298-0517.m6 /mnt/disk1/DEMO_Gg_298-0517.m6 /mnt/disk2/DEMO_Gg_298-0517.m6 /mnt/disk3/DEMO_Gg_298-0517.m6 
+smp_affinities:     1 1 3 3 
+snaplen:            8266
+promiscuous:        1
+time:               48
+log_config:         /opt/mit/mark6/etc/net2raid-log.cfg
+write_blocks:       512
+num_interfaces:     4
+translate:          0
+ INFO [0x7f10f051f760] (main.cc:357) - Launching main.
+
+Received start()
+Recording for 48 seconds
+ INFO [0x7f10f051f760] (main.cc:372) - Starting child fd: 5
+ INFO [0x7f10f051f760] (main.cc:372) - Starting child fd: 6
+ INFO [0x7f10f051f760] (main.cc:372) - Starting child fd: 7
+ INFO [0x7f10f051f760] (main.cc:372) - Starting child fd: 8
+ INFO [0x7f10f051f760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk1/DEMO_Gg_298-0517.m6
+ INFO [0x7f10f051f760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk0/DEMO_Gg_298-0517.m6
+ INFO [0x7f10f051f760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f10f051f760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f10f051f760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk2/DEMO_Gg_298-0517.m6
+ INFO [0x7f10f051f760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk3/DEMO_Gg_298-0517.m6
+ INFO [0x7f10f051f760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f10f051f760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f10f051f760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f10f051f760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f10f051f760] (main.cc:433) - Started capture process.
+ INFO [0x7f109b67b700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f109c67d700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f10f051f760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f10f051f760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f10f051f760] (main.cc:433) - Started capture process.
+ INFO [0x7f109b67b700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f109c67d700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f10f051f760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f10f051f760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f10f051f760] (main.cc:433) - Started capture process.
+ INFO [0x7f109b67b700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f10f051f760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f10f051f760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f10f051f760] (main.cc:433) - Started capture process.
+ INFO [0x7f109c67d700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f109c67d700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f109b67b700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f109b67b700] (net_reader.cc:249) - New stream identified: stream_id=30551
+ INFO [0x7f109b67b700] (net_reader.cc:249) - New stream identified: stream_id=29523
+ INFO [0x7f109b67b700] (net_reader.cc:249) - New stream identified: stream_id=162137
+ INFO [0x7f109b67b700] (net_reader.cc:249) - New stream identified: stream_id=161109
+ INFO [0x7f109b67b700] (net_reader.cc:249) - New stream identified: stream_id=95316
+ INFO [0x7f109b67b700] (net_reader.cc:249) - New stream identified: stream_id=96344
+ INFO [0x7f109b67b700] (net_reader.cc:249) - New stream identified: stream_id=226902
+ INFO [0x7f109b67b700] (net_reader.cc:249) - New stream identified: stream_id=227930
+ INFO [0x7f10f051f760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f10f051f760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f10f051f760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f10f051f760] (stats_writer.cc:132) - Received STOP
+Received stop()/opt/mit/mark6/bin/net2raid-run: line 39:  5216 Terminated              ${VMSTAT} -n ${VMSTAT_INTERVAL} > ${LOG_DIR}/vmstat.log
+ INFO [0x7f10f051f760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f109b67b700] (net_reader.cc:149) - fdl: intf=eth3,id=95316:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f109b67b700] (net_reader.cc:149) - fdl: intf=eth3,id=226902:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f10f051f760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f10f051f760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f109b67b700] (net_reader.cc:149) - fdl: intf=eth2,id=29523:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f109b67b700] (net_reader.cc:149) - fdl: intf=eth2,id=161109:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f10f051f760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f10f051f760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f109b67b700] (net_reader.cc:149) - fdl: intf=eth4,id=30551:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f109b67b700] (net_reader.cc:149) - fdl: intf=eth4,id=162137:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f10f051f760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f10f051f760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f109b67b700] (net_reader.cc:149) - fdl: intf=eth5,id=96344:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f109b67b700] (net_reader.cc:149) - fdl: intf=eth5,id=227930:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f10f051f760] (stats_writer.cc:132) - Received STOP
+/bin/tar: Removing leading `/' from member names
+scan/actual duration: 48 48.6876029968
+
+
+Converting DEMO_Gg_298-0517 on /mnt/disk0
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk0/DEMO_Gg_298-0517.m6 --size 0
+ INFO [0x7f3068c6f760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk0/DEMO_Gg_298-0517.m6
+ INFO [0x7f10f051f760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f10f051f760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f10f051f760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f10f051f760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f10f051f760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f10f051f760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f10f051f760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f10f051f760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f10f051f760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f10f051f760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f10f051f760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f10f051f760] (main.cc:404) - Closed CLI stream.
+Converting DEMO_Gg_298-0517 on /mnt/disk1
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk1/DEMO_Gg_298-0517.m6 --size 0
+ INFO [0x7f716960b760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk1/DEMO_Gg_298-0517.m6
+Converting DEMO_Gg_298-0517 on /mnt/disk2
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk2/DEMO_Gg_298-0517.m6 --size 0
+ INFO [0x7fea30b82760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk2/DEMO_Gg_298-0517.m6
+Converting DEMO_Gg_298-0517 on /mnt/disk3
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk3/DEMO_Gg_298-0517.m6 --size 0
+ INFO [0x7f22d9832760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk3/DEMO_Gg_298-0517.m6
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0517-4205.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0517-4205.vdif
+Begins[0] 23@10041472.000608
+Using 1024 octets/frame for 1e+06 frames from 0x1068270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1450559 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450559 packets (all channels)
+Bstats[0] 0.194 0.311 0.310 0.186 (62.1% 32768.000 Ms 650650/1Ms)
+Cumulative CPUtime 43.920 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.920 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.920 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.920 s
+Total issues 0 on 1450559 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10041472.000608 to 23@10041518.418464 for 46.417856 s, 1450560 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0517-4207.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0517-4207.vdif
+Begins[2] 23@10041472.000608
+Using 1024 octets/frame for 1e+06 frames from 0x2380270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1450558 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450558 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.769 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.769 s
+Bstats[2] 0.180 0.319 0.322 0.179 (64.1% 32768.000 Ms 672060/1Ms)
+Cumulative CPUtime 43.769 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.769 s
+Total issues 0 on 1450558 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10041472.000608 to 23@10041518.418432 for 46.417824 s, 1450559 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0517-4206.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0517-4206.vdif
+Begins[1] 23@10041472.000640
+Using 1024 octets/frame for 1e+06 frames from 0x12f4270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1450052 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450052 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.905 s
+Bstats[1] 0.166 0.346 0.313 0.175 (65.9% 32768.000 Ms 690770/1Ms)
+Cumulative CPUtime 43.905 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.905 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.905 s
+Total issues 0 on 1450052 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10041472.000640 to 23@10041518.402272 for 46.401632 s, 1450053 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0517-4208.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0517-4208.vdif
+Begins[3] 23@10041472.000640
+Using 1024 octets/frame for 1e+06 frames from 0x19a9270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1450052 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450052 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.920 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.920 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.920 s
+Bstats[3] 0.184 0.303 0.332 0.181 (63.5% 32768.000 Ms 665925/1Ms)
+Cumulative CPUtime 43.920 s
+Total issues 0 on 1450052 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10041472.000640 to 23@10041518.402272 for 46.401632 s, 1450053 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0517-4201.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0517-4201.vdif
+Begins[0] 23@10041472.000640
+Using 1024 octets/frame for 1e+06 frames from 0x1ada270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1450939 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450939 packets (all channels)
+Bstats[0] 0.156 0.344 0.347 0.154 (69.0% 32768.000 Ms 724038/1Ms)
+Cumulative CPUtime 44.602 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.602 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.602 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.602 s
+Total issues 0 on 1450939 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10041472.000640 to 23@10041518.430656 for 46.430016 s, 1450940 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0517-4203.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0517-4203.vdif
+Begins[2] 23@10041472.000640
+Using 1024 octets/frame for 1e+06 frames from 0x17ed270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1450938 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450938 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.450 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.450 s
+Bstats[2] 0.156 0.341 0.350 0.154 (69.1% 32768.000 Ms 724241/1Ms)
+Cumulative CPUtime 44.450 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.450 s
+Total issues 0 on 1450938 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10041472.000640 to 23@10041518.430624 for 46.429984 s, 1450939 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0517-4202.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0517-4202.vdif
+Begins[1] 23@10041472.000640
+Using 1024 octets/frame for 1e+06 frames from 0xf8c270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1451192 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451192 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.997 s
+Bstats[1] 0.197 0.298 0.298 0.207 (59.6% 32768.000 Ms 625084/1Ms)
+Cumulative CPUtime 44.997 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.997 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.997 s
+Total issues 0 on 1451192 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10041472.000640 to 23@10041518.438752 for 46.438112 s, 1451193 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0517-4204.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0517-4204.vdif
+Begins[3] 23@10041472.000640
+Using 1024 octets/frame for 1e+06 frames from 0x79a270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1451191 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1451191 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.987 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.987 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.987 s
+Bstats[3] 0.179 0.316 0.324 0.181 (64.0% 32768.000 Ms 671171/1Ms)
+Cumulative CPUtime 44.987 s
+Total issues 0 on 1451191 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10041472.000640 to 23@10041518.438720 for 46.438080 s, 1451192 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+Starting scan at Tue Oct 25 05:47:21 UTC 2011 for 48 seconds.
+
+DEMO_Gg_298-0547
+298
+0547
+scan-run -e DEMO -s 0552+398 -S Gg -T 1319521641 -n DEMO_Gg_298-0547 -d 48
+Running schedule: <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319521641" duration="48" scan_name="DEMO_Gg_298-0547"/>
+running scan:        <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319521641" duration="48" scan_name="DEMO_Gg_298-0547"/>
+scan start:          Tue Oct 25 05:47:21 2011
+now/start_time:      1319521641.01 1319521641
++------------------------------------------------------------------------------+
+|                                                                              |
+|                              Net2disk v0.5                                   |
+|                                                                              |
+|                                                                              |
+|                  Copyright 2011 MIT Haystack Observatory                     |
+|                          dlapsley@haystack.mit.edu                           |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+interfaces:         eth2 eth3 eth4 eth5 
+capture_files:      /mnt/disk0/DEMO_Gg_298-0547.m6 /mnt/disk1/DEMO_Gg_298-0547.m6 /mnt/disk2/DEMO_Gg_298-0547.m6 /mnt/disk3/DEMO_Gg_298-0547.m6 
+smp_affinities:     1 1 3 3 
+snaplen:            8266
+promiscuous:        1
+time:               48
+log_config:         /opt/mit/mark6/etc/net2raid-log.cfg
+write_blocks:       512
+num_interfaces:     4
+translate:          0
+ INFO [0x7fb845d00760] (main.cc:357) - Launching main.
+
+Received start()
+Recording for 48 seconds
+ INFO [0x7fb845d00760] (main.cc:372) - Starting child fd: 5
+ INFO [0x7fb845d00760] (main.cc:372) - Starting child fd: 6
+ INFO [0x7fb845d00760] (main.cc:372) - Starting child fd: 7
+ INFO [0x7fb845d00760] (main.cc:372) - Starting child fd: 8
+ INFO [0x7fb845d00760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk1/DEMO_Gg_298-0547.m6
+ INFO [0x7fb845d00760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7fb845d00760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk0/DEMO_Gg_298-0547.m6
+ INFO [0x7fb845d00760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk3/DEMO_Gg_298-0547.m6
+ INFO [0x7fb845d00760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk2/DEMO_Gg_298-0547.m6
+ INFO [0x7fb845d00760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7fb845d00760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7fb845d00760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7fb845d00760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7fb845d00760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7fb845d00760] (main.cc:433) - Started capture process.
+ INFO [0x7fb7f0e5c700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7fb845d00760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7fb845d00760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7fb845d00760] (main.cc:433) - Started capture process.
+ INFO [0x7fb7f0e5c700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7fb845d00760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7fb845d00760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7fb845d00760] (main.cc:433) - Started capture process.
+ INFO [0x7fb7f1e5e700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7fb845d00760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7fb845d00760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7fb845d00760] (main.cc:433) - Started capture process.
+ INFO [0x7fb7f1e5e700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7fb7f0e5c700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7fb7f0e5c700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7fb7f1e5e700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7fb7f1e5e700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7fb7f0e5c700] (net_reader.cc:249) - New stream identified: stream_id=161109
+ INFO [0x7fb7f0e5c700] (net_reader.cc:249) - New stream identified: stream_id=162137
+ INFO [0x7fb7f0e5c700] (net_reader.cc:249) - New stream identified: stream_id=30551
+ INFO [0x7fb7f0e5c700] (net_reader.cc:249) - New stream identified: stream_id=29523
+ INFO [0x7fb7f0e5c700] (net_reader.cc:249) - New stream identified: stream_id=227930
+ INFO [0x7fb7f0e5c700] (net_reader.cc:249) - New stream identified: stream_id=226902
+ INFO [0x7fb7f0e5c700] (net_reader.cc:249) - New stream identified: stream_id=96344
+ INFO [0x7fb7f0e5c700] (net_reader.cc:249) - New stream identified: stream_id=95316
+ INFO [0x7fb845d00760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fb845d00760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fb845d00760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fb845d00760] (stats_writer.cc:132) - Received STOP
+Received stop()/opt/mit/mark6/bin/net2raid-run: line 39:  5278 Terminated              ${VMSTAT} -n ${VMSTAT_INTERVAL} > ${LOG_DIR}/vmstat.log
+ INFO [0x7fb845d00760] (net_reader.cc:137) - Received STOP
+ INFO [0x7fb7f0e5c700] (net_reader.cc:149) - fdl: intf=eth3,id=226902:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fb845d00760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fb845d00760] (net_reader.cc:137) - Received STOP
+ INFO [0x7fb7f0e5c700] (net_reader.cc:149) - fdl: intf=eth4,id=162137:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fb845d00760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fb845d00760] (net_reader.cc:137) - Received STOP
+ INFO [0x7fb845d00760] (net_reader.cc:137) - Received STOP
+ INFO [0x7fb7f0e5c700] (net_reader.cc:149) - fdl: intf=eth5,id=227930:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fb7f0e5c700] (net_reader.cc:149) - fdl: intf=eth5,id=96344:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fb845d00760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fb7f0e5c700] (net_reader.cc:149) - fdl: intf=eth2,id=161109:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fb845d00760] (stats_writer.cc:132) - Received STOP
+/bin/tar: Removing leading `/' from member names
+scan/actual duration: 48 48.6806528568
+
+
+Converting DEMO_Gg_298-0547 on /mnt/disk0
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk0/DEMO_Gg_298-0547.m6 --size 0
+ INFO [0x7fbc5538f760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk0/DEMO_Gg_298-0547.m6
+ INFO [0x7fb845d00760] (file_writer.cc:234) - Received STOP
+ INFO [0x7fb845d00760] (file_writer.cc:234) - Received STOP
+ INFO [0x7fb845d00760] (file_writer.cc:234) - Received STOP
+ INFO [0x7fb845d00760] (file_writer.cc:234) - Received STOP
+ INFO [0x7fb845d00760] (main.cc:446) - Stopped capture process.
+ INFO [0x7fb845d00760] (main.cc:446) - Stopped capture process.
+ INFO [0x7fb845d00760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7fb845d00760] (main.cc:446) - Stopped capture process.
+ INFO [0x7fb845d00760] (main.cc:446) - Stopped capture process.
+ INFO [0x7fb845d00760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7fb845d00760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7fb845d00760] (main.cc:404) - Closed CLI stream.
+Converting DEMO_Gg_298-0547 on /mnt/disk1
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk1/DEMO_Gg_298-0547.m6 --size 0
+ INFO [0x7ff590dc4760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk1/DEMO_Gg_298-0547.m6
+Converting DEMO_Gg_298-0547 on /mnt/disk2
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk2/DEMO_Gg_298-0547.m6 --size 0
+ INFO [0x7fa12e438760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk2/DEMO_Gg_298-0547.m6
+Converting DEMO_Gg_298-0547 on /mnt/disk3
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk3/DEMO_Gg_298-0547.m6 --size 0
+ INFO [0x7f6cb31d5760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk3/DEMO_Gg_298-0547.m6
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0547-4205.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0547-4205.vdif
+Begins[0] 23@10043243.000032
+Using 1024 octets/frame for 1e+06 frames from 0xc90270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1449799 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449799 packets (all channels)
+Bstats[0] 0.191 0.314 0.313 0.182 (62.7% 32768.000 Ms 657318/1Ms)
+Cumulative CPUtime 43.446 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.446 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.446 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.446 s
+Total issues 0 on 1449799 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10043243.000032 to 23@10043289.393568 for 46.393536 s, 1449800 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0547-4207.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0547-4207.vdif
+Begins[2] 23@10043243.000000
+Using 1024 octets/frame for 1e+06 frames from 0x1a43270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1449799 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449799 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.555 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.555 s
+Bstats[2] 0.177 0.322 0.325 0.175 (64.7% 32768.000 Ms 678717/1Ms)
+Cumulative CPUtime 43.555 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.555 s
+Total issues 0 on 1449799 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10043243.000000 to 23@10043289.393536 for 46.393536 s, 1449800 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0547-4206.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0547-4206.vdif
+Begins[1] 23@10043243.000032
+Using 1024 octets/frame for 1e+06 frames from 0xc55270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1449545 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449545 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.459 s
+Bstats[1] 0.161 0.351 0.318 0.170 (66.9% 32768.000 Ms 701441/1Ms)
+Cumulative CPUtime 43.459 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.459 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.459 s
+Total issues 0 on 1449545 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10043243.000032 to 23@10043289.385440 for 46.385408 s, 1449546 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0547-4208.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0547-4208.vdif
+Begins[3] 23@10043243.000000
+Using 1024 octets/frame for 1e+06 frames from 0x753270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1449546 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449546 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.477 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.477 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.477 s
+Bstats[3] 0.180 0.307 0.337 0.176 (64.4% 32768.000 Ms 675227/1Ms)
+Cumulative CPUtime 43.477 s
+Total issues 0 on 1449546 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10043243.000000 to 23@10043289.385440 for 46.385440 s, 1449547 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0547-4201.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0547-4201.vdif
+Begins[0] 23@10043243.000032
+Using 1024 octets/frame for 1e+06 frames from 0xdb6270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1449672 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449672 packets (all channels)
+Bstats[0] 0.151 0.348 0.351 0.150 (69.9% 32768.000 Ms 733093/1Ms)
+Cumulative CPUtime 43.977 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.977 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.977 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.977 s
+Total issues 0 on 1449672 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10043243.000032 to 23@10043289.389504 for 46.389472 s, 1449673 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0547-4203.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0547-4203.vdif
+Begins[2] 23@10043243.000000
+Using 1024 octets/frame for 1e+06 frames from 0x816270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1449672 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449672 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.823 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.823 s
+Bstats[2] 0.151 0.345 0.354 0.149 (69.9% 32768.000 Ms 733340/1Ms)
+Cumulative CPUtime 43.823 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.823 s
+Total issues 0 on 1449672 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10043243.000000 to 23@10043289.389472 for 46.389472 s, 1449673 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0547-4202.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0547-4202.vdif
+Begins[1] 23@10043242.999936
+Using 1024 octets/frame for 1e+06 frames from 0x19b0270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1450178 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450178 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.352 s
+Bstats[1] 0.193 0.302 0.302 0.203 (60.4% 32768.000 Ms 633325/1Ms)
+Cumulative CPUtime 44.352 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.352 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.352 s
+Total issues 0 on 1450178 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10043242.999936 to 23@10043289.405600 for 46.405664 s, 1450179 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0547-4204.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0547-4204.vdif
+Begins[3] 23@10043242.999904
+Using 1024 octets/frame for 1e+06 frames from 0xf43270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1450179 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450179 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.664 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.664 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.665 s
+Bstats[3] 0.175 0.320 0.329 0.176 (64.9% 32768.000 Ms 680226/1Ms)
+Cumulative CPUtime 44.665 s
+Total issues 0 on 1450179 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10043242.999904 to 23@10043289.405600 for 46.405696 s, 1450180 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+Starting scan at Tue Oct 25 07:10:01 UTC 2011 for 48 seconds.
+
+DEMO_Gg_298-0710
+298
+0710
+scan-run -e DEMO -s 0552+398 -S Gg -T 1319526601 -n DEMO_Gg_298-0710 -d 48
+Running schedule: <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319526601" duration="48" scan_name="DEMO_Gg_298-0710"/>
+running scan:        <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319526601" duration="48" scan_name="DEMO_Gg_298-0710"/>
+scan start:          Tue Oct 25 07:10:01 2011
+now/start_time:      1319526601.07 1319526601
++------------------------------------------------------------------------------+
+|                                                                              |
+|                              Net2disk v0.5                                   |
+|                                                                              |
+|                                                                              |
+|                  Copyright 2011 MIT Haystack Observatory                     |
+|                          dlapsley@haystack.mit.edu                           |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+interfaces:         eth2 eth3 eth4 eth5 
+capture_files:      /mnt/disk0/DEMO_Gg_298-0710.m6 /mnt/disk1/DEMO_Gg_298-0710.m6 /mnt/disk2/DEMO_Gg_298-0710.m6 /mnt/disk3/DEMO_Gg_298-0710.m6 
+smp_affinities:     1 1 3 3 
+snaplen:            8266
+promiscuous:        1
+time:               48
+log_config:         /opt/mit/mark6/etc/net2raid-log.cfg
+write_blocks:       512
+num_interfaces:     4
+translate:          0
+ INFO [0x7fa5b45dd760] (main.cc:357) - Launching main.
+
+Received start()
+Recording for 48 seconds
+ INFO [0x7fa5b45dd760] (main.cc:372) - Starting child fd: 5
+ INFO [0x7fa5b45dd760] (main.cc:372) - Starting child fd: 6
+ INFO [0x7fa5b45dd760] (main.cc:372) - Starting child fd: 7
+ INFO [0x7fa5b45dd760] (main.cc:372) - Starting child fd: 8
+ INFO [0x7fa5b45dd760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk2/DEMO_Gg_298-0710.m6
+ INFO [0x7fa5b45dd760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7fa5b45dd760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk1/DEMO_Gg_298-0710.m6
+ INFO [0x7fa5b45dd760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk3/DEMO_Gg_298-0710.m6
+ INFO [0x7fa5b45dd760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk0/DEMO_Gg_298-0710.m6
+ INFO [0x7fa5b45dd760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7fa5b45dd760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7fa5b45dd760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7fa5b45dd760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7fa5b45dd760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7fa5b45dd760] (main.cc:433) - Started capture process.
+ INFO [0x7fa55f739700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7fa5b45dd760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7fa5b45dd760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7fa5b45dd760] (main.cc:433) - Started capture process.
+ INFO [0x7fa56073b700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7fa55f739700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7fa5b45dd760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7fa5b45dd760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7fa5b45dd760] (main.cc:433) - Started capture process.
+ INFO [0x7fa55f739700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7fa56073b700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7fa56073b700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7fa5b45dd760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7fa5b45dd760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7fa5b45dd760] (main.cc:433) - Started capture process.
+ INFO [0x7fa56073b700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7fa55f739700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7fa55f739700] (net_reader.cc:249) - New stream identified: stream_id=162137
+ INFO [0x7fa55f739700] (net_reader.cc:249) - New stream identified: stream_id=29523
+ INFO [0x7fa55f739700] (net_reader.cc:249) - New stream identified: stream_id=30551
+ INFO [0x7fa55f739700] (net_reader.cc:249) - New stream identified: stream_id=161109
+ INFO [0x7fa55f739700] (net_reader.cc:249) - New stream identified: stream_id=95316
+ INFO [0x7fa55f739700] (net_reader.cc:249) - New stream identified: stream_id=227930
+ INFO [0x7fa55f739700] (net_reader.cc:249) - New stream identified: stream_id=226902
+ INFO [0x7fa55f739700] (net_reader.cc:249) - New stream identified: stream_id=96344
+ INFO [0x7fa5b45dd760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fa5b45dd760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fa5b45dd760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fa5b45dd760] (stats_writer.cc:132) - Received STOP
+Received stop()/opt/mit/mark6/bin/net2raid-run: line 39:  5367 Terminated              ${VMSTAT} -n ${VMSTAT_INTERVAL} > ${LOG_DIR}/vmstat.log
+ INFO [0x7fa5b45dd760] (net_reader.cc:137) - Received STOP
+ INFO [0x7fa5b45dd760] (net_reader.cc:137) - Received STOP
+ INFO [0x7fa55f739700] (net_reader.cc:149) - fdl: intf=eth5,id=227930:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fa55f739700] (net_reader.cc:149) - fdl: intf=eth5,id=96344:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fa5b45dd760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fa55f739700] (net_reader.cc:149) - fdl: intf=eth4,id=162137:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fa55f739700] (net_reader.cc:149) - fdl: intf=eth4,id=30551:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fa5b45dd760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fa5b45dd760] (net_reader.cc:137) - Received STOP
+ INFO [0x7fa55f739700] (net_reader.cc:149) - fdl: intf=eth2,id=29523:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fa55f739700] (net_reader.cc:149) - fdl: intf=eth2,id=161109:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fa5b45dd760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7fa5b45dd760] (net_reader.cc:137) - Received STOP
+ INFO [0x7fa55f739700] (net_reader.cc:149) - fdl: intf=eth3,id=95316:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fa55f739700] (net_reader.cc:149) - fdl: intf=eth3,id=226902:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7fa5b45dd760] (stats_writer.cc:132) - Received STOP
+/bin/tar: Removing leading `/' from member names
+scan/actual duration: 48 48.7668409348
+
+
+Converting DEMO_Gg_298-0710 on /mnt/disk0
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk0/DEMO_Gg_298-0710.m6 --size 0
+ INFO [0x7f2f93f15760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk0/DEMO_Gg_298-0710.m6
+ INFO [0x7fa5b45dd760] (file_writer.cc:234) - Received STOP
+ INFO [0x7fa5b45dd760] (main.cc:446) - Stopped capture process.
+ INFO [0x7fa5b45dd760] (file_writer.cc:234) - Received STOP
+ INFO [0x7fa5b45dd760] (main.cc:446) - Stopped capture process.
+ INFO [0x7fa5b45dd760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7fa5b45dd760] (file_writer.cc:234) - Received STOP
+ INFO [0x7fa5b45dd760] (file_writer.cc:234) - Received STOP
+ INFO [0x7fa5b45dd760] (main.cc:446) - Stopped capture process.
+ INFO [0x7fa5b45dd760] (main.cc:446) - Stopped capture process.
+ INFO [0x7fa5b45dd760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7fa5b45dd760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7fa5b45dd760] (main.cc:404) - Closed CLI stream.
+Converting DEMO_Gg_298-0710 on /mnt/disk1
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk1/DEMO_Gg_298-0710.m6 --size 0
+ INFO [0x7f326d54a760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk1/DEMO_Gg_298-0710.m6
+Converting DEMO_Gg_298-0710 on /mnt/disk2
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk2/DEMO_Gg_298-0710.m6 --size 0
+ INFO [0x7f9a4750e760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk2/DEMO_Gg_298-0710.m6
+Converting DEMO_Gg_298-0710 on /mnt/disk3
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk3/DEMO_Gg_298-0710.m6 --size 0
+ INFO [0x7fbd9df72760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk3/DEMO_Gg_298-0710.m6
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0710-4205.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0710-4205.vdif
+Begins[0] 23@10048202.999520
+Using 1024 octets/frame for 1e+06 frames from 0x19dd270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1453597 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1453597 packets (all channels)
+Bstats[0] 0.197 0.308 0.307 0.188 (61.5% 32768.000 Ms 645134/1Ms)
+Cumulative CPUtime 43.505 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.506 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.506 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.506 s
+Total issues 0 on 1453597 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10048202.999520 to 23@10048249.514592 for 46.515072 s, 1453598 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0710-4207.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0710-4207.vdif
+Begins[2] 23@10048202.999520
+Using 1024 octets/frame for 1e+06 frames from 0x1e77270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1453597 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1453597 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.390 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.390 s
+Bstats[2] 0.183 0.316 0.319 0.182 (63.5% 32768.000 Ms 666134/1Ms)
+Cumulative CPUtime 43.390 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.390 s
+Total issues 0 on 1453597 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10048202.999520 to 23@10048249.514592 for 46.515072 s, 1453598 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0710-4206.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0710-4206.vdif
+Begins[1] 23@10048202.999520
+Using 1024 octets/frame for 1e+06 frames from 0x97f270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1453724 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1453724 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.481 s
+Bstats[1] 0.166 0.346 0.313 0.176 (65.8% 32768.000 Ms 690317/1Ms)
+Cumulative CPUtime 43.481 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.481 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.481 s
+Total issues 0 on 1453724 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10048202.999520 to 23@10048249.518656 for 46.519136 s, 1453725 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0710-4208.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0710-4208.vdif
+Begins[3] 23@10048202.999520
+Using 1024 octets/frame for 1e+06 frames from 0x19b1270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1453723 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1453723 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.313 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.313 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.313 s
+Bstats[3] 0.186 0.301 0.331 0.182 (63.2% 32768.000 Ms 663215/1Ms)
+Cumulative CPUtime 43.313 s
+Total issues 0 on 1453723 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10048202.999520 to 23@10048249.518624 for 46.519104 s, 1453724 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0710-4201.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0710-4201.vdif
+Begins[0] 23@10048202.999552
+Using 1024 octets/frame for 1e+06 frames from 0x2103270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1453344 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1453344 packets (all channels)
+Bstats[0] 0.156 0.342 0.346 0.155 (68.8% 32768.000 Ms 721838/1Ms)
+Cumulative CPUtime 43.705 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.705 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.705 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.705 s
+Total issues 0 on 1453344 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10048202.999552 to 23@10048249.506528 for 46.506976 s, 1453345 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0710-4203.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0710-4203.vdif
+Begins[2] 23@10048202.999520
+Using 1024 octets/frame for 1e+06 frames from 0x687270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1453344 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1453344 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.957 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.957 s
+Bstats[2] 0.157 0.339 0.349 0.155 (68.8% 32768.000 Ms 721692/1Ms)
+Cumulative CPUtime 43.957 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.957 s
+Total issues 0 on 1453344 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10048202.999520 to 23@10048249.506496 for 46.506976 s, 1453345 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0710-4202.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0710-4202.vdif
+Begins[1] 23@10048202.999552
+Using 1024 octets/frame for 1e+06 frames from 0x7b6270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1453344 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1453344 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.763 s
+Bstats[1] 0.198 0.297 0.297 0.208 (59.3% 32768.000 Ms 622181/1Ms)
+Cumulative CPUtime 44.763 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.763 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.763 s
+Total issues 0 on 1453344 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10048202.999552 to 23@10048249.506528 for 46.506976 s, 1453345 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0710-4204.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0710-4204.vdif
+Begins[3] 23@10048202.999520
+Using 1024 octets/frame for 1e+06 frames from 0x2352270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1453344 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1453344 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.650 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.650 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.650 s
+Bstats[3] 0.180 0.315 0.323 0.182 (63.8% 32768.000 Ms 668966/1Ms)
+Cumulative CPUtime 44.650 s
+Total issues 0 on 1453344 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10048202.999520 to 23@10048249.506496 for 46.506976 s, 1453345 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+Starting scan at Tue Oct 25 07:56:57 UTC 2011 for 48 seconds.
+
+DEMO_Gg_298-0756
+298
+0756
+scan-run -e DEMO -s 0552+398 -S Gg -T 1319529417 -n DEMO_Gg_298-0756 -d 48
+Running schedule: <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319529417" duration="48" scan_name="DEMO_Gg_298-0756"/>
+running scan:        <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319529417" duration="48" scan_name="DEMO_Gg_298-0756"/>
+scan start:          Tue Oct 25 07:56:57 2011
+now/start_time:      1319529417.01 1319529417
++------------------------------------------------------------------------------+
+|                                                                              |
+|                              Net2disk v0.5                                   |
+|                                                                              |
+|                                                                              |
+|                  Copyright 2011 MIT Haystack Observatory                     |
+|                          dlapsley@haystack.mit.edu                           |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+interfaces:         eth2 eth3 eth4 eth5 
+capture_files:      /mnt/disk0/DEMO_Gg_298-0756.m6 /mnt/disk1/DEMO_Gg_298-0756.m6 /mnt/disk2/DEMO_Gg_298-0756.m6 /mnt/disk3/DEMO_Gg_298-0756.m6 
+smp_affinities:     1 1 3 3 
+snaplen:            8266
+promiscuous:        1
+time:               48
+log_config:         /opt/mit/mark6/etc/net2raid-log.cfg
+write_blocks:       512
+num_interfaces:     4
+translate:          0
+ INFO [0x7f0447cfb760] (main.cc:357) - Launching main.
+
+Received start()
+Recording for 48 seconds
+ INFO [0x7f0447cfb760] (main.cc:372) - Starting child fd: 5
+ INFO [0x7f0447cfb760] (main.cc:372) - Starting child fd: 6
+ INFO [0x7f0447cfb760] (main.cc:372) - Starting child fd: 7
+ INFO [0x7f0447cfb760] (main.cc:372) - Starting child fd: 8
+ INFO [0x7f0447cfb760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk2/DEMO_Gg_298-0756.m6
+ INFO [0x7f0447cfb760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk0/DEMO_Gg_298-0756.m6
+ INFO [0x7f0447cfb760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk3/DEMO_Gg_298-0756.m6
+ INFO [0x7f0447cfb760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk1/DEMO_Gg_298-0756.m6
+ INFO [0x7f0447cfb760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f0447cfb760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f0447cfb760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f0447cfb760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f0447cfb760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f0447cfb760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f0447cfb760] (main.cc:433) - Started capture process.
+ INFO [0x7f03f2e57700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f03f3e59700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f0447cfb760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f0447cfb760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f0447cfb760] (main.cc:433) - Started capture process.
+ INFO [0x7f03f2e57700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f03f3e59700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f0447cfb760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f0447cfb760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f0447cfb760] (main.cc:433) - Started capture process.
+ INFO [0x7f03f2e57700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f0447cfb760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f0447cfb760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f0447cfb760] (main.cc:433) - Started capture process.
+ INFO [0x7f03f3e59700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f03f3e59700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f03f2e57700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f03f2e57700] (net_reader.cc:249) - New stream identified: stream_id=226902
+ INFO [0x7f03f2e57700] (net_reader.cc:249) - New stream identified: stream_id=227930
+ INFO [0x7f03f2e57700] (net_reader.cc:249) - New stream identified: stream_id=96344
+ INFO [0x7f03f2e57700] (net_reader.cc:249) - New stream identified: stream_id=95316
+ INFO [0x7f03f2e57700] (net_reader.cc:249) - New stream identified: stream_id=30551
+ INFO [0x7f03f2e57700] (net_reader.cc:249) - New stream identified: stream_id=161109
+ INFO [0x7f03f2e57700] (net_reader.cc:249) - New stream identified: stream_id=162137
+ INFO [0x7f03f2e57700] (net_reader.cc:249) - New stream identified: stream_id=29523
+ INFO [0x7f0447cfb760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f0447cfb760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f0447cfb760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f0447cfb760] (stats_writer.cc:132) - Received STOP
+Received stop()/opt/mit/mark6/bin/net2raid-run: line 39:  5436 Terminated              ${VMSTAT} -n ${VMSTAT_INTERVAL} > ${LOG_DIR}/vmstat.log
+ INFO [0x7f0447cfb760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f03f2e57700] (net_reader.cc:149) - fdl: intf=eth5,id=227930:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f03f2e57700] (net_reader.cc:149) - fdl: intf=eth5,id=96344:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f0447cfb760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f0447cfb760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f03f2e57700] (net_reader.cc:149) - fdl: intf=eth4,id=30551:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f03f2e57700] (net_reader.cc:149) - fdl: intf=eth4,id=162137:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f0447cfb760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f0447cfb760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f03f2e57700] (net_reader.cc:149) - fdl: intf=eth3,id=226902:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f03f2e57700] (net_reader.cc:149) - fdl: intf=eth3,id=95316:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f0447cfb760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f0447cfb760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f03f2e57700] (net_reader.cc:149) - fdl: intf=eth2,id=161109:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f03f2e57700] (net_reader.cc:149) - fdl: intf=eth2,id=29523:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f0447cfb760] (stats_writer.cc:132) - Received STOP
+/bin/tar: Removing leading `/' from member names
+scan/actual duration: 48 48.7388560772
+
+
+Converting DEMO_Gg_298-0756 on /mnt/disk0
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk0/DEMO_Gg_298-0756.m6 --size 0
+ INFO [0x7f8bb153a760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk0/DEMO_Gg_298-0756.m6
+ INFO [0x7f0447cfb760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f0447cfb760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f0447cfb760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f0447cfb760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f0447cfb760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f0447cfb760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f0447cfb760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f0447cfb760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f0447cfb760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f0447cfb760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f0447cfb760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f0447cfb760] (main.cc:404) - Closed CLI stream.
+Converting DEMO_Gg_298-0756 on /mnt/disk1
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk1/DEMO_Gg_298-0756.m6 --size 0
+ INFO [0x7ffc27501760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk1/DEMO_Gg_298-0756.m6
+Converting DEMO_Gg_298-0756 on /mnt/disk2
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk2/DEMO_Gg_298-0756.m6 --size 0
+ INFO [0x7f21de53d760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk2/DEMO_Gg_298-0756.m6
+Converting DEMO_Gg_298-0756 on /mnt/disk3
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk3/DEMO_Gg_298-0756.m6 --size 0
+ INFO [0x7f6267329760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk3/DEMO_Gg_298-0756.m6
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0756-4205.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0756-4205.vdif
+Begins[0] 23@10051018.998656
+Using 1024 octets/frame for 1e+06 frames from 0x1d18270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1450685 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450685 packets (all channels)
+Bstats[0] 0.215 0.290 0.289 0.206 (57.8% 32768.000 Ms 606353/1Ms)
+Cumulative CPUtime 43.181 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.181 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.181 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.181 s
+Total issues 0 on 1450685 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10051018.998656 to 23@10051065.420544 for 46.421888 s, 1450686 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0756-4207.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0756-4207.vdif
+Begins[2] 23@10051018.998624
+Using 1024 octets/frame for 1e+06 frames from 0x1301270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1450685 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450685 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 42.978 s
+Bstats[1] not calculated
+Cumulative CPUtime 42.978 s
+Bstats[2] 0.200 0.298 0.301 0.201 (59.9% 32768.000 Ms 628018/1Ms)
+Cumulative CPUtime 42.978 s
+Bstats[3] not calculated
+Cumulative CPUtime 42.978 s
+Total issues 0 on 1450685 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10051018.998624 to 23@10051065.420512 for 46.421888 s, 1450686 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0756-4206.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0756-4206.vdif
+Begins[1] 23@10051018.998624
+Using 1024 octets/frame for 1e+06 frames from 0x23e0270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1450052 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450052 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.114 s
+Bstats[1] 0.183 0.328 0.297 0.193 (62.4% 32768.000 Ms 654567/1Ms)
+Cumulative CPUtime 43.114 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.114 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.114 s
+Total issues 0 on 1450052 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10051018.998624 to 23@10051065.400256 for 46.401632 s, 1450053 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0756-4208.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0756-4208.vdif
+Begins[3] 23@10051018.998592
+Using 1024 octets/frame for 1e+06 frames from 0x1d9e270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1450052 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1450052 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.294 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.294 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.294 s
+Bstats[3] 0.200 0.284 0.315 0.201 (59.8% 32768.000 Ms 627508/1Ms)
+Cumulative CPUtime 43.294 s
+Total issues 0 on 1450052 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10051018.998592 to 23@10051065.400224 for 46.401632 s, 1450053 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0756-4201.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0756-4201.vdif
+Begins[0] 23@10051018.998624
+Using 1024 octets/frame for 1e+06 frames from 0x1a2a270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1449419 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449419 packets (all channels)
+Bstats[0] 0.173 0.325 0.329 0.172 (65.4% 32768.000 Ms 685915/1Ms)
+Cumulative CPUtime 43.529 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.529 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.529 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.529 s
+Total issues 0 on 1449419 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10051018.998624 to 23@10051065.380000 for 46.381376 s, 1449420 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0756-4203.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0756-4203.vdif
+Begins[2] 23@10051018.998624
+Using 1024 octets/frame for 1e+06 frames from 0xc30270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1449419 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449419 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.414 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.414 s
+Bstats[2] 0.173 0.322 0.332 0.173 (65.4% 32768.000 Ms 685590/1Ms)
+Cumulative CPUtime 43.414 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.415 s
+Total issues 0 on 1449419 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10051018.998624 to 23@10051065.380000 for 46.381376 s, 1449420 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0756-4202.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0756-4202.vdif
+Begins[1] 23@10051018.998624
+Using 1024 octets/frame for 1e+06 frames from 0x134f270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1449165 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449165 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.150 s
+Bstats[1] 0.215 0.280 0.280 0.226 (55.9% 32768.000 Ms 586394/1Ms)
+Cumulative CPUtime 44.150 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.150 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.151 s
+Total issues 0 on 1449165 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10051018.998624 to 23@10051065.371872 for 46.373248 s, 1449166 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0756-4204.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0756-4204.vdif
+Begins[3] 23@10051018.998592
+Using 1024 octets/frame for 1e+06 frames from 0x162b270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1449166 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449166 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.232 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.232 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.232 s
+Bstats[3] 0.197 0.297 0.306 0.200 (60.3% 32768.000 Ms 632310/1Ms)
+Cumulative CPUtime 44.232 s
+Total issues 0 on 1449166 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10051018.998592 to 23@10051065.371872 for 46.373280 s, 1449167 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+Starting scan at Tue Oct 25 08:19:50 UTC 2011 for 48 seconds.
+
+DEMO_Gg_298-0819
+298
+0819
+scan-run -e DEMO -s 0552+398 -S Gg -T 1319530790 -n DEMO_Gg_298-0819 -d 48
+Running schedule: <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319530790" duration="48" scan_name="DEMO_Gg_298-0819"/>
+running scan:        <scan experiment="DEMO" source="0552+398" station_code="Gg" start_time="1319530790" duration="48" scan_name="DEMO_Gg_298-0819"/>
+scan start:          Tue Oct 25 08:19:50 2011
+now/start_time:      1319530790.0 1319530790
++------------------------------------------------------------------------------+
+|                                                                              |
+|                              Net2disk v0.5                                   |
+|                                                                              |
+|                                                                              |
+|                  Copyright 2011 MIT Haystack Observatory                     |
+|                          dlapsley@haystack.mit.edu                           |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+interfaces:         eth2 eth3 eth4 eth5 
+capture_files:      /mnt/disk0/DEMO_Gg_298-0819.m6 /mnt/disk1/DEMO_Gg_298-0819.m6 /mnt/disk2/DEMO_Gg_298-0819.m6 /mnt/disk3/DEMO_Gg_298-0819.m6 
+smp_affinities:     1 1 3 3 
+snaplen:            8266
+promiscuous:        1
+time:               48
+log_config:         /opt/mit/mark6/etc/net2raid-log.cfg
+write_blocks:       512
+num_interfaces:     4
+translate:          0
+ INFO [0x7f8216d34760] (main.cc:357) - Launching main.
+
+Received start()
+Recording for 48 seconds
+ INFO [0x7f8216d34760] (main.cc:372) - Starting child fd: 5
+ INFO [0x7f8216d34760] (main.cc:372) - Starting child fd: 6
+ INFO [0x7f8216d34760] (main.cc:372) - Starting child fd: 7
+ INFO [0x7f8216d34760] (main.cc:372) - Starting child fd: 8
+ INFO [0x7f8216d34760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk1/DEMO_Gg_298-0819.m6
+ INFO [0x7f8216d34760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk3/DEMO_Gg_298-0819.m6
+ INFO [0x7f8216d34760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk0/DEMO_Gg_298-0819.m6
+ INFO [0x7f8216d34760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f8216d34760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f8216d34760] (file_writer.cc:256) - Opening FileWriter file: /mnt/disk2/DEMO_Gg_298-0819.m6
+ INFO [0x7f8216d34760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f8216d34760] (file_writer.cc:281) - Preallocating  24000 MBytes
+ INFO [0x7f8216d34760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f8216d34760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f8216d34760] (main.cc:433) - Started capture process.
+ INFO [0x7f81c1e90700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f8216d34760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f8216d34760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f8216d34760] (main.cc:433) - Started capture process.
+ INFO [0x7f81c1e90700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f81c2e92700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f81c2e92700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f8216d34760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f8216d34760] (file_writer.cc:239) - Received WRITE_TO_DISK
+ INFO [0x7f8216d34760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f8216d34760] (main.cc:433) - Started capture process.
+ INFO [0x7f8216d34760] (net_reader.cc:142) - Received READ_FROM_NETWORK...
+ INFO [0x7f8216d34760] (main.cc:433) - Started capture process.
+ INFO [0x7f81c1e90700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f81c1e90700] (net_reader.cc:92) - NetReader Running...
+ INFO [0x7f81c2e92700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f81c2e92700] (file_writer.cc:191) - FileWriter Running...
+ INFO [0x7f81c1e90700] (net_reader.cc:249) - New stream identified: stream_id=226902
+ INFO [0x7f81c1e90700] (net_reader.cc:249) - New stream identified: stream_id=227930
+ INFO [0x7f81c1e90700] (net_reader.cc:249) - New stream identified: stream_id=96344
+ INFO [0x7f81c1e90700] (net_reader.cc:249) - New stream identified: stream_id=29523
+ INFO [0x7f81c1e90700] (net_reader.cc:249) - New stream identified: stream_id=161109
+ INFO [0x7f81c1e90700] (net_reader.cc:249) - New stream identified: stream_id=162137
+ INFO [0x7f81c1e90700] (net_reader.cc:249) - New stream identified: stream_id=30551
+ INFO [0x7f81c1e90700] (net_reader.cc:249) - New stream identified: stream_id=95316
+ INFO [0x7f8216d34760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f8216d34760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f8216d34760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f8216d34760] (stats_writer.cc:132) - Received STOP
+Received stop()/opt/mit/mark6/bin/net2raid-run: line 39:  5503 Terminated              ${VMSTAT} -n ${VMSTAT_INTERVAL} > ${LOG_DIR}/vmstat.log
+ INFO [0x7f8216d34760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f81c1e90700] (net_reader.cc:149) - fdl: intf=eth2,id=29523:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f81c1e90700] (net_reader.cc:149) - fdl: intf=eth2,id=161109:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f8216d34760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f8216d34760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f81c1e90700] (net_reader.cc:149) - fdl: intf=eth5,id=227930:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f81c1e90700] (net_reader.cc:149) - fdl: intf=eth5,id=96344:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f8216d34760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f8216d34760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f81c1e90700] (net_reader.cc:149) - fdl: intf=eth4,id=162137:2,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f81c1e90700] (net_reader.cc:149) - fdl: intf=eth4,id=30551:0,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f8216d34760] (stats_writer.cc:132) - Received STOP
+ INFO [0x7f8216d34760] (net_reader.cc:137) - Received STOP
+ INFO [0x7f81c1e90700] (net_reader.cc:149) - fdl: intf=eth3,id=226902:3,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f81c1e90700] (net_reader.cc:149) - fdl: intf=eth3,id=95316:1,eps=0,daf=0,ldf=0,sqb=0,frr=0,frl=0
+ INFO [0x7f8216d34760] (stats_writer.cc:132) - Received STOP
+/bin/tar: Removing leading `/' from member names
+scan/actual duration: 48 48.7036600113
+
+
+Converting DEMO_Gg_298-0819 on /mnt/disk0
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk0/DEMO_Gg_298-0819.m6 --size 0
+ INFO [0x7f28c9173760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk0/DEMO_Gg_298-0819.m6
+ INFO [0x7f8216d34760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f8216d34760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f8216d34760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f8216d34760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f8216d34760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f8216d34760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f8216d34760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f8216d34760] (file_writer.cc:234) - Received STOP
+ INFO [0x7f8216d34760] (main.cc:446) - Stopped capture process.
+ INFO [0x7f8216d34760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f8216d34760] (main.cc:404) - Closed CLI stream.
+ INFO [0x7f8216d34760] (main.cc:404) - Closed CLI stream.
+Converting DEMO_Gg_298-0819 on /mnt/disk1
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk1/DEMO_Gg_298-0819.m6 --size 0
+ INFO [0x7f317da6e760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk1/DEMO_Gg_298-0819.m6
+Converting DEMO_Gg_298-0819 on /mnt/disk2
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk2/DEMO_Gg_298-0819.m6 --size 0
+ INFO [0x7f7b257b4760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk2/DEMO_Gg_298-0819.m6
+Converting DEMO_Gg_298-0819 on /mnt/disk3
+/opt/mit/mark6/bin/disk2vlbi --input_file /mnt/disk3/DEMO_Gg_298-0819.m6 --size 0
+ INFO [0x7f0a7cb0d760] (disk2vlbi.cc:48) - Starting translation on : /mnt/disk3/DEMO_Gg_298-0819.m6
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0819-4205.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0819-4205.vdif
+Begins[0] 23@10052391.998496
+Using 1024 octets/frame for 1e+06 frames from 0x1e5b270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1448660 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1448660 packets (all channels)
+Bstats[0] 0.285 0.218 0.219 0.278 (43.7% 32768.000 Ms 458382/1Ms)
+Cumulative CPUtime 43.325 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.325 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.325 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.325 s
+Total issues 0 on 1448660 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10052391.998496 to 23@10052438.355584 for 46.357088 s, 1448661 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk0/DEMO_Gg_298-0819-4207.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/DEMO_Gg_298-0819-4207.vdif
+Begins[2] 23@10052391.998496
+Using 1024 octets/frame for 1e+06 frames from 0x1985270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1448659 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1448659 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.227 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.227 s
+Bstats[2] 0.268 0.227 0.232 0.273 (45.9% 32768.000 Ms 481248/1Ms)
+Cumulative CPUtime 43.227 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.227 s
+Total issues 0 on 1448659 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10052391.998496 to 23@10052438.355552 for 46.357056 s, 1448660 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0819-4206.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0819-4206.vdif
+Begins[1] 23@10052391.998496
+Using 1024 octets/frame for 1e+06 frames from 0x25ea270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1449545 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449545 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.292 s
+Bstats[1] 0.255 0.250 0.227 0.267 (47.7% 32768.000 Ms 500544/1Ms)
+Cumulative CPUtime 43.292 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.292 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.292 s
+Total issues 0 on 1449545 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10052391.998496 to 23@10052438.383904 for 46.385408 s, 1449546 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk1/DEMO_Gg_298-0819-4208.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/DEMO_Gg_298-0819-4208.vdif
+Begins[3] 23@10052391.998464
+Using 1024 octets/frame for 1e+06 frames from 0x20ce270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1449546 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449546 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.323 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.323 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.323 s
+Bstats[3] 0.259 0.217 0.246 0.278 (46.3% 32768.000 Ms 485408/1Ms)
+Cumulative CPUtime 43.323 s
+Total issues 0 on 1449546 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10052391.998464 to 23@10052438.383904 for 46.385440 s, 1449547 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0819-4201.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0819-4201.vdif
+Begins[0] 23@10052391.998528
+Using 1024 octets/frame for 1e+06 frames from 0x212a270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 1449292 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449292 packets (all channels)
+Bstats[0] 0.246 0.249 0.254 0.250 (50.4% 32768.000 Ms 528206/1Ms)
+Cumulative CPUtime 43.538 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.538 s
+Bstats[2] not calculated
+Cumulative CPUtime 43.538 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.538 s
+Total issues 0 on 1449292 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@10052391.998528 to 23@10052438.375840 for 46.377312 s, 1449293 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk2/DEMO_Gg_298-0819-4203.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/DEMO_Gg_298-0819-4203.vdif
+Begins[2] 23@10052391.998496
+Using 1024 octets/frame for 1e+06 frames from 0x2563270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 1449293 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449293 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 43.660 s
+Bstats[1] not calculated
+Cumulative CPUtime 43.660 s
+Bstats[2] 0.243 0.249 0.259 0.249 (50.8% 32768.000 Ms 532904/1Ms)
+Cumulative CPUtime 43.660 s
+Bstats[3] not calculated
+Cumulative CPUtime 43.660 s
+Total issues 0 on 1449293 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@10052391.998496 to 23@10052438.375840 for 46.377344 s, 1449294 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0819-4202.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0819-4202.vdif
+Begins[1] 23@10052391.998496
+Using 1024 octets/frame for 1e+06 frames from 0x864270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 1449039 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449039 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.211 s
+Bstats[1] 0.280 0.211 0.212 0.297 (42.3% 32768.000 Ms 443203/1Ms)
+Cumulative CPUtime 44.211 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.211 s
+Bstats[3] not calculated
+Cumulative CPUtime 44.211 s
+Total issues 0 on 1449039 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@10052391.998496 to 23@10052438.367712 for 46.369216 s, 1449040 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/opt/haystack/bmr/x86_64-0.7/bin/fchk_test -v -cf=4vdx -cs=8224 -cg=1000000 /mnt/disk3/DEMO_Gg_298-0819-4204.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/DEMO_Gg_298-0819-4204.vdif
+Begins[3] 23@10052391.998464
+Using 1024 octets/frame for 1e+06 frames from 0x1872270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 1449039 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 1449039 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 44.293 s
+Bstats[1] not calculated
+Cumulative CPUtime 44.293 s
+Bstats[2] not calculated
+Cumulative CPUtime 44.293 s
+Bstats[3] 0.264 0.228 0.235 0.272 (46.4% 32768.000 Ms 486257/1Ms)
+Cumulative CPUtime 44.293 s
+Total issues 0 on 1449039 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@10052391.998464 to 23@10052438.367680 for 46.369216 s, 1449040 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+root@mark6-002:~\ m6>
+root@mark6-002:~\ m6>
+root@mark6-002:~\ m6>history 
+    5  vi start-gg.sh 
+    6  ls
+    7  ./start-gg.sh 
+    8  ps aux | grep net2raid
+    9  ls
+   10  tcpdump -i eth2 -c 1 -n
+   11  tcpdump -i eth3 -c 1 -n
+   12  tcpdump -i eth4 -c 1 -n
+   13  tcpdump -i eth5 -c 1 -n
+   14  ls
+   15  vi start-gg.sh 
+   16  df 
+   17  ./start-gg.sh 
+   18  ls -lh /mnt/disk{0,1,2,3}
+   19  ls -lh /mnt/disk{0,1,2,3}/DEMO_Gg_297-1807*
+   20  ls -lh /mnt/disk{0,1,2,3}/DEMO_Gg_297-1807.m6
+   21  ps aux | grep net2raid
+   22  df -h 
+   23  ls
+   24  ls
+   25  ls
+   26  ls /mnt/disk{0,1,2,3}/*
+   27  ls /mnt/disk{0,1,2,3}/*1702*
+   28  ls -l  /mnt/disk{0,1,2,3}/*1702*
+   29  ls -l  /mnt/disk{0,1,2,3}/*1702*m6
+   30  ls -l  /mnt/disk{0,1,2,3}/*1702.m6
+   31  ls
+   32  ls
+   33  cd
+   34  source /opt/mit/mark6/etc/rc.mark6.gg 
+   35  ls
+   36  vi start-gg.sh 
+   37  vi start-gg.sh 
+   38  ./start-gg.sh 
+   39  ls -lh /mnt/disk2/*.m6
+   40  ls -lh /mnt/disk{0,1,2,3}/*1807.m6
+   41  ls
+   42  ls -l /mnt/disk{0,1,2,3}/*
+   43  ls -l /mnt/disk{0,1,2,3}/*.m6
+   44  ls -lh /mnt/disk{0,1,2,3}/*.m6
+   45  ls
+   46  vi start-gg.sh 
+   47  vi start-gg.sh 
+   48  export START_TIME=1319481044
+   49  ./start-gg.sh 
+   50  df -h 
+   51  dmesg | tail
+   52  ls
+   53  ls -ltr /mnt/disk{0,1,2,3}/*.m6
+   54  source /opt/mit/mark6/etc/rc.mark6.gg 
+   55  ls
+   56  clear
+   57  vi start-gg.sh 
+   58  export START_TIME=1319481298
+   59  ./start-gg.sh 
+   60  ps aux | grep scp
+   61  kill -9 20777
+   62  ps aux | grep scp
+   63  ps aux | grep scp
+   64  kill -9 24848
+   65  ps aux | grep scp
+   66  kill -9 24859
+   67  ps aux | grep scp
+   68  ps aux | grep scp
+   69  ls
+   70  source /opt/mit/mark6/etc/rc.mark6.gg 
+   71  export START_TIME=1319481621
+   72  ./start-gg.sh 
+   73  ps aux | grep scp
+   74  ps aux | grep net2raid
+   75  export START_TIME=1319481800
+   76  ./start-gg.sh 
+   77  ls
+   78  ls
+   79  ps
+   80  ps aux | grep mark
+   81  ls
+   82  ls
+   83  ps aux | grep net2raid
+   84  df 
+   85  df -h 
+   86  ls
+   87  ls
+   88  ifconfig eth2
+   89  ifconfig eth3
+   90  ifconfig eth4
+   91  ifconfig eth5
+   92  sysctl 
+   93  sysctl   net.core.rmem_max
+   94  net.core.rmem_default
+   95  sysctl net.core.rmem_default
+   96  sysctl  net.core.netdev_max_backlog 
+   97  ls
+   98  cd
+   99  ls
+  100  vi tune.sh
+  101  man sysctl
+  102  ls
+  103  history 
+  104  sysctl   net.core.rmem_max sysctl net.core.rmem_default sysctl  net.core.netdev_max_backlog 
+  105  sysctl   net.core.rmem_max
+  106  sysctl net.core.rmem_default
+  107  sysctl  net.core.netdev_max_backlog 
+  108  sysctl net.core.netdev_max_backlog 
+  109  ,s
+  110  ls
+  111  vi tune.sh
+  112  bash tunes.h
+  113  bash tune.sh
+  114  vi tune.sh
+  115  vi tune.sh
+  116  bash tune.sh
+  117  bash tune.sh
+  118  ls
+  119  cd
+  120  ls
+  121  vi start-gg.sh 
+  122  ps aux | grep net2raid
+  123  ls
+  124  ./start-gg.sh 
+  125  ls -l
+  126  ls -lh /mnt/disk{0,1,2,3}/*.m6
+  127  ls
+  128  cd /proc
+  129  ls
+  130  cd net
+  131  ls
+  132  cd udp
+  133  ls
+  134  more udp
+  135  ls
+  136  cd ip
+  137  ls
+  138  cd
+  139  ls
+  140  lks
+  141  ls
+  142  lsmod
+  143  more /etc/modules 
+  144  lsmod | grep pf_ring
+  145  ls -lh /mnt/disk0
+  146  ls -ltr /mnt/disk{0,1,2,3}/*.m6
+  147  ls -hltr /mnt/disk{0,1,2,3}/*.m6
+  148  df -h
+  149  megasasctl
+  150  ls
+  151  top
+  152  psa ux | grep net
+  153  ls
+  154  ps aux | grep net
+  155  ls -hltr /mnt/disk{0,1,2,3}/*.m6
+  156  ls
+  157  source /opt/mit/mark6/etc/rc.mark6.gg 
+  158  vi /opt/mit/mark6/bin/net2raid-run
+  159  ls
+  160  pushd /opt/mit
+  161  ls
+  162  cd mark6/
+  163  ls
+  164  cd bin
+  165  ls
+  166  more net2
+  167  diff net2raid-run net2raid-run.2
+  168  ./net2raid-run.2
+  169  ./net2raid-run.2 TEST 20
+  170  ls
+  171  ls -ltrh /mnt/disk0
+  172  ls -ltrh /mnt/disk2
+  173  ls -ltrh /mnt/disk3
+  174  dmesg
+  175  ls
+  176  ls
+  177  cp net2raid-run.2 net2raid-run.3
+  178  vi net2raid-run.3
+  179  ./net2raid-run.3 TEST3 20
+  180  ls -lhtr /mnt/disk{1,2,3}/TEST3*
+  181  ls -lhtr /mnt/disk{1,2,3}/TEST*
+  182  ls
+  183  source /opt/mit/mark6/etc/rc.mark6.gg 
+  184  cat /proc/interrupts  | grep eth
+  185  cat /proc/interrupts  | grep megasas
+  186  vi net2raid-run.3
+  187  ls
+  188  vi *.3
+  189  ls
+  190  cd ..
+  191  cd log
+  192  ls
+  193  tar xvfz TEST3.tar.gz 
+  194  cd opt/mit/mark6/log/
+  195  ls
+  196  more fw_eth3.sts 
+  197  more fw_eth4.sts 
+  198  more fw_eth5.sts 
+  199  more fw_eth6.sts 
+  200  ls
+  201  more nr_eth5.sts 
+  202  ls
+  203  lsmod
+  204  ls
+  205  ls
+  206  sysctl net.inet.tcp.sendspace
+  207  sysctl net.inet.tcp.recvspace
+  208  sysctl net.inet.udp.recvspace
+  209  sysctl -a | fgrep udp
+  210  vi tune.sh
+  211  cd
+  212  ls
+  213  vi tune.sh
+  214  vi tune.sh
+  215  ls
+  216  cd /proc/sys
+  217  ls
+  218  cd net/
+  219  ls
+  220  cd ipv4
+  221  ls
+  222  more udp_mem
+  223  echo "1154688      1539584 2309376" > udp_mem
+  224  cat udp_mem
+  225  ls
+  226  ls
+  227  cd
+  228  sl
+  229  cd
+  230  ls
+  231  cd /opt/mark
+  232  ls
+  233  cd /opt/mark6
+  234  ls
+  235  cd /opt
+  236  cd mit
+  237  cd mark6/
+  238  cd bin
+  239  ls
+  240  ./net2raid
+  241  ps aux | grep net2raid
+  242  ls
+  243  ./net2raid-run.3 TEST3.1 20
+  244  ls -thrl /mnt/disk{0,1,2,3}/*.m6
+  245  ls
+  246  vi net2raid-run.3
+  247  ls
+  248  vi ../etc/rc.mark6.gg 
+  249  source ../etc/rc.mark6.gg 
+  250  ls
+  251  ./net2raid-run.3 TEST3.1 20
+  252  ls -thrl /mnt/disk{0,1,2,3}/*.m6
+  253  ls
+  254  vi ../etc/rc.mark6.gg 
+  255  cat udp_mem
+  256  cat /proc/interrupts | grep mega
+  257  ls
+  258  vi *.3
+  259  ./net2raid-run.3 TEST3.2 20
+  260  ls -thrl /mnt/disk{0,1,2,3}/*.m6
+  261  vi *.3
+  262  vi *.3
+  263  lspci  -vvvv > a
+  264  more a
+  265  vi a
+  266  ls
+  267  vi net2raid-run.3 
+  268  ./net2raid-run.3 TEST3.2 20
+  269  ls -thrl /mnt/disk{0,1,2,3}/*.m6
+  270  vi net2raid-run.3 
+  271  ls
+  272  cat /proc/interrupts | grep mega
+  273  cat /proc/interrupts 
+  274  ls
+  275  ls
+  276  vi *.3
+  277  ls
+  278  vi ../etc/rc.mark6.gg 
+  279  ls
+  280  source ../etc/rc.mark6.gg 
+  281  ls
+  282  ls
+  283  ls
+  284  lcd
+  285  ls
+  286  vi tune.
+  287  vi tune.sh
+  288  ls
+  289  ls tune*
+  290  ls
+  291  cd
+  292  ls
+  293  cd /opt/mit
+  294  ls
+  295  cd mark6/
+  296  ls
+  297  cd bin
+  298  ls
+  299  vi net2raid-run.3
+  300  ls /mnt/disk0
+  301  ./net2raid-run.3 TEST3.3 20
+  302  ps aux | grep net2raid
+  303  ps aux | grep scp
+  304  ls
+  305  ls -ltrh /mnt/disk{0,1,2,3}
+  306  ls -ltrh /mnt/disk{0,1,2,3}/*.m6
+  307  df -h 
+  308  dmesg
+  309  sudo reboot
+  310  w
+  311  reboot
+  312  ls
+  313  source ../etc/rc.mark6.gg 
+  314  source /opt/mit/mark6/etc/rc.mark6.gg
+  315  ls
+  316  net2raid TEST4 20
+  317  ls
+  318  cd /opt/mit
+  319  ls
+  320  cd mark6/
+  321  ls
+  322  cd bin
+  323  ls
+  324  vi net2raid
+  325  ls
+  326  vi net2raid-run
+  327  df
+  328  ls
+  329  ./mount-modules 
+  330  ls
+  331  ./net2raid-run TEST4 20
+  332  ls -ltrh /mnt/disk{0,1,2,3}
+  333  ls
+  334  ls -ltrh /mnt/disk{0,1,2,3}/*.m6
+  335  cd
+  336  ls
+  337  vi start-gg.sh 
+  338  ./start-gg.sh 
+  339  ls -lthr /mnt/disk{0,1,2,3}/*.m6
+  340  ls
+  341  vi tune.sh 
+  342  bash tune.sh
+  343  vi tune.sh 
+  344  vi tune.sh 
+  345  bash tune.sh
+  346  ls
+  347  ls
+  348  blockdev --setra 16384 /dev/sdb
+  349  blockdev --setra 16384 /dev/sde
+  350  blockdev --setra 16384 /dev/sdh
+  351  blockdev --setra 16384 /dev/sdk
+  352  echo deadline > /sys/block/sdb/queue/scheduler
+  353  echo deadline > /sys/block/sde/queue/scheduler
+  354  echo deadline > /sys/block/sdh/queue/scheduler
+  355  echo deadline > /sys/block/sdk/queue/scheduler
+  356  echo 512 > /sys/block/sdb/queue/nr_requests
+  357  echo 512 > /sys/block/sde/queue/nr_requests
+  358  echo 512 > /sys/block/sdh/queue/nr_requests
+  359  echo 512 > /sys/block/sdk/queue/nr_requests
+  360  ls
+  361  pwd
+  362  blockdev --setra 16384 /dev/sdb
+  363  blockdev --setra 16384 /dev/sde
+  364  blockdev --setra 16384 /dev/sdh
+  365  blockdev --setra 16384 /dev/sdk
+  366  echo deadline > /sys/block/sdb/queue/scheduler
+  367  echo deadline > /sys/block/sde/queue/scheduler
+  368  echo deadline > /sys/block/sdh/queue/scheduler
+  369  echo deadline > /sys/block/sdk/queue/scheduler
+  370  echo 512 > /sys/block/sdb/queue/nr_requests
+  371  echo 512 > /sys/block/sde/queue/nr_requests
+  372  echo 512 > /sys/block/sdh/queue/nr_requests
+  373  echo 512 > /sys/block/sdk/queue/nr_requests
+  374  cd
+  375  ls
+  376  vi t.sh
+  377  vi t.sh
+  378  chmod u+x t.sh
+  379  ./t.sh
+  380  vi t.sh
+  381  vi t.sh
+  382  ./t.sh 
+  383  ls
+  384  ./start-gg.sh 
+  385  ls
+  386  vi start-gg.sh 
+  387  ls -l /mnt/disk0
+  388  ls -lhtr /mnt/disk0
+  389  vi start-gg.sh 
+  390  ./start-gg.sh 
+  391  ls
+  392  vi tune.sh 
+  393  ./tune.sh
+  394  ls
+  395  bash tune.sh
+  396  ls
+  397  megasasctl
+  398  ls
+  399  ls
+  400  ls
+  401  clear
+  402  ls
+  403  cd
+  404  ls
+  405  more t.sh
+  406  ls
+  407  cd
+  408  ls
+  409  more start-gg.sh 
+  410  ls
+  411  ls
+  412  ls
+  413  ls
+  414  ls
+  415  ls
+  416  cat /proc/meminfo 
+  417  top
+  418  meminfo
+  419  cat /proc/meminfo 
+  420  ls
+  421  cd
+  422  ls
+  423  vi /opt/mit/mark6/etc/rc.mark6.g
+  424  vi /opt/mit/mark6/etc/rc.mark6.gg
+  425  ls
+  426  vi /opt/mit/mark6/bin/net2raid-run
+  427  ls
+  428  cd
+  429  ls
+  430  vi start-gg.sh 
+  431  ./start-gg.sh 
+  432  cd
+  433  ls
+  434  vi start-gg.sh 
+  435  ps aux | grep net2raid
+  436  ./start-gg.sh 
+  437  exit
+  438  ls /opt/haystack/bmr/x86_64-0.7/bin/bmr.bash 
+  439  source /opt/haystack/bmr/x86_64-0.7/bin/bmr.bash
+  440  xterm -name iterm & xterm -name zterm &
+  441  export if=- # iterm: maxwell / tigress eth[45]: disk[23]
+  442  export rdbe=S004 side=WwXxYyZz$if # iterm
+  443  export host=rdbe-$rdbe
+  444  export SAVE_VERS=XX
+  445  export SAVE_PATH=/mnt/raid1/wf-e
+  446  export SAVE_PATH=/mnt/disk0/wf-e
+  447  export image=RoachAstro8Gbs_sept14g.bin
+  448  echo $host $side ; requantize.bash $host
+  449  echo $host $side ; requantize.bash $host
+  450  export if=+ # zterm: monarth / tigress eth[23]: disk[01]
+  451  export rdbe=S003 side=SsTtUuVv$if # zterm
+  452  export host=rdbe-$rdbe
+  453  export SAVE_VERS=XX
+  454  export SAVE_PATH=/mnt/raid1/wf-e
+  455  export SAVE_PATH=/mnt/disk0/wf-e
+  456  export image=RoachAstro8Gbs_sept14g.bin
+  457  echo $host $side ; requantize.bash $host
+  458  ssh root@$host
+  459  echo $host $side ; requantize.bash $host
+  460  echo $host $side ; requantize.bash $host
+  461  source /opt/haystack/bmr/x86_64-0.7/bin/bmr.bash
+  462  history 
+  463  exit
+  464  ls
+  465  source /opt/haystack/bmr/x86_64-0.7/bin/bmr.bash
+  466  exit
+  467  source /opt/haystack/bmr/x86_64-0.7/bin/bmr.bash
+  468  exit
+  469  source /opt/mit/mark6/etc/rc.mark6.gg 
+  470  ls
+  471  vi /opt/mit/mark6/bin/net2raid-run
+  472  ls
+  473  ate
+  474  date
+  475  ls
+  476  vi start-gg.sh 
+  477  date -d @1319510310
+  478  ls
+  479  vi start-gg.sh 
+  480  vi start-gg.sh 
+  481  vi start-gg.sh 
+  482  ls
+  483  clear
+  484  ls
+  485  vi start-gg.sh 
+  486  vi /opt/mit/mark6/bin/net2raid-run
+  487  ls
+  488  ls /opt/mit/mark6/log
+  489  rm -fr /opt/mit/mark6/log/opt
+  490  rm -fr /opt/mit/mark6/log/*.log
+  491  vi start-gg.sh 
+  492  script -f capture.log
+  493  exit
+  494  source /opt/mit/mark6/etc/rc.mark6.gg
+  495  ./start-gg.sh 
+  496  exit
+  497  rm capture.log 
+  498  script -f capture.log
+  499  ls
+  500  exit
+  501  ls
+  502  source /opt/mit/mark6/etc/rc.mark6.gg
+  503  ./start-gg.sh 
+  504  history 
+root@mark6-002:~\ m6>exit
+exit
+
+Script done on Tue 25 Oct 2011 10:40:30 AM UTC

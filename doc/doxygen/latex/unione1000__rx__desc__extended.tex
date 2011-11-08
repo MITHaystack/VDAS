@@ -1,0 +1,126 @@
+\hypertarget{unione1000__rx__desc__extended}{
+\section{e1000\_\-rx\_\-desc\_\-extended Union Reference}
+\label{unione1000__rx__desc__extended}\index{e1000\_\-rx\_\-desc\_\-extended@{e1000\_\-rx\_\-desc\_\-extended}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{unione1000__rx__desc__extended_acd12bc624683251c13b7502ca1e917d7}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\_\_le64 {\bfseries buffer\_addr}\\
+\>\_\_le64 {\bfseries reserved}\\
+\} {\bfseries read}}
+\label{unione1000__rx__desc__extended_acd12bc624683251c13b7502ca1e917d7}
+\\
+
+\end{tabbing}\item 
+\hypertarget{unione1000__rx__desc__extended_a05f4f14ac1ced2c9034e8d370881189c}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>struct \{\\
+\>\>\_\_le32 {\bfseries mrq}\\
+\>\>union \{\\
+\>\>\>\_\_le32 {\bfseries rss}\\
+\>\>\>struct \{\\
+\>\>\>\>\_\_le16 {\bfseries ip\_id}\\
+\>\>\>\>\_\_le16 {\bfseries csum}\\
+\>\>\>\} {\bfseries csum\_ip}\\
+\>\>\} {\bfseries hi\_dword}\\
+\>\} {\bfseries lower}\\
+\>struct \{\\
+\>\>\_\_le32 {\bfseries status\_error}\\
+\>\>\_\_le16 {\bfseries length}\\
+\>\>\_\_le16 {\bfseries vlan}\\
+\>\} {\bfseries upper}\\
+\} {\bfseries wb}}
+\label{unione1000__rx__desc__extended_a05f4f14ac1ced2c9034e8d370881189c}
+\\
+
+\end{tabbing}\item 
+\hypertarget{unione1000__rx__desc__extended_aa77a88f4fedba6a7595416e3b49e31a7}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\_\_le64 {\bfseries buffer\_addr}\\
+\>\_\_le64 {\bfseries reserved}\\
+\} {\bfseries read}}
+\label{unione1000__rx__desc__extended_aa77a88f4fedba6a7595416e3b49e31a7}
+\\
+
+\end{tabbing}\item 
+\hypertarget{unione1000__rx__desc__extended_ab8cacb81f32c82f3b44e0d2004b031e9}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>struct \{\\
+\>\>\_\_le32 {\bfseries mrq}\\
+\>\>union \{\\
+\>\>\>\_\_le32 {\bfseries rss}\\
+\>\>\>struct \{\\
+\>\>\>\>\_\_le16 {\bfseries ip\_id}\\
+\>\>\>\>\_\_le16 {\bfseries csum}\\
+\>\>\>\} {\bfseries csum\_ip}\\
+\>\>\} {\bfseries hi\_dword}\\
+\>\} {\bfseries lower}\\
+\>struct \{\\
+\>\>\_\_le32 {\bfseries status\_error}\\
+\>\>\_\_le16 {\bfseries length}\\
+\>\>\_\_le16 {\bfseries vlan}\\
+\>\} {\bfseries upper}\\
+\} {\bfseries wb}}
+\label{unione1000__rx__desc__extended_ab8cacb81f32c82f3b44e0d2004b031e9}
+\\
+
+\end{tabbing}\item 
+\hypertarget{unione1000__rx__desc__extended_a036b17ada92df7aeb796eeab27da83e0}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\_\_le64 {\bfseries buffer\_addr}\\
+\>\_\_le64 {\bfseries reserved}\\
+\} {\bfseries read}}
+\label{unione1000__rx__desc__extended_a036b17ada92df7aeb796eeab27da83e0}
+\\
+
+\end{tabbing}\item 
+\hypertarget{unione1000__rx__desc__extended_a354462ba24d0e5194d7cfa8fff303ee3}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>struct \{\\
+\>\>\_\_le32 {\bfseries mrq}\\
+\>\>union \{\\
+\>\>\>\_\_le32 {\bfseries rss}\\
+\>\>\>struct \{\\
+\>\>\>\>\_\_le16 {\bfseries ip\_id}\\
+\>\>\>\>\_\_le16 {\bfseries csum}\\
+\>\>\>\} {\bfseries csum\_ip}\\
+\>\>\} {\bfseries hi\_dword}\\
+\>\} {\bfseries lower}\\
+\>struct \{\\
+\>\>\_\_le32 {\bfseries status\_error}\\
+\>\>\_\_le16 {\bfseries length}\\
+\>\>\_\_le16 {\bfseries vlan}\\
+\>\} {\bfseries upper}\\
+\} {\bfseries wb}}
+\label{unione1000__rx__desc__extended_a354462ba24d0e5194d7cfa8fff303ee3}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 243 of file e1000\_\-hw.h.
+
+
+
+The documentation for this union was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/e1000/e1000-\/8.0.30/src/e1000\_\-hw.h\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/e1000e/e1000e-\/1.3.10a/src/hw.h\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/igb/igb-\/3.0.22/src/e1000\_\-hw.h\end{DoxyCompactItemize}

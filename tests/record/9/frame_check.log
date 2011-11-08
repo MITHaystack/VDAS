@@ -1,0 +1,361 @@
+root@tigress:~# ./check.sh 
+/mnt/disk0/disk0-6-4205.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/disk0-6-4205.vdif
+Begins[0] 23@9433482.004096
+Using 1024 octets/frame for 1e+06 frames from 0x2149270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 5604728 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 5604728 packets (all channels)
+Bstats[0] 0.187 0.310 0.308 0.196 (61.7% 32768.000 Ms 647466/1Ms)
+Cumulative CPUtime 59.042 s
+Bstats[1] not calculated
+Cumulative CPUtime 59.042 s
+Bstats[2] not calculated
+Cumulative CPUtime 59.042 s
+Bstats[3] not calculated
+Cumulative CPUtime 59.042 s
+Total issues 0 on 5604728 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@9433482.004096 to 23@9433661.355360 for 179.351264 s, 5604729 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/mnt/disk0/disk0-6-4207.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk0/disk0-6-4207.vdif
+Begins[2] 23@9433482.004096
+Using 1024 octets/frame for 1e+06 frames from 0x1494270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 5604727 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 5604727 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 60.909 s
+Bstats[1] not calculated
+Cumulative CPUtime 60.909 s
+Bstats[2] 0.497 0.000 0.015 0.488 (1.5% 32768.000 Ms 15645/1Ms)
+Cumulative CPUtime 60.909 s
+Bstats[3] not calculated
+Cumulative CPUtime 60.909 s
+Total issues 0 on 5604727 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@9433482.004096 to 23@9433661.355328 for 179.351232 s, 5604728 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/mnt/disk1/disk1-6-4206.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/disk1-6-4206.vdif
+Begins[1] 23@9433482.004096
+Using 1024 octets/frame for 1e+06 frames from 0x1d80270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 5602955 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 5602955 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 59.229 s
+Bstats[1] 0.180 0.319 0.315 0.186 (63.4% 32768.000 Ms 664811/1Ms)
+Cumulative CPUtime 59.229 s
+Bstats[2] not calculated
+Cumulative CPUtime 59.229 s
+Bstats[3] not calculated
+Cumulative CPUtime 59.229 s
+Total issues 0 on 5602955 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@9433482.004096 to 23@9433661.298624 for 179.294528 s, 5602956 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/mnt/disk1/disk1-6-4208.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk1/disk1-6-4208.vdif
+Begins[3] 23@9433482.004064
+Using 1024 octets/frame for 1e+06 frames from 0xe1b270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 5602955 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 5602955 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 60.202 s
+Bstats[1] not calculated
+Cumulative CPUtime 60.202 s
+Bstats[2] not calculated
+Cumulative CPUtime 60.202 s
+Bstats[3] 0.483 0.015 0.000 0.503 (1.5% 32768.000 Ms 15308/1Ms)
+Cumulative CPUtime 60.202 s
+Total issues 0 on 5602955 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@9433482.004064 to 23@9433661.298592 for 179.294528 s, 5602956 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/mnt/disk2/disk2-6-4201.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/disk2-6-4201.vdif
+Begins[0] 23@9433482.004064
+Using 1024 octets/frame for 1e+06 frames from 0xd1f270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 5603082 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 5603082 packets (all channels)
+Bstats[0] 0.188 0.307 0.328 0.177 (63.5% 32768.000 Ms 666084/1Ms)
+Cumulative CPUtime 59.236 s
+Bstats[1] not calculated
+Cumulative CPUtime 59.236 s
+Bstats[2] not calculated
+Cumulative CPUtime 59.236 s
+Bstats[3] not calculated
+Cumulative CPUtime 59.236 s
+Total issues 0 on 5603082 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 0 Scan report of 1
+Scan-0 0 23@9433482.004064 to 23@9433661.302656 for 179.298592 s, 5603083 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/mnt/disk2/disk2-6-4203.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk2/disk2-6-4203.vdif
+Begins[2] 23@9433482.004064
+Using 1024 octets/frame for 1e+06 frames from 0x12e2270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 5603081 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 5603081 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 60.357 s
+Bstats[1] not calculated
+Cumulative CPUtime 60.357 s
+Bstats[2] 0.491 0.000 0.017 0.492 (1.7% 32768.000 Ms 17548/1Ms)
+Cumulative CPUtime 60.357 s
+Bstats[3] not calculated
+Cumulative CPUtime 60.357 s
+Total issues 0 on 5603081 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 2 Scan report of 1
+Scan-2 0 23@9433482.004064 to 23@9433661.302624 for 179.298560 s, 5603082 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/mnt/disk3/disk3-6-4202.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/disk3-6-4202.vdif
+Begins[1] 23@9433482.004064
+Using 1024 octets/frame for 1e+06 frames from 0x19f7270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 5605361 ch-1
+Total frames 0 ch-2
+Total frames 0 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 5605361 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 60.260 s
+Bstats[1] 0.167 0.333 0.338 0.163 (67.1% 32768.000 Ms 703279/1Ms)
+Cumulative CPUtime 60.260 s
+Bstats[2] not calculated
+Cumulative CPUtime 60.260 s
+Bstats[3] not calculated
+Cumulative CPUtime 60.260 s
+Total issues 0 on 5605361 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 1 Scan report of 1
+Scan-1 0 23@9433482.004064 to 23@9433661.375584 for 179.371520 s, 5605362 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled
+/mnt/disk3/disk3-6-4204.vdif
+Format 4 checker 0x4048b0
+Setting data size to 8224
+State Counts percent mode
+State Counts uses  1000000.000000 frames
+State Counts skips 0 frames
+Checking /mnt/disk3/disk3-6-4204.vdif
+Begins[3] 23@9433482.004064
+Using 1024 octets/frame for 1e+06 frames from 0x1d99270
+File checker pkt_chkvdx_vdx
+PSN - SQN count -1 ch-0
+PSN - SQN count -1 ch-1
+PSN - SQN count -1 ch-2
+PSN - SQN count -1 ch-3
+File checker pkt_chkvdx_psn
+Total psn count -1 ch-0
+Total psn count -1 ch-1
+Total psn count -1 ch-2
+Total psn count -1 ch-3
+Total frames 0 ch-0
+Total frames 0 ch-1
+Total frames 0 ch-2
+Total frames 5605360 ch-3
+Total time 0 ch-0
+Total time 0 ch-1
+Total time 0 ch-2
+Total time 0 ch-3
+Total VDX errors 0 on 5605360 packets (all channels)
+Bstats[0] not calculated
+Cumulative CPUtime 61.929 s
+Bstats[1] not calculated
+Cumulative CPUtime 61.929 s
+Bstats[2] not calculated
+Cumulative CPUtime 61.929 s
+Bstats[3] 0.485 0.016 0.000 0.499 (1.6% 32768.000 Ms 17057/1Ms)
+Cumulative CPUtime 61.929 s
+Total issues 0 on 5605360 pkts = 0 %
+Total breaks 0
+Scan report
+Thread 3 Scan report of 1
+Scan-3 0 23@9433482.004064 to 23@9433661.375552 for 179.371488 s, 5605361 fr F#0
+Zero search on channel 0: 0 hits not enabled
+Zero search on channel 1: 0 hits not enabled
+Zero search on channel 2: 0 hits not enabled
+Zero search on channel 3: 0 hits not enabled

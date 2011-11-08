@@ -1,0 +1,81 @@
+\hypertarget{structlsa}{
+\section{lsa Struct Reference}
+\label{structlsa}\index{lsa@{lsa}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structlsa_afda1c88a5404724d79d770917763b068}{
+struct \hyperlink{structlsa__hdr}{lsa\_\-hdr} {\bfseries ls\_\-hdr}}
+\label{structlsa_afda1c88a5404724d79d770917763b068}
+
+\item 
+\hypertarget{structlsa_a14d7b09626eda9346d5b6a946cd789b7}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>u\_int8\_t {\bfseries rla\_flags}\\
+\>\>u\_int8\_t {\bfseries rla\_zero} \mbox{[}1\mbox{]}\\
+\>\>u\_int16\_t {\bfseries rla\_count}\\
+\>\>struct {\bfseries rlalink} \{\\
+\>\>\>struct in\_addr {\bfseries link\_id}\\
+\>\>\>struct in\_addr {\bfseries link\_data}\\
+\>\>\>union \hyperlink{unionun__tos}{un\_tos} {\bfseries un\_tos}\\
+\>\>\} {\bfseries rla\_link} \mbox{[}1\mbox{]}\\
+\>\} {\bfseries un\_rla}\\
+\>struct \{\\
+\>\>struct in\_addr {\bfseries nla\_mask}\\
+\>\>struct in\_addr {\bfseries nla\_router} \mbox{[}1\mbox{]}\\
+\>\} {\bfseries un\_nla}\\
+\>struct \{\\
+\>\>struct in\_addr {\bfseries sla\_mask}\\
+\>\>u\_int32\_t {\bfseries sla\_tosmetric} \mbox{[}1\mbox{]}\\
+\>\} {\bfseries un\_sla}\\
+\>struct \{\\
+\>\>struct in\_addr {\bfseries asla\_mask}\\
+\>\>struct {\bfseries aslametric} \{\\
+\>\>\>u\_int32\_t {\bfseries asla\_tosmetric}\\
+\>\>\>struct in\_addr {\bfseries asla\_forward}\\
+\>\>\>struct in\_addr {\bfseries asla\_tag}\\
+\>\>\} {\bfseries asla\_metric} \mbox{[}1\mbox{]}\\
+\>\} {\bfseries un\_asla}\\
+\>struct {\bfseries mcla} \{\\
+\>\>u\_int32\_t {\bfseries mcla\_vtype}\\
+\>\>struct in\_addr {\bfseries mcla\_vid}\\
+\>\} {\bfseries un\_mcla} \mbox{[}1\mbox{]}\\
+\>struct \{\\
+\>\>u\_int16\_t {\bfseries type}\\
+\>\>u\_int16\_t {\bfseries length}\\
+\>\>u\_int8\_t {\bfseries data} \mbox{[}1\mbox{]}\\
+\>\} {\bfseries un\_te\_lsa\_tlv}\\
+\>struct \{\\
+\>\>u\_int16\_t {\bfseries type}\\
+\>\>u\_int16\_t {\bfseries length}\\
+\>\>u\_int8\_t {\bfseries data} \mbox{[}1\mbox{]}\\
+\>\} {\bfseries un\_grace\_tlv}\\
+\>struct \{\\
+\>\>u\_int16\_t {\bfseries type}\\
+\>\>u\_int16\_t {\bfseries length}\\
+\>\>u\_int8\_t {\bfseries data} \mbox{[}1\mbox{]}\\
+\>\} {\bfseries un\_ri\_tlv}\\
+\>struct {\bfseries unknown} \{\\
+\>\>u\_int8\_t {\bfseries data} \mbox{[}1\mbox{]}\\
+\>\} {\bfseries un\_unknown} \mbox{[}1\mbox{]}\\
+\} {\bfseries lsa\_un}}
+\label{structlsa_a14d7b09626eda9346d5b6a946cd789b7}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 183 of file ospf.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/userland/tcpdump-\/4.1.1/ospf.h\end{DoxyCompactItemize}

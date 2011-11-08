@@ -1,0 +1,11 @@
+#!/bin/bash
+
+/bin/rm -fr config
+/bin/mkdir -p config
+
+set -x
+aclocal -I config  \
+&& autoheader \
+&& automake --gnu --add-missing --copy \
+&& autoconf
+

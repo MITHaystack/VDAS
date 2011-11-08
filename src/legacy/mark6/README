@@ -1,0 +1,3 @@
+This directory contains a prototype implementation of the Mark6 control plane. 
+
+The production level control plane has been implemented in Python and will be uploaded to the repo soon.

@@ -1,0 +1,92 @@
+\hypertarget{structbnx2i__endpoint}{
+\section{bnx2i\_\-endpoint Struct Reference}
+\label{structbnx2i__endpoint}\index{bnx2i\_\-endpoint@{bnx2i\_\-endpoint}}
+}
+
+
+{\ttfamily \#include $<$bnx2i.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structbnx2i__endpoint_a664cead45bece82ba2c9f614005cd715}{
+struct list\_\-head {\bfseries link}}
+\label{structbnx2i__endpoint_a664cead45bece82ba2c9f614005cd715}
+
+\item 
+\hypertarget{structbnx2i__endpoint_a799a346fdf92364c193f1b1f27f2162f}{
+struct \hyperlink{structbnx2i__hba}{bnx2i\_\-hba} $\ast$ {\bfseries hba}}
+\label{structbnx2i__endpoint_a799a346fdf92364c193f1b1f27f2162f}
+
+\item 
+\hypertarget{structbnx2i__endpoint_aa5edae43cb71e101dc3c1b9544f6b3ea}{
+struct \hyperlink{structbnx2i__conn}{bnx2i\_\-conn} $\ast$ {\bfseries conn}}
+\label{structbnx2i__endpoint_aa5edae43cb71e101dc3c1b9544f6b3ea}
+
+\item 
+\hypertarget{structbnx2i__endpoint_ac4776792fa4fab5e3be7e8e3b2699a1b}{
+struct \hyperlink{structcnic__sock}{cnic\_\-sock} $\ast$ {\bfseries cm\_\-sk}}
+\label{structbnx2i__endpoint_ac4776792fa4fab5e3be7e8e3b2699a1b}
+
+\item 
+\hypertarget{structbnx2i__endpoint_aa7113e5ef5adc9bc45ad0c96a93dca3d}{
+u16 {\bfseries tcp\_\-port}}
+\label{structbnx2i__endpoint_aa7113e5ef5adc9bc45ad0c96a93dca3d}
+
+\item 
+\hypertarget{structbnx2i__endpoint_ae32687df6a0b2dcbf93c7f9ecc61ddf0}{
+u32 {\bfseries hba\_\-age}}
+\label{structbnx2i__endpoint_ae32687df6a0b2dcbf93c7f9ecc61ddf0}
+
+\item 
+\hypertarget{structbnx2i__endpoint_ac7bdefa6383531d739c7ce3f2b8360ab}{
+u32 {\bfseries state}}
+\label{structbnx2i__endpoint_ac7bdefa6383531d739c7ce3f2b8360ab}
+
+\item 
+\hypertarget{structbnx2i__endpoint_ac098c982c0046de838b02615f998c911}{
+unsigned long {\bfseries timestamp}}
+\label{structbnx2i__endpoint_ac098c982c0046de838b02615f998c911}
+
+\item 
+\hypertarget{structbnx2i__endpoint_a0053c58b3379ee013c4e9efd55bf8cba}{
+int {\bfseries num\_\-active\_\-cmds}}
+\label{structbnx2i__endpoint_a0053c58b3379ee013c4e9efd55bf8cba}
+
+\item 
+\hypertarget{structbnx2i__endpoint_a0fb163e6a91e6d5e9066145bb6fdac9e}{
+struct \hyperlink{structqp__info}{qp\_\-info} {\bfseries qp}}
+\label{structbnx2i__endpoint_a0fb163e6a91e6d5e9066145bb6fdac9e}
+
+\item 
+\hypertarget{structbnx2i__endpoint_a9e0983cd73945eb0f158e80efe373a42}{
+struct \hyperlink{structep__handles}{ep\_\-handles} {\bfseries ids}}
+\label{structbnx2i__endpoint_a9e0983cd73945eb0f158e80efe373a42}
+
+\item 
+\hypertarget{structbnx2i__endpoint_a1e154d93efc2ec194ca49f8f5989bd2c}{
+struct timer\_\-list {\bfseries ofld\_\-timer}}
+\label{structbnx2i__endpoint_a1e154d93efc2ec194ca49f8f5989bd2c}
+
+\item 
+\hypertarget{structbnx2i__endpoint_a274c1a1a6730724ef2d139d7081d5e13}{
+wait\_\-queue\_\-head\_\-t {\bfseries ofld\_\-wait}}
+\label{structbnx2i__endpoint_a274c1a1a6730724ef2d139d7081d5e13}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+struct \hyperlink{structbnx2i__endpoint}{bnx2i\_\-endpoint} -\/ representation of tcp connection in NX2 world
+
+list head to link elements : adapter to which this connection belongs : iscsi connection this EP is linked to : iscsi session this EP is linked to : cnic sock struct : age to detect if 'iscsid' issues ep\_\-disconnect() after HBA reset is completed by bnx2i/cnic/bnx2 modules : tracks offload connection state machine : indicates if conn teardown is abortive or orderly : QP information : contains chip allocated $\ast$context id$\ast$ \& driver assigned $\ast$iscsi cid$\ast$ : offload timer to detect timeout : wait queue
+
+Endpoint Structure -\/ equivalent of tcp socket structure 
+
+Definition at line 671 of file bnx2i.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/broadcom/netxtreme2-\/5.2.50/bnx2i\_\-sles11-\/2.0.1e-\/05/driver/bnx2i.h\end{DoxyCompactItemize}

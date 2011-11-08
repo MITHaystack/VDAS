@@ -1,0 +1,77 @@
+\hypertarget{structe1000__buffer}{
+\section{e1000\_\-buffer Struct Reference}
+\label{structe1000__buffer}\index{e1000\_\-buffer@{e1000\_\-buffer}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structe1000__buffer_ac5cbef5146c263af46ff735c237cd0f2}{
+struct sk\_\-buff $\ast$ {\bfseries skb}}
+\label{structe1000__buffer_ac5cbef5146c263af46ff735c237cd0f2}
+
+\item 
+\hypertarget{structe1000__buffer_a0a0927d3015b37b8338421df47afd9cf}{
+dma\_\-addr\_\-t {\bfseries dma}}
+\label{structe1000__buffer_a0a0927d3015b37b8338421df47afd9cf}
+
+\item 
+\hypertarget{structe1000__buffer_abc55d24f31f25b71a1f7aea59a91d7af}{
+unsigned long {\bfseries time\_\-stamp}}
+\label{structe1000__buffer_abc55d24f31f25b71a1f7aea59a91d7af}
+
+\item 
+\hypertarget{structe1000__buffer_a9f23fe1e3d1fb18b75ea0b339056c547}{
+u16 {\bfseries length}}
+\label{structe1000__buffer_a9f23fe1e3d1fb18b75ea0b339056c547}
+
+\item 
+\hypertarget{structe1000__buffer_a1f4c203183365f4a6b84f5f46e608764}{
+u16 {\bfseries next\_\-to\_\-watch}}
+\label{structe1000__buffer_a1f4c203183365f4a6b84f5f46e608764}
+
+\item 
+\hypertarget{structe1000__buffer_a29c8eba22eb7df077e9284e19b8996c4}{
+u16 {\bfseries mapped\_\-as\_\-page}}
+\label{structe1000__buffer_a29c8eba22eb7df077e9284e19b8996c4}
+
+\item 
+\hypertarget{structe1000__buffer_a6c1e07072d7c21c4948f96277dbf3563}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\hypertarget{unione1000__buffer_1_1@66_a9c5c9a8227bd926aa81ecdce0a784c6a}{
+\>struct \{\\
+\>\>unsigned long {\bfseries time\_stamp}\\
+\>\>u16 {\bfseries length}\\
+\>\>u16 {\bfseries next\_to\_watch}\\
+\>\>unsigned int {\bfseries segs}\\
+\>\>unsigned int {\bfseries bytecount}\\
+\>\>u16 {\bfseries mapped\_as\_page}\\
+\>\} }
+\label{unione1000__buffer_1_1@66_a9c5c9a8227bd926aa81ecdce0a784c6a}
+\\
+\hypertarget{unione1000__buffer_1_1@66_a00b61f413488a4ef38313616d909a46e}{
+\>struct \{\\
+\>\>struct \hyperlink{structe1000__ps__page}{e1000\_ps\_page} $\ast$ {\bfseries ps\_pages}\\
+\>\>struct page $\ast$ {\bfseries page}\\
+\>\} }
+\label{unione1000__buffer_1_1@66_a00b61f413488a4ef38313616d909a46e}
+\\
+\}; }
+\label{structe1000__buffer_a6c1e07072d7c21c4948f96277dbf3563}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 123 of file e1000.h.
+
+
+
+The documentation for this struct was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/e1000/e1000-\/8.0.30/src/e1000.h\item 
+src/extern/PF\_\-RING-\/4.7.0/drivers/intel/e1000e/e1000e-\/1.3.10a/src/e1000.h\end{DoxyCompactItemize}

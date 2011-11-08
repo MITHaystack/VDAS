@@ -1,0 +1,74 @@
+.\" Process this file with
+.\" groff -man -Tascii foo.1
+.\"
+.TH mark6.sh 1 "September 2011" Linux "User Manuals"
+
+.SH NAME
+.B mark6.sh
+\- Mark6 control plane.
+
+.SH SYNOPSIS
+.B mark6.sh
+.B [start|stop|restart|reboot|ping|console|attach
+.B ]
+.B ...
+
+.SH DESCRIPTION
+.B mark6.sh
+This script controls the Mark6 control plane.
+The control plane is run from within a high availability
+Erlang Virtual Machine.
+
+.SH OPTIONS
+.IP "start"
+Start the control plane as a daemon.
+
+.IP "stop"
+Stop a control plane daemon.
+
+.IP "restart"
+Restart a control plane daemon.
+
+
+.IP "reboot"
+Reboot the Erlang Virtual Machine and the control plane daemon.
+
+.IP "ping"
+Ping the control plane daemon to see if it is up and running.
+
+.IP "console"
+Run the control plane in console mode (useful for debugging).
+
+.IP "attach"
+Attach a console session to a running control plane daemon.
+
+.SH FILES
+.I /opt/haystack/mark6/lib/rel
+.RS
+The control plane application tree (including embedded ERTS).
+
+.RE
+.I /opt/haystack/mark6/bin/mark6.sh
+.RS
+Execution script. This script controls the control plane.
+
+.RE
+.I /opt/haystack/mark6/log/
+.RS
+Logging directory. All log files and statistics files are stored here.
+
+.SH ENVIRONMENT
+None
+
+.SH DIAGNOSTICS
+The following diagnostics may be issued on stderr:
+ 
+.SH BUGS
+None known at this time.
+
+.SH AUTHOR
+David Lapsley <del at haystack dot mit dot edu>
+
+.SH "SEE ALSO"
+.BR net2disk (1).
+

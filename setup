@@ -1,0 +1,190 @@
+#!/bin/bash
+
+# Copyright 2011 MIT Haystack Observatory
+#
+# This file is part of Mark6.
+# 
+# Mark6 is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 2 of the License.
+# 
+# Mark6 is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with Mark6.  If not, see <http://www.gnu.org/licenses/>.
+
+# Date:	6/21/2011
+# Description:
+#	Install build dependencies.
+
+# Filesystem variables
+if [ "${MARK6_ROOT}" = "" ]; then
+    echo "Error.  MARK6_ROOT must be set before running this script."
+    exit 1
+fi
+
+if [ "${MARK6_USER}" = "" ]; then
+    echo "Warning.  MARK6_USER must be set before running this script."
+    exit 1
+fi
+
+EXTERN_ROOT=${MARK6_ROOT}/src/extern
+
+# Binary dependencies
+PREQ=$(cat <<EOP
+automake autoconf build-essential flex linux-headers-2.6-amd64 git-core
+byacc iperf texinfo texi2html subversion
+libboost-all-dev libcppunit-dev libapr1-dev libaprutil1-dev liblog4cxx10-dev
+erlang erlang-os-mon libreadline5-dev
+fio tree parted
+EOP
+)
+
+# erlang-base erlang-doc erlang-edoc erlang-eunit erlang-manpages erlang-mnesia erlang-mode
+
+# Source dependencies
+
+# PF_RING dependency
+PF_RING=PF_RING-4.7.0
+
+# Commands
+INSTALL=/usr/bin/apt-get
+TAR=/bin/tar
+RM=/bin/rm
+GROUPADD=/usr/sbin/groupadd
+CHMOD=/bin/chmod
+CHGRP=/bin/chgrp
+USERMOD=/usr/sbin/usermod
+
+fix_squeeze_bugs() {
+# Debian squeeze has a dangling symlink that breaks erlang packaging:
+# lrwxrwxrwx 1 root root 19 Jul  5 13:46 /usr/lib/erlang/man/man1/gserialver.1.gz -> gserialver-4.4.1.gz
+    sudo ${RM} -f /usr/lib/erlang/man/man1/gserialver.1.gz
+}
+
+install_binary_deps() {
+    echo Installing binary dependencies: ${PREQ}
+    sudo ${INSTALL} install ${PREQ} -y
+}
+
+install_source_deps() {
+    echo Installing source dependencies
+}
+
+install_pfring() {
+    echo Installing ${PF_RING}...
+    cd ${EXTERN_ROOT}
+    ${TAR} xvzf ${PF_RING}.tar.gz
+    cd ${PF_RING}
+
+    cd kernel
+    make
+    sudo make install
+    cd ..
+
+    cd userland
+    cd lib
+    ./configure --prefix=/opt/mit/mark6
+    make 
+    sudo make install
+    cd ..
+
+    cd libpcap-1.1.1-ring
+    ./configure --prefix=/opt/mit/mark6
+    make
+    sudo make install
+    cd ..
+
+    cd ..
+}
+
+build() {
+    cd ${MARK6_ROOT}
+    ./bootstrap
+    CXXFLAGS=-O4 ./configure \
+	--prefix=/opt/mit/mark6 \
+	BOOST_INCDIR=/usr/include/boost \
+	BOOST_LIBDIR=/usr/lib64/boost \
+	PFRING_ROOT=${MARK6_ROOT}/src/extern/PF_RING-4.7.0
+    make
+}
+
+install_mark6() {
+    cd ${MARK6_ROOT}
+    make
+    sudo make install
+    sudo ${GROUPADD} -f mark6
+    sudo ${CHGRP} -R mark6 /opt/mit/mark6
+    sudo ${CHMOD} g+rwx /opt/mit/mark6/bin/*
+    sudo ${CHMOD} -R g+rwx /opt/mit/mark6/lib
+    sudo ${CHMOD} g+rwx /opt/mit/mark6/lib/rel/mark6/bin/*
+    sudo ${USERMOD} -a -G mark6 ${MARK6_USER}
+}
+
+
+
+usage() {
+    echo "$0: [-b] [-s] [-p] [-B] [-f] [-a] [-h]"
+    echo "    [--binary] [--source] [--pfring] [--fix] [--all] [--help]"
+    echo "  -b, --binary   Install binary dependencies"
+    echo "  -s, --source   Install source dependencies"
+    echo "  -p, --pfring   Install PF_RING"
+    echo "  -B, --build    Build software"
+    echo "  -i, --install  Build software"
+    echo "  -f, --fix      Fix debian os issues"
+    echo "  -a, --all      Do everything"
+    echo "  -h, --help     Display help message"
+}
+
+main() {
+	if [ $# -eq 0 ] ; then
+	    usage
+	    exit
+	fi
+
+	echo Welcome to the Mark6 setup program
+	echo
+	echo This software has been developed by MIT Haystack Observatory and
+	echo is released under the terms fo the GPL \(see LICENSE file\)
+	    echo 
+	    echo Please direct any questions to del@haystack.mit.edu
+	    echo
+
+	    while [ "$1" != "" ]; do
+    		case $1 in
+        	    -b | --binary )	install_binary_deps
+			;;
+		    -s | --source )	install_source_deps
+			;;
+		    -p | --pfring )	install_pfring
+			;;
+		    -B | --build )	build
+			;;
+		    -i | --install )	install_mark6
+			;;
+		    -f | --fix )	fix_squeeze_bugs
+			;;
+		    -a | --all )	install_binary_deps
+					fix_squeeze_bugs
+					install_pfring
+					install_source_deps
+					build
+					install_mark6
+					;;
+		    -h | --help )	usage
+			exit
+			;;
+		    * )             usage
+			exit 1
+		esac
+		shift
+	    done
+    }
+
+
+# Kick off setup.
+    echo $*
+    main $*

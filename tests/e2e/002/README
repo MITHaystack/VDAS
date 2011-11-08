@@ -1,0 +1,9 @@
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/sde1             220G  3.4G  206G   2% /
+tmpfs                 5.9G     0  5.9G   0% /lib/init/rw
+udev                  5.9G  244K  5.9G   1% /dev
+tmpfs                 5.9G     0  5.9G   0% /dev/shm
+/dev/sda1             7.2T  568G  6.3T   9% /mnt/disk0
+/dev/sdb1             7.2T  568G  6.3T   9% /mnt/disk1
+/dev/sdc1              13T  570G   12T   5% /mnt/disk2
+/dev/sdd1             7.2T  551G  6.3T   8% /mnt/disk3

@@ -1,0 +1,59 @@
+************************************
+
+LSI Corp. MegaRAID Firmware Release 
+
+************************************
+
+Release date: 04/15/2011
+
+====================== 
+Supported Controllers:
+======================
+
+MegaRAID SAS 9280-24i4e
+MegaRAID SAS 9280-16i4e
+MegaRAID SAS 9260-16i
+
+
+
+Component:
+=========
+SAS MegaRAID Firmware Release for MegaRAID Controllers
+Release date: 04/15/2011
+
+
+Version Numbers:	
+===============
+Current Firmware Package:  12.12.0-0044  
+Current Package Details:   
+APP-2.120.43-1223_BB-2.02.00.00-0000_BIOS-3.22.00_4.11.05.00_0x05020000_WEBBIOS-6.0-34-e_29-Rel_PCLI-04.04-01700008_BOOT-01.250.04.219_NVDATA-2.09.03-0012_SAS2XFW-25.05.04.00_MFGIMG-25.05.04.00_2011_03_17
+			     
+Previous Firmware Package: 12.12.0-0044  
+Previous Package Details:   
+APP-2.120.23-1181_BB-2.02.00.00-0000_BIOS-3.21.00_4.11.05.00_0x05000000_WEBBIOS-6.0-34-e_29-Rel_PCLI-04.04-01700008_BOOT-01.250.04.219_NVDATA-2.09.03-0010_SAS2XFW-25.05.04.00_MFGIMG-25.05.04.00_2011_02_12
+		 
+			      
+
+Bug Fixes and Enhancements:
+===========================
+Firmware:
+=========
+LSIP200158868 (DFCT) Power save mode hangs firmware causing driver to send kill adpter command 
+LSIP200145892 (DFCT) Liberator FW 10M09 cause system (sles11sp1/rhel6) reset while lspci -vvxxx is used 
+LSIP200153318 (DFCT) FW doesn’t detect the iBBU08 if it is remotely mounting with OEM controller 
+
+ BIOS:
+========
+HII changes only
+
+
+
+Installation:
+=============
+Use MegaCLI to flash the SAS controllers.  MegaCLI can be downloaded from the support and download
+section of www.lsi.com.
+
+Command syntax:  MegaCli -adpfwflash -f mrhighpc.rom -a0
+
+
+
