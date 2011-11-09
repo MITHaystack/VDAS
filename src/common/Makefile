@@ -61,8 +61,8 @@ am_commontest_OBJECTS = test_main.$(OBJEXT) disk2vlbi.$(OBJEXT) \
 	test_pfile_writer.$(OBJEXT)
 commontest_OBJECTS = $(am_commontest_OBJECTS)
 commontest_DEPENDENCIES =  \
-	/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
-	/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
+	/home/dlapsley/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
+	/home/dlapsley/Mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
 DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/config/depcomp
 am__depfiles_maybe = depfiles
@@ -83,14 +83,14 @@ CTAGS = ctags
 am__tty_colors = \
 red=; grn=; lgn=; blu=; std=
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /opt/src/mark6/config/missing --run aclocal-1.11
-AMTAR = ${SHELL} /opt/src/mark6/config/missing --run tar
-AUTOCONF = ${SHELL} /opt/src/mark6/config/missing --run autoconf
-AUTOHEADER = ${SHELL} /opt/src/mark6/config/missing --run autoheader
-AUTOMAKE = ${SHELL} /opt/src/mark6/config/missing --run automake-1.11
-AWK = gawk
-BOOST_INCDIR = /opt/local/include/boost
-BOOST_LIBDIR = /opt/local/lib/boost
+ACLOCAL = ${SHELL} /home/dlapsley/Mark6/config/missing --run aclocal-1.11
+AMTAR = ${SHELL} /home/dlapsley/Mark6/config/missing --run tar
+AUTOCONF = ${SHELL} /home/dlapsley/Mark6/config/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/dlapsley/Mark6/config/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/dlapsley/Mark6/config/missing --run automake-1.11
+AWK = mawk
+BOOST_INCDIR = /usr/include/boost
+BOOST_LIBDIR = /usr/lib64/boost
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -102,23 +102,23 @@ CXXFLAGS = -O4
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-ECHO_C = \c
-ECHO_N = 
+ECHO_C = 
+ECHO_N = -n
 ECHO_T = 
-EGREP = /usr/bin/grep -E
+EGREP = /bin/grep -E
 EXEEXT = 
-GREP = /usr/bin/grep
-INSTALL = /opt/local/bin/ginstall -c
+GREP = /bin/grep
+INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LDFLAGS = 
 LIBOBJS = 
-LIBS = -lpthread -lm -ldl 
+LIBS = -lpthread -lm -llog4cxx -ldl -lcppunit 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /opt/src/mark6/config/missing --run makeinfo
-MKDIR_P = /opt/local/bin/gmkdir -p
+MAKEINFO = ${SHELL} /home/dlapsley/Mark6/config/missing --run makeinfo
+MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = mark6
 PACKAGE_BUGREPORT = BUG-REPORT-ADDRESS
@@ -128,16 +128,16 @@ PACKAGE_TARNAME = full-package-name
 PACKAGE_URL = 
 PACKAGE_VERSION = VERSION
 PATH_SEPARATOR = :
-PFRING_ROOT = /opt/src/mark6/src/extern/PF_RING-4.7.0
+PFRING_ROOT = /home/dlapsley/Mark6/src/extern/PF_RING-4.7.0
 RANLIB = ranlib
 SET_MAKE = 
-SHELL = /bin/sh
+SHELL = /bin/bash
 STRIP = 
 VERSION = 0.1
-abs_builddir = /opt/src/mark6/src/common
-abs_srcdir = /opt/src/mark6/src/common
-abs_top_builddir = /opt/src/mark6
-abs_top_srcdir = /opt/src/mark6
+abs_builddir = /home/dlapsley/Mark6/src/common
+abs_srcdir = /home/dlapsley/Mark6/src/common
+abs_top_builddir = /home/dlapsley/Mark6
+abs_top_srcdir = /home/dlapsley/Mark6
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -157,13 +157,13 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /opt/src/mark6/config/install-sh
+install_sh = ${SHELL} /home/dlapsley/Mark6/config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
 mandir = ${datarootdir}/man
-mkdir_p = /opt/local/bin/gmkdir -p
+mkdir_p = /bin/mkdir -p
 oldincludedir = /usr/include
 pdfdir = ${docdir}
 prefix = /opt/mit/mark6
@@ -186,26 +186,28 @@ commontest_SOURCES = test_main.cc \
 			net_reader.cc \
 			pfile_writer.h \
 			pfile_writer.cc \
+			queue.h \
 			scan_check.h \
 			scan_check.cc \
 			stats_writer.h \
 			stats_writer.cc \
+			threaded.h \
+			writer_task.h \
 			test_file_writer.h \
 			test_file_writer.cc \
 			test_pfile_writer.h \
-			test_pfile_writer.cc \
-			threaded.h
+			test_pfile_writer.cc
 
 commontest_LDADD = -L. \
 			-lcommon \
-			-L/opt/local/lib/boost \
+			-L/usr/lib64/boost \
 			-lboost_program_options-mt \
 			-lboost_system-mt \
 			-lboost_thread-mt \
 			-lm \
 			-lpthread \
-			/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
-			/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
+			/home/dlapsley/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
+			/home/dlapsley/Mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
 
 noinst_LIBRARIES = libcommon.a
 libcommon_a_SOURCES = \
@@ -221,19 +223,21 @@ libcommon_a_SOURCES = \
 			net_reader.cc \
 			pfile_writer.h \
 			pfile_writer.cc \
+			queue.h \
 			scan_check.h \
 			scan_check.cc \
 			stats_writer.h \
 			stats_writer.cc \
-			threaded.h
+			threaded.h \
+			writer_task.h
 
 INCLUDES = -I../../src/common \
 			-I/usr/include \
-			-I/opt/src/mark6/src/extern/PF_RING-4.7.0/kernel \
-			-I/opt/src/mark6/src/extern/PF_RING-4.7.0/kernel/plugins \
-			-I/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/lib \
-			-I/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring \
-			-I/opt/local/include/boost
+			-I/home/dlapsley/Mark6/src/extern/PF_RING-4.7.0/kernel \
+			-I/home/dlapsley/Mark6/src/extern/PF_RING-4.7.0/kernel/plugins \
+			-I/home/dlapsley/Mark6/src/extern/PF_RING-4.7.0/userland/lib \
+			-I/home/dlapsley/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring \
+			-I/usr/include/boost
 
 AM_CXXFLAGS = -O4
 TESTS_ENVIRONMENT = LD_LIBRARY_PATH=/usr/local/lib:/usr/lib64/boost

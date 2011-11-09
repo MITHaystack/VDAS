@@ -14,18 +14,12 @@ commontest_SOURCES=	test_main.cc \
 			scan_check.cc \
 			stats_writer.h \
 			stats_writer.cc \
-			thread_pool.h \
-			thread_pool.cc \
 			threaded.h \
 			writer_task.h \
 			test_file_writer.h \
 			test_file_writer.cc \
 			test_pfile_writer.h \
-			test_pfile_writer.cc \
-			test_thread_pool.h \
-			test_thread_pool.cc \
-			test_writer_thread_pool.h \
-			test_writer_thread_pool.cc 
+			test_pfile_writer.cc
 
 commontest_LDADD= 	-L. \
 			-lcommon \
@@ -58,8 +52,6 @@ libcommon_a_SOURCES	= \
 			scan_check.cc \
 			stats_writer.h \
 			stats_writer.cc \
-			thread_pool.h \
-			thread_pool.cc \
 			threaded.h \
 			writer_task.h
 

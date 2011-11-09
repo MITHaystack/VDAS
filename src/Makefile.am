@@ -1,1 +1,1 @@
-SUBDIRS=common disk2vlbi net2disk net2raid scancheck demo
+SUBDIRS=common disk2vlbi net2raid scancheck demo
