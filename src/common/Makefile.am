@@ -5,6 +5,8 @@ commontest_SOURCES=	test_main.cc \
 			disk2vlbi.h \
 			file_writer.h \
 			file_writer.cc \
+			m6logger.h \
+			m6logger.cc \
 			net_reader.h \
 			net_reader.cc \
 			pfile_writer.h \
@@ -47,8 +49,8 @@ libcommon_a_SOURCES	= \
 			pfr.cc \
 			file_writer.h \
 			file_writer.cc \
-			logger.h \
-			logger.cc \
+			m6logger.h \
+			m6logger.cc \
 			net_reader.h \
 			net_reader.cc \
 			pfile_writer.h \

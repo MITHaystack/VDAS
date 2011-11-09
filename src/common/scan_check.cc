@@ -38,7 +38,7 @@
 #include <vdif.h>
 #include <scan_check.h>
 #include <mark6.h>
-#include <logger.h>
+#include <m6logger.h>
 
 namespace fs = boost::filesystem;
 
@@ -46,7 +46,7 @@ typedef std::map<int, int> map_t;
 
 ScanCheck::ScanCheck(const std::string scan_file,
 		     const int frame_size) {
-  LOG4CXX_INFO(logger, "Starting check on : " << scan_file);
+  INFO("Starting check on : " << scan_file);
 
   std::ifstream input_file(scan_file.c_str());
   
@@ -70,7 +70,7 @@ ScanCheck::ScanCheck(const std::string scan_file,
 
     curr = pmap.find(str);
     if (curr == pmap.end()) {
-      LOG4CXX_INFO(logger, "New stream identified: stream_id=" << str);
+      INFO("New stream identified: stream_id=" << str);
       VdifStreamState s(str, tid);
       pmap[str] = s;
     }

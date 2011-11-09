@@ -35,7 +35,7 @@
 
 //Local includes.
 #include <mark6.h>
-#include <logger.h>
+#include <m6logger.h>
 #include <stats_writer.h>
 #include <pfile_writer.h>
 #include <test_pfile_writer.h>
@@ -94,7 +94,7 @@ TestPFileWriter::basic(void)
   pfw.open();
   pfw.start();
 
-  LOG4CXX_DEBUG(logger, "Started pfile writer.");
+  DEBUG("Started pfile writer.");
     
   pfw.cmd_write_to_disk();
 
@@ -116,5 +116,5 @@ TestPFileWriter::basic(void)
   sw.cmd_stop();
   sw.join();
 
-  LOG4CXX_DEBUG(logger, "Joined file writer.");
+  DEBUG("Joined file writer.");
 }

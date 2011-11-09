@@ -64,7 +64,7 @@
 
 // Local includes.
 #include <mark6.h>
-#include <logger.h>
+#include <m6logger.h>
 #include <file_writer.h>
 #include <stats_writer.h>
 
@@ -103,7 +103,7 @@ FileWriter::FileWriter(const int id,
   void* buf;
   for (int i=0; i<write_blocks; i++) {
     if (posix_memalign(&buf, getpagesize(), write_block_size) != 0) {
-      LOG4CXX_ERROR(logger, "FileWriter buffer allocation failed.");
+      ERR("FileWriter buffer allocation failed.");
       throw std::string("Memalign failed.");
     }
     _free_bufs.push_back(static_cast<boost::uint8_t*>(buf));
@@ -114,7 +114,7 @@ FileWriter::~FileWriter() {
   close();
 #ifdef TRANSLATE
   if (_translate) {
-    LOG4CXX_INFO(logger, "Starting translation on : " << _capture_file);
+    INFO("Starting translation on : " << _capture_file);
 
     // open the pcap file 
     pcap_t *handle; 
@@ -124,7 +124,7 @@ FileWriter::~FileWriter() {
 
     handle = pcap_open_offline(_capture_file.c_str(), errbuf);
     if (handle == NULL) {
-      LOG4CXX_ERROR(logger, "Couldn't open pcap file " << _capture_file
+      ERR("Couldn't open pcap file " << _capture_file
 		    << " " << errbuf);
       exit(1);
     }
@@ -145,7 +145,7 @@ FileWriter::~FileWriter() {
       else if (ether_type == ETHER_TYPE_8021Q)
 	ether_offset = 18; 
       else 
-	LOG4CXX_ERROR(logger, "Unknown ethernet type skipping...");
+	ERR("Unknown ethernet type skipping...");
       
       // Parse the IP header 
       pkt_ptr += ether_offset;
@@ -192,7 +192,7 @@ void FileWriter::join() {
 }
 
 void FileWriter::run() {
-  LOG4CXX_INFO(logger, "FileWriter Running...");
+  INFO("FileWriter Running...");
 
   Timer run_timer;
   Timer command_timer;
@@ -224,23 +224,23 @@ void FileWriter::run() {
 	break;
 
       default:
-	LOG4CXX_ERROR(logger, "Unknown state.");
+	ERR("Unknown state.");
 	break;
       }
     }
-    LOG4CXX_DEBUG(logger, "elapsed run time: " << run_timer.elapsed());
+    DEBUG("elapsed run time: " << run_timer.elapsed());
   } catch(std::exception &ex) {
-    LOG4CXX_ERROR(logger, "error: " << ex.what());
+    ERR("error: " << ex.what());
   }
 }
 
 void FileWriter::cmd_stop() {
-  LOG4CXX_INFO(logger, "Received STOP");
+  INFO("Received STOP");
   _state = STOP;
 }
 
 void FileWriter::cmd_write_to_disk() {
-  LOG4CXX_INFO(logger, "Received WRITE_TO_DISK");
+  INFO("Received WRITE_TO_DISK");
   _state = WRITE_TO_DISK;
 }
 
@@ -257,7 +257,7 @@ void FileWriter::handle_write_to_disk() {
 }
 
 int FileWriter::open() {
-  LOG4CXX_INFO(logger, "Opening FileWriter file: " << _capture_file);
+  INFO("Opening FileWriter file: " << _capture_file);
 
   // Open files for each path.
   int ret=0;
@@ -270,47 +270,47 @@ int FileWriter::open() {
   }
  
   if (_pfd.fd<0) {
-    LOG4CXX_ERROR(logger, "Unable to open file: " << _capture_file
+    ERR("Unable to open file: " << _capture_file
 		  << " - " << strerror(errno));
     _pfd.fd = -1;
     ret = -1;
   } else {
-    LOG4CXX_DEBUG(logger, "File: " << _capture_file << " fd: "
+    DEBUG("File: " << _capture_file << " fd: "
 		  << _pfd.fd);
     _pfd.events = POLLOUT;
   }
 
   if (_preallocated) {
     off_t len = _file_size * 1000000;
-    LOG4CXX_INFO(logger, "Preallocating  " << len/1000000 << " MBytes");
+    INFO("Preallocating  " << len/1000000 << " MBytes");
 
     // Scope errno locally for fallocate.
     int myerrno = fallocate(_pfd.fd, FALLOC_FL_KEEP_SIZE, 0, len);
     if (myerrno != 0) {
-      LOG4CXX_ERROR(logger, "Fallocate() failed: " << strerror(myerrno));
+      ERR("Fallocate() failed: " << strerror(myerrno));
       return -1;
     }
     
     if (::lseek(_pfd.fd, 0, SEEK_SET) < 0) {
-      LOG4CXX_ERROR(logger, "Unable to seek to beginning of file: "
+      ERR("Unable to seek to beginning of file: "
 		    << _capture_file
 		    << " - " << strerror(errno));
       _pfd.fd = -1;
       ret = -1;
     }
   } else {
-    LOG4CXX_DEBUG(logger, "Successfully seeked.");
+    DEBUG("Successfully seeked.");
   }
 
   // Debug message.
-  LOG4CXX_DEBUG(logger, "pfd: " << _pfd.fd);
+  DEBUG("pfd: " << _pfd.fd);
 
   return ret;
 }
 
 int FileWriter::close() {
   if ( (_pfd.fd>0) && (::close(_pfd.fd)<0) ) {
-    LOG4CXX_ERROR(logger, "Unable to close fd: " << _pfd.fd
+    ERR("Unable to close fd: " << _pfd.fd
 		  << " - " << strerror(errno));
     return -1;
   }
@@ -395,7 +395,7 @@ bool FileWriter::write(boost::uint8_t* buf,
       bytes_left -= nb;
       bytes_written += nb;
     } else {
-      LOG4CXX_ERROR(logger, "Write error: " << strerror(errno));
+      ERR("Write error: " << strerror(errno));
     }
   }
   if (_sw)
@@ -419,7 +419,7 @@ bool FileWriter::write_unbuffered(boost::uint8_t* buf,
       bytes_left -= nb;
       bytes_written += nb;
     } else {
-      LOG4CXX_ERROR(logger, "Write error: " << strerror(errno));
+      ERR("Write error: " << strerror(errno));
     }
   }
   if (_sw)

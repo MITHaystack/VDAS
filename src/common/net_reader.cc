@@ -33,7 +33,7 @@
 
 // Local includes.
 #include <mark6.h>
-#include <logger.h>
+#include <m6logger.h>
 #include <pfr.h>
 #include <file_writer.h>
 #include <net_reader.h>
@@ -93,7 +93,7 @@ void NetReader::join() {
 }
 
 void NetReader::run() {
-  LOG4CXX_INFO(logger, "NetReader Running...");
+  INFO("NetReader Running...");
 
   Timer run_timer;
   Timer command_timer;
@@ -126,31 +126,31 @@ void NetReader::run() {
 	break;
 
       default:
-	LOG4CXX_ERROR(logger, "Unknown state.");
+	ERR("Unknown state.");
 	break;
       }
     }
 
-    LOG4CXX_DEBUG(logger, "elapsed run time: " << run_timer.elapsed());
+    DEBUG("elapsed run time: " << run_timer.elapsed());
   } catch(std::exception &ex) {
-    LOG4CXX_ERROR(logger, "error: " << ex.what());
+    ERR("error: " << ex.what());
   }
 }
 
 void NetReader::cmd_stop() {
-  LOG4CXX_INFO(logger, "Received STOP");
+  INFO("Received STOP");
   _state = STOP;
 }
 
 void NetReader::cmd_read_from_network() {
-  LOG4CXX_INFO(logger, "Received READ_FROM_NETWORK...");
+  INFO("Received READ_FROM_NETWORK...");
   _state = READ_FROM_NETWORK;
 }
 
 void NetReader::handle_stop() {
   _running = false;
   BOOST_FOREACH(std::string& s, _frame_drop_log) {
-    LOG4CXX_INFO(logger, "fdl: intf=" << _interface << "," << s);
+    INFO("fdl: intf=" << _interface << "," << s);
   }
 }
 
@@ -184,7 +184,7 @@ void NetReader::handle_read_from_network() {
   int bytes_left = _buffer_size;
   boost::uint8_t* file_buf = _fw->malloc_buffer();
   if (!file_buf) {
-    LOG4CXX_ERROR(logger, "File buffer's full: timedout");
+    ERR("File buffer's full: timedout");
     return;
   }
   assert(file_buf);
@@ -250,7 +250,7 @@ void NetReader::handle_read_from_network() {
 
       curr = pmap.find(str);
       if (curr == pmap.end()) {
-	LOG4CXX_INFO(logger, "New stream identified: stream_id=" << str);
+	INFO("New stream identified: stream_id=" << str);
 	VdifStreamState s(str, tid);
 	pmap[str] = s;
       }
@@ -294,7 +294,7 @@ void NetReader::handle_read_from_network() {
       if (hdr.caplen != _snaplen) {
 	  // || hdr.caplen != hdr.len
 	  // || payload_length != _payload_length) {
-	LOG4CXX_DEBUG(logger, "Short capture(caplen/snaplen"
+	DEBUG("Short capture(caplen/snaplen"
 		      "len/payload_length/PAYLOAD_LENGTH) -> ("
 		      << hdr.caplen << "/" << _snaplen << "/"
 		      << hdr.len << "/" << payload_length << "/"
@@ -306,7 +306,7 @@ void NetReader::handle_read_from_network() {
       num_packets++;
       num_bytes += hdr.len;
     } else {
-      LOG4CXX_ERROR(logger, "Error while calling get_next_packet(): "
+      ERR("Error while calling get_next_packet(): "
 		    << strerror(errno));
       continue;
     }
@@ -322,7 +322,7 @@ void NetReader::handle_read_from_network() {
       memcpy(remainder_buf, payload_ptr + bytes_left, remainder_len);
 
       if (!_fw->write(file_buf)) {
-	LOG4CXX_ERROR(logger, "Packet drop on port: " << dport
+	ERR("Packet drop on port: " << dport
 		      << " Total dropped: " << dropped_packets);
 	++dropped_packets;
       }
@@ -338,7 +338,7 @@ void NetReader::handle_read_from_network() {
       bytes_left -= payload_length;
 
       if (!_fw->write(file_buf)) {
-	LOG4CXX_ERROR(logger, "Packet drop on port: " << dport
+	ERR("Packet drop on port: " << dport
 		      << " Total dropped: " << dropped_packets);
 	++dropped_packets;
       }

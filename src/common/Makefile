@@ -50,19 +50,20 @@ ARFLAGS = cru
 libcommon_a_AR = $(AR) $(ARFLAGS)
 libcommon_a_LIBADD =
 am_libcommon_a_OBJECTS = disk2vlbi.$(OBJEXT) pfr.$(OBJEXT) \
-	file_writer.$(OBJEXT) logger.$(OBJEXT) net_reader.$(OBJEXT) \
+	file_writer.$(OBJEXT) m6logger.$(OBJEXT) net_reader.$(OBJEXT) \
 	pfile_writer.$(OBJEXT) scan_check.$(OBJEXT) \
-	stats_writer.$(OBJEXT)
+	stats_writer.$(OBJEXT) thread_pool.$(OBJEXT)
 libcommon_a_OBJECTS = $(am_libcommon_a_OBJECTS)
 am_commontest_OBJECTS = test_main.$(OBJEXT) disk2vlbi.$(OBJEXT) \
-	file_writer.$(OBJEXT) net_reader.$(OBJEXT) \
+	file_writer.$(OBJEXT) m6logger.$(OBJEXT) net_reader.$(OBJEXT) \
 	pfile_writer.$(OBJEXT) scan_check.$(OBJEXT) \
-	stats_writer.$(OBJEXT) test_file_writer.$(OBJEXT) \
-	test_pfile_writer.$(OBJEXT)
+	stats_writer.$(OBJEXT) thread_pool.$(OBJEXT) \
+	test_file_writer.$(OBJEXT) test_pfile_writer.$(OBJEXT) \
+	test_thread_pool.$(OBJEXT) test_writer_thread_pool.$(OBJEXT)
 commontest_OBJECTS = $(am_commontest_OBJECTS)
 commontest_DEPENDENCIES =  \
-	/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
-	/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
+	/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
+	/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
 DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/config/depcomp
 am__depfiles_maybe = depfiles
@@ -83,14 +84,14 @@ CTAGS = ctags
 am__tty_colors = \
 red=; grn=; lgn=; blu=; std=
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /opt/src/mark6/config/missing --run aclocal-1.11
-AMTAR = ${SHELL} /opt/src/mark6/config/missing --run tar
-AUTOCONF = ${SHELL} /opt/src/mark6/config/missing --run autoconf
-AUTOHEADER = ${SHELL} /opt/src/mark6/config/missing --run autoheader
-AUTOMAKE = ${SHELL} /opt/src/mark6/config/missing --run automake-1.11
+ACLOCAL = ${SHELL} /opt/src/Mark6/config/missing --run aclocal-1.11
+AMTAR = ${SHELL} /opt/src/Mark6/config/missing --run tar
+AUTOCONF = ${SHELL} /opt/src/Mark6/config/missing --run autoconf
+AUTOHEADER = ${SHELL} /opt/src/Mark6/config/missing --run autoheader
+AUTOMAKE = ${SHELL} /opt/src/Mark6/config/missing --run automake-1.11
 AWK = gawk
-BOOST_INCDIR = /opt/local/include/boost
-BOOST_LIBDIR = /opt/local/lib/boost
+BOOST_INCDIR = /usr/include/boost
+BOOST_LIBDIR = /usr/lib64/boost
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -117,7 +118,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -lpthread -lm -ldl 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /opt/src/mark6/config/missing --run makeinfo
+MAKEINFO = ${SHELL} /opt/src/Mark6/config/missing --run makeinfo
 MKDIR_P = /opt/local/bin/gmkdir -p
 OBJEXT = o
 PACKAGE = mark6
@@ -128,16 +129,16 @@ PACKAGE_TARNAME = full-package-name
 PACKAGE_URL = 
 PACKAGE_VERSION = VERSION
 PATH_SEPARATOR = :
-PFRING_ROOT = /opt/src/mark6/src/extern/PF_RING-4.7.0
+PFRING_ROOT = /opt/src/Mark6/src/extern/PF_RING-4.7.0
 RANLIB = ranlib
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = 
 VERSION = 0.1
-abs_builddir = /opt/src/mark6/src/common
-abs_srcdir = /opt/src/mark6/src/common
-abs_top_builddir = /opt/src/mark6
-abs_top_srcdir = /opt/src/mark6
+abs_builddir = /opt/src/Mark6/src/common
+abs_srcdir = /opt/src/Mark6/src/common
+abs_top_builddir = /opt/src/Mark6
+abs_top_srcdir = /opt/src/Mark6
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -157,7 +158,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /opt/src/mark6/config/install-sh
+install_sh = ${SHELL} /opt/src/Mark6/config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -182,30 +183,40 @@ commontest_SOURCES = test_main.cc \
 			disk2vlbi.h \
 			file_writer.h \
 			file_writer.cc \
+			m6logger.h \
+			m6logger.cc \
 			net_reader.h \
 			net_reader.cc \
 			pfile_writer.h \
 			pfile_writer.cc \
+			queue.h \
 			scan_check.h \
 			scan_check.cc \
 			stats_writer.h \
 			stats_writer.cc \
+			thread_pool.h \
+			thread_pool.cc \
+			threaded.h \
+			writer_task.h \
 			test_file_writer.h \
 			test_file_writer.cc \
 			test_pfile_writer.h \
 			test_pfile_writer.cc \
-			threaded.h
+			test_thread_pool.h \
+			test_thread_pool.cc \
+			test_writer_thread_pool.h \
+			test_writer_thread_pool.cc 
 
 commontest_LDADD = -L. \
 			-lcommon \
-			-L/opt/local/lib/boost \
+			-L/usr/lib64/boost \
 			-lboost_program_options-mt \
 			-lboost_system-mt \
 			-lboost_thread-mt \
 			-lm \
 			-lpthread \
-			/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
-			/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
+			/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
+			/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
 
 noinst_LIBRARIES = libcommon.a
 libcommon_a_SOURCES = \
@@ -215,25 +226,29 @@ libcommon_a_SOURCES = \
 			pfr.cc \
 			file_writer.h \
 			file_writer.cc \
-			logger.h \
-			logger.cc \
+			m6logger.h \
+			m6logger.cc \
 			net_reader.h \
 			net_reader.cc \
 			pfile_writer.h \
 			pfile_writer.cc \
+			queue.h \
 			scan_check.h \
 			scan_check.cc \
 			stats_writer.h \
 			stats_writer.cc \
-			threaded.h
+			thread_pool.h \
+			thread_pool.cc \
+			threaded.h \
+			writer_task.h
 
 INCLUDES = -I../../src/common \
 			-I/usr/include \
-			-I/opt/src/mark6/src/extern/PF_RING-4.7.0/kernel \
-			-I/opt/src/mark6/src/extern/PF_RING-4.7.0/kernel/plugins \
-			-I/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/lib \
-			-I/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring \
-			-I/opt/local/include/boost
+			-I/opt/src/Mark6/src/extern/PF_RING-4.7.0/kernel \
+			-I/opt/src/Mark6/src/extern/PF_RING-4.7.0/kernel/plugins \
+			-I/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/lib \
+			-I/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring \
+			-I/usr/include/boost
 
 AM_CXXFLAGS = -O4
 TESTS_ENVIRONMENT = LD_LIBRARY_PATH=/usr/local/lib:/usr/lib64/boost
@@ -293,7 +308,7 @@ distclean-compile:
 
 include ./$(DEPDIR)/disk2vlbi.Po
 include ./$(DEPDIR)/file_writer.Po
-include ./$(DEPDIR)/logger.Po
+include ./$(DEPDIR)/m6logger.Po
 include ./$(DEPDIR)/net_reader.Po
 include ./$(DEPDIR)/pfile_writer.Po
 include ./$(DEPDIR)/pfr.Po
@@ -302,6 +317,9 @@ include ./$(DEPDIR)/stats_writer.Po
 include ./$(DEPDIR)/test_file_writer.Po
 include ./$(DEPDIR)/test_main.Po
 include ./$(DEPDIR)/test_pfile_writer.Po
+include ./$(DEPDIR)/test_thread_pool.Po
+include ./$(DEPDIR)/test_writer_thread_pool.Po
+include ./$(DEPDIR)/thread_pool.Po
 
 .cc.o:
 	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

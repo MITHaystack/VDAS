@@ -50,13 +50,13 @@ PROGRAMS = $(bin_PROGRAMS)
 am_net2disk_OBJECTS = main.$(OBJEXT)
 net2disk_OBJECTS = $(am_net2disk_OBJECTS)
 net2disk_DEPENDENCIES =  \
-	/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
-	/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
+	/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
+	/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
 am_net2disktest_OBJECTS = test_main.$(OBJEXT)
 net2disktest_OBJECTS = $(am_net2disktest_OBJECTS)
 net2disktest_DEPENDENCIES =  \
-	/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
-	/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
+	/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
+	/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
 DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/config/depcomp
 am__depfiles_maybe = depfiles
@@ -73,12 +73,12 @@ CTAGS = ctags
 am__tty_colors = \
 red=; grn=; lgn=; blu=; std=
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/dlapsley/mark6/config/missing --run aclocal-1.11
-AMTAR = ${SHELL} /home/dlapsley/mark6/config/missing --run tar
-AUTOCONF = ${SHELL} /home/dlapsley/mark6/config/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/dlapsley/mark6/config/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/dlapsley/mark6/config/missing --run automake-1.11
-AWK = mawk
+ACLOCAL = ${SHELL} /opt/src/Mark6/config/missing --run aclocal-1.11
+AMTAR = ${SHELL} /opt/src/Mark6/config/missing --run tar
+AUTOCONF = ${SHELL} /opt/src/Mark6/config/missing --run autoconf
+AUTOHEADER = ${SHELL} /opt/src/Mark6/config/missing --run autoheader
+AUTOMAKE = ${SHELL} /opt/src/Mark6/config/missing --run automake-1.11
+AWK = gawk
 BOOST_INCDIR = /usr/include/boost
 BOOST_LIBDIR = /usr/lib64/boost
 CC = gcc
@@ -92,23 +92,23 @@ CXXFLAGS = -O4
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-ECHO_C = 
-ECHO_N = -n
+ECHO_C = \c
+ECHO_N = 
 ECHO_T = 
-EGREP = /bin/grep -E
+EGREP = /usr/bin/grep -E
 EXEEXT = 
-GREP = /bin/grep
-INSTALL = /usr/bin/install -c
+GREP = /usr/bin/grep
+INSTALL = /opt/local/bin/ginstall -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LDFLAGS = 
 LIBOBJS = 
-LIBS = -lpthread -lm -llog4cxx -ldl -lcppunit 
+LIBS = -lpthread -lm -ldl 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/dlapsley/mark6/config/missing --run makeinfo
-MKDIR_P = /bin/mkdir -p
+MAKEINFO = ${SHELL} /opt/src/Mark6/config/missing --run makeinfo
+MKDIR_P = /opt/local/bin/gmkdir -p
 OBJEXT = o
 PACKAGE = mark6
 PACKAGE_BUGREPORT = BUG-REPORT-ADDRESS
@@ -118,16 +118,16 @@ PACKAGE_TARNAME = full-package-name
 PACKAGE_URL = 
 PACKAGE_VERSION = VERSION
 PATH_SEPARATOR = :
-PFRING_ROOT = /home/dlapsley/mark6/src/extern/PF_RING-4.7.0
+PFRING_ROOT = /opt/src/Mark6/src/extern/PF_RING-4.7.0
 RANLIB = ranlib
 SET_MAKE = 
-SHELL = /bin/bash
+SHELL = /bin/sh
 STRIP = 
 VERSION = 0.1
-abs_builddir = /home/dlapsley/mark6/src/net2disk
-abs_srcdir = /home/dlapsley/mark6/src/net2disk
-abs_top_builddir = /home/dlapsley/mark6
-abs_top_srcdir = /home/dlapsley/mark6
+abs_builddir = /opt/src/Mark6/src/net2disk
+abs_srcdir = /opt/src/Mark6/src/net2disk
+abs_top_builddir = /opt/src/Mark6
+abs_top_srcdir = /opt/src/Mark6
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -147,13 +147,13 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/dlapsley/mark6/config/install-sh
+install_sh = ${SHELL} /opt/src/Mark6/config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
 mandir = ${datarootdir}/man
-mkdir_p = /bin/mkdir -p
+mkdir_p = /opt/local/bin/gmkdir -p
 oldincludedir = /usr/include
 pdfdir = ${docdir}
 prefix = /opt/mit/mark6
@@ -178,8 +178,8 @@ net2disk_LDADD = -L. \
 			-lboost_thread-mt \
 			-lm \
 			-lpthread \
-			/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
-			/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
+			/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
+			/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
 
 net2disktest_SOURCES = test_main.cc
 net2disktest_LDADD = -L. \
@@ -191,16 +191,16 @@ net2disktest_LDADD = -L. \
 			-lboost_thread-mt \
 			-lm \
 			-lpthread \
-			/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
-			/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
+			/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
+			/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
 
 INCLUDES = -I../common \
 			-I../../src/net2disk \
 			-I/usr/include \
-			-I/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/kernel \
-			-I/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/kernel/plugins \
-			-I/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/userland/lib \
-			-I/home/dlapsley/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring \
+			-I/opt/src/Mark6/src/extern/PF_RING-4.7.0/kernel \
+			-I/opt/src/Mark6/src/extern/PF_RING-4.7.0/kernel/plugins \
+			-I/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/lib \
+			-I/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring \
 			-I/usr/include/boost
 
 AM_CXXFLAGS = -O4

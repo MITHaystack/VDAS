@@ -50,8 +50,8 @@ PROGRAMS = $(bin_PROGRAMS)
 am_disk2vlbi_OBJECTS = main.$(OBJEXT)
 disk2vlbi_OBJECTS = $(am_disk2vlbi_OBJECTS)
 disk2vlbi_DEPENDENCIES =  \
-	/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
-	/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
+	/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
+	/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
     $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
@@ -88,14 +88,14 @@ DIST_SOURCES = $(disk2vlbi_SOURCES)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /opt/src/mark6/config/missing --run aclocal-1.11
-AMTAR = ${SHELL} /opt/src/mark6/config/missing --run tar
-AUTOCONF = ${SHELL} /opt/src/mark6/config/missing --run autoconf
-AUTOHEADER = ${SHELL} /opt/src/mark6/config/missing --run autoheader
-AUTOMAKE = ${SHELL} /opt/src/mark6/config/missing --run automake-1.11
+ACLOCAL = ${SHELL} /opt/src/Mark6/config/missing --run aclocal-1.11
+AMTAR = ${SHELL} /opt/src/Mark6/config/missing --run tar
+AUTOCONF = ${SHELL} /opt/src/Mark6/config/missing --run autoconf
+AUTOHEADER = ${SHELL} /opt/src/Mark6/config/missing --run autoheader
+AUTOMAKE = ${SHELL} /opt/src/Mark6/config/missing --run automake-1.11
 AWK = gawk
-BOOST_INCDIR = /opt/local/include/boost
-BOOST_LIBDIR = /opt/local/lib/boost
+BOOST_INCDIR = /usr/include/boost
+BOOST_LIBDIR = /usr/lib64/boost
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -122,7 +122,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -lpthread -lm -ldl 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /opt/src/mark6/config/missing --run makeinfo
+MAKEINFO = ${SHELL} /opt/src/Mark6/config/missing --run makeinfo
 MKDIR_P = /opt/local/bin/gmkdir -p
 OBJEXT = o
 PACKAGE = mark6
@@ -133,16 +133,16 @@ PACKAGE_TARNAME = full-package-name
 PACKAGE_URL = 
 PACKAGE_VERSION = VERSION
 PATH_SEPARATOR = :
-PFRING_ROOT = /opt/src/mark6/src/extern/PF_RING-4.7.0
+PFRING_ROOT = /opt/src/Mark6/src/extern/PF_RING-4.7.0
 RANLIB = ranlib
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = 
 VERSION = 0.1
-abs_builddir = /opt/src/mark6/src/disk2vlbi
-abs_srcdir = /opt/src/mark6/src/disk2vlbi
-abs_top_builddir = /opt/src/mark6
-abs_top_srcdir = /opt/src/mark6
+abs_builddir = /opt/src/Mark6/src/disk2vlbi
+abs_srcdir = /opt/src/Mark6/src/disk2vlbi
+abs_top_builddir = /opt/src/Mark6
+abs_top_srcdir = /opt/src/Mark6
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -162,7 +162,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /opt/src/mark6/config/install-sh
+install_sh = ${SHELL} /opt/src/Mark6/config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -186,15 +186,15 @@ dist_bin_SCRIPTS = disk2vlbi
 disk2vlbi_SOURCES = main.cc
 disk2vlbi_LDADD = -L../common \
 			-lcommon \
-			-L/opt/local/lib/boost \
+			-L/usr/lib64/boost \
 			-lboost_program_options-mt \
 			-lboost_system-mt \
-			/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
-			/opt/src/mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
+			/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/libpcap-1.1.1-ring/libpcap.a \
+			/opt/src/Mark6/src/extern/PF_RING-4.7.0/userland/lib/libpfring.a
 
 INCLUDES = -I/usr/include  \
 			-I../common \
-			-I/opt/local/include/boost
+			-I/usr/include/boost
 
 AM_CXXFLAGS = -O4
 all: all-am

@@ -33,7 +33,7 @@
 
 // Local includes.
 #include <mark6.h>
-#include <logger.h>
+#include <m6logger.h>
 #include <stats_writer.h>
 
 const double DEFAULT_ALPHA = 0.5;
@@ -90,7 +90,7 @@ void StatsWriter::join() {
 }
 
 void StatsWriter::run() {
-  LOG4CXX_DEBUG(logger, "StatsWriter Running...");
+  DEBUG("StatsWriter Running...");
 
   Timer run_timer;
   Timer command_timer;
@@ -122,23 +122,23 @@ void StatsWriter::run() {
 	break;
 
       default:
-	LOG4CXX_ERROR(logger, "Unknown state.");
+	ERR("Unknown state.");
 	break;
       }
     }
-    LOG4CXX_DEBUG(logger, "elapsed run time: " << run_timer.elapsed());
+    DEBUG("elapsed run time: " << run_timer.elapsed());
   } catch(std::exception &ex) {
-    LOG4CXX_ERROR(logger, "error: " << ex.what());
+    ERR("error: " << ex.what());
   }
 }
 
 void StatsWriter::cmd_stop() {
-  LOG4CXX_INFO(logger, "Received STOP");
+  INFO("Received STOP");
   _state = STOP;
 }
 
 void StatsWriter::cmd_write_to_disk() {
-  LOG4CXX_DEBUG(logger, "Received WRITE_TO_DISK");
+  DEBUG("Received WRITE_TO_DISK");
   _state = WRITE_TO_DISK;
 }
 
