@@ -86,12 +86,21 @@ DIST_SOURCES = $(scancheck_SOURCES)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+<<<<<<< HEAD
 ACLOCAL = ${SHELL} /home/dlapsley/Mark6/config/missing --run aclocal-1.11
 AMTAR = ${SHELL} /home/dlapsley/Mark6/config/missing --run tar
 AUTOCONF = ${SHELL} /home/dlapsley/Mark6/config/missing --run autoconf
 AUTOHEADER = ${SHELL} /home/dlapsley/Mark6/config/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/dlapsley/Mark6/config/missing --run automake-1.11
 AWK = mawk
+=======
+ACLOCAL = ${SHELL} /opt/src/Mark6/config/missing --run aclocal-1.11
+AMTAR = ${SHELL} /opt/src/Mark6/config/missing --run tar
+AUTOCONF = ${SHELL} /opt/src/Mark6/config/missing --run autoconf
+AUTOHEADER = ${SHELL} /opt/src/Mark6/config/missing --run autoheader
+AUTOMAKE = ${SHELL} /opt/src/Mark6/config/missing --run automake-1.11
+AWK = gawk
+>>>>>>> 5a21177dd1fb9d1e023ffc3547de3fa7aa75b38d
 BOOST_INCDIR = /usr/include/boost
 BOOST_LIBDIR = /usr/lib64/boost
 CC = gcc
@@ -120,8 +129,13 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -lpthread -lm -llog4cxx -ldl -lcppunit 
 LTLIBOBJS = 
+<<<<<<< HEAD
 MAKEINFO = ${SHELL} /home/dlapsley/Mark6/config/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
+=======
+MAKEINFO = ${SHELL} /opt/src/Mark6/config/missing --run makeinfo
+MKDIR_P = /opt/local/bin/gmkdir -p
+>>>>>>> 5a21177dd1fb9d1e023ffc3547de3fa7aa75b38d
 OBJEXT = o
 PACKAGE = mark6
 PACKAGE_BUGREPORT = BUG-REPORT-ADDRESS
@@ -131,16 +145,27 @@ PACKAGE_TARNAME = full-package-name
 PACKAGE_URL = 
 PACKAGE_VERSION = VERSION
 PATH_SEPARATOR = :
+<<<<<<< HEAD
 PFRING_ROOT = /home/dlapsley/Mark6/src/extern/PF_RING-4.7.0
+=======
+PFRING_ROOT = /opt/src/Mark6/src/extern/PF_RING-4.7.0
+>>>>>>> 5a21177dd1fb9d1e023ffc3547de3fa7aa75b38d
 RANLIB = ranlib
 SET_MAKE = 
 SHELL = /bin/bash
 STRIP = 
 VERSION = 0.1
+<<<<<<< HEAD
 abs_builddir = /home/dlapsley/Mark6/src/scancheck
 abs_srcdir = /home/dlapsley/Mark6/src/scancheck
 abs_top_builddir = /home/dlapsley/Mark6
 abs_top_srcdir = /home/dlapsley/Mark6
+=======
+abs_builddir = /opt/src/Mark6/src/scancheck
+abs_srcdir = /opt/src/Mark6/src/scancheck
+abs_top_builddir = /opt/src/Mark6
+abs_top_srcdir = /opt/src/Mark6
+>>>>>>> 5a21177dd1fb9d1e023ffc3547de3fa7aa75b38d
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -160,7 +185,11 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
+<<<<<<< HEAD
 install_sh = ${SHELL} /home/dlapsley/Mark6/config/install-sh
+=======
+install_sh = ${SHELL} /opt/src/Mark6/config/install-sh
+>>>>>>> 5a21177dd1fb9d1e023ffc3547de3fa7aa75b38d
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale

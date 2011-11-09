@@ -35,7 +35,7 @@
 
 //Local includes.
 #include <mark6.h>
-#include <logger.h>
+#include <m6logger.h>
 #include <stats_writer.h>
 #include <file_writer.h>
 #include <test_file_writer.h>
@@ -85,7 +85,7 @@ TestFileWriter::basic(void)
   fw.open();
   fw.start();
 
-  LOG4CXX_DEBUG(logger, "Started file writer.");
+  DEBUG("Started file writer.");
     
   const int NUM_BLOCKS = 100;
   boost::uint8_t* buf = fw.malloc_buffer();
@@ -108,5 +108,5 @@ TestFileWriter::basic(void)
   sw.cmd_stop();
   sw.join();
 
-  LOG4CXX_DEBUG(logger, "Joined file writer.");
+  DEBUG("Joined file writer.");
 }

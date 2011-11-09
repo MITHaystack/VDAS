@@ -38,7 +38,7 @@
 
 // Local includes.
 #include <mark6.h>
-#include <logger.h>
+#include <m6logger.h>
 #include <file_writer.h>
 #include <stats_writer.h>
 #include <pfile_writer.h>
@@ -89,7 +89,7 @@ int PFileWriter::open() {
     int ret=0;
     int i = 0;
     BOOST_FOREACH(std::string capture_file, _capture_files) {
-        LOG4CXX_INFO(logger, "Opening PFileWriter file: " << capture_file);
+        INFO("Opening PFileWriter file: " << capture_file);
 
 
         int fd = -1;
@@ -102,38 +102,38 @@ int PFileWriter::open() {
         }
 
         if (fd<0) {
-            LOG4CXX_ERROR(logger, "Unable to open file: " << capture_file
+            ERR("Unable to open file: " << capture_file
                     << " - " << strerror(errno));
             fd = -1;
             return -1;
         } else {
-            LOG4CXX_DEBUG(logger, "File: " << capture_file << " fd: " << fd);
+            DEBUG("File: " << capture_file << " fd: " << fd);
             _fds[i] = fd;
         }
 
         if (_preallocated) {
             off_t len = _file_size * 1000000;
-            LOG4CXX_INFO(logger, "Preallocating  " << len/1000000 << " MBytes");
+            INFO("Preallocating  " << len/1000000 << " MBytes");
 
             // Scope errno locally for fallocate.
             if (fallocate(fd, FALLOC_FL_KEEP_SIZE, 0, len)) {
-                LOG4CXX_FATAL(logger, "Fallocate() failed: " << strerror(errno));
+                CRIT("Fallocate() failed: " << strerror(errno));
                 return -1;
             }
 
             if (::lseek(fd, 0, SEEK_SET) < 0) {
-                LOG4CXX_ERROR(logger, "Unable to seek to beginning of file: "
+                ERR("Unable to seek to beginning of file: "
                         << capture_file
                         << " - " << strerror(errno));
                 fd = -1;
                 return -1;
             }
         } else {
-            LOG4CXX_DEBUG(logger, "Successfully seeked.");
+            DEBUG("Successfully seeked.");
         }
 
         if (i >= _nfds) {
-            LOG4CXX_ERROR(logger, "_pfds index out of bounds: " << i);
+            ERR("_pfds index out of bounds: " << i);
             break;
         }
 
@@ -147,7 +147,7 @@ int PFileWriter::open() {
 int PFileWriter::close() {
     for (int i=0; i<_nfds; i++) {
         if ( (_fds[i]>0) && (::close(_fds[i])<0) ) {
-            LOG4CXX_ERROR(logger, "Unable to close fd: " << _fds[i]
+            ERR("Unable to close fd: " << _fds[i]
                     << " - " << strerror(errno));
             return -1;
         }
@@ -188,7 +188,7 @@ bool PFileWriter::write(boost::uint8_t* buf,
             if (pret > 0) {
                 break;
             } else if (pret < 0) {
-                LOG4CXX_ERROR(logger, "Write to disk failed: " << strerror(errno));
+                ERR("Write to disk failed: " << strerror(errno));
                 return false;
             }
             // Continue looping if no file descriptors available (pret==0).
@@ -206,7 +206,7 @@ bool PFileWriter::write(boost::uint8_t* buf,
     }
 
     if (write_fd <= 0) {
-        LOG4CXX_ERROR(logger, "Invalid write_fd: " << write_fd);
+        ERR("Invalid write_fd: " << write_fd);
         return false;
     }
 
@@ -219,7 +219,7 @@ bool PFileWriter::write(boost::uint8_t* buf,
             bytes_left -= nb;
             bytes_written += nb;
         } else {
-            LOG4CXX_ERROR(logger, "Write error: " << strerror(errno));
+            ERR("Write error: " << strerror(errno));
         }
     }
     if (_sw)
@@ -257,7 +257,7 @@ bool PFileWriter::write(boost::uint8_t* buf,
                 if (pret > 0) {
                     break;
                 } else if (pret < 0) {
-                    LOG4CXX_ERROR(logger, "Write to disk failed: " << strerror(errno));
+                    ERR("Write to disk failed: " << strerror(errno));
                     return false;
                 }
                 // Continue looping if no file descriptors available (pret==0).
@@ -265,7 +265,7 @@ bool PFileWriter::write(boost::uint8_t* buf,
         }
 
         if (write_fd <= 0) {
-            LOG4CXX_ERROR(logger, "Invalid write_fd: " << write_fd);
+            ERR("Invalid write_fd: " << write_fd);
             return false;
         }
 
@@ -278,7 +278,7 @@ bool PFileWriter::write(boost::uint8_t* buf,
                 bytes_left -= nb;
                 bytes_written += nb;
             } else {
-                LOG4CXX_ERROR(logger, "Write error: " << strerror(errno));
+                ERR("Write error: " << strerror(errno));
             }
         }
         if (_sw)

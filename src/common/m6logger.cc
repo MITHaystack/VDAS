@@ -21,14 +21,25 @@
 // Local includes.
 #include <m6logger.h>
 
-const std::string LOGGER_NAME("net2raid");
+const std::string LOGGER_NAME("mark6");
 
 // Global logger definition.
-LoggerPtr logger(Logger::getLogger(LOGGER_NAME));
-
-void init_logger(const std::string log_config)
+void init_logger(const std::string log_name, const int priority)
 {
-  // Configure log subsystem.
-  PropertyConfigurator::configure(log_config);
+  openlog(log_name.c_str(), LOG_NDELAY | LOG_PID, LOG_USER);
+  setlogmask(priority);
 }
 
+void close_logger() {
+  closelog();
+}
+
+#ifdef TEST
+int main(int argc, char** argv) {
+  init_logger("mylog", LOG_MASK(LOG_INFO) | LOG_MASK(LOG_DEBUG));
+
+  DEBUG(std::string("this is cool5."));
+  INFO(std::string("this is cool6."));
+  close_logger();
+}
+#endif

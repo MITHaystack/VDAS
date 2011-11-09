@@ -42,7 +42,7 @@
 #include <cppunit/BriefTestProgressListener.h>
 
 // Local includes.
-#include <logger.h>
+#include <m6logger.h>
 // #include <test_pool.h>
 
 int

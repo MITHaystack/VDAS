@@ -41,7 +41,7 @@
 // Local includes.
 #include <disk2vlbi.h>
 #include <mark6.h>
-#include <logger.h>
+#include <m6logger.h>
 
 namespace fs = boost::filesystem;
 
@@ -49,7 +49,7 @@ typedef std::map<int, int> map_t;
 
 Disk2vlbi::Disk2vlbi(const std::string capture_file,
 		     const unsigned long long size) {
-  LOG4CXX_INFO(logger, "Starting translation on : " << capture_file);
+  INFO("Starting translation on : " << capture_file);
 
   // open the pcap file 
   pcap_t *handle; 
@@ -59,7 +59,7 @@ Disk2vlbi::Disk2vlbi(const std::string capture_file,
 
   handle = pcap_open_offline(capture_file.c_str(), errbuf);
   if (handle == NULL) {
-    LOG4CXX_ERROR(logger, "Couldn't open pcap file " << capture_file
+    ERR("Couldn't open pcap file " << capture_file
 		  << " " << errbuf);
     exit(1);
   }
@@ -85,7 +85,7 @@ Disk2vlbi::Disk2vlbi(const std::string capture_file,
     else if (ether_type == ETHER_TYPE_8021Q)
       ether_offset = 18; 
     else 
-      LOG4CXX_ERROR(logger, "Unknown ethernet type skipping...");
+      ERR("Unknown ethernet type skipping...");
       
     // Parse the IP header 
     pkt_ptr += ether_offset;
