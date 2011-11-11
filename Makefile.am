@@ -2,7 +2,6 @@ MAINTAINERCLEANFILES	=	Makefile.in
 SUBDIRS			=	src doc
 dist_bin_SCRIPTS	=	bin/mark6 \
 				bin/tstmark6 \
-				src/vdif/bin/vdif \
 				tools/disk/disktool \
 				tools/disk/fio  \
 				tools/disk/condition-modules \
@@ -11,11 +10,7 @@ dist_bin_SCRIPTS	=	bin/mark6 \
 
 sysconf_DATA		=	tools/disk/disktool.fio \
 				tools/disk/disktool.rc \
-				rc.mark6 \
-				tests/r1504/rc.mark6.gg \
-				tests/r1504/rc.mark6.wf \
-				tests/r1504/r1504-gg.xml \
-				tests/r1504/r1504-wf.xml 
+				rc.mark6
 logdir 			= 	log
 DISTCHECK_CONFIGURE_FLAGS=\
 				BOOST_LIBDIR=/usr/lib64/boost141 \
