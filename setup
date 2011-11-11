@@ -37,13 +37,11 @@ EXTERN_ROOT=${MARK6_ROOT}/src/extern
 PREQ=$(cat <<EOP
 automake autoconf build-essential flex linux-headers-2.6-amd64 git-core
 byacc iperf texinfo texi2html subversion
-libboost-all-dev libcppunit-dev libapr1-dev libaprutil1-dev liblog4cxx10-dev
+libboost-all-dev libcppunit-dev
 erlang erlang-os-mon libreadline5-dev
 fio tree parted
 EOP
 )
-
-# erlang-base erlang-doc erlang-edoc erlang-eunit erlang-manpages erlang-mnesia erlang-mode
 
 # Source dependencies
 
@@ -186,5 +184,5 @@ main() {
 
 
 # Kick off setup.
-    echo $*
-    main $*
+echo $*
+main $*
