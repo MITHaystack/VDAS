@@ -62,7 +62,8 @@
     syslog(LOG_CRIT, oss.str().c_str()); }
 
 //! Initialize logger.
-extern void init_logger(const std::string log_config);
+extern void init_logger(const std::string log_name, const int priority);
+
 
 //! Close logger.
 extern void close_logger();

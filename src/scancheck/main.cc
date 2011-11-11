@@ -28,13 +28,13 @@
 #include <boost/algorithm/string.hpp> 
 
 // Local includes.
-#include <logger.h>
+#include <m6logger.h>
 #include <scan_check.h>
 
 // Namespaces.
 namespace po = boost::program_options;
 
-const std::string DEFAULT_LOG_CONFIG("/opt/mit/mark6/etc/net2raid-log.cfg");
+const std::string DEFAULT_LOG_NAME("scancheck");
 
 void
 usage(const po::options_description& desc) {
@@ -49,11 +49,15 @@ main(int argc, char *argv[]) {
   std::string input_file;
   std::string output_prefix;
   int frame_size;
+  int log_level;
 
   // Declare supported options, defaults, and variable bindings.
   po::options_description desc("Allowed options");
   desc.add_options()
     ("help", "produce help message")
+    ("log_level",
+     po::value<int>(&log_level)->default_value(0),
+     "integer log level (higher -> less verbose)")
     ("frame_size",
      po::value<int>(&frame_size)->default_value(8224),
      "total number of megabytes to output (across all files)")
@@ -66,7 +70,7 @@ main(int argc, char *argv[]) {
   po::notify(vm);
 
   // Configure log subsystem.
-  init_logger(DEFAULT_LOG_CONFIG);
+  init_logger(DEFAULT_LOG_NAME, log_level);
 
   if (vm.count("help") || argc < 3) {
     usage(desc);

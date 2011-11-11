@@ -27,7 +27,31 @@ const std::string LOGGER_NAME("mark6");
 void init_logger(const std::string log_name, const int priority)
 {
   openlog(log_name.c_str(), LOG_NDELAY | LOG_PID, LOG_USER);
-  setlogmask(priority);
+  int log_level = 0;
+  switch (priority) {
+    case 0:
+        log_level = LOG_UPTO(LOG_DEBUG);
+        break;
+    case 1:
+        log_level = LOG_UPTO(LOG_INFO);
+        break;
+    case 2:
+        log_level = LOG_UPTO(LOG_NOTICE);
+        break;
+    case 3:
+        log_level = LOG_UPTO(LOG_WARNING);
+        break;
+    case 4:
+        log_level = LOG_UPTO(LOG_ERR);
+        break;
+    case 5:
+        log_level = LOG_UPTO(LOG_CRIT);
+        break;
+    default:
+        log_level = LOG_UPTO(LOG_CRIT);
+        break;
+  }
+  setlogmask(log_level);
 }
 
 void close_logger() {

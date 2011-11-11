@@ -42,7 +42,7 @@
 
 // Local includes.
 #include <mark6.h>
-#include <logger.h>
+#include <m6logger.h>
 #include <pfr.h>
 #include <file_writer.h>
 #include <net_reader.h>
@@ -70,21 +70,19 @@ const string DEFAULT_INTERFACES("eth0");
 const int DEFAULT_SNAPLEN(8224);
 const bool DEFAULT_PROMISCUOUS(true);
 const int DEFAULT_TIME(30);
-// TODO: make environment variable.
-const string DEFAULT_LOG_CONFIG("/opt/mit/mark6/etc/net2raid-log.cfg");
+const string DEFAULT_LOG_NAME("net2raid");
 // const int DEFAULT_PAYLOAD_LENGTH(8224);
 const int DEFAULT_PAYLOAD_LENGTH(8268);
 const int DEFAULT_SMP_AFFINITY(0);
 const int DEFAULT_WRITE_BLOCKS(128);
 const int DEFAULT_RATE(4000);
 const int DEFAULT_TRANSLATE(false);
+const string LOG_PREFIX("/opt/mit/mark6/log/");
 
 // Other constants.
 const int MAX_SNAPLEN(9014);
 const int STATS_SLEEP(1);
 const int PAYLOAD_LENGTH(DEFAULT_PAYLOAD_LENGTH);
-// TODO: make environment variable.
-const string LOG_PREFIX("/opt/mit/mark6/log/");
 const int DISK_RAMP_UP_TIME(2);
 
 //----------------------------------------------------------------------
@@ -137,7 +135,6 @@ sigproc(int sig) {
 int
 main (int argc, char* argv[]) {
   // Variables to store options.
-  string log_config; 
   string config;
   int snaplen;
   bool promiscuous;
@@ -150,11 +147,16 @@ main (int argc, char* argv[]) {
   int write_blocks;
   bool translate;
   int pages_per_buffer;
+  int log_level;
 
   // Declare supported options, defaults, and variable bindings.
   po::options_description desc("Allowed options");
   desc.add_options()
     ("help", "produce help message")
+
+    ("log_level",
+     po::value<int>(&log_level)->default_value(0),
+     "integer log level (higher -> less verbose)")
 
     ("v", "print version message")
 
@@ -173,10 +175,6 @@ main (int argc, char* argv[]) {
     ("rate",
      po::value<int>(&rate)->default_value(DEFAULT_RATE),
      "individual file rate (Mbps)")
-
-    ("log_config",
-     po::value<string>(&log_config)->default_value(DEFAULT_LOG_CONFIG),
-     "log configuration file")
 
     ("interfaces",
      po::value< vector<string> >(&interfaces)->multitoken(),
@@ -209,7 +207,7 @@ main (int argc, char* argv[]) {
   po::notify(vm);
 
   // Configure log subsystem.
-  init_logger(log_config);
+  init_logger(DEFAULT_LOG_NAME, log_level);
 
   // Check various options.
   if (vm.count("help")) {
@@ -225,7 +223,7 @@ main (int argc, char* argv[]) {
 
   const int NUM_INTERFACES = interfaces.size();
   if (capture_files.size() != NUM_INTERFACES) {
-    LOG4CXX_ERROR(logger, "Arg length mismatch, capture_files");
+    ERR("Arg length mismatch, capture_files");
     usage(desc);
     return 1;
   }
@@ -251,7 +249,6 @@ main (int argc, char* argv[]) {
     << setw(20) << left << "snaplen:" << snaplen << endl
     << setw(20) << left << "promiscuous:" << promiscuous << endl
     << setw(20) << left << "time:" << time << endl
-    << setw(20) << left << "log_config:" << log_config << endl
     << setw(20) << left << "write_blocks:" << write_blocks << endl
     << setw(20) << left << "num_interfaces:" << NUM_INTERFACES << endl
     << setw(20) << left << "translate:" << translate << endl;
@@ -260,7 +257,7 @@ main (int argc, char* argv[]) {
   vector<pid_t> child_pids;
   vector<int> child_fds;
   try {
-    LOG4CXX_DEBUG(logger, "Starting.");
+    DEBUG("Starting.");
 
     const int COMMAND_INTERVAL(1);
     const int STATS_INTERVAL(1);
@@ -274,16 +271,16 @@ main (int argc, char* argv[]) {
     for (int i=0; i<NUM_INTERFACES; i++) {
       int fd[2];
       if (pipe(fd) < 0) {
-	LOG4CXX_ERROR(logger, "Pipe error");
+	ERR("Pipe error");
 	exit(1);
       }
 
       if ( (pid = fork()) < 0) {
-	LOG4CXX_ERROR(logger, "Unable to fork. Exiting.");
+	ERR("Unable to fork. Exiting.");
 	exit(1);
       } else if (pid == 0) {
 	// Child. Do stuff then exit.
-	LOG4CXX_DEBUG(logger, "Forked child: " << i);
+	DEBUG("Forked child: " << i);
 
 	// Clean pipe for receiving commands from parent. fd[0] will be
 	// read fd.
@@ -299,7 +296,7 @@ main (int argc, char* argv[]) {
 	CPU_ZERO(&mask);
 	CPU_SET(smp_affinities[i], &mask);
 	if (sched_setaffinity(mypid, cpu_setsize, &mask) < 0)
-	  LOG4CXX_ERROR(logger, "Unble to set process affinity.");
+	  ERR("Unble to set process affinity.");
 
 	// Setup buffer pool.
 	const int BUFFER_SIZE(getpagesize()*pages_per_buffer);
@@ -347,7 +344,7 @@ main (int argc, char* argv[]) {
 	return 0;
       } else {
 	// Parent.
-	LOG4CXX_DEBUG(logger, "Parent still here after fork.");
+	DEBUG("Parent still here after fork.");
 
 	// Clean up pipe for communicating with child. fd[1] will be write fd.
 	close(fd[0]);
@@ -358,7 +355,7 @@ main (int argc, char* argv[]) {
     cerr << e.what() << endl;
   }
 
-  LOG4CXX_INFO(logger, "Launching main.\n");
+  INFO("Launching main.\n");
 
   main_cli(time, child_pids, child_fds);
 
@@ -373,7 +370,7 @@ void main_cli(const int time, const vector<pid_t>& child_pids,
     << "Recording for " << time << " seconds\n";
 
   BOOST_FOREACH(int fd, child_fds) {
-    LOG4CXX_INFO(logger, "Starting child fd: " << fd);
+    INFO("Starting child fd: " << fd);
     write(fd, "start\n", 6);
   }
 
@@ -390,11 +387,11 @@ void main_cli(const int time, const vector<pid_t>& child_pids,
 }
 
 void child_cli(int parent_fd) {
-  LOG4CXX_DEBUG(logger, "Started child_cli");
+  DEBUG("Started child_cli");
 
   FILE* parent_file = fdopen(parent_fd, "r");
   if (parent_file == NULL) {
-    LOG4CXX_ERROR(logger, "Unable to create file stream.");
+    ERR("Unable to create file stream.");
     exit(1);
   }
     
@@ -405,7 +402,7 @@ void child_cli(int parent_fd) {
     line_read = (char*)malloc(nbytes+1);
     bytes_read = getline(&line_read, &nbytes, parent_file);
     if (bytes_read < 0) {
-      LOG4CXX_INFO(logger, "Closed CLI stream.");
+      INFO("Closed CLI stream.");
       free(line_read);
       break;
     } else {
@@ -434,7 +431,7 @@ void child_cli(int parent_fd) {
 
 	NET_READER->start();
 	NET_READER->cmd_read_from_network();
-	LOG4CXX_INFO(logger, "Started capture process.");
+	INFO("Started capture process.");
       } else if (cmd.compare("stop") == 0) {
 	NET_READER_STATS->cmd_stop();
 	NET_READER_STATS->join();
@@ -447,7 +444,7 @@ void child_cli(int parent_fd) {
 
 	FILE_WRITER->cmd_stop();
 	FILE_WRITER->join();
-	LOG4CXX_INFO(logger, "Stopped capture process.");
+	INFO("Stopped capture process.");
       }
     }
   }
