@@ -34,7 +34,7 @@ source_suffix = '.txt'
 #source_encoding = 'utf-8'
 
 # The master toctree document.
-master_doc = 'README'
+master_doc = 'index'
 
 # General information about the project.
 project = u'Mark6 VDAS'
@@ -172,7 +172,7 @@ htmlhelp_basename = 'Mark6VDASdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('README', 'Mark6VDAS.tex', u'Mark6 VDAS Documentation',
+  ('index', 'Mark6VDAS.tex', u'Mark6 VDAS Documentation',
    u'David Lapsley', 'manual'),
 ]
 
