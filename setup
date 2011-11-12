@@ -21,17 +21,17 @@
 #	Install build dependencies.
 
 # Filesystem variables
-if [ "${MARK6_ROOT}" = "" ]; then
-    echo "Error.  MARK6_ROOT must be set before running this script."
+if [ "${VDAS_ROOT}" = "" ]; then
+    echo "Error.  VDAS_ROOT must be set before running this script."
     exit 1
 fi
 
-if [ "${MARK6_USER}" = "" ]; then
-    echo "Warning.  MARK6_USER must be set before running this script."
+if [ "${VDAS_USER}" = "" ]; then
+    echo "Warning.  VDAS_USER must be set before running this script."
     exit 1
 fi
 
-EXTERN_ROOT=${MARK6_ROOT}/src/extern
+EXTERN_ROOT=${VDAS_ROOT}/src/extern
 
 # Binary dependencies
 PREQ=$(cat <<EOP
@@ -100,18 +100,18 @@ install_pfring() {
 }
 
 build() {
-    cd ${MARK6_ROOT}
+    cd ${VDAS_ROOT}
     ./bootstrap
     CXXFLAGS=-O4 ./configure \
 	    --prefix=/opt/mit/mark6 \
 	    BOOST_INCDIR=/usr/include/boost \
 	    BOOST_LIBDIR=/usr/lib64/boost \
-	    PFRING_ROOT=${MARK6_ROOT}/src/extern/PF_RING-4.7.0
+	    PFRING_ROOT=${VDAS_ROOT}/src/extern/PF_RING-4.7.0
     make
 }
 
 install_mark6() {
-    cd ${MARK6_ROOT}
+    cd ${VDAS_ROOT}
     make
     sudo make install
     sudo ${GROUPADD} -f mark6
@@ -119,7 +119,7 @@ install_mark6() {
     sudo ${CHMOD} g+rwx /opt/mit/mark6/bin/*
     sudo ${CHMOD} -R g+rwx /opt/mit/mark6/lib
     sudo ${CHMOD} g+rwx /opt/mit/mark6/lib/rel/mark6/bin/*
-    sudo ${USERMOD} -a -G mark6 ${MARK6_USER}
+    sudo ${USERMOD} -a -G mark6 ${VDAS_USER}
 }
 
 

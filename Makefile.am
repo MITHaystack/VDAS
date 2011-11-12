@@ -8,7 +8,7 @@ dist_bin_SCRIPTS				=	bin/mark6 \
 													tools/disk/mount-modules \
 													tools/disk/unmount-modules
 
-PYTHON_TOOLS						= Drs
+PYTHON_TOOLS						= drs-server drs-client
 
 ${PYTHON_TOOLS}:	python_wrapper
 	cp $< $@
@@ -16,8 +16,17 @@ ${PYTHON_TOOLS}:	python_wrapper
 dist_bin_SCRIPTS				+=${PYTHON_TOOLS}
 
 pythonlibdir						= $(libdir)/python/mark6
-pythonlib_DATA					= src/drs/src/drs/Client.py
-pythonlib_SCRIPTS				= src/drs/src/drs/Drs.py
+pythonlib_DATA					= src/drs/src/Command.py \
+													src/drs/src/Parser.py \
+													src/drs/src/Response.py \
+													src/drs/src/Server.py \
+													src/drs/src/ServerTest.py \
+													src/drs/src/State.py \
+													src/drs/src/TCPRequestHandler.py \
+													src/drs/src/Utils.py
+
+pythonlib_SCRIPTS				= src/drs/src/drs-server.py \
+													src/drs/src/drs-client.py
 
 sysconf_DATA						=	tools/disk/disktool.fio \
 													tools/disk/disktool.rc \
@@ -41,6 +50,8 @@ distclean-local:
 		config.log\
 		config.status\
 		stamp-h1\
+		drs-client\
+		drs-server\
 		src/Makefile\
 		src/Makefile.in\
 		src/common/.deps\

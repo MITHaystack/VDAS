@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 ## Copyright 2011 MIT Haystack Observatory
 ##
 ## This file is part of dimino6.
@@ -81,40 +83,40 @@ class Client(socket.socket):
 
 
 def main():
-	parser = optparse.OptionParser()
-	parser.add_option(
-        '-p', '--port', dest='port', help='VSIS TCP port.', default=14242)
-	parser.add_option(
-        '-h', '--host', dest='host', help='VSIS host address.',
-        default='localhost')
-	parser.add_option(
-        '-l', '--log_level', dest='log_level', help='Log level.',
-        default='1')
-	parser.add_option(
-        '-f', '--input_file', dest='input_file',
-        help='Input command file (for batch mode).')
-	parser.add_option(
-        '-t', '--test', action='store_true', dest='test', help='Run tests.',
-        default=False)
+  parser = optparse.OptionParser()
+  parser.add_option(
+      '-p', '--port', dest='port', help='VSIS TCP port.', default=14242)
+  parser.add_option(
+      '-H', '--host', dest='host', help='VSIS host address.',
+      default='localhost')
+  parser.add_option(
+      '-l', '--log_level', dest='log_level', help='Log level.',
+      default='1')
+  parser.add_option(
+      '-f', '--input_file', dest='input_file',
+      help='Input command file (for batch mode).')
+  parser.add_option(
+      '-t', '--test', action='store_true', dest='test', help='Run tests.',
+      default=False)
 
-	(o, a) = parser.parse_args()
+  (o, a) = parser.parse_args()
 
-    log_level = 0
-    l = int(o.log_level)
-    if l == 0:
-        log_level = logging.DEBUG
-    elif l == 1:
-        log_level = logging.INFO
-    elif l == 2:
-        log_level = logging.WARNING
-    elif l == 3:
-        log_level = logging.ERROR
-    else:
-        log_level = logging.CRITICAL
-    logging.basicConfig(level=log_level)
-    
-    Client(o.host, o.port).run()
+  log_level = 0
+  l = int(o.log_level)
+  if l == 0:
+    log_level = logging.DEBUG
+  elif l == 1:
+    log_level = logging.INFO
+  elif l == 2:
+    log_level = logging.WARNING
+  elif l == 3:
+    log_level = logging.ERROR
+  else:
+    log_level = logging.CRITICAL
+  logging.basicConfig(level=log_level)
+
+  Client(o.host, o.port).run()
 
 
 if __name__ == '__main__':
-    main()
+  main()
