@@ -1,19 +1,26 @@
-MARK6 CONTROL PLANE
-===================
+DATA RECORDING SERVICE
+======================
 v0.1, 8 Nov 2011, David Lapsley<del@haystack.mit.edu>
 
-== Introduction
+Introduction
+------------
 
-This module is the python-based Mark6 control plane.
+This module is the python-based Mark6 control plane. It has an external
+interface that implements the VSI-S command protocol and interfaces
+with the Field System for automated operation. It has an internal interface
+that interfaces with the Mark6 Data Plane (net2raid).
 
-== Overview
+Overview
+--------
 
 TODO
 
-== Architecture
+Architecture
+------------
 
 TODO
 
-== Operation
+Operation
+---------
 
 TODO

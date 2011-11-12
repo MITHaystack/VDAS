@@ -33,8 +33,8 @@ main.cc
 netraid-run
   Program launch script. This is the script used to launch the net2raid
   application. Operators will typically call this from the command line
-  to start a capture session. In the near future, the DRS VSI-S control
-  plane will be used instead.
+  to start a capture session. In the near future, the DRS(Data Recording
+  Service) VSI-S control plane will be used instead.
 
 test_main.cc
   CPPUNIT test harness for main function. Obsolete.
