@@ -12,6 +12,8 @@ Contents:
     :maxdepth: 2
 
     introduction
+    vdas
+    install
 
 Indices and tables
 ==================
