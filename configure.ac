@@ -16,8 +16,6 @@ AC_PROG_RANLIB
 AC_CHECK_LIB([cppunit], [main])
 # FIXME: Replace `main' with a function in `-ldl':
 AC_CHECK_LIB([dl], [main])
-# FIXME: Replace `main' with a function in `-llog4cxx':
-AC_CHECK_LIB([log4cxx], [main])
 # FIXME: Replace `main' with a function in `-lm':
 AC_CHECK_LIB([m], [main])
 # FIXME: Replace `main' with a function in `-lpthread':
@@ -41,11 +39,12 @@ AM_INIT_AUTOMAKE(mark6, 0.1)
 AC_CONFIG_FILES([Makefile
                 doc/Makefile
                 src/Makefile
-		src/common/Makefile
-		src/net2raid/Makefile
-		src/disk2vlbi/Makefile
-		src/scancheck/Makefile
-		])
+		            src/common/Makefile
+		            src/net2raid/Makefile
+		            src/disk2vlbi/Makefile
+		            src/scancheck/Makefile
+                python_wrapper
+		            ])
 
 AC_SUBST(BOOST_LIBDIR)
 AC_SUBST(BOOST_INCDIR)

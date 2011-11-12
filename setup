@@ -103,10 +103,10 @@ build() {
     cd ${MARK6_ROOT}
     ./bootstrap
     CXXFLAGS=-O4 ./configure \
-	--prefix=/opt/mit/mark6 \
-	BOOST_INCDIR=/usr/include/boost \
-	BOOST_LIBDIR=/usr/lib64/boost \
-	PFRING_ROOT=${MARK6_ROOT}/src/extern/PF_RING-4.7.0
+	    --prefix=/opt/mit/mark6 \
+	    BOOST_INCDIR=/usr/include/boost \
+	    BOOST_LIBDIR=/usr/lib64/boost \
+	    PFRING_ROOT=${MARK6_ROOT}/src/extern/PF_RING-4.7.0
     make
 }
 

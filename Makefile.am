@@ -8,6 +8,17 @@ dist_bin_SCRIPTS				=	bin/mark6 \
 													tools/disk/mount-modules \
 													tools/disk/unmount-modules
 
+PYTHON_TOOLS						= Drs
+
+${PYTHON_TOOLS}:	python_wrapper
+	cp $< $@
+
+dist_bin_SCRIPTS				+=${PYTHON_TOOLS}
+
+pythonlibdir						= $(libdir)/python/mark6
+pythonlib_DATA					= src/drs/src/drs/Client.py
+pythonlib_SCRIPTS				= src/drs/src/drs/Drs.py
+
 sysconf_DATA						=	tools/disk/disktool.fio \
 													tools/disk/disktool.rc \
 													rc.mark6
