@@ -1,0 +1,19 @@
+MARK6 CONTROL PLANE
+===================
+v0.1, 8 Nov 2011, David Lapsley<del@haystack.mit.edu>
+
+== Introduction
+
+This module is the python-based Mark6 control plane.
+
+== Overview
+
+TODO
+
+== Architecture
+
+TODO
+
+== Operation
+
+TODO
