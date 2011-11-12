@@ -17,7 +17,7 @@ drs/
     Python control plane (still under construction).
 
 legacy/
-    - Legacy code. Includes:
+    Legacy code. Includes:
 
         - mark6: erlang-based control plane (not yet integrated
           with data plane).
@@ -30,5 +30,6 @@ legacy/
 
 net2raid/
     Application used during successful 16 Gbps MIT/NASA demonstration.
+
 scancheck/
     Application for checking vdiff frames.

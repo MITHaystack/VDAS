@@ -1,0 +1,40 @@
+NET2RAID APPLICATION
+====================
+
+Overview
+--------
+
+This is the main recording application. It utilizes a RAID-0 based file system
+to record data at 16 Gbps from 4 x 10 GE Myricom Ethernet cards. Four 8-disk
+modules are required to sustain 16 Gbps recording. A significant amount of
+work was done to optimize memory, processor, interrupt, and file system
+settings to achieve this.
+
+This capability was successfully demonstrated during the October 24th Westford
+to GGAO two antenna, 16 Gbps experiment.
+
+Files
+-----
+
+Makefile.am
+  Build file.
+
+main.cc
+  Program entry point. Imports components from the src/common library directory.
+  Provides command line option processing and co-ordinates the launching and
+  termination of the multiple processes required for application execution.
+
+  The main classes imported from src/common are NetReader and FileWriter.
+  Most of the data plane code for this application are stored in those classes.
+  A considerable amount of process optimization is achieved through the
+  settings in the rc.mark6 configuration file in the root directory of the
+  distribution.
+
+netraid-run
+  Program launch script. This is the script used to launch the net2raid
+  application. Operators will typically call this from the command line
+  to start a capture session. In the near future, the DRS VSI-S control
+  plane will be used instead.
+
+test_main.cc
+  CPPUNIT test harness for main function. Obsolete.
