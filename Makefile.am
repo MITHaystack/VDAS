@@ -1,8 +1,6 @@
 MAINTAINERCLEANFILES		=	Makefile.in
 SUBDIRS									=	src doc
-dist_bin_SCRIPTS				=	bin/mark6 \
-													bin/tstmark6 \
-													tools/disk/disktool \
+dist_bin_SCRIPTS				=	tools/disk/disktool \
 													tools/disk/fio  \
 													tools/disk/condition-modules \
 													tools/disk/mount-modules \
