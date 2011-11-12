@@ -54,7 +54,10 @@ class Client(socket.socket):
 
     def run(self):
         '''Main execution loop.'''
-        self.connect((self._host, self._port))
+        try:
+          self.connect((self._host, self._port))
+        except Exception, e:
+          print 'Unable to connect to server: %s'%e
 
         VALID_RE = re.compile('.*;')
         

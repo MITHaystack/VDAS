@@ -14,6 +14,8 @@ Contents:
     introduction
     vdas
     install
+    todo
+    news
 
 Indices and tables
 ==================
