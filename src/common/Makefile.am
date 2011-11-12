@@ -9,8 +9,6 @@ commontest_SOURCES=	test_main.cc \
 			m6logger.cc \
 			net_reader.h \
 			net_reader.cc \
-			pfile_writer.h \
-			pfile_writer.cc \
 			queue.h \
 			scan_check.h \
 			scan_check.cc \
@@ -19,9 +17,7 @@ commontest_SOURCES=	test_main.cc \
 			threaded.h \
 			writer_task.h \
 			test_file_writer.h \
-			test_file_writer.cc \
-			test_pfile_writer.h \
-			test_pfile_writer.cc
+			test_file_writer.cc
 
 commontest_LDADD= 	-L. \
 			-lcommon \
@@ -47,8 +43,6 @@ libcommon_a_SOURCES	= \
 			m6logger.cc \
 			net_reader.h \
 			net_reader.cc \
-			pfile_writer.h \
-			pfile_writer.cc \
 			queue.h \
 			scan_check.h \
 			scan_check.cc \

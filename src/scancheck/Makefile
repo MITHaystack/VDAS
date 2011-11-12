@@ -182,15 +182,15 @@ top_builddir = ../..
 top_srcdir = ../..
 dist_bin_SCRIPTS = scancheck
 scancheck_SOURCES = main.cc
-scancheck_LDADD = -L../common \
-			-lcommon \
-			-L/usr/lib64/boost \
-			-lboost_program_options-mt \
-			-lboost_system-mt 
+scancheck_LDADD = -L../common\
+											-lcommon\
+											-L/usr/lib64/boost\
+											-lboost_program_options-mt\
+											-lboost_system-mt 
 
-INCLUDES = -I/usr/include  \
-			-I../common \
-			-I/usr/include/boost
+INCLUDES = -I/usr/include\
+											-I../common\
+											-I/usr/include/boost
 
 AM_CXXFLAGS = -O4
 all: all-am
