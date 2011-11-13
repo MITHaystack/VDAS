@@ -122,7 +122,7 @@ class Parser(object):
                       e['data_format'],
                       e['interface_id'],
                       e['filter_address']])
-        
+
         return Response.GetInputStream(
             return_code='0', dimino6_return_code='0', list=l)
             

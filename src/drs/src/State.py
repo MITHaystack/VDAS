@@ -1,7 +1,29 @@
-'''
-Created on Oct 3, 2011
+## Copyright 2011 MIT Haystack Observatory
+##
+## This file is part of Mark6 VDAS.
+##
+## Mark6 VDAS is free software: you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation, version 3 of the License.
+##
+## Mark6 VDAS is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+##
+## You should have received a copy of the GNU General Public License
+## along with Mark6 VDAS.  If not, see <http://www.gnu.org/licenses/>.
 
-@author: dlapsley
+'''
+Author:   del@haystack.mit.edu
+Date:     5/12/2011
+Description:
+
+This module implements the operational state of the Mark6. It is not
+persistent, but only exists while the DRS Server software is running.
+
+State changes are made in respones to commands from the VSI-S command
+interface.
 '''
 
 import pprint
@@ -10,8 +32,12 @@ input_streams = dict()
 record_session = dict()
 
 
-def add_input_stream(stream_label, data_format, interface_id, filter_address=None):
+def add_input_stream(stream_label, data_format, interface_id,
+    filter_address):
     global input_streams
+
+    if filter_address is None:
+        filter_address = ''
 
     input_streams[stream_label] = {
                                    'stream_label': stream_label,
@@ -38,8 +64,8 @@ def dump():
     p = pprint.PrettyPrinter()
     p.pprint(input_streams)
     
-def on_record_session(start_time, duration, data_size, scan_name, experiment_name,
-                      station_code):
+def on_record_session(start_time, duration, data_size, scan_name,
+    experiment_name, station_code):
     global record_session
 
     record_session['start_time'] = start_time

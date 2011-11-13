@@ -21,7 +21,7 @@ Author:     del@haystack.mit.edu
 Date:         11/12/2011
 Description:
 
-    Unit test class for drs-client application.
+    Unit test class for Server class.
 '''
 
 import os

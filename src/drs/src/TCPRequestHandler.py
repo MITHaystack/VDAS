@@ -48,6 +48,7 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
                                                  server)
 
     def handle(self):
+        '''Handle incoming TCP connection from an operator/field system.'''
         logging.debug('Handle')
         ST = TCPRequestHandler.STATEMENT_TERMINATOR
         
