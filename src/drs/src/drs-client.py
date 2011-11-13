@@ -64,7 +64,9 @@ def main():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
         sock.connect((o.host, o.port))
-        Client(cmd_source=sys.stdin, cmd_destination=sock).run()
+        Client(
+            cmd_source=sys.stdin, cmd_sink=sock, rsp_source=sock,
+            rsp_sink=sys.stdout).run()
     except Exception, e:
         logging.error('Unable to connect to DRS server: %s'%e)
 
