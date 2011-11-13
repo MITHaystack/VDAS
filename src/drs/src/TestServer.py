@@ -54,7 +54,7 @@ class TestServer(unittest.TestCase):
         vsi_thread = threading.Thread(target=vsi_server.serve_forever)
         vsi_thread.start()
 
-        # This will be the client's sink.
+        # Connection to the server.
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.connect((HOST, PORT))
 
