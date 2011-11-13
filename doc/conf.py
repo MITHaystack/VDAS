@@ -38,7 +38,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Mark6 VDAS'
-copyright = u'2011, David Lapsley'
+copyright = u'2011, MIT Haystack Observatory'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
