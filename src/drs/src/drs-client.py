@@ -26,72 +26,18 @@ Description:
 import logging
 import re
 import sys
-import getopt
 import optparse
 import socket
 
 from Utils import set_log_level
+from Client import Client
 
-
-class Client(socket.socket):
-    '''
-    This class implements command line parsing functionality.
-    '''
-
-
-    def __init__(self, host, port, debug=False):
-        '''Constructor.
-
-        Args:
-            debug: Whether or not we are in debug mode (commands not
-                    sent in debug mode).
-
-        Returns:
-            None.
-        '''
-        socket.socket.__init__( self, socket.AF_INET, socket.SOCK_STREAM)
-
-        self._host = host
-        self._port = port
-        self._debug = debug
-
-    def run(self):
-        '''Main execution loop.'''
-        try:
-            self.connect((self._host, self._port))
-        except Exception, e:
-            print 'Unable to connect to server: %s'%e
-
-        VALID_RE = re.compile('.*;')
-        
-        while True:
-            try:
-                line = raw_input("mark6>")
-                line = line.strip()
-                if line == 'exit;':
-                    return
-                
-                if not re.match(VALID_RE, line):
-                    continue
-                
-                if len(line) == 0:
-                    continue
-                
-                self.sendall(line)
-                response = self.recv(2048)
-                print response
-                sys.stdout.flush()
-            except Exception, e:
-                print 'Exception: %s'%e
-                try:
-                    self.connect((self._host, self._port))
-                except:
-                    pass
 
 # Default parameters.
 DEFAULT_VSIS_PORT = 14242
 DEFAULT_VSIS_HOST = '127.0.0.1'
 DEFAULT_LOG_LEVEL = '2'
+
 
 def main():
     parser = optparse.OptionParser()
@@ -115,8 +61,12 @@ def main():
 
     set_log_level(o.log_level)
 
-    Client(o.host, o.port).run()
-
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        sock.connect((o.host, o.port))
+        Client(cmd_source=sys.stdin, cmd_destination=sock).run()
+    except Exception, e:
+        logging.error('Unable to connect to DRS server: %s'%e)
 
 if __name__ == '__main__':
     main()

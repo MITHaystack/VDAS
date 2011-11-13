@@ -1,6 +1,8 @@
 #!/bin/bash
 
+PYTHON=/usr/bin/python
+
 for t in Test*.py
 do
-  ./${t}
+  ${PYTHON} ./${t}
 done

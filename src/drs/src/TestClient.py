@@ -20,9 +20,10 @@
 Author:     del@haystack.mit.edu
 Date:         11/12/2011
 Description:
+
+    Unit test class for drs-client application.
 '''
 
-import fcntl
 import os
 import socket
 import subprocess
@@ -31,6 +32,9 @@ import time
 import unittest
 import SocketServer
 from threading import Thread
+
+import Client
+import Utils
 
 class TestTCPServer(SocketServer.TCPServer):
 
@@ -67,35 +71,51 @@ class TestClient(unittest.TestCase):
         vsi_thread = Thread(target=vsi_server.serve_forever)
         vsi_thread.start()
 
-        time.sleep(0.5)
+        # This will be the client's sink.
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect((HOST, PORT))
 
-        args = ['python', './drs-client.py', '-l', '0' ]
-        p = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+        # One end will be the client's source.
+        (r, w) = os.pipe()
+        cmd_source = os.fdopen(r, 'r')
+        cli_in = os.fdopen(w, 'w')
 
-        stdout, stdin = p.stdout, p.stdin
+        (r, w) = os.pipe()
+        cli_out = os.fdopen(r, 'r')
+        rsp_sink = os.fdopen(w, 'w')
+
+        # Use dependency injection to construct the client.
+        vsi_client = Client.Client(
+            cmd_source=cmd_source, cmd_sink=sock, rsp_source=sock,
+            rsp_sink=rsp_sink)
+        client_thread = Thread(target=vsi_client.run)
+        client_thread.start()
 
         cmds = [ 'hello;', 'how;', 'are;', 'you;' ]
         for cmd in cmds:
-            stdin.write('%s\n'%cmd)
-            stdin.flush()
+            cli_in.write('%s\n'%cmd)
+            cli_in.flush()
 
         for cmd in cmds:
-            rsp1 = stdout.readline().strip()
-            rsp2 = stdout.readline().strip()
-            self.assertEqual(rsp1, '%s%s'%(PROMPT, cmd))
+            rsp = cli_out.readline().strip()
+            self.assertEqual(rsp, '%s%s'%(PROMPT, cmd))
 
-        stdin.write('exit;\n')
-        r = stdout.readline()
+        cli_in.write('exit;\n')
+        cli_in.flush()
+
+        time.sleep(0.1)
 
         try:
+            sock.close()
             vsi_server.shutdown()
         except Exception, e:
             print 'Service is closed: %s'%e
 
+        client_thread.join()
         vsi_thread.join()
 
 
 if __name__ == '__main__':
+    Utils.set_log_level(0)
     suite = unittest.TestLoader().loadTestsFromTestCase(TestClient)
     unittest.TextTestRunner(verbosity=2).run(suite)
-
