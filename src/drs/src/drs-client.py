@@ -23,12 +23,12 @@ Description:
 
 '''
 
-import socket
 import logging
 import re
 import sys
 import getopt
 import optparse
+import socket
 
 from Utils import set_log_level
 
@@ -49,6 +49,8 @@ class Client(socket.socket):
         Returns:
             None.
         '''
+        socket.socket.__init__( self, socket.AF_INET, socket.SOCK_STREAM)
+
         self._host = host
         self._port = port
         self._debug = debug
@@ -77,7 +79,8 @@ class Client(socket.socket):
                 
                 self.sendall(line)
                 response = self.recv(2048)
-                print response.strip()
+                print response
+                sys.stdout.flush()
             except Exception, e:
                 print 'Exception: %s'%e
                 try:
@@ -87,7 +90,7 @@ class Client(socket.socket):
 
 # Default parameters.
 DEFAULT_VSIS_PORT = 14242
-DEFAULT_VSIS_HOST = 'localhost'
+DEFAULT_VSIS_HOST = '127.0.0.1'
 DEFAULT_LOG_LEVEL = '2'
 
 def main():
