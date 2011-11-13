@@ -23,12 +23,14 @@ Implements the Mark6 VDAS serving functionality.
 '''
 
 import logging
+import optparse
 import socket
 import sys
 import threading
 import SocketServer
-import TCPRequestHandler as TCPRequestHandler
 
+import Server
+import TCPRequestHandler as TCPRequestHandler
 from Utils import set_log_level
 
 

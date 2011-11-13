@@ -38,7 +38,7 @@ import TCPRequestHandler
 import Utils
 
 
-class TestClient(unittest.TestCase):
+class TestServer(unittest.TestCase):
 
     def setUp(self):
         pass
@@ -72,5 +72,5 @@ class TestClient(unittest.TestCase):
 
 if __name__ == '__main__':
     Utils.set_log_level(0)
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestClient)
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestServer)
     unittest.TextTestRunner(verbosity=2).run(suite)

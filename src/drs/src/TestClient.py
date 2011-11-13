@@ -46,13 +46,19 @@ class TestTCPServer(SocketServer.TCPServer):
 class TestRequestHandler(SocketServer.BaseRequestHandler):
 
     def handle(self):
-        running = True
-        while running:
-            r = self.request.recv(1024).strip()
+        while True:
+            try:
+                r = self.request.recv(1024).strip()
+            except:
+                break
+
+            if not len(r):
+                continue
+
             try:
                 self.request.sendall('%s\n'%r)
             except:
-                running = False
+                break
 
 PROMPT='mark6>'
 
@@ -93,15 +99,21 @@ class TestClient(unittest.TestCase):
 
         cmds = [ 'hello;', 'how;', 'are;', 'you;' ]
         for cmd in cmds:
+            print 'cmd:', cmd
             cli_in.write('%s\n'%cmd)
             cli_in.flush()
 
         for cmd in cmds:
             rsp = cli_out.readline().strip()
+            if not len(rsp):
+                rsp = cli_out.readline().strip()
+            print 'rsp:', rsp
             self.assertEqual(rsp, '%s%s'%(PROMPT, cmd))
 
         cli_in.write('exit;\n')
         cli_in.flush()
+
+        print 'wrote exit.'
 
         time.sleep(0.1)
 

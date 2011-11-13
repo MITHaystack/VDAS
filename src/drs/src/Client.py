@@ -26,6 +26,7 @@ DRS Client module.
 
 import re
 import sys
+import time
 
 
 class Client(object):
@@ -41,6 +42,8 @@ class Client(object):
     '''
 
     PROMPT='mark6>'
+    DISCONNECT_SLEEP = 1
+    RECV_BUFFER_SIZE = 2048
 
     def __init__(self, cmd_source, cmd_sink, rsp_source, rsp_sink):
         '''Constructor.
@@ -62,27 +65,29 @@ class Client(object):
     def run(self):
         '''Main execution loop.'''
         VALID_RE = re.compile('.*;')
-        running = True        
-        while running:
+        while True:
             try:
                 self._rsp_sink.write(Client.PROMPT)
                 self._rsp_sink.flush()
                 line = self._cmd_source.readline()
                 line = line.strip()
+
+                if len(line) == 0:
+                    continue
+
                 if line == 'exit;':
+                    self._cmd_sink.sendall(line)
+                    time.sleep(Client.DISCONNECT_SLEEP)
                     return
                 
                 if not re.match(VALID_RE, line):
                     continue
                 
-                if len(line) == 0:
-                    continue
-                
                 self._cmd_sink.sendall(line)
-                response = self._rsp_source.recv(2048)
+                response = self._rsp_source.recv(Client.RECV_BUFFER_SIZE)
                 self._rsp_sink.write(response)
+                self._rsp_sink.write('\n')
                 self._rsp_sink.flush()
             except Exception, e:
                 print 'Exception: %s'%e
-                running = False
-
+                return
