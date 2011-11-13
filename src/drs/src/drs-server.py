@@ -22,48 +22,21 @@ Description:
 Implements the Mark6 VDAS serving functionality.
 '''
 
-import getopt
 import logging
-import optparse
 import socket
 import sys
+import threading
 import SocketServer
 import TCPRequestHandler as TCPRequestHandler
 
-from threading import Thread
-from Utils import get_pypath_resource
 from Utils import set_log_level
-
-
-class ThreadedTCPServer(SocketServer.ThreadingTCPServer):
-
-    def server_bind(self): 
-        self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) 
-        self.socket.bind(self.server_address)
-                # self.socket.settimeout(5.0)
-
-
-class Server(object):
-
-    def __init__(self, vsi_server):
-        self._vsi_server = vsi_server
-        self._vsi_thread = Thread(target=self._vsi_server.serve_forever)
-
-    def start(self):
-        self._vsi_thread.setDaemon(True)
-        self._vsi_thread.start()
-
-    def shutdown(self):
-        self._vsi_server.shutdown()
-
-    def join(self):
-        self._vsi_thread.join()
 
 
 # Default parameters.
 DEFAULT_VSIS_PORT = 14242
 DEFAULT_VSIS_HOST = 'localhost'
 DEFAULT_LOG_LEVEL = '2'
+
 
 def main():
     parser = optparse.OptionParser()
@@ -86,12 +59,16 @@ def main():
     # CONFIGURATION_FILE='dimino6.xml'
     # logging.info("%s"%get_pypath_resource(CONFIGURATION_FILE))
 
-    vsi_server = ThreadedTCPServer((o.host, o.port),
-        TCPRequestHandler.TCPRequestHandler)
+    try:
+        vsi_server = Server.Server(
+            (o.host, o.port), TCPRequestHandler.TCPRequestHandler)
 
-    s = Server(vsi_server)
-    s.start()
-    s.join()
+        vsi_thread = threading.Thread(target=vsi_server.serve_forever)
+        vsi_thread.setDaemon(True)
+        vsi_thread.start()
+        vsi_thread.join()
+    except Exception, e:
+        logging.error('Server error: %s'%e)
 
 
 if __name__ == '__main__':

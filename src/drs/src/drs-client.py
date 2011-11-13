@@ -24,7 +24,6 @@ Description:
 '''
 
 import logging
-import re
 import sys
 import optparse
 import socket
@@ -68,7 +67,7 @@ def main():
             cmd_source=sys.stdin, cmd_sink=sock, rsp_source=sock,
             rsp_sink=sys.stdout).run()
     except Exception, e:
-        logging.error('Unable to connect to DRS server: %s'%e)
+        logging.error('DRS client error: %s'%e)
 
 if __name__ == '__main__':
     main()

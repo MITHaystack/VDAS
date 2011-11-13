@@ -21,15 +21,16 @@ Description:
 
 '''
 
-import socket
-import SocketServer
 import logging
+import socket
+import sys
 import Queue
-import Parser
-import Command as VSISC
-import Response as VSISR
-import State
+import SocketServer
 
+import Command
+import Parser
+import Response
+import State
     
 
 class TCPRequestHandler(SocketServer.BaseRequestHandler):
@@ -54,11 +55,14 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
                 b = self.request.recv(1)
                 received_data.append(b)
                 if cmp(b, ST) == 0:
-                    received_command = ''.join(received_data)
+                    received_command = ''.join(received_data).strip()
+                    if received_command == 'exit;':
+                        break
+
                     try:
                         parsed = v.parse(received_command)
                         logging.debug('Parsed: %s'%parsed)
-                        if parsed['name'] not in VSISC.COMMANDS:
+                        if parsed['name'] not in Command.COMMANDS:
                             self.request.sendall('Invalid command.')
                         else:
                             if cmp(parsed['type'], 'QRY') == 0:
@@ -87,9 +91,9 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 
 #    def handle_disk_info_query(self, p):
 #        logging.debug('handle_disk_info_query')
-#        q = VSISC.DiskInfoQuery(p)
+#        q = Command.DiskInfoQuery(p)
 #        logging.debug('params: %s'%q.parsed())
-#        r = VSISR.DiskInfo(return_code='0',
+#        r = Response.DiskInfo(return_code='0',
 #                           dimino6_return_code='0',
 #                           type='type',
 #                           list=[])
@@ -97,9 +101,9 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 #
 #    def handle_error_query(self, p):
 #        logging.debug('handle_error_query')
-#        q = VSISC.ErrorQuery(p)
+#        q = Command.ErrorQuery(p)
 #        logging.debug('params: %s'%q.parsed())
-#        r = VSISR.error(return_code='0',
+#        r = Response.error(return_code='0',
 #                        dimino6_return_code='0',
 #                        dimino6_error_message='There was an error.',
 #                        list=[])
@@ -107,7 +111,7 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 
     def handle_input_stream_query(self, p):
         logging.info('handle_input_stream_query')
-        q = VSISC.InputStreamQuery(p)
+        q = Command.InputStreamQuery(p)
         s = State.get_input_stream(q['stream_label'])
         l = []
         for e in s:
@@ -116,14 +120,14 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
                       e['interface_id'],
                       e['filter_address']])
         
-        r = VSISR.GetInputStream(return_code='0',
+        r = Response.GetInputStream(return_code='0',
                                  dimino6_return_code='0',
                                  list=l)
         return str(r)
             
     def handle_input_stream_command(self, p):
         logging.debug('handle_input_stream_command')
-        c = VSISC.InputStreamCommand(p)
+        c = Command.InputStreamCommand(p)
         
         if c['action'] == 'add':
             State.add_input_stream(c['stream_label'],
@@ -135,38 +139,38 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
         else:
             print 'Invalid input_stream_command action'
         
-        r = VSISR.SetInputStream(return_code='0', dimino6_return_code='0', list=[])
+        r = Response.SetInputStream(return_code='0', dimino6_return_code='0', list=[])
         return str(r)
 
 
 #    def handle_mod_init_query(self, p):
 #        logging.debug('handle_mod_init_query')
-#        q = VSISC.ModInitQuery(p)
+#        q = Command.ModInitQuery(p)
 #        logging.debug('params: %s'%q.parsed())
-#        # TODO: translate response to VSISR.
-#        r = VSISR.GetModInit(return_code='0', list=[])
+#        # TODO: translate response to Response.
+#        r = Response.GetModInit(return_code='0', list=[])
 #        return str(r)
 #
 #    def handle_mod_init_command(self, p):
 #        logging.debug('handle_mod_init_command')
-#        c = VSISC.ModInitCommand(p)
+#        c = Command.ModInitCommand(p)
 #        logging.debug('params: %s'%c.parsed())
-#        # TODO: translate response to VSISR.
-#        r = VSISR.SetModInit(return_code='0',
+#        # TODO: translate response to Response.
+#        r = Response.SetModInit(return_code='0',
 #                             dimino6_return_code='0',
 #                             list=[])
 #        return str(r)
 #
 #    def handle_record_query(self, p):
 #        logging.debug('handle_record_query')
-#        q = VSISC.RecordQuery(p)
+#        q = Command.RecordQuery(p)
 #        logging.debug('params: %s'%q.parsed())
 #        x3c = X3CC.GetRecordStatus()
 #        resp = self.send_x3c_cmd(x3c)
 #        logging.debug('RESPONSE: %s'%resp)
 #        params = resp['params']
 #        # TODO: fill in parameters.
-#        r = VSISR.GetRecord(return_code=resp['retval'],
+#        r = Response.GetRecord(return_code=resp['retval'],
 #                            dimino6_return_code='0',
 #                            status='NI',
 #                            scan_number='NI',
@@ -176,7 +180,7 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 
     def handle_record_command(self, p):
         logging.info('handle_record_command')
-        c = VSISC.RecordCommand(p)
+        c = Command.RecordCommand(p)
         logging.info('params: %s'%c.__dict__)
         
         if c['action'] == 'on':
@@ -192,14 +196,14 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
             print 'Invalid record action'
         
         # TODO: fill in parameters.
-        r = VSISR.SetRecord(return_code='0',
+        r = Response.SetRecord(return_code='0',
                             dimino6_return_code='0',
                             list=[])
         return str(r)
 
 #    def handle_rtime_query(self, p):
 #        logging.debug('handle_rtime_query')
-#        q = VSISC.RtimeQuery(p)
+#        q = Command.RtimeQuery(p)
 #        logging.debug('params: %s'%q.parsed())
 #        P = q.parsed()
 #        x3c = X3CC.GetVolumeUsage(volumeName=P['volref'],
@@ -208,7 +212,7 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 #        logging.debug('RESPONSE: %s'%resp)
 #        params = resp['params']
 #        # TODO: fill in parameters.
-#        r = VSISR.Rtime(return_code=resp['retval'],
+#        r = Response.Rtime(return_code=resp['retval'],
 #                        dimino6_return_code='0',
 #                        volref='NI',
 #                        data_rate='NI',
@@ -220,10 +224,10 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 
 #    def handle_scan_check_command(self, p):
 #        logging.debug('handle_scan_check_command')
-#        c = VSISC.ScanCheckCommand(p)
+#        c = Command.ScanCheckCommand(p)
 #        logging.debug('params: %s'%c.parsed())
-#        # TODO: translate response to VSISR.
-#        r = VSISR.ScanCheck(return_code='0',
+#        # TODO: translate response to Response.
+#        r = Response.ScanCheck(return_code='0',
 #                            dimino6_return_code='0',
 #                            volref='0',
 #                            scan_num='100',
@@ -234,10 +238,10 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 #
 #    def handle_scan_info_query(self, p):
 #        logging.debug('handle_scan_info_query')
-#        q = VSISC.ScanInfoQuery(p)
+#        q = Command.ScanInfoQuery(p)
 #        logging.debug('params: %s'%q.parsed())
-#        # TODO: translate response to VSISR.
-#        r = VSISR.ScanInfo(return_code='0',
+#        # TODO: translate response to Response.
+#        r = Response.ScanInfo(return_code='0',
 #                           dimino6_return_code='0',
 #                           volref='0',
 #                           mark6_sn='M60001',
@@ -252,14 +256,14 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 #
 #    def handle_status_query(self, p):
 #        logging.info('handle_status_query')
-#        q = VSISC.StatusQuery(p)
+#        q = Command.StatusQuery(p)
 #        logging.info('params: %s'%q.parsed())
 #        x3c = X3CC.GetSystemStatus()
 #        resp = self.send_x3c_cmd(x3c)
 #        logging.debug('RESPONSE: %s'%resp)
 #        params = resp['params']
 #        # TODO: fill in parameters.
-#        r = VSISR.Status(return_code=resp['retval'],
+#        r = Response.Status(return_code=resp['retval'],
 #                         dimino6_return_code='0',
 #                         status_word='NI',
 #                         list=[])
@@ -267,10 +271,10 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 #
 #    def handle_sys_info_query(self, p):
 #        logging.debug('handle_sys_info')
-#        q = VSISC.SysInfoQuery(p)
+#        q = Command.SysInfoQuery(p)
 #        logging.debug('params: %s'%q.parsed())
-#        # TODO: translate response to VSISR.
-#        r = VSISR.SysInfo(return_code='0',
+#        # TODO: translate response to Response.
+#        r = Response.SysInfo(return_code='0',
 #                          dimino6_return_code='0',
 #                          system_type='Mark6',
 #                          mark6_sn='M600001',
@@ -286,10 +290,10 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 #
 #    def handle_vol_cmd_command(self, p):
 #        logging.debug('handle_vol_cmd_command')
-#        c = VSISC.VolCmdCommand(p)
+#        c = Command.VolCmdCommand(p)
 #        logging.debug('params: %s'%c.parsed())
-#        # TODO: translate response to VSISR.
-#        r = VSISR.SetVolCmd(return_code='0',
+#        # TODO: translate response to Response.
+#        r = Response.SetVolCmd(return_code='0',
 #                        dimino6_return_code='0',
 #                        status_word='0x00',
 #                        list=[])
@@ -299,40 +303,40 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 #
 #    def handle_vol_stack_query(self, p):
 #        logging.debug('handle_vol_stack_query')
-#        q = VSISC.VolStackQuery(p)
+#        q = Command.VolStackQuery(p)
 #        logging.debug('params: %s'%q.parsed())            
-#        # TODO: translate response to VSISR.
-#        r = VSISR.VolStack(return_code='0',
+#        # TODO: translate response to Response.
+#        r = Response.VolStack(return_code='0',
 #                           dimino6_return_code='0',
 #                           list=[])
 #        return str(r)
 #
 #    def handle_vsm_query(self, p):
 #        logging.debug('handle_vsm_query')
-#        q = VSISC.VSMQuery(p)
+#        q = Command.VSMQuery(p)
 #        logging.debug('params: %s'%q.parsed())            
-#        # TODO: translate response to VSISR.
-#        r = VSISR.GetVSM(return_code='0',
+#        # TODO: translate response to Response.
+#        r = Response.GetVSM(return_code='0',
 #                         dimino6_return_code='0',
 #                         list=[])
 #        return str(r)
 #
 #    def handle_vsm_command(self, p):
 #        logging.debug('handle_vsm_command')
-#        c = VSISC.VSMCommand(p)
+#        c = Command.VSMCommand(p)
 #        logging.debug('params: %s'%c.parsed())
-#        # TODO: translate response to VSISR.
-#        r = VSISR.SetVSM(return_code='0',
+#        # TODO: translate response to Response.
+#        r = Response.SetVSM(return_code='0',
 #                         dimino6_return_code='0',
 #                         list=[])
 #        return str(r)
 #
 #    def handle_vsm_mask_query(self, p):
 #        logging.debug('handle_vsm_mask_query')
-#        q = VSISC.VSMMaskQuery(p)
+#        q = Command.VSMMaskQuery(p)
 #        logging.debug('params: %s'%q.parsed())            
-#        # TODO: translate response to VSISR.
-#        r = VSISR.GetVSMMask(return_code='0',
+#        # TODO: translate response to Response.
+#        r = Response.GetVSMMask(return_code='0',
 #                             dimino6_return_code='0',
 #                             erase_mask_enable='True',
 #                             play_mask_enable='False',
@@ -342,10 +346,10 @@ class TCPRequestHandler(SocketServer.BaseRequestHandler):
 #
 #    def handle_vsm_mask_command(self, p):
 #        logging.debug('handle_vsm_mask_command')
-#        c = VSISC.VSMMaskCommand(p)
+#        c = Command.VSMMaskCommand(p)
 #        logging.debug('params: %s'%c.parsed())
-#        # TODO: translate response to VSISR.
-#        r = VSISR.SetVSMMask(return_code='0',
+#        # TODO: translate response to Response.
+#        r = Response.SetVSMMask(return_code='0',
 #                             dimino6_return_code='0',
 #                             erase_mask_enable='True',
 #                             play_mask_enable='False',

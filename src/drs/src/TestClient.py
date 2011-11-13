@@ -28,10 +28,10 @@ import os
 import socket
 import subprocess
 import sys
+import threading
 import time
 import unittest
 import SocketServer
-from threading import Thread
 
 import Client
 import Utils
@@ -68,7 +68,7 @@ class TestClient(unittest.TestCase):
         HOST='localhost'
         PORT=14242
         vsi_server = TestTCPServer((HOST, PORT), TestRequestHandler)
-        vsi_thread = Thread(target=vsi_server.serve_forever)
+        vsi_thread = threading.Thread(target=vsi_server.serve_forever)
         vsi_thread.start()
 
         # This will be the client's sink.
@@ -88,7 +88,7 @@ class TestClient(unittest.TestCase):
         vsi_client = Client.Client(
             cmd_source=cmd_source, cmd_sink=sock, rsp_source=sock,
             rsp_sink=rsp_sink)
-        client_thread = Thread(target=vsi_client.run)
+        client_thread = threading.Thread(target=vsi_client.run)
         client_thread.start()
 
         cmds = [ 'hello;', 'how;', 'are;', 'you;' ]
