@@ -42,8 +42,7 @@ transfer data into and out of the system.
 
 .. figure:: http://dl.dropbox.com/u/18326850/Mark6/mark6-architecture.png
   :align: center
-  :scale: 200%
-  :figwidth: 50 %
+  :scale: 100%
 
   **Figure 1:** VLBI data are input/output to the system via one ore more
   10 Gbps Ethernet interfaces and stored/retrieved to/from one or more

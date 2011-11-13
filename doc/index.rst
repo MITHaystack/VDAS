@@ -8,10 +8,10 @@ Welcome to Mark6 VDAS's documentation!
 
 Contents:
 
-..toctree::
-  :maxdepth: 2
+..  toctree::
+    :maxdepth: 2
 
-  introduction
+    introduction
 
 Indices and tables
 ==================
