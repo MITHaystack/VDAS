@@ -37,13 +37,13 @@ AC_CHECK_FUNCS([gettimeofday memset socket strerror])
 AM_INIT_AUTOMAKE(mark6, 0.1)
 
 AC_CONFIG_FILES([Makefile
-                doc/Makefile
                 src/Makefile
 		            src/common/Makefile
 		            src/net2raid/Makefile
 		            src/disk2vlbi/Makefile
 		            src/scancheck/Makefile
-                python_wrapper
+                src/drs/Makefile
+                src/drs/python_wrapper
 		            ])
 
 AC_SUBST(BOOST_LIBDIR)
