@@ -30,6 +30,8 @@ import sys
 import getopt
 import optparse
 
+from Utils import set_log_level
+
 
 class Client(socket.socket):
     '''
@@ -54,9 +56,9 @@ class Client(socket.socket):
     def run(self):
         '''Main execution loop.'''
         try:
-          self.connect((self._host, self._port))
+            self.connect((self._host, self._port))
         except Exception, e:
-          print 'Unable to connect to server: %s'%e
+            print 'Unable to connect to server: %s'%e
 
         VALID_RE = re.compile('.*;')
         
@@ -83,42 +85,35 @@ class Client(socket.socket):
                 except:
                     pass
 
+# Default parameters.
+DEFAULT_VSIS_PORT = 14242
+DEFAULT_VSIS_HOST = 'localhost'
+DEFAULT_LOG_LEVEL = '2'
 
 def main():
-  parser = optparse.OptionParser()
-  parser.add_option(
-      '-p', '--port', dest='port', help='VSIS TCP port.', default=14242)
-  parser.add_option(
-      '-H', '--host', dest='host', help='VSIS host address.',
-      default='localhost')
-  parser.add_option(
-      '-l', '--log_level', dest='log_level', help='Log level.',
-      default='1')
-  parser.add_option(
-      '-f', '--input_file', dest='input_file',
-      help='Input command file (for batch mode).')
-  parser.add_option(
-      '-t', '--test', action='store_true', dest='test', help='Run tests.',
-      default=False)
+    parser = optparse.OptionParser()
+    parser.add_option(
+        '-p', '--port', dest='port', help='VSIS TCP port.',
+        default=DEFAULT_VSIS_PORT)
+    parser.add_option(
+        '-H', '--host', dest='host', help='VSIS host address.',
+        default=DEFAULT_VSIS_HOST)
+    parser.add_option(
+        '-l', '--log_level', dest='log_level', help='Log level(0,..,4).',
+        default=DEFAULT_LOG_LEVEL)
+    parser.add_option(
+        '-f', '--input_file', dest='input_file',
+        help='Input command file (for batch mode).')
+    parser.add_option(
+        '-t', '--test', action='store_true', dest='test', help='Run tests.',
+        default=False)
 
-  (o, a) = parser.parse_args()
+    (o, a) = parser.parse_args()
 
-  log_level = 0
-  l = int(o.log_level)
-  if l == 0:
-    log_level = logging.DEBUG
-  elif l == 1:
-    log_level = logging.INFO
-  elif l == 2:
-    log_level = logging.WARNING
-  elif l == 3:
-    log_level = logging.ERROR
-  else:
-    log_level = logging.CRITICAL
-  logging.basicConfig(level=log_level)
+    set_log_level(o.log_level)
 
-  Client(o.host, o.port).run()
+    Client(o.host, o.port).run()
 
 
 if __name__ == '__main__':
-  main()
+    main()

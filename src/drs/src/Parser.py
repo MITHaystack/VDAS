@@ -22,7 +22,7 @@ Description:
 '''
 
 import re
-import mark6.vsis.Command as VSISC
+import Command as VSISC
 
 import re
 

@@ -24,6 +24,8 @@ Description:
 
 
 import unittest
+import subprocess
+import time
 
 class TestClient(unittest.TestCase):
 
@@ -34,7 +36,15 @@ class TestClient(unittest.TestCase):
     pass
 
   def test_construct(self):
-    pass
+    args = ['python', './drs-server.py' ]
+    pid = subprocess.Popen(args).pid
+
+    time.sleep(1)
+
+    args = ['python', './drs-client.py', '-l', '0' ]
+    p = subprocess.Popen(args, stdin=subprocess.PIPE)
+    p.stdin.write('exit;')
+
 
 if __name__ == '__main__':
   suite = unittest.TestLoader().loadTestsFromTestCase(TestClient)

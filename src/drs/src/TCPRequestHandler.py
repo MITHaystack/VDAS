@@ -25,10 +25,10 @@ import socket
 import SocketServer
 import logging
 import Queue
-import mark6.vsis.Parser as Parser
-import mark6.vsis.Command as VSISC
-import mark6.vsis.Response as VSISR
-import mark6.State as State
+import Parser
+import Command as VSISC
+import Response as VSISR
+import State
 
     
 
