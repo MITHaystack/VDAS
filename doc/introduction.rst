@@ -37,7 +37,7 @@ Controller runs the Linux Operating System, and includes the control software
 required to control the Mark6, as well as the data plane software required to
 transfer data into and out of the system. 
 
-.. figure:: http://dl.dropbox.com/u/18326850/Mark6/mark6-architecture.png
+.. figure:: images/mark6-architecture.png
   :align: center
   :scale: 100%
 

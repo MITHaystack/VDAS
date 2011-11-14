@@ -27,10 +27,11 @@ Site Map
     vdas
     download
     install
+    demo
     faq
-    todo
     news
     team
+    license
 
 Indices and tables
 ==================
