@@ -52,6 +52,17 @@ class Command(object):
     def __getitem__(self, key):
         return self.__dict__.get(key, None)
 
+    def todict(self):
+        return dict([(x, getattr(self, x)) for x in self.__class__.PARAMS])
+
+    def todict_generator(self):
+        for x in self.__class__.PARAMS:
+            yield (x, getattr(self, x))
+
+    def __iter__(self):
+        return self.todict_generator()
+
+
 class Query(Command):
     pass
 
@@ -69,7 +80,6 @@ class ErrorQuery(Query):
         ]
 
 
-# SUPPORTED
 class InputStreamCommand(Command):
     PARAMS = [
         'action',
@@ -80,7 +90,6 @@ class InputStreamCommand(Command):
         ]
 
 
-# SUPPORTED
 class InputStreamQuery(Query):
     PARAMS = [
         'stream_label',
@@ -99,7 +108,6 @@ class ModInitQuery(Query):
         ]
 
 
-# SUPPORTED
 class RecordCommand(Command):
     PARAMS = [
         'action',
@@ -112,12 +120,10 @@ class RecordCommand(Command):
         ]
 
 
-# SUPPORTED
 class RecordQuery(Query):
     PARAMS = []
 
 
-# SUPPORTED
 class RtimeQuery(Query):
     PARAMS = [
         'volref',
@@ -139,7 +145,6 @@ class ScanInfoQuery(Query):
         ]
 
 
-# SUPPORTED
 class StatusQuery(Query):
     PARAMS = []
 

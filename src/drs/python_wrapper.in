@@ -1,9 +1,11 @@
 #!/bin/bash
 
+PYTHON=/usr/bin/python
+
 if test -z "${PYTHONPATH}"; then
-  PYTHONPATH=@prefix@/lib/python/mark6
+    PYTHONPATH=@prefix@/lib/python/mark6
 else
-  PYTHONPATH=@prefix@/lib/python/mark6:${PYTHONPATH}
+    PYTHONPATH=@prefix@/lib/python/mark6:${PYTHONPATH}
 fi
 
-exec @prefix@/lib/python/mark6/`basename $0`.py "$@"
+exec ${PYTHON} @prefix@/lib/python/mark6/`basename $0`.py "$@"

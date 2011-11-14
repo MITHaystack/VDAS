@@ -48,6 +48,9 @@ class Response(object):
         except Exception, e:
             logging.error('Response exception: %s'%e)
 
+    def execute(self):
+        return str(self)
+
     def append_param(self, value):
         self._params.append(value)
         
