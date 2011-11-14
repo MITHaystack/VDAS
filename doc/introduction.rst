@@ -1,13 +1,10 @@
 Mark6 VLBI Data Acquisition System (VDAS)
 =========================================
 
-Welcome to the Mark6 wiki! This is where you can find answers to all things
-related to the Mark6 VLBI Data Acquisition System. If you have any questions or
-comments, we would love to hear from you. Please email us: del@haystack.mit.edu.
-
-The Mark6 VLBI Data Acquisition System is the next generation, high speed VLBI
-Data Acquisition System (DAS) jointly developed by `MIT Haystack Observatory
-<http://www.haystack.mit.edu/>`_ and `NASA Goddard Space Flight Center High End
+The Mark6 VLBI Data Acquisition System is the next generation, high speed
+VLBI Data Acquisition System (DAS) jointly developed by
+`MIT Haystack Observatory <http://www.haystack.mit.edu/>`_ and
+`NASA Goddard Space Flight Center High End
 Computer Network Team <http://science.gsfc.nasa.gov/606.1/HECN.html>`_.
 
 Features

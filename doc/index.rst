@@ -8,8 +8,8 @@ Mark6 VLBI Data Acquisition System
 
 Welcome to the Mark6 website! This is where you can find answers to all things
 related to the Mark6 VLBI Data Acquisition System.
-If you have any questions or comments, we would love to hear from you.
-Please email us: del@haystack.mit.edu.
+If you have any questions, comments or suggestions, we would love to hear
+from you!  Please email us: del@haystack.mit.edu.
 
 The Mark6 VLBI Data Acquisition System is the next generation, high speed
 VLBI Data Acquisition System (DAS) jointly developed by
@@ -25,9 +25,12 @@ Site Map
 
     introduction
     vdas
+    download
     install
+    faq
     todo
     news
+    team
 
 Indices and tables
 ==================
