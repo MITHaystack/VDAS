@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Release 0.1	7/5/2011
+Release 0.1 7/5/2011
 --------------------
 
 Committer: David Lapsley<del@haystack.mit.edu>
@@ -12,7 +12,7 @@ First internal release. End to end data path, supporting infrastructure.
 - Implemented continuous integration and unit testing framework.
 - Main program with options parsing.
 
-Release 0.2	7/7/2011
+Release 0.2 7/7/2011
 --------------------
 
 Committer: David Lapsley<del@haystack.mit.edu>
@@ -37,7 +37,7 @@ checked. Test duraiton was 30 seconds.
   journaling on ext4 file systems and enable driver level throughput
   optimizations.
 
-Release 0.4	7/15/2011
+Release 0.4 7/15/2011
 ---------------------
 
 Committer: David Lapsley<del@haystack.mit.edu>
@@ -73,7 +73,7 @@ configured as a separate RAID-0 array.
   arrays, label and partition virtual drives, create EXT4 file systems,
   and optimize file system parameters.
 
-Release 0.4.1	9/20/2011
+Release 0.4.1 9/20/2011
 -----------------------
 
 Committer: David Lapsley<del@haystack.mit.edu>
@@ -87,7 +87,7 @@ to do complete build and install.
 - Extended build system to do full build and install in
   /opt/haystack/mark6.
 
-Release 0.4.2	9/28/2011
+Release 0.4.2 9/28/2011
 -----------------------
 
 Committer: David Lapsley<del@haystack.mit.edu>
@@ -113,14 +113,14 @@ ethernet frames for robust on-disk framing.
 - Incorporation of disk tools into distributed application (eventually will
   be integrated into control plane as conditioning/test scripts).
 
-Release 0.5.0	10/24/2011
+Release 0.5.0 10/24/2011
 ------------------------
 
 Committer: David Lapsley<del@haystack.mit.edu>
 
 - Version to be used for 16 Gbps demonstration.
 
-Release 0.6.0	11/13/2011
+Release 0.6.0 11/13/2011
 ------------------------
 
 Committer: David Lapsley<del@haystack.mit.edu>
