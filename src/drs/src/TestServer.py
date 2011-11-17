@@ -58,7 +58,34 @@ class TestServer(unittest.TestCase):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.connect((HOST, PORT))
 
-        cmds = ['input_stream?;' ]
+        cmds = [
+            'input_stream?;',
+            'input_stream=add:stream_a:vdif:eth2:4505;',
+            'input_stream=add:stream_b:vdif:eth3:4506;',
+            'input_stream=add:stream_c:vdif:eth4:4507;',
+            'input_stream=add:stream_d:vdif:eth5:4508;',
+            'input_stream=add:stream_e:vdif:eth6:4509;',
+            'input_stream=dismount:stream_e;',
+            'input_stream?;',
+            'input_stream?stream_a;',
+
+            # 'record=on:starttime:duration:datasize:scanname:experimentname:stationcode;',
+            # 'mod_init=msn:disks;',
+            # 'mod_init?;',
+            # 'record?;',
+            # 'rtime?volref:datarate;',
+            # 'scan_check=volref:scanname;',
+            # 'scan_info?volref:scanname;',
+            # 'status?;',
+            # 'sys_info?;',
+            # 'vol_cmd=action:volref1:volref2;',
+            # 'vol_stack?;',
+            # 'VSM=volref:VSM;',
+            # 'VSM?volref;',
+            # 'VSM=erasemaskenable:playmaskenable:recordmaskenable;',
+            # 'VSM?;',
+        ]
+
         for cmd in cmds:
             sock.sendall('%s\n'%cmd)
             resp = sock.recv(1024)

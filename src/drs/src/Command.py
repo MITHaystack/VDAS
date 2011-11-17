@@ -20,6 +20,8 @@ Date:     5/12/2011
 Description:
 '''
 
+import Response
+import State
         
 COMMANDS = set([
     'input_stream',
@@ -47,10 +49,10 @@ class Command(object):
     def __init__(self, parsed):
         params = parsed['params']
         for p, P in zip(params, self.__class__.PARAMS):
-            self.__dict__[P] = p
+            setattr(self, P, p)
 
     def __getitem__(self, key):
-        return self.__dict__.get(key, None)
+        return getattr(self, key, None)
 
     def todict(self):
         return dict([(x, getattr(self, x)) for x in self.__class__.PARAMS])
@@ -61,6 +63,9 @@ class Command(object):
 
     def __iter__(self):
         return self.todict_generator()
+
+    def execute(self):
+        raise Exception('Please implement me.')
 
 
 class Query(Command):
@@ -73,11 +78,28 @@ class DiskInfoQuery(Query):
         'vol_ref',
         ]
 
+    def execute(self):
+        logging.debug('params: %s'%q.parsed())
+        r = Response.DiskInfo(return_code='0',
+                dimino6_return_code='0',
+                type='type',
+                list=[])
+        return str(r)
+
 
 class ErrorQuery(Query):
     PARAMS = [
         'dimino6_return_code',
         ]
+
+    def execute(self):
+        logging.debug('params: %s'%q.parsed())
+#        r = Response.error(return_code='0',
+#                        dimino6_return_code='0',
+#                        dimino6_error_message='There was an error.',
+#                        list=[])
+#        return str(r)
+
 
 
 class InputStreamCommand(Command):
@@ -89,11 +111,42 @@ class InputStreamCommand(Command):
         'filter_address',
         ]
 
+    def execute(self):
+        if self.action == 'add':
+            State.add_input_stream(self.stream_label,
+                                   self.data_format,
+                                   self.interface_id,
+                                   self.filter_address)            
+        elif self.action == 'dismount':
+            State.dismount_input_stream(self.stream_label)
+        else:
+            print 'Invalid input_stream_command action'
+        
+        r = Response.SetInputStream(
+                return_code='0', dimino6_return_code='0', list=[])
+        return str(r)
+
+
 
 class InputStreamQuery(Query):
     PARAMS = [
         'stream_label',
         ]
+
+    def execute(self):
+        s = State.get_input_stream(getattr(self, 'stream_label', None))
+        l = []
+        for e in s:
+            l.append([e['stream_label'],
+                      e['data_format'],
+                      e['interface_id'],
+                      e['filter_address']])
+
+        r = Response.GetInputStream(
+            return_code='0', dimino6_return_code='0', list=l)
+
+        return str(r)
+            
 
 
 class ModInitCommand(Command):
@@ -118,6 +171,25 @@ class RecordCommand(Command):
         'experiment_name',
         'station_code',
         ]
+
+    def execute(self):
+        logging.info('params: %s'%s.__dict__)
+        
+        if self.action == 'on':
+            State.on_record_session(self.start_time,
+                                    self.duration,
+                                    self.data_size,
+                                    self.scan_name,
+                                    self.experiment_name,
+                                    self.station_code)
+        elif self.action == 'off':
+            State.off_record_session(self)
+        else:
+            print 'Invalid record action'
+        
+        # TODO: fill in parameters.
+        return Response.SetRecord(
+            return_code='0', dimino6_return_code='0', list=[])
 
 
 class RecordQuery(Query):
