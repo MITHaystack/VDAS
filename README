@@ -22,7 +22,8 @@ NEWS
   Describes the release notes for each release.
 
 doc
-  User documentation is stored in this directory.
+  User documentation is stored in this directory. For a nicely rendered
+  version of this documentation, go to http://www.vdas.org.
 
 src
   Source code, test code, release configuration files are stored in this
