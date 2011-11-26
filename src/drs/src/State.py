@@ -27,6 +27,12 @@ interface.
 '''
 
 import pprint
+import thread
+import subprocess
+import time
+
+MARK6_EXEC=os.environ.get('MARK6_EXEC', None)
+POLLING_INTERVAL=0.1
 
 input_streams = dict()
 record_session = dict()
@@ -63,6 +69,21 @@ def dump():
     
     p = pprint.PrettyPrinter()
     p.pprint(input_streams)
+
+def record(record_session):
+    end_time = record_session['start_time'] + record_session['duration']
+    if time.time() > end_time:
+        raise Exception('late scan: %s'%record_session)
+
+    while time.time() < record_session['start_time']:
+        time.sleep(POLLING_INTERVAL)
+
+    start_time = time.time()
+    args = [
+            MARK6_EXEC, record_session['scan_name'], record_session['duration']]
+    p = subprocess.Popen(args)
+    p.wait()
+
     
 def on_record_session(start_time, duration, data_size, scan_name,
     experiment_name, station_code):
@@ -74,6 +95,8 @@ def on_record_session(start_time, duration, data_size, scan_name,
     record_session['scan_name'] = scan_name
     record_session['experiment_name'] = experiment_name
     record_session['station_code'] = station_code
+
+    thread.start_new_thread(record, record_session)
 
 def off_record_session():
     global record_session

@@ -24,6 +24,7 @@ MEGASAS1_IRQ=24
 MEGASAS2_IRQ=35
 
 # Setup user environment.
+export MARK6_EXEC=/opt/mit/mark6/bin/net2raid-run
 export MANPATH=/opt/mit/mark6/man:${MANPATH}
 export PATH=/opt/mit/mark6/bin:${PATH}
 export PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\ m6>'
@@ -98,6 +99,9 @@ export TZ=UTC
 echo ==============================
 echo Mark6 environment
 echo 
+echo EXEC
+echo MARK6_EXEC     ${MARK6_EXEC}
+echo
 echo ETHERNET IRQs
 echo ETH2_IRQ       ${ETH2_IRQ}
 echo ETH3_IRQ       ${ETH3_IRQ}

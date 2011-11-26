@@ -20,6 +20,7 @@ Date:     5/12/2011
 Description:
 '''
 
+import os
 import Response
 import State
         
@@ -39,6 +40,7 @@ COMMANDS = set([
     'sys_info',
     'vol_stack',
     ])
+
 
 class Command(object):
 
@@ -94,12 +96,11 @@ class ErrorQuery(Query):
 
     def execute(self):
         logging.debug('params: %s'%q.parsed())
-#        r = Response.error(return_code='0',
-#                        dimino6_return_code='0',
-#                        dimino6_error_message='There was an error.',
-#                        list=[])
-#        return str(r)
-
+        r = Response.error(return_code='0',
+            dimino6_return_code='0',
+            dimino6_error_message='There was an error.',
+            list=[])
+        return str(r)
 
 
 class InputStreamCommand(Command):
@@ -123,9 +124,8 @@ class InputStreamCommand(Command):
             print 'Invalid input_stream_command action'
         
         r = Response.SetInputStream(
-                return_code='0', dimino6_return_code='0', list=[])
+            return_code='0', dimino6_return_code='0', list=[])
         return str(r)
-
 
 
 class InputStreamQuery(Query):
@@ -146,7 +146,6 @@ class InputStreamQuery(Query):
             return_code='0', dimino6_return_code='0', list=l)
 
         return str(r)
-            
 
 
 class ModInitCommand(Command):
@@ -154,6 +153,24 @@ class ModInitCommand(Command):
         'msn',
         'number_disks',
         ]
+
+    def execute(self):
+        cmd = 'lshw -class disk -short'
+        result = subprocess.Popen(cmd)
+        result.pop(0)
+        result.pop(0)
+        disks = []
+        for r in result:
+            d = r.split()
+            if d[1] == 'sda':
+                continue
+            disks.append({ 'device': d[1], 'size': d[3]})
+
+        r = Response.GetInputStream(
+            return_code='0', dimino6_return_code='0', list=l)
+
+        return str(r)
+
 
 
 class ModInitQuery(Query):
