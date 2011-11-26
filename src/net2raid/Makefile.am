@@ -5,8 +5,10 @@ dist_bin_SCRIPTS		=	net2raid-run\
 							net2raid-graphs
 sysconf_DATA			=	
 
-net2raid_SOURCES		=	main.cc \
-							record_session.h
+net2raid_SOURCES		=	main.cc\
+							command.h\
+							command_factory.h
+
 net2raid_LDADD			=	-L.\
 							-L../common\
 							-lcommon\
