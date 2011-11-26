@@ -34,7 +34,7 @@ class RecordSession {
         int snaplen;
         bool promiscuous;
         int duration;
-        int rate;
+        int file_size;
         string interface;
         string capture_file;
         int smp_affinity;
@@ -49,7 +49,7 @@ class RecordSession {
             in  >> snaplen
                 >> promiscuous
                 >> duration
-                >> rate
+                >> file_size
                 >> interface
                 >> capture_file
                 >> smp_affinity
@@ -63,7 +63,7 @@ class RecordSession {
             oss << snaplen << " "
                 << promiscuous << " "
                 << duration << " "
-                << rate << " "
+                << file_size << " "
                 << interface << " "
                 << capture_file << " "
                 << smp_affinity << " "
@@ -77,7 +77,7 @@ class RecordSession {
             INFO("snaplen: " << snaplen);
             INFO("promiscuous: " << promiscuous);
             INFO("duration: " << duration);
-            INFO("rate: " << snaplen);
+            INFO("file_size: " << file_size);
             INFO("interface: " << interface);
             INFO("capture_file: " << capture_file);
             INFO("smp_affinity: " << smp_affinity);
