@@ -18,8 +18,8 @@
 // Author: David Lapsley <dlapsley@haystack.mit.edu>
 //
 
-#ifndef _COMMAND_H_
-#define _COMMAND_H_
+#ifndef _TEARDOWN_COMMAND_H_
+#define _TEARDOWN_COMMAND_H_
 
 // C includes.
 // C++ includes.
@@ -30,29 +30,33 @@
 // Framework includes.
 // Local includes.
 #include <net2raid.h>
+#include <command.h>
 
 using namespace std;
 
-class Command {
-    public:
-        Command() {}
-        Command(const list<string>& params) {}
-        virtual void execute(){}
-        virtual string to_string() {}
-        virtual void dump() {}
-};
 
-
-class NullCommand: public Command {
+class TeardownCommand: public Command {
+    // Variables to store options.
     public:
-        NullCommand(): Command() {}
+        TeardownCommand(const list<string>& params) {}
         void execute() {
-            INFO("NullCommand executing.");
+            INFO("TeardownCommand executing.");
+
+            // State is stored globally.
+            delete NET_READER;
+            delete NET_READER_STATS;
+            delete FILE_WRITER;
+            delete FILE_WRITER_STATS;
+
+            NET_READER = (NetReader*)0;
+            NET_READER_STATS = (StatsWriter*)0;
+            FILE_WRITER = (FileWriter*)0;
+            FILE_WRITER_STATS = (StatsWriter*)0;
         }
-        string to_string() { return string("null"); }
+        string to_string() { return string("teardown"); }
         void dump() {
-            INFO("NullCommand {}");
+            INFO("TeardownCommand {}");
         }
 };
 
-#endif // _COMMAND_H_
+#endif // _TEARDOWN_COMMAND_H_

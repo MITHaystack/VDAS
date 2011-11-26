@@ -7,6 +7,10 @@ sysconf_DATA			=
 
 net2raid_SOURCES		=	main.cc\
 							command.h\
+							setup_command.h\
+							start_command.h\
+							stop_command.h\
+							setup_command.h\
 							command_factory.h
 
 net2raid_LDADD			=	-L.\

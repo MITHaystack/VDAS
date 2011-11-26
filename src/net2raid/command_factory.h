@@ -31,6 +31,10 @@
 // Framework includes.
 // Local includes.
 #include <command.h>
+#include <setup_command.h>
+#include <start_command.h>
+#include <stop_command.h>
+#include <teardown_command.h>
 
 using namespace std;
 

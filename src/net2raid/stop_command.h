@@ -18,8 +18,8 @@
 // Author: David Lapsley <dlapsley@haystack.mit.edu>
 //
 
-#ifndef _COMMAND_H_
-#define _COMMAND_H_
+#ifndef _STOP_COMMAND_H_
+#define _STOP_COMMAND_H_
 
 // C includes.
 // C++ includes.
@@ -30,29 +30,36 @@
 // Framework includes.
 // Local includes.
 #include <net2raid.h>
+#include <command.h>
 
 using namespace std;
 
-class Command {
-    public:
-        Command() {}
-        Command(const list<string>& params) {}
-        virtual void execute(){}
-        virtual string to_string() {}
-        virtual void dump() {}
-};
 
-
-class NullCommand: public Command {
+class StopCommand: public Command {
+    // Variables to store options.
     public:
-        NullCommand(): Command() {}
+        StopCommand(const list<string>& params) {}
         void execute() {
-            INFO("NullCommand executing.");
+            INFO("StartCommand executing.");
+
+            // State is stored globally.
+            NET_READER_STATS->cmd_stop();
+            NET_READER_STATS->join();
+
+            NET_READER->cmd_stop();
+            NET_READER->join();
+
+            FILE_WRITER_STATS->cmd_stop();
+            FILE_WRITER_STATS->join();
+
+            FILE_WRITER->cmd_stop();
+            FILE_WRITER->join();
+            INFO("Stopped capture process.");
         }
-        string to_string() { return string("null"); }
+        string to_string() { return string("stop"); }
         void dump() {
-            INFO("NullCommand {}");
+            INFO("StopCommand {}");
         }
 };
 
-#endif // _COMMAND_H_
+#endif // _STOP_COMMAND_H_

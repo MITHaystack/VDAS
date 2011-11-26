@@ -18,8 +18,8 @@
 // Author: David Lapsley <dlapsley@haystack.mit.edu>
 //
 
-#ifndef _COMMAND_H_
-#define _COMMAND_H_
+#ifndef _START_COMMAND_H_
+#define _START_COMMAND_H_
 
 // C includes.
 // C++ includes.
@@ -30,29 +30,38 @@
 // Framework includes.
 // Local includes.
 #include <net2raid.h>
+#include <command.h>
 
 using namespace std;
 
-class Command {
+class StartCommand: public Command {
+    // Variables to store options.
     public:
-        Command() {}
-        Command(const list<string>& params) {}
-        virtual void execute(){}
-        virtual string to_string() {}
-        virtual void dump() {}
-};
-
-
-class NullCommand: public Command {
-    public:
-        NullCommand(): Command() {}
+        StartCommand(const list<string>& params) {}
         void execute() {
-            INFO("NullCommand executing.");
+            INFO("StartCommand executing.");
+
+            // State is stored globally.
+            FILE_WRITER_STATS->start();
+            FILE_WRITER_STATS->cmd_write_to_disk();
+
+            FILE_WRITER->open();
+            FILE_WRITER->start();
+            FILE_WRITER->cmd_write_to_disk();
+
+            NET_READER_STATS->start();
+            NET_READER_STATS->cmd_write_to_disk();
+
+            // sleep(DISK_RAMP_UP_TIME);
+
+            NET_READER->start();
+            NET_READER->cmd_read_from_network();
+            INFO("Started capture process.");
         }
-        string to_string() { return string("null"); }
+        string to_string() { return string("start"); }
         void dump() {
-            INFO("NullCommand {}");
+            INFO("StartCommand {}");
         }
 };
 
-#endif // _COMMAND_H_
+#endif // _START_COMMAND_H_
