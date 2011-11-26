@@ -47,24 +47,16 @@ void cli();
 extern const string DEFAULT_INTERFACES;
 extern const int DEFAULT_SNAPLEN;
 extern const bool DEFAULT_PROMISCUOUS;
-extern const int DEFAULT_TIME;
 extern const string DEFAULT_LOG_NAME;
 extern const int DEFAULT_PAYLOAD_LENGTH;
 extern const int DEFAULT_SMP_AFFINITY;
 extern const int DEFAULT_WRITE_BLOCKS;
-extern const int DEFAULT_RATE;
 extern const string LOG_PREFIX;
 
 // Other constants.
 extern const int MAX_SNAPLEN;
-extern const int STATS_SLEEP;
 extern const int PAYLOAD_LENGTH;
 extern const int DISK_RAMP_UP_TIME;
-
-extern const int LOCAL_PAGES_PER_BUFFER;
-
-extern int LOCAL_PAGE_SIZE;
-extern int BUFFER_SIZE;
 
 extern FileWriter* FILE_WRITER;
 extern NetReader* NET_READER;

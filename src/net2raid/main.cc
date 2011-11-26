@@ -46,26 +46,17 @@ using namespace std; // Clean up long lines.
 const string DEFAULT_INTERFACES("eth0");
 const int DEFAULT_SNAPLEN(8224);
 const bool DEFAULT_PROMISCUOUS(true);
-const int DEFAULT_TIME(30);
 const string DEFAULT_LOG_NAME("net2raid");
 // const int DEFAULT_PAYLOAD_LENGTH(8224);
 const int DEFAULT_PAYLOAD_LENGTH(8268);
 const int DEFAULT_SMP_AFFINITY(0);
 const int DEFAULT_WRITE_BLOCKS(128);
-const int DEFAULT_RATE(4000);
 const string LOG_PREFIX("/opt/mit/mark6/log/");
 
 // Other constants.
 const int MAX_SNAPLEN(9014);
-const int STATS_SLEEP(1);
 const int PAYLOAD_LENGTH(DEFAULT_PAYLOAD_LENGTH);
 const int DISK_RAMP_UP_TIME(2);
-
-const int LOCAL_PAGES_PER_BUFFER(256);
-// const int LOCAL_PAGES_PER_BUFFER(64);
-
-int LOCAL_PAGE_SIZE(0);
-int BUFFER_SIZE(0);
 
 const int FILE_WRITER_ID(0);
 const int FILE_WRITER_STATS_ID(1);
