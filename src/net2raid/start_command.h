@@ -39,7 +39,7 @@ class StartCommand: public Command {
     public:
         StartCommand(const vector<string>& params) {}
         void execute() {
-            INFO("StartCommand executing.");
+            INFO("StartCommand: executing.");
 
             // State is stored globally.
             FILE_WRITER_STATS->start();
@@ -56,11 +56,12 @@ class StartCommand: public Command {
 
             NET_READER->start();
             NET_READER->cmd_read_from_network();
-            INFO("Started capture process.");
+            INFO("StartCommand: Started capture process.");
         }
         string to_string() { return string("start"); }
         void dump() {
-            INFO("StartCommand {}");
+            INFO("StartCommand: BEGIN DUMP");
+            INFO("StartCommand: END DUMP");
         }
 };
 

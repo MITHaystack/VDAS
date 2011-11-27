@@ -40,7 +40,7 @@ class StopCommand: public Command {
     public:
         StopCommand(const vector<string>& params) {}
         void execute() {
-            INFO("StartCommand executing.");
+            INFO("StopCommand: executing.");
 
             // State is stored globally.
             NET_READER_STATS->cmd_stop();
@@ -54,11 +54,12 @@ class StopCommand: public Command {
 
             FILE_WRITER->cmd_stop();
             FILE_WRITER->join();
-            INFO("Stopped capture process.");
+            INFO("StopCommand: Stopped capture process.");
         }
         string to_string() { return string("stop"); }
         void dump() {
-            INFO("StopCommand {}");
+            INFO("StopCommand BEGIN DUMP");
+            INFO("StopCommand END DUMP");
         }
 };
 

@@ -101,6 +101,8 @@ void TestCommand::setup_command(void)
     cout << "to_string() " << sc.to_string() << endl;
     sc.dump();
 
+    sc.execute();
+
     cout << endl;
 }
 
@@ -141,6 +143,8 @@ void TestCommand::teardown_command(void)
     StartCommand td(params);
     cout << "to_string() " << td.to_string() << endl;
     td.dump();
+
+    td.execute();
 
     cout << endl;
 }

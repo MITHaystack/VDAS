@@ -72,7 +72,7 @@ class SetupCommand: public Command {
 
     void execute() {
         // State is stored globally.
-        INFO("Setup capture process.");
+        INFO("SetupCommand: Setup capture process.");
         // Assorted constants.
         const int SETUP_COMMAND_INTERVAL(1);
         const int STATS_INTERVAL(1);
@@ -88,7 +88,7 @@ class SetupCommand: public Command {
         CPU_ZERO(&mask);
         CPU_SET(smp_affinity, &mask);
         if (sched_setaffinity(mypid, cpu_setsize, &mask) < 0)
-            ERR("Unble to set process affinity.");
+            ERR("SetupCommand: Unable to set process affinity.");
 
         // Setup buffer pool.
         const int BUFFER_SIZE(getpagesize()*pages_per_buffer);
@@ -132,17 +132,18 @@ class SetupCommand: public Command {
     }
     string to_string() { return string("setup"); }
     void dump() {
-        INFO("SetupCommand {}");
-        INFO("snaplen: " << snaplen);
-        INFO("promiscuous: " << promiscuous);
-        INFO("duration: " << duration);
-        INFO("file_size: " << file_size);
-        INFO("interface: " << interface);
-        INFO("capture_file: " << capture_file);
-        INFO("smp_affinity: " << smp_affinity);
-        INFO("ring_buffers: " << ring_buffers);
-        INFO("write_blocks: " << write_blocks);
-        INFO("pages_per_buffer: " << pages_per_buffer);
+        INFO("SetupCommand: BEGIN DUMP");
+        INFO("SetupCommand: snaplen: " << snaplen);
+        INFO("SetupCommand: promiscuous: " << promiscuous);
+        INFO("SetupCommand: duration: " << duration);
+        INFO("SetupCommand: file_size: " << file_size);
+        INFO("SetupCommand: interface: " << interface);
+        INFO("SetupCommand: capture_file: " << capture_file);
+        INFO("SetupCommand: smp_affinity: " << smp_affinity);
+        INFO("SetupCommand: ring_buffers: " << ring_buffers);
+        INFO("SetupCommand: write_blocks: " << write_blocks);
+        INFO("SetupCommand: pages_per_buffer: " << pages_per_buffer);
+        INFO("SetupCommand: END DUMP");
     }
 };
 

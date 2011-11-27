@@ -40,7 +40,7 @@ class TeardownCommand: public Command {
     public:
         TeardownCommand(const vector<string>& params) {}
         void execute() {
-            INFO("TeardownCommand executing.");
+            INFO("TeardownCommand: executing.");
 
             // State is stored globally.
             delete NET_READER;
@@ -55,7 +55,8 @@ class TeardownCommand: public Command {
         }
         string to_string() { return string("teardown"); }
         void dump() {
-            INFO("TeardownCommand {}");
+            INFO("TeardownCommand BEGIN DUMP");
+            INFO("TeardownCommand END DUMP");
         }
 };
 

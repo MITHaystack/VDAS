@@ -90,7 +90,7 @@ void StatsWriter::join() {
 }
 
 void StatsWriter::run() {
-  DEBUG("StatsWriter Running...");
+  DEBUG("StatsWriter: Running...");
 
   Timer run_timer;
   Timer command_timer;
@@ -122,23 +122,23 @@ void StatsWriter::run() {
 	break;
 
       default:
-	ERR("Unknown state.");
+	ERR("StatsWriter: Unknown state.");
 	break;
       }
     }
-    DEBUG("elapsed run time: " << run_timer.elapsed());
+    DEBUG("StatsWriter: elapsed run time: " << run_timer.elapsed());
   } catch(std::exception &ex) {
-    ERR("error: " << ex.what());
+    ERR("StatsWriter: error: " << ex.what());
   }
 }
 
 void StatsWriter::cmd_stop() {
-  INFO("Received STOP");
+  INFO("StatsWriter: Received STOP");
   _state = STOP;
 }
 
 void StatsWriter::cmd_write_to_disk() {
-  DEBUG("Received WRITE_TO_DISK");
+  DEBUG("StatsWriter: Received WRITE_TO_DISK");
   _state = WRITE_TO_DISK;
 }
 

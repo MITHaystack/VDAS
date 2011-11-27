@@ -47,11 +47,12 @@ class NullCommand: public Command {
     public:
         NullCommand(): Command() {}
         void execute() {
-            INFO("NullCommand executing.");
+            INFO("NullCommand: executing.");
         }
         string to_string() { return string("null"); }
         void dump() {
-            INFO("NullCommand {}");
+            INFO("NullCommand: BEGIN DUMP");
+            INFO("NullCommand: END DUMP");
         }
 };
 

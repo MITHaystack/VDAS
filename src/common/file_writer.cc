@@ -103,7 +103,7 @@ FileWriter::FileWriter(const int id,
   void* buf;
   for (int i=0; i<write_blocks; i++) {
     if (posix_memalign(&buf, getpagesize(), write_block_size) != 0) {
-      ERR("FileWriter buffer allocation failed.");
+      ERR("FileWriter: buffer allocation failed.");
       throw std::string("Memalign failed.");
     }
     _free_bufs.push_back(static_cast<boost::uint8_t*>(buf));
@@ -114,7 +114,7 @@ FileWriter::~FileWriter() {
   close();
 #ifdef TRANSLATE
   if (_translate) {
-    INFO("Starting translation on : " << _capture_file);
+    INFO("FileWriter: Starting translation on : " << _capture_file);
 
     // open the pcap file 
     pcap_t *handle; 
@@ -192,7 +192,7 @@ void FileWriter::join() {
 }
 
 void FileWriter::run() {
-  INFO("FileWriter Running...");
+  INFO("FileWriter: Running...");
 
   Timer run_timer;
   Timer command_timer;
@@ -228,19 +228,19 @@ void FileWriter::run() {
 	break;
       }
     }
-    DEBUG("elapsed run time: " << run_timer.elapsed());
+    DEBUG("FileWriter: elapsed run time: " << run_timer.elapsed());
   } catch(std::exception &ex) {
-    ERR("error: " << ex.what());
+    ERR("FileWriter: error: " << ex.what());
   }
 }
 
 void FileWriter::cmd_stop() {
-  INFO("Received STOP");
+  INFO("FileWriter: Received STOP");
   _state = STOP;
 }
 
 void FileWriter::cmd_write_to_disk() {
-  INFO("Received WRITE_TO_DISK");
+  INFO("FileWriter: Received WRITE_TO_DISK");
   _state = WRITE_TO_DISK;
 }
 
@@ -257,7 +257,7 @@ void FileWriter::handle_write_to_disk() {
 }
 
 int FileWriter::open() {
-  INFO("Opening FileWriter file: " << _capture_file);
+  INFO("FileWriter: Opening file: " << _capture_file);
 
   // Open files for each path.
   int ret=0;
@@ -270,47 +270,47 @@ int FileWriter::open() {
   }
  
   if (_pfd.fd<0) {
-    ERR("Unable to open file: " << _capture_file
+    ERR("FileWriter: Unable to open file: " << _capture_file
 		  << " - " << strerror(errno));
     _pfd.fd = -1;
     ret = -1;
   } else {
-    DEBUG("File: " << _capture_file << " fd: "
+    DEBUG("FileWriter: File: " << _capture_file << " fd: "
 		  << _pfd.fd);
     _pfd.events = POLLOUT;
   }
 
   if (_preallocated) {
     off_t len = _file_size * 1000000;
-    INFO("Preallocating  " << len/1000000 << " MBytes");
+    INFO("FileWriter: Preallocating  " << len/1000000 << " MBytes");
 
     // Scope errno locally for fallocate.
     int myerrno = fallocate(_pfd.fd, FALLOC_FL_KEEP_SIZE, 0, len);
     if (myerrno != 0) {
-      ERR("Fallocate() failed: " << strerror(myerrno));
+      ERR("FileWriter: Fallocate() failed: " << strerror(myerrno));
       return -1;
     }
     
     if (::lseek(_pfd.fd, 0, SEEK_SET) < 0) {
-      ERR("Unable to seek to beginning of file: "
+      ERR("FileWriter: Unable to seek to beginning of file: "
 		    << _capture_file
 		    << " - " << strerror(errno));
       _pfd.fd = -1;
       ret = -1;
     }
   } else {
-    DEBUG("Successfully seeked.");
+    DEBUG("FileWriter: Successfully seeked.");
   }
 
   // Debug message.
-  DEBUG("pfd: " << _pfd.fd);
+  DEBUG("FileWriter: pfd: " << _pfd.fd);
 
   return ret;
 }
 
 int FileWriter::close() {
   if ( (_pfd.fd>0) && (::close(_pfd.fd)<0) ) {
-    ERR("Unable to close fd: " << _pfd.fd
+    ERR("FileWriter: Unable to close fd: " << _pfd.fd
 		  << " - " << strerror(errno));
     return -1;
   }
@@ -395,7 +395,7 @@ bool FileWriter::write(boost::uint8_t* buf,
       bytes_left -= nb;
       bytes_written += nb;
     } else {
-      ERR("Write error: " << strerror(errno));
+      ERR("FileWriter: Write error: " << strerror(errno));
     }
   }
   if (_sw)
@@ -419,7 +419,7 @@ bool FileWriter::write_unbuffered(boost::uint8_t* buf,
       bytes_left -= nb;
       bytes_written += nb;
     } else {
-      ERR("Write error: " << strerror(errno));
+      ERR("FileWriter: Write error: " << strerror(errno));
     }
   }
   if (_sw)
