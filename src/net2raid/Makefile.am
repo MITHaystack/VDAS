@@ -16,7 +16,6 @@ net2raid_SOURCES		=	main.cc\
 net2raid_LDADD			=	-L.\
 							-L../common\
 							-lcommon\
-							-lreadline\
 							-L@BOOST_LIBDIR@\
 							-lboost_program_options-mt\
 							-lboost_system-mt\
@@ -26,9 +25,17 @@ net2raid_LDADD			=	-L.\
 							@PFRING_ROOT@/userland/libpcap-1.1.1-ring/libpcap.a\
 							@PFRING_ROOT@/userland/lib/libpfring.a
 
-net2raidtest_SOURCES	=	test_main.cc
+net2raidtest_SOURCES	=	test_main.cc\
+							command.h\
+							setup_command.h\
+							start_command.h\
+							stop_command.h\
+							setup_command.h\
+							command_factory.h\
+							test_command.h\
+							test_command.cc
 
-net2raidtest_LDAD		=	-L.\
+net2raidtest_LDADD		=	-L.\
 							-L../common\
 							-lcommon\
 							-L@BOOST_LIBDIR@\

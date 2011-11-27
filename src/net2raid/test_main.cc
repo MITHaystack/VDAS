@@ -44,12 +44,12 @@
 #include <cppunit/BriefTestProgressListener.h>
 
 // Local includes.
-#include <logger.h>
-// #include <test_pool.h>
+#include <m6logger.h>
+#include <test_command.h>
 
 int
 main(int argc, char** argv) {
-  init_logger("net2raid-log.cfg");
+  init_logger("net2raid-check", 0);
 
   // informs test-listener about testresults
   CPPUNIT_NS::TestResult testresult;
@@ -64,11 +64,11 @@ main(int argc, char** argv) {
 
   // insert test-suite at test-runner by registry
   CPPUNIT_NS::TestRunner testrunner;
-  testrunner.addTest(CPPUNIT_NS::TestFactoryRegistry::getRegistry ().makeTest ());
+  testrunner.addTest(CPPUNIT_NS::TestFactoryRegistry::getRegistry().makeTest());
   testrunner.run(testresult);
 
   // output results in compiler-format
-  CPPUNIT_NS::CompilerOutputter compileroutputter (&collectedresults, std::cerr);
+  CPPUNIT_NS::CompilerOutputter compileroutputter(&collectedresults, std::cerr);
   compileroutputter.write ();
 
   // return 0 if tests were successful
