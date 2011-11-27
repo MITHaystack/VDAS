@@ -25,7 +25,7 @@
 // C++ includes.
 #include <string>
 #include <iostream>
-#include <list>
+#include <vector>
 
 // Framework includes.
 // Local includes.
@@ -36,7 +36,7 @@ using namespace std;
 class Command {
     public:
         Command() {}
-        Command(const list<string>& params) {}
+        Command(const vector<string>& params) {}
         virtual void execute(){}
         virtual string to_string() {}
         virtual void dump() {}

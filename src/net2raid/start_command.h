@@ -37,7 +37,7 @@ using namespace std;
 class StartCommand: public Command {
     // Variables to store options.
     public:
-        StartCommand(const list<string>& params) {}
+        StartCommand(const vector<string>& params) {}
         void execute() {
             INFO("StartCommand executing.");
 

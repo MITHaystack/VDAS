@@ -38,7 +38,7 @@ using namespace std;
 class TeardownCommand: public Command {
     // Variables to store options.
     public:
-        TeardownCommand(const list<string>& params) {}
+        TeardownCommand(const vector<string>& params) {}
         void execute() {
             INFO("TeardownCommand executing.");
 

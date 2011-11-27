@@ -25,7 +25,9 @@
 // C++ includes.
 #include <string>
 #include <iostream>
+#include <sstream>
 #include <list>
+#include <exception>
 
 // Framework includes.
 // Local includes.
@@ -50,27 +52,24 @@ class SetupCommand: public Command {
     const int NUM_PARAMETERS;
             
     public:
-    SetupCommand(const list<string>& params):
+    SetupCommand(const vector<string>& params):
         NUM_PARAMETERS(10)
     {
+        if (params.size() != NUM_PARAMETERS + 1)
+            throw runtime_error("SetupCommand: invalid number of parameters.");
 
-#if 0
-            ostringstream oss;
-            oss << snaplen << " "
-                << promiscuous << " "
-                << duration << " "
-                << file_size << " "
-                << interface << " "
-                << capture_file << " "
-                << smp_affinity << " "
-                << ring_buffers << " "
-                << write_blocks << " "
-                << pages_per_buffer;
-            return oss.str();
-        }
-#endif
-
+        istringstream(params[1]) >> snaplen;
+        istringstream(params[2]) >> promiscuous;
+        istringstream(params[3]) >> duration;
+        istringstream(params[4]) >> file_size;
+        interface = params[5];
+        capture_file = params[6];
+        istringstream(params[7]) >> smp_affinity;
+        istringstream(params[8]) >> ring_buffers;
+        istringstream(params[9]) >> write_blocks;
+        istringstream(params[10]) >> pages_per_buffer;
     }
+
     void execute() {
         // State is stored globally.
         INFO("Setup capture process.");

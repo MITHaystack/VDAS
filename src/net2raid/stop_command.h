@@ -38,7 +38,7 @@ using namespace std;
 class StopCommand: public Command {
     // Variables to store options.
     public:
-        StopCommand(const list<string>& params) {}
+        StopCommand(const vector<string>& params) {}
         void execute() {
             INFO("StartCommand executing.");
 

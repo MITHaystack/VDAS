@@ -26,7 +26,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include <list>
+#include <vector>
 
 // Framework includes.
 // Local includes.
@@ -50,7 +50,7 @@ class CommandFactory {
                 return NullCommand();
 
             istringstream iss(command);
-            std::list<string> strings;
+            std::vector<string> strings;
             while (iss) {
                 string s;
                 iss >> s;
